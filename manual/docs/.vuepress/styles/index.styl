@@ -1,0 +1,32 @@
+/*
+Custom Styles here.
+ref：https://v1.vuepress.vuejs.org/config/#index-styl
+
+https://github.com/leo-buneev/vuepress-plugin-fulltext-search/blob/master/components/SearchBox.vue
+*/
+
+.home .hero img
+    max-width 450px!important
+
+.icon-image {
+    width:24px;
+    pointer-events:none;
+}
+
+.icon-tool {
+    width:32px;
+    pointer-events:none;
+}
+
+.search-box
+    .suggestion
+        a
+            .page-title
+                border-color $borderDarkColor !important
+                background $searchLeftBg !important
+            .parent-page-title
+                background $searchHeaderBg !important
+            .suggestion-row
+                .suggestion-content
+                    border-color $borderDarkColor !important
+                    background $searchRightBg !important
