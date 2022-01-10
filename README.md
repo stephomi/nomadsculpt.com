@@ -25,9 +25,7 @@ https://html5up.net/solid-state
 
 ```bash
 cd website
-sass --update assets/sass:assets/css --no-source-map
-
-python -m http.server 8000
+python3 -m http.server 8000
 
 # visit in the brownser: localhost:8000
 ```

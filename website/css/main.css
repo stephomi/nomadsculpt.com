@@ -8,6 +8,7 @@ html, body {
   border: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: #262322;
   background-size: auto, cover;
@@ -29,6 +30,12 @@ ul {
   list-style: disc;
   margin: 0 0 2em 0;
   padding-left: 1em;
+}
+
+@media screen and (max-width: 980px) {
+  li {
+    text-align: left;
+  }
 }
 
 a {
@@ -206,7 +213,9 @@ h6 {
 }
 #banner .inner {
   margin: 0 auto;
-  width: 55em;
+  width: 80%;
+  min-width: 320px;
+  max-width: 55em;
 }
 #banner .logo {
   transition: opacity 2s ease, transform 1s ease;
@@ -225,6 +234,7 @@ h6 {
   font-size: 2.25em;
   margin-bottom: 0.8em;
   padding-bottom: 0.4em;
+  min-width: 420px;
 }
 #banner p {
   transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
@@ -237,6 +247,23 @@ h6 {
   letter-spacing: 0.1em;
   line-height: 2;
   text-transform: uppercase;
+}
+
+/* Animation */
+
+body.is-preload #banner .logo {
+  transform: translateY(0.5em);
+  opacity: 0;
+}
+body.is-preload #banner h2 {
+  opacity: 0;
+  transform: translateX(0.25em);
+  filter: blur(2px);
+}
+body.is-preload #banner p {
+  opacity: 0;
+  transform: translateX(0.5em);
+  filter: blur(2px);
 }
 
 /* Wrapper */
