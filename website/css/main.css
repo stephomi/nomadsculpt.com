@@ -214,7 +214,6 @@ h6 {
 #banner .inner {
   margin: 0 auto;
   width: 80%;
-  min-width: 320px;
   max-width: 55em;
 }
 #banner .logo {
@@ -223,7 +222,6 @@ h6 {
   opacity: 1;
   margin: 0 0 1.3em 0;
 }
-
 #banner h2 {
   transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
   transform: translateX(0);
@@ -234,7 +232,6 @@ h6 {
   font-size: 2.25em;
   margin-bottom: 0.8em;
   padding-bottom: 0.4em;
-  min-width: 420px;
 }
 #banner p {
   transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
@@ -247,6 +244,14 @@ h6 {
   letter-spacing: 0.1em;
   line-height: 2;
   text-transform: uppercase;
+}
+@media screen and (max-width: 736px) {
+  #banner .inner {
+    width: 100%;
+  }
+  #banner h2 {
+    font-size: 1.6em;
+  }
 }
 
 /* Animation */
