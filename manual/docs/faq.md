@@ -89,11 +89,11 @@ The [web demo](https://stephaneginier.com/archive/nomad_demo) is usually updated
 
 
 ## Can you translate in [my-language]?
-At the moment I rely on [the community](https://github.com/stephomi/nomad-translation) for translation, but it's not realistic since I vastly understimated the number of text in Nomad!
+At the moment I rely on [the community](https://github.com/stephomi/nomad-translation) for translation, but it's not realistic since I vastly underestimated the number of texts in Nomad!
 My previous project SculptGL was [much smaller](https://github.com/stephomi/sculptgl/tree/master/src/gui/tr).
 
-And I don't really want to have a uncomplete/botched version with many of the strings not translated.  
-You can't really rely on the community to regularly handle the update (although I've been very luck for the chinese translation, thanks [@CrisprHarrison!](https://github.com/CrisprHarrison)).
+And I don't really want to have an incomplete version with many of the text entries not translated.  
+You can't really rely on the community to regularly handle the update (although I've been very lucky with the chinese translation, thanks to [@CrisprHarrison!](https://github.com/CrisprHarrison)).
 
 My plan was to use an app translation service but I want to be sure it's not going to be too much work on maintenance (especially since I do updates regularly).
 So maybe later!

@@ -36,8 +36,8 @@ Here are the type of lights currently supported:
 | Mode                        | Description                      | Can cast shadows |
 | :---:                       | :---:                            | :---: |
 | [Directional](#directional) | Infinitely far away sun light    | yes   |
-| [Spot](spot.md)             | Cone shaped lights				 | Yes   |
-| [Point](point.md)           | Omni-directional point of light  | No    |
+| [Spot](#spot.md)             | Cone shaped lights				 | Yes   |
+| [Point](#point.md)           | Omni-directional point of light  | No    |
 
 ### Directional
 It emits light from infinitely far away, with a uniform intensity.
