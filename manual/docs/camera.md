@@ -24,7 +24,7 @@ It can be useful if you want to cycle between front/left/back reference views wi
 ## Interaction
 
 ### Rotation
-You rotate the camera by draging *one* finger on the background.
+You rotate the camera by dragging *one* finger on the background.
 If you drag the finger on your model, it will instead start the sculpting operation.
 
 ::: tip Can I rotate the camera if I can't access the background?
@@ -33,7 +33,7 @@ Yes, you can simply put *two* fingers on the screen - as if you wanted to start 
 
 ### Focus / Reset
 *Double tap* on the model to focus the picked point.
-If you *double tap* on the background, the camera will focus on the selected mesh instead.
+If you *double tap* in the background, the camera will focus on the selected mesh instead.
 
 
 ### Translation
@@ -58,7 +58,7 @@ You can also use the `Orthographic` mode, which is more or less similar to a FOV
 
 ## Rotation Type
 By default the camera is using the `Orbit` rotation mode.
-It means you have only two degrees of freedom, it is more intuitive but in some case you'll want more flexibility.  
+It means you have only two degrees of freedom, it is more intuitive but in some cases you'll want more flexibility.  
 You can switch to `Trackball`, you'll be able to *roll* the view by rotating *two* fingers on the viewport.
 
 

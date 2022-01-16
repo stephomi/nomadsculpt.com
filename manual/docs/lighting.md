@@ -24,7 +24,7 @@ It allows you to paint your object and then tweak the lighting later, without br
 
 ## Lights
 Lights are only available with [PBR mode](#pbr).
-For performance reason, you are limited to only 3 lights.
+For performance reasons, you are limited to only 3 lights.
 
 ::: tip
 You can load a glTF file with more than 3 lights in it and Nomad will keep all of them.
@@ -43,18 +43,18 @@ Here are the type of lights currently supported:
 It emits light from infinitely far away, with a uniform intensity.
 Unlike the other type of lights, its 3d position in the scene doesn't matter, only its orientation does.
 
-You can attach this light to the camera, that way have a consistent lighting.  
-For example you can use it to make a rim light (strong light that emits, the back of your model or pointing towards the camera) that always light the back of your model.
+You can attach this light to the camera, that way it has consistent lighting.  
+For example you can use it to make a rim light (a strong light that emits from the back of your model, pointing towards the camera) that always lights the back of your model.
 
 ### Spot
 Spot light emits light in a single direction, restricted by a cone shape.
 
 ### Point
-Point light will emits light in every direction.  
+Point light will emit light in every direction.  
 At the moment, point light doesn't support shadows.
 
 ### Shadows
-The option `normal bias` can be use to reduce common shadow artefacts (acne/peter-panning).
+The option `normal bias` can be used to reduce common shadow artifacts (acne/peter-panning).
 
 The quality of the shadows depends on the size of the objects relative to the entire scene.  
 If you have a big object in your scene that doesn't need to cast shadows (for example a big plane), make sure to disable shadow casting in its [material settings](material.md#cast-shadows).
@@ -63,6 +63,9 @@ If you have a big object in your scene that doesn't need to cast shadows (for ex
 ## Matcap
 As the name suggests (MATerial CAPture), a matcap takes care of both the lighting and material information in a single image.
 Since the material itself is already present in the matcap, roughness and metalness painting channel will be ignored.
-The painting color will be multiplied against the matcap, meaning if you have a black/grey matcap, using white paint won't make it brighter.
+The painting color will be multiplied against the matcap, meaning if you have a black/gray matcap, using white paint won't make it brighter.
 
-Artists tends to favor this mode for sculpting purposes since they allow to focus on the shape and geometry itself.
+Artists tend to favor this mode for sculpting purposes since they allow them to focus on the shape and geometry itself.
+
+
+

@@ -5,10 +5,10 @@
 ---
 
 ## Stroke Painting
-Most sculpting tool can paint as well, you can select the intensity and the channel you want to paint on.
+Most sculpting tools can paint as well, you can select the intensity and the channel you want to paint on.
 
 ::: tip
-You might consider turning on `Smooth Shading` [globally](settings.md#smooth-shading) or [per-object](material.md#smooth-shading) if you are painting metallic surface on a low poly object.
+You might consider turning on `Smooth Shading` [globally](settings.md#smooth-shading) or [per-object](material.md#smooth-shading) if you are painting a metallic surface on a low poly object.
 :::
 
 ## Material
@@ -42,3 +42,5 @@ Maybe in the future, each channel will have its own alpha channel to remove this
 ::: warning
 Metalness and roughness can't be supported if you are using [Matcap rendering](lighting.md#matcap), so if you paint you will only see the colors.
 :::
+
+

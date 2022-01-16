@@ -4,7 +4,7 @@
 
 ---
 
-You can use symmetry to mirror sculpting operation from on side to the another.
+You can use symmetry to mirror sculpting operations from one side to the other.
 
 The option to enable/disable the symmetry can also be found on the left quick panel (*"Sym"*).
 
@@ -17,10 +17,10 @@ Because of technical reasons, some brushes will have imperfect symmetry behavior
 
 In that case you can use the *Mirror* button to apply back the symmetry from one side to the other.
 
-This operation only succeeds if the algorithm detect that the mesh is symmetrical.
-In case the detection failed, you will be asked if you want to force the mirroring.
+This operation only succeeds if the algorithm detects that the mesh is symmetrical.
+In case the detection fails, you will be asked if you want to force the mirroring.
 
-The main difference is that forcing the mirroring will change the topology, thus you might loose the [Mutiresolution](topology.md#multiresolution).
+The main difference is that forcing the mirroring will change the topology, thus you might lose the [Multiresolution](topology.md#multiresolution).
 
 
 ## World vs Local
@@ -39,3 +39,6 @@ You should probably never use these options but you can reset the symmetry plane
 
 Note that the behavior of these options will change depending on what space (*Local/World*) you are in.
 So if it doesn't work as you would expect, make sure to check if you are in the correct space.
+
+
+

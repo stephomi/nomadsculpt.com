@@ -1,7 +1,7 @@
 # Overview
 
 ::: tip Any questions?
-You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <stephaneginier@gmail.com>.
+You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <support@nomadsculpt.com>.
 :::
 
 # Table of content

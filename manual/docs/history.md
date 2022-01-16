@@ -5,7 +5,7 @@
 ---
 
 Like most content creation tools, you can undo/redo all editing in Nomad.
-There is a limits to how many operation can be undoable, but you can control this behavior.
+There is a limit to how many operations can be undoable, but you can control this behavior.
 
 ::: tip
 You can use quick gestures to undo/redo:
@@ -16,7 +16,7 @@ You can use quick gestures to undo/redo:
 ## Limitation
 
 ### History limit (Mb)
-If the history stack exceed this value, the older operations will be removed so that the memory budget fit into this limit.
+If the history stack exceeds this value, the older operations will be removed so that the memory budget fits into this limit.
 
 
 ### Stack limit
@@ -31,5 +31,7 @@ For example by sculpting a bit after redoing many operations, you will lose the 
 
 
 ## Restore camera
-For each operation, the view point of the camera is saved.
+For each operation, the viewpoint of the camera is saved.
 If you enable this option, undoing or redoing an operation will reset the camera to the saved viewpoint.
+
+

@@ -15,4 +15,7 @@ For some Android device, finger inputs will return an arbitrary fixed pressure v
 It can be annoying if you plan on sculpting with your finger, especially if the value returned is small.
 In that case, make sure to disable this option.
 
-By default, this option is enabled iOS, but disabled for Android.
+By default, this option is enabled on iOS, but disabled for Android.
+
+
+

@@ -5,10 +5,10 @@
 ---
 
 Layers can record position offsets and painting, it can be useful for non-linear workflow.
-For example by experimenting different facial expression without relying on the history stack to undo the changes.
+For example by experimenting with different facial expressions without relying on the history stack to undo the changes.
 
 For painting data, layers are sorted in a top-down fashion; so layers on top will mask the lower ones.
-The order only matter for the painting information, the sculpting part (offset) isn't impacted.
+The order only matters for the painting information, the sculpting part (offset) isn't impacted.
 
 You can clear part of this mask by using the [Delete Layer](#delete-layer) tool.
 
@@ -48,3 +48,6 @@ Unlike many sculpting softwares, changing the topology of a mesh will not discar
 So you can use the [Voxel Remesher](topology.md#voxel-remesher), the [Multiresolution](topology.md#multiresolution) or the [Trim](tools.md#trim)/[Split](tools.md#split) tools.
 
 However for the [Voxel Remesher](topology.md#voxel-remesher), the quality of the layer will be impacted.
+
+
+

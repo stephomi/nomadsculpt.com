@@ -69,7 +69,7 @@ Sculpt by limiting the maximum height displacement, this tool is more useful whe
 
 
 ## Crease
-Crease tool can be useful to sculpt small cut or dents.
+Crease tools can be useful to sculpt small cuts or dents.
 
 <video width='360' preload='metadata' poster='./videos/tool_crease.jpg' controls>
     <source src='./videos/tool_crease.mp4' type='video/mp4'>
@@ -109,10 +109,10 @@ This tool can reset layers locally, you need an active layer otherwise nothing w
 
 
 ## Smooth
-Smooth the area by average the point positions. This tool is highly dependent of the polygon density.
-So if you have lot of polygons the smoothing will be less effective.
+Smooth the area by average the point positions. This tool is highly dependent on the polygon density.
+So if you have many polygons, the smoothing will be less effective.
 
-The alternate mode is the `Relax` mode, which only smooth the wireframe but try to retain the geometric details.
+The alternate mode is the `Relax` mode, which only smooths the wireframe but tries to retain the geometric details.
 
 <video width='360' preload='metadata' poster='./videos/tool_smooth.jpg' controls>
     <source src='./videos/tool_smooth.mp4' type='video/mp4'>
@@ -120,7 +120,7 @@ The alternate mode is the `Relax` mode, which only smooth the wireframe but try 
 
 
 ## Mask
-This tool let you mask points.
+This tool lets you mask points.
 Masked vertices can't be sculpted or painted afterwards, this is a way to "protect" some area.
 
 If you go in the tool settings, you can also perform other operations on the mask.
@@ -139,7 +139,7 @@ If you go in the tool settings, you can also perform other operations on the mas
 #### Extraction
 
 You can also create other objects by extracting the mask.
-When you use one of these operation, you can specify how to handle the holes.
+When you use one of these operations, you can specify how to handle the holes.
 
 | Action    | Description     |
 | :---:     | :---:           |
@@ -148,7 +148,7 @@ When you use one of these operation, you can specify how to handle the holes.
 | Shell     | Close the extracted shape by using the thickness value |
 
 ::: tip
-When you are using an extraction method that make use of the the thickness, the mask value will also impact the thickness.
+When you are using an extraction method that makes use of the thickness, the mask value will also impact the thickness.
 
 This can be useful if you have custom made [Alphas](stroke.md#alpha) and you are using the `Grab - dynamic radius` [stroke type](stroke.md#stroke-type). 
 :::
@@ -188,7 +188,7 @@ This tool is mostly similar to the [Masking tool](#mask), the main difference is
 
 
 ## Paint
-To learn more about materail you can visit the [Paint & Material](#paint) section.
+To learn more about material you can visit the [Paint & Material](#paint) section.
 
 <video width='360' preload='metadata' poster='./videos/tool_paint.jpg' controls>
     <source src='./videos/tool_paint.mp4' type='video/mp4'>
@@ -204,7 +204,7 @@ The smudge tool is only active on painting.
 
 
 ## Trim
-The Trim tool works by removing chunk of your mesh and then filling the hole.
+The Trim tool works by removing a chunk of your mesh and then filling the hole.
 
 <video width='360' preload='metadata' poster='./videos/tool_trim.jpg' controls>
     <source src='./videos/tool_trim.mp4' type='video/mp4'>
@@ -263,7 +263,7 @@ The interaction is more or less similar to the camera movement.
 * Pinching will scale the model
 * Twisting will rotate the model
 
-You can disable each of these movement separately, for example if you disable Scaling you will only be able to translate and rotate at the same time.
+You can disable each of these movements separately, for example if you disable Scaling you will only be able to translate and rotate at the same time.
 
 
 ## Tube
@@ -287,7 +287,7 @@ Create a revolution surface by drawing a curve first.
 Insert an object in the scene.  
 When the insertion takes place, Nomad switches automatically to the [Transform tool](#transform) for quick adjustment and then switches back the [Insert](#insert) tool when you release your fingers.
 
-If an object is using a custom gizmo pivot, then it will be used as an anchor point for the insertion, see vide below.
+If an object is using a custom gizmo pivot, then it will be used as an anchor point for the insertion, see video below.
 
 <video width='360' preload='metadata' poster='./videos/tool_insert.jpg' controls>
     <source src='./videos/tool_insert.mp4' type='video/mp4'>
@@ -295,4 +295,7 @@ If an object is using a custom gizmo pivot, then it will be used as an anchor po
 
 
 ## View
-This "tool" do nothing in particular, this is simply a way to view the model without modifying your scene.
+This "tool" does nothing in particular, this is simply a way to view the model without modifying your scene.
+
+
+

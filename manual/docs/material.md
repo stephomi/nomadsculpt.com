@@ -4,7 +4,7 @@
 
 ---
 
-Materials are properties that can change your object visual for your object.
+Materials are properties that can change the look of your object.
 For precise control over the object's painting, see the [Vertex Paint options](paint.md);
 
 At the moment, each object has its own material, two objects cannot share the same material.
@@ -17,15 +17,15 @@ The default mode and the fastest.
 
 ### Blending
 You can make your mesh semi-transparent with this slider.
-Note that because of real-time constraints, you can have noticeable visual artefacts in some cases if your object has a complex shape shape.
+Note that because of real-time constraints, you can have noticeable visual artifacts in some cases if your object has a complex shape.
 
 ### Additive
 You can make your mesh semi-transparent with this slider.
 
-You can set an opacity value higher than 1, which mean the object will be brighter.  
+You can set an opacity value higher than 1, which means the object will be brighter.  
 It can be useful if you want to use [bloom](postprocess.md#bloom) and the `threshold parameter` to only make this object glow like an emissive object.
 
-This mode tends to have less artefacts than [Blending](#blending) (order independent transparency).
+This mode tends to have less artifacts than [Blending](#blending) (order independent transparency).
 
 ### Dithering
 Make the object semi-transparent by discarding some pixels in a random fashion.
@@ -35,7 +35,7 @@ This mode can be used to simulate glass material.
 Because of real time constraints, self-refraction and multi-layered refraction is somewhat limited.
 
 The roughness painting of the model impacts how blurry the refraction is.
-By default, every object created in Nomad has a roughness slighty around 25%, thus the refraction won't be perfectly but a bit blurry.
+By default, every object created in Nomad has a roughness slightly around 25%, thus the refraction won't be perfect but a bit blurry.
 You can use the `paint glossy` button to repaint your model with a roughness and metalness of 0 (the colors won't be affected).
 
 There are 2 different roughness at play, the one driving how blurry the reflection is on the surface, and the other one driving the interior (refraction).  
@@ -48,7 +48,7 @@ In order to have different values (for example a lollipop with sharp surface but
 
 
 ## Always unlit
-If enabled, the object will ignores PBR and Matcap and simply display its color painting without shading.
+If enabled, the object will ignore PBR and Matcap and simply display its color painting without shading.
 Note that if you use [Additive](#additive), you can paint transparency directly by using black color.
 
 
@@ -64,3 +64,5 @@ See the [global option](settings.md#two-sided).
 ## Smooth Shading
 See the [global option](settings.md#smooth-shading).  
 `Auto` value will use the global option.
+
+

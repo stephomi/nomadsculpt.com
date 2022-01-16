@@ -20,19 +20,19 @@ You can select multiple object, it can help you achieve two things:
 - using the gizmo tool to move several objects at once
 - merging the objects thanks to the [Simple Merge](#simple-merge) or [Voxel Merge](#voxel-merge) feature
 
-You can do that by using the `Multiselection` checkbox, and then by clicking on the object in list.
+You can do that by using the `Multiselection` checkbox, and then by clicking on the object in the list.
 
 ::: tip Quick multiselection
 You can also multiselect in the viewport by holding the `Smooth` shortcut and tapping on another mesh.
 
-You can unselect an object by tapping on it again (only if your selection has more than one object).
+You can deselect an object by tapping on it again (only if your selection has more than one object).
 :::
 
 ::: warning Limited gizmo feature
 When using multiselection, the gizmo tool will always ignore masking.
 Also, X/Y/Z scaling is removed.
 
-The reason is that multiselection only allow whole mesh transformation, not per vertex transformation.
+The reason is that multiselection only allows whole mesh transformation, not per vertex transformation.
 This might be improved in the future.
 :::
 
@@ -57,7 +57,7 @@ When using the voxel merger you can change the resolution of the voxel by going 
 
 ### Subtraction
 You can use the remesher to perform boolean operations, for example by subtracting one mesh from another,
-The objects that are hidden will be subtracted, they will appear with a crosshatching look.
+The objects that are hidden will be subtracted, they will appear with a cross hatching look.
 
 <video width='360' preload='metadata' poster='./videos/merge_sub.jpg' controls>
     <source src='./videos/merge_sub.mp4' type='video/mp4'>
@@ -74,7 +74,7 @@ If you use the voxel remesher with all the objects hidden, the boolean intersect
 
 ## Primitive
 
-If you need to add a new objects in your scene, you can add primitive.
+If you need to add a new object in your scene, you can add primitive.
 You can configure the primitive with some parameters.
 
 However, you need to `Validate` the primitive in order to sculpt or paint it.
@@ -88,7 +88,7 @@ When you `Validate` a primitive you won't be able to edit the primitives setting
 | Torus       | <img src='./images/common/torus.png'       class='icon-image'/> | The torus can be a good starting point for rings |
 | Cone        | <img src='./images/common/cone.png'        class='icon-image'/> | - |
 | Icosahedron | <img src='./images/common/icosahedron.png' class='icon-image'/> | - |
-| UV-sphere   | <img src='./images/common/sphere.png'      class='icon-image'/> | You should probably not use this primtive, see [Warning below](#sphere-warning) |
+| UV-sphere   | <img src='./images/common/sphere.png'      class='icon-image'/> | You should probably not use this primitive, see [Warning below](#sphere-warning) |
 | Plane       | <img src='./images/common/rectangle.png'   class='icon-image'/> | It's a simple plane, note that this is the only primitive that is not closed |
 | Triplanar   | <img src='./images/common/sphere.png'      class='icon-image'/> | A special primitive, see [Triplanar](triplanar) |
 
@@ -136,5 +136,8 @@ Each plane has its own symmetry plane.
 Each time you update the size of the Triplanar primitive, the quality of the mask painting will degrade.
 
 For now there is no option to 'lock' the painting on a single plane, but maybe it will come in the future.
-You can use the [Connected Topology](stroke.md#connected-topology) to help a little bit, in that if your cursor lie precisely on one plane it won't impact the the other planes.
+You can use the [Connected Topology](stroke.md#connected-topology) to help a little bit, in that if your cursor lies precisely on one plane it won't impact the other planes.
 :::
+
+
+

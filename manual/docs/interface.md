@@ -13,6 +13,8 @@ Note that if the left shortcuts can't fit on the screen, some of these shortcuts
 
 Keyboard is supported on iOS, you can hold ⌘ to display a list of shortcuts.
 
-For Android support is a bit experimental.
+For Android, support is a bit experimental.
 
 ![](./images/shortcuts.jpg)
+
+

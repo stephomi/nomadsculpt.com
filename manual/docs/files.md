@@ -6,10 +6,10 @@
 
 ## Autosave
 
-If you enable autosave, you can setup a timer so that a popup will appear at regular interval.
-The reason why Nomad doesn't save in background is because 3d files can be pretty big so it can induces a signifant lag while you are sculpting.
+If you enable autosave, you can set up a timer so that a popup will appear at regular intervals.
+The reason why Nomad doesn't save in background is because 3d files can be pretty big so it can induce a significant lag while you are sculpting.
 
-Additionally, to avoid out-of-memory issue the scene is typically compressed before the saving operation.
+Additionally, to avoid out-of-memory issues the scene is typically compressed before the saving operation.
 This compression/decompression will slow down the save operation as well.
 
 ## Import
@@ -51,7 +51,7 @@ OBJ and STL don't support vertex colors officially, so it might not work in some
 It includes most of Nomad settings: symmetry, primitive config, transforms, etc.
 
 ### PBR
-PBR vertex colors are exported as a secondary vertex colors attributes.
+PBR vertex colors are exported as secondary vertex colors attributes.
 The channels are packed in the follow way:
 
 |           | Channel  |
@@ -61,7 +61,7 @@ The channels are packed in the follow way:
 | Masking   | B        |
 
 ::: warning
-The packing might change in future version, if it happens, this manual will be updated.
+The packing might change in future versions, if it happens, this manual will be updated.
 :::
 
 #### For blender:
@@ -70,3 +70,6 @@ The packing might change in future version, if it happens, this manual will be u
 <video width='360' preload='metadata' poster='./videos/blender_pbr.jpg' controls>
     <source src='./videos/blender_pbr.mp4' type='video/mp4'>
 </video>
+
+
+

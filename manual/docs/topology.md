@@ -4,7 +4,7 @@
 
 ---
 
-Nomad is a polygonal software, it's using triangles and quads to handle the geometry.
+Nomad is a polygonal software, it uses triangles and quads to handle the geometry.
 By topology, we refer to both the number of faces but also the way points (vertices) are connected.
 
 It's important to keep track of the topology, especially if you want to sculpt or paint fine details.
@@ -52,7 +52,7 @@ You can learn more in the [voxel booleans](scene.md#subtraction) section.
 ## Multiresolution
 The multiresolution feature is useful for mostly two scenario:
 - The smooth subdivision algorithm to increase the polycount of your object
-- handle multiple level of resolution so that you can alernate between small and large scale edits
+- handle multiple level of resolution so that you can alternate between small and large scale edits
 
 <video width='360' preload='metadata' poster='./videos/multiresolution.jpg' controls>
     <source src='./videos/multiresolution.mp4' type='video/mp4'>
@@ -60,7 +60,7 @@ The multiresolution feature is useful for mostly two scenario:
 
 
 ### Subdivision
-The *Subdvide* button will increase the number of polygons by 4, so make sure to keep an eye an the polycount as it can increase very quickly!
+The *Subdivide* button will increase the number of polygons by 4, so make sure to keep an eye on the polycount as it can increase very quickly!
 One important aspect of *Subdivision Surface*  is that they will converge to a *Smooth Surface*.
 To understand how it works, you can try the *Subdivide* button on an object with only a few polygons.
 
@@ -68,11 +68,11 @@ You can disable this *Smooth* behavior by checking the `Linear` option.
 
 
 ### Multiresolution Workflow
-One important aspect of the multiresolution is that you can go back to a lower resolution, making change on your object and then go back to the highest resolution without loosing the high resolution details.  
+One important aspect of the multiresolution is that you can go back to a lower resolution, make changes on your object and then go back to the highest resolution without losing the high resolution details.  
 All the high resolution details will be projected automatically.
 
 ::: warning
-If you are using a tool that alters the topology of your object, you will loose all the other resolutions of your object!
+If you are using a tool that alters the topology of your object, you will lose all the other resolutions of your object!
 You should always get a warning in case it should happen, for example when you are using:
 - the [Voxel Remesher](#voxel-remesher)
 - the [Dynamic Topology](#dynamic-topology)
@@ -99,7 +99,7 @@ See the video below in action.
 | Brush Size          | The level of detail will depend of the brush size |
 
 The option `Use pressure radius` is only relevant if `Brush Size` is activated.
-When it is activated, the level of detail will always reflects the brush size, even when the brush size is affacted by pencil pressure.
+When it is activated, the level of detail will always reflect the brush size, even when the brush size is affected by pencil pressure.
 
 #### Quality/Performance
 
@@ -109,7 +109,7 @@ When it is activated, the level of detail will always reflects the brush size, e
 | Quality             | Favor quality |
 
 When you favor `Quality`, the 2 main differences are:
-- refinement is applied before sculpting, so you will get less interpolating artefact when painting or sculpting very small details
+- refinement is applied before sculpting, so you will get less interpolating artifact when painting or sculpting very small details
 - refinement is running until it converges to the correct level of detail, in contrast to an incremental behavior.
   
   That way, if you sculpt very small details or do quick strokes, the topology will always be refined as expected
@@ -133,7 +133,7 @@ Whether you are using `Dynamic Topology` on your [Brush](#brush) or [Globally](#
 
 
 #### Separate
-If you have a single object based on several disconnected part, you can split this object into several objects. 
+If you have a single object based on several disconnected parts, you can split this object into several objects. 
 This can be seen as the opposite of [Simple Merging](#simple-merge).
 
 <video width='360' preload='metadata' poster='./videos/merge_separate.jpg' controls>
@@ -145,7 +145,7 @@ This can be seen as the opposite of [Simple Merging](#simple-merge).
 Most of the time, your object will probably be watertight, meaning the mesh is 'closed'.
 
 However if you import You can fill the holes in your mesh If your object has holes, you can fill them.
-Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate border.
+Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate borders.
 
 <video width='360' preload='metadata' poster='./videos/hole_filling.jpg' controls>
     <source src='./videos/hole_filling.mp4' type='video/mp4'>
@@ -154,3 +154,5 @@ Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate
 ::: tip
 When you run the Voxel remesher, all the holes are automatically closed, whether you are using it on 1 or multiple meshes.ul
 :::
+
+
