@@ -45,6 +45,13 @@ With homebrew, simply do `brew install lz4` and then `lz4 myproject.glb.lz4`.
 6. If it still crashes at loading, you can open the file on any 3d desktop software that supports `glTF`.
 
 
+## It crashes when I start Nomad!
+Rename the [projects folder](#where-are-located-my-projects-on-my-device) and start Nomad to see if it's working.
+If it loads correctly, you can move the faulty file (probably the biggest one) outside the `projects` folder.
+
+Otherwise try to rename the other folder (matcaps, backgrounds) and start Nomad again.
+
+
 ## Can you do animation?
 A timeline feature that could animate the layers could be interesting, but not really planend at the moment.  
 I'd like to support rigging/skinning in the future, but it poses a few challenge (notably the interaction with sculpting tools...) so nothing sure for now.
