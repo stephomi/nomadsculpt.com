@@ -12,21 +12,20 @@ The order only matters for the painting information, the sculpting part (offset)
 
 You can clear part of this mask by using the [Delete Layer](#delete-layer) tool.
 
-<video width='360' preload='metadata' poster='./videos/layer.jpg' controls>
-    <source src='./videos/layer.mp4' type='video/mp4'>
-</video>
+![](./videos/layer.mp4)
+
 
 ## Options
 
-| Action       | Icon                                                           | Description  |
-| :---:        | :---:                                                          | :---:        |
-| Visible      | <img src='./images/common/show.png'       class='icon-image'/> | Show/hide the layer influence |
-| Edit Name    | <img src='./images/common/pencil.png'     class='icon-image'/> | Edit the layer name |
-| Delete       | <img src='./images/common/trash.png'      class='icon-image'/> | Delete the layer |
-| Move         | <img src='./images/common/move.png'       class='icon-image'/> | Hold to move the layer position in the list |
-| Duplicate    | <img src='./images/common/duplicate.png'  class='icon-image'/> | Duplicate the layer |
-| Merge Down   | <img src='./images/common/merge_down.png' class='icon-image'/> | Merge the layer with the lower layer (or base mesh) |
-| More         | <img src='./images/common/more.png'       class='icon-image'/> | [More...](#more) options |
+| Action       | Icon                                      | Description  |
+| :---:        | :---:                                     | :---:        |
+| Visible      | ![](./icons/show.png#small)       | Show/hide the layer influence |
+| Edit Name    | ![](./icons/pencil.png#small)     | Edit the layer name |
+| Delete       | ![](./icons/trash.png#small)      | Delete the layer |
+| Move         | ![](./icons/move.png#small)       | Hold to move the layer position in the list |
+| Duplicate    | ![](./icons/duplicate.png#small)  | Duplicate the layer |
+| Merge Down   | ![](./icons/merge_down.png#small) | Merge the layer with the lower layer (or base mesh) |
+| More         | ![](./icons/more.png#small)       | [More...](#more) options |
 
 ### More...
 If you want more control you can change the intensity of each channel of a layer:

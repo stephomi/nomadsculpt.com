@@ -29,9 +29,8 @@ By default the symmetry is in *World* space, meaning that the symmetry plane is 
 
 You can see in the video below the usage of *World/Local* space and the behavior of the *Mirror* feature.
 
-<video width='360' preload='metadata' poster='./videos/symmetry.jpg' controls>
-    <source src='./videos/symmetry.mp4' type='video/mp4'>
-</video>
+![](./videos/symmetry.mp4)
+
 
 ## Editing the symmetry plane
 

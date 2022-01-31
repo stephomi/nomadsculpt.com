@@ -1,111 +1,92 @@
 # Tools
 
-| Tables                          | Icon                                                            |
-| :---:                           | :---:                                                           |
-| [Clay](#clay)                   | <img src='./images/tools/clay.png'         class='icon-tool'/>  |
-| [Brush](#brush)                 | <img src='./images/tools/brush.png'        class='icon-tool'/>  |
-| [Flatten](#flatten)             | <img src='./images/tools/flatten.png'      class='icon-tool'/>  |
-| [Inflate](#inflate)             | <img src='./images/tools/inflate.png'      class='icon-tool'/>  |
-| [Layer](#layer)                 | <img src='./images/tools/layer.png'        class='icon-tool'/>  |
-| [Crease](#crease)               | <img src='./images/tools/crease.png'       class='icon-tool'/>  |
-| [Pinch](#pinch)                 | <img src='./images/tools/pinch.png'        class='icon-tool'/>  |
-| [Nudge](#nudge)                 | <img src='./images/tools/nudge.png'        class='icon-tool'/>  |
-| [Stamp](#stamp)                 | <img src='./images/tools/stamp.png'        class='icon-tool'/>  |
-| [Delete Layer](#delete-Layer)   | <img src='./images/tools/clearLayer.png'   class='icon-tool'/>  |
-| [Smooth](#smooth)               | <img src='./images/tools/smooth.png'       class='icon-tool'/>  |
-| [Mask](#mask)                   | <img src='./images/tools/mask.png'         class='icon-tool'/>  |
-| [Selector Mask](#selector-mask) | <img src='./images/tools/maskSelector.png' class='icon-tool'/>  |
-| [Drag](#drag)                   | <img src='./images/tools/drag.png'         class='icon-tool'/>  |
-| [Move](#move)                   | <img src='./images/tools/move.png'         class='icon-tool'/>  |
-| [Paint](#paint)                 | <img src='./images/tools/paint.png'        class='icon-tool'/>  |
-| [Smudge](#smudge)               | <img src='./images/tools/smudge.png'       class='icon-image'/> |
-| [Trim](#trim)                   | <img src='./images/tools/trim.png'         class='icon-image'/> |
-| [Split](#split)                 | <img src='./images/tools/split.png'        class='icon-image'/> |
-| [Project](#project)             | <img src='./images/tools/project.png'      class='icon-image'/> |
-| [Gizmo](#gizmo)                 | <img src='./images/tools/gizmo.png'        class='icon-image'/> |
-| [Transform](#transform)         | <img src='./images/tools/transform.png'    class='icon-image'/> |
-| [Insert](#insert)               | <img src='./images/tools/insert.png'       class='icon-image'/> |
-| [Tube](#tube)                   | <img src='./images/tools/tube.png'         class='icon-image'/> |
-| [Lath](#lathe)                  | <img src='./images/tools/lathe.png'        class='icon-image'/> |
-| [View](#view)                   | <img src='./images/tools/view.png'         class='icon-image'/> |
+| Tables                          | Icon                                        |
+| :---:                           | :---:                                       |
+| [Clay](#clay)                   | ![](./images/tools/clay.png#medium)         |
+| [Brush](#brush)                 | ![](./images/tools/brush.png#medium)        |
+| [Flatten](#flatten)             | ![](./images/tools/flatten.png#medium)      |
+| [Inflate](#inflate)             | ![](./images/tools/inflate.png#medium)      |
+| [Layer](#layer)                 | ![](./images/tools/layer.png#medium)        |
+| [Crease](#crease)               | ![](./images/tools/crease.png#medium)       |
+| [Pinch](#pinch)                 | ![](./images/tools/pinch.png#medium)        |
+| [Nudge](#nudge)                 | ![](./images/tools/nudge.png#medium)        |
+| [Stamp](#stamp)                 | ![](./images/tools/stamp.png#medium)        |
+| [Delete Layer](#delete-Layer)   | ![](./images/tools/clearLayer.png#medium)   |
+| [Smooth](#smooth)               | ![](./images/tools/smooth.png#medium)       |
+| [Mask](#mask)                   | ![](./images/tools/mask.png#medium)         |
+| [Selector Mask](#selector-mask) | ![](./images/tools/maskSelector.png#medium) |
+| [Drag](#drag)                   | ![](./images/tools/drag.png#medium)         |
+| [Move](#move)                   | ![](./images/tools/move.png#medium)         |
+| [Paint](#paint)                 | ![](./images/tools/paint.png#medium)        |
+| [Smudge](#smudge)               | ![](./images/tools/smudge.png#medium)       |
+| [Trim](#trim)                   | ![](./images/tools/trim.png#medium)         |
+| [Split](#split)                 | ![](./images/tools/split.png#medium)        |
+| [Project](#project)             | ![](./images/tools/project.png#medium)      |
+| [Gizmo](#gizmo)                 | ![](./images/tools/gizmo.png#medium)        |
+| [Transform](#transform)         | ![](./images/tools/transform.png#medium)    |
+| [Insert](#insert)               | ![](./images/tools/insert.png#medium)       |
+| [Tube](#tube)                   | ![](./images/tools/tube.png#medium)         |
+| [Lath](#lathe)                  | ![](./images/tools/lathe.png#medium)        |
+| [View](#view)                   | ![](./images/tools/view.png#medium)         |
 
 ## Clay
 The Clay tool is useful for building up your sculpture.
 
-<video width='360' preload='metadata' poster='./videos/tool_clay.jpg' controls>
-    <source src='./videos/tool_clay.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_clay.mp4)
+
 
 ## Brush
 The standard brush.
 
-<video width='360' preload='metadata' poster='./videos/tool_brush.jpg' controls>
-    <source src='./videos/tool_brush.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_brush.mp4)
 
 
 ## Flatten
 Flatten the area by projecting the points onto the average plane.
 
-<video width='360' preload='metadata' poster='./videos/tool_flatten.jpg' controls>
-    <source src='./videos/tool_flatten.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_flatten.mp4)
 
 
 ## Inflate
 Move the vertices along their own normals.
 
-<video width='360' preload='metadata' poster='./videos/tool_inflate.jpg' controls>
-    <source src='./videos/tool_inflate.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_inflate.mp4)
 
 
 ## Layer
 Sculpt by limiting the maximum height displacement, this tool is more useful when a layer is active.
 
-<video width='360' preload='metadata' poster='./videos/tool_layer.jpg' controls>
-    <source src='./videos/tool_layer.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_layer.mp4)
 
 
 ## Crease
 Crease tools can be useful to sculpt small cuts or dents.
 
-<video width='360' preload='metadata' poster='./videos/tool_crease.jpg' controls>
-    <source src='./videos/tool_crease.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_crease.mp4)
 
 
 ## Pinch
 This tool can be used to sharpen edges.
 
-<video width='360' preload='metadata' poster='./videos/tool_pinch.jpg' controls>
-    <source src='./videos/tool_pinch.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_pinch.mp4)
 
 
 ## Nudge
 Move points along the stroke.
 
-<video width='360' preload='metadata' poster='./videos/tool_nudge.jpg' controls>
-    <source src='./videos/tool_nudge.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_nudge.mp4)
 
 
 ## Stamp
 This is simply the [Brush tool](#brush) with a stroke type set to `Grab - dynamic radius`.
 
-<video width='360' preload='metadata' poster='./videos/tool_stamp.jpg' controls>
-    <source src='./videos/tool_stamp.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_stamp.mp4)
 
 
 ## Delete Layer
 This tool can reset layers locally, you need an active layer otherwise nothing will happen.
 
-<video width='360' preload='metadata' poster='./videos/tool_delete_layer.jpg' controls>
-    <source src='./videos/tool_delete_layer.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_delete_layer.mp4)
 
 
 ## Smooth
@@ -114,9 +95,7 @@ So if you have many polygons, the smoothing will be less effective.
 
 The alternate mode is the `Relax` mode, which only smooths the wireframe but tries to retain the geometric details.
 
-<video width='360' preload='metadata' poster='./videos/tool_smooth.jpg' controls>
-    <source src='./videos/tool_smooth.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_smooth.mp4)
 
 
 ## Mask
@@ -132,9 +111,8 @@ If you go in the tool settings, you can also perform other operations on the mas
 | Invert       | Invert the mask |
 | Clear        | Clear the mask  |
 
-<video width='360' preload='metadata' poster='./videos/tool_mask1.jpg' controls>
-    <source src='./videos/tool_mask1.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_mask1.mp4)
+
 
 #### Extraction
 
@@ -153,9 +131,8 @@ When you are using an extraction method that makes use of the thickness, the mas
 This can be useful if you have custom made [Alphas](stroke.md#alpha) and you are using the `Grab - dynamic radius` [stroke type](stroke.md#stroke-type). 
 :::
 
-<video width='360' preload='metadata' poster='./videos/tool_mask2.jpg' controls>
-    <source src='./videos/tool_mask2.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_mask2.mp4)
+
 
 #### Quick gesture
 You can perform zbrush-style gestures while holding the quick masking button:
@@ -169,61 +146,48 @@ You can perform zbrush-style gestures while holding the quick masking button:
 ## Selector Mask
 This tool is mostly similar to the [Masking tool](#mask), the main difference is that you don't use stroke to paint mask, but instead use the shape selector.
 
-<video width='360' preload='metadata' poster='./videos/tool_selector_mask.jpg' controls>
-    <source src='./videos/tool_selector_mask.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_selector_mask.mp4)
+
 
 ## Drag
 
-<video width='360' preload='metadata' poster='./videos/tool_drag.jpg' controls>
-    <source src='./videos/tool_drag.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_drag.mp4)
 
 
 ## Move
 
-<video width='360' preload='metadata' poster='./videos/tool_move.jpg' controls>
-    <source src='./videos/tool_move.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_move.mp4)
 
 
 ## Paint
 To learn more about material you can visit the [Paint & Material](#paint) section.
 
-<video width='360' preload='metadata' poster='./videos/tool_paint.jpg' controls>
-    <source src='./videos/tool_paint.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_paint.mp4)
 
 
 ## Smudge
 The smudge tool is only active on painting.
 
-<video width='360' preload='metadata' poster='./videos/tool_smudge.jpg' controls>
-    <source src='./videos/tool_smudge.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_smudge.mp4)
 
 
 ## Trim
 The Trim tool works by removing a chunk of your mesh and then filling the hole.
 
-<video width='360' preload='metadata' poster='./videos/tool_trim.jpg' controls>
-    <source src='./videos/tool_trim.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_trim.mp4)
 
 
 ## Split
 Similar to the [Trim](#trim) tool, except that it produces two different objects instead of one.
 
-<video width='360' preload='metadata' poster='./videos/tool_split.jpg' controls>
-    <source src='./videos/tool_split.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_split.mp4)
+
 
 ## Project
 The Project tool will project the points on a shape that you draw, but unlike the [Trim](#trim) tool, the topology is kept intact.
 
-<video width='360' preload='metadata' poster='./videos/tool_project.jpg' controls>
-    <source src='./videos/tool_project.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_project.mp4)
+
 
 ## Gizmo
 This tool lets you translate, rotate and scale your mesh with a single tool.
@@ -251,9 +215,7 @@ And by default, the symmetry is turned off.
 On the left you can move the gizmo pivot, you can see the video below in action.
 This is especially useful for the rotation, as it doesn't change anything for translation.
 
-<video width='360' preload='metadata' poster='./videos/tool_gizmo.jpg' controls>
-    <source src='./videos/tool_gizmo.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_gizmo.mp4)
 
 
 ## Transform
@@ -270,17 +232,13 @@ You can disable each of these movements separately, for example if you disable S
 Create a tube by drawing a curve first.  
 You can then edit its radius.
 
-<video width='360' preload='metadata' poster='./videos/tool_tube.jpg' controls>
-    <source src='./videos/tool_tube.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_tube.mp4)
 
 
 ## Lathe
 Create a revolution surface by drawing a curve first.
 
-<video width='360' preload='metadata' poster='./videos/tool_lathe.jpg' controls>
-    <source src='./videos/tool_lathe.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_lathe.mp4)
 
 
 ## Insert
@@ -289,13 +247,9 @@ When the insertion takes place, Nomad switches automatically to the [Transform t
 
 If an object is using a custom gizmo pivot, then it will be used as an anchor point for the insertion, see video below.
 
-<video width='360' preload='metadata' poster='./videos/tool_insert.jpg' controls>
-    <source src='./videos/tool_insert.mp4' type='video/mp4'>
-</video>
+![](./videos/tool_insert.mp4)
 
 
 ## View
 This "tool" does nothing in particular, this is simply a way to view the model without modifying your scene.
-
-
 

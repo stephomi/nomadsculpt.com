@@ -29,9 +29,8 @@ This is very useful when you don't want to think about topology and simply do fr
 A typical sculpting workflow can start by using the `Voxel Remesher` to block-out a rough shape with a low resolution.
 Simply hit the *Remesh* button once in a while when you are stretching the mesh too much to avoid too much distortion.
 
-<video width='360' preload='metadata' poster='./videos/voxel_remesher.jpg' controls>
-    <source src='./videos/voxel_remesher.mp4' type='video/mp4'>
-</video>
+![](./videos/voxel_remesher.mp4)
+
 
 ::: tip Voxel?
 As stated above, Nomad is a polygonal software, but the `Voxel Remesher` is one exception where another approach is used (temporarily) to perform the remeshing.
@@ -54,9 +53,7 @@ The multiresolution feature is useful for mostly two scenario:
 - The smooth subdivision algorithm to increase the polycount of your object
 - handle multiple level of resolution so that you can alternate between small and large scale edits
 
-<video width='360' preload='metadata' poster='./videos/multiresolution.jpg' controls>
-    <source src='./videos/multiresolution.mp4' type='video/mp4'>
-</video>
+![](./videos/multiresolution.mp4)
 
 
 ### Subdivision
@@ -88,9 +85,8 @@ When you enable `Dynamic Topology`, most sculpting brushes will have the ability
 
 See the video below in action.
 
-<video width='360' preload='metadata' poster='./videos/dynamic.jpg' controls>
-    <source src='./videos/dynamic.mp4' type='video/mp4'>
-</video>
+![](./videos/dynamic.mp4)
+
 
 #### Level of detail
 | Method              | Description  |
@@ -136,9 +132,7 @@ Whether you are using `Dynamic Topology` on your [Brush](#brush) or [Globally](#
 If you have a single object based on several disconnected parts, you can split this object into several objects. 
 This can be seen as the opposite of [Simple Merging](scene.md#simple-merge).
 
-<video width='360' preload='metadata' poster='./videos/merge_separate.jpg' controls>
-    <source src='./videos/merge_separate.mp4' type='video/mp4'>
-</video>
+![](./videos/merge_separate.mp4)
 
 
 #### Hole Filling
@@ -147,9 +141,8 @@ Most of the time, your object will probably be watertight, meaning the mesh is '
 However if you import You can fill the holes in your mesh If your object has holes, you can fill them.
 Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate borders.
 
-<video width='360' preload='metadata' poster='./videos/hole_filling.jpg' controls>
-    <source src='./videos/hole_filling.mp4' type='video/mp4'>
-</video>
+![](./videos/hole_filling.mp4)
+
 
 ::: tip
 When you run the Voxel remesher, all the holes are automatically closed, whether you are using it on 1 or multiple meshes.ul

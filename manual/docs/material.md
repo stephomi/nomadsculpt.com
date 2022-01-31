@@ -42,9 +42,7 @@ There are 2 different roughness at play, the one driving how blurry the reflecti
 However, since there is only one painting roughness channel in Nomad, both interior and exterior roughness will share the same value.  
 In order to have different values (for example a lollipop with sharp surface but blurry interior) you use the sliders `Surface glossiness` and `Interior roughness` to override the painted roughness.
 
-<video width='360' preload='metadata' poster='./videos/refraction.jpg' controls>
-    <source src='./videos/refraction.mp4' type='video/mp4'>
-</video>
+![](./videos/refraction.mp4)
 
 
 ## Always unlit

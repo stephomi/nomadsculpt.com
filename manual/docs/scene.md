@@ -7,13 +7,13 @@
 This menu lets you manage the different objects that you might have in Nomad.
 
 ## List
-| Action       | Icon                                                           | Description  |
-| :---:        | :---:                                                          | :---:        |
-| Visible      | <img src='./images/common/show.png'      class='icon-image'/>  | Hide the object (or use the object as subtractive mesh by the [Voxel Merger](#subtraction)) |
-| Edit Name    | <img src='./images/common/pencil.png'    class='icon-image'/>  | Edit the object |
-| Delete       | <img src='./images/common/trash.png'     class='icon-image'/>  | Delete the object |
-| Move         | <img src='./images/common/move.png'      class='icon-image'/>  | Move the object in the list, it doesn't have any effect on the viewport |
-| Duplicate    | <img src='./images/common/duplicate.png' class='icon-image'/>  | Duplicate the object |
+| Action       | Icon                                     | Description  |
+| :---:        | :---:                                    | :---:        |
+| Visible      | ![](./icons/show.png#small)      | Hide the object (or use the object as subtractive mesh by the [Voxel Merger](#subtraction)) |
+| Edit Name    | ![](./icons/pencil.png#small)    | Edit the object |
+| Delete       | ![](./icons/trash.png#small)     | Delete the object |
+| Move         | ![](./icons/move.png#small)      | Move the object in the list, it doesn't have any effect on the viewport |
+| Duplicate    | ![](./icons/duplicate.png#small) | Duplicate the object |
 
 ## Multiselection
 You can select multiple object, it can help you achieve two things:
@@ -50,26 +50,20 @@ More importantly, there won't be any separation between the two meshes, so the p
 
 When using the voxel merger you can change the resolution of the voxel by going in the [Topology](topology.md) menu.
 
-<video width='360' preload='metadata' poster='./videos/merge_add.jpg' controls>
-    <source src='./videos/merge_add.mp4' type='video/mp4'>
-</video>
+![](./videos/merge_add.mp4)
 
 
 ### Subtraction
 You can use the remesher to perform boolean operations, for example by subtracting one mesh from another,
 The objects that are hidden will be subtracted, they will appear with a cross hatching look.
 
-<video width='360' preload='metadata' poster='./videos/merge_sub.jpg' controls>
-    <source src='./videos/merge_sub.mp4' type='video/mp4'>
-</video>
+![](./videos/merge_sub.mp4)
 
 
 ### Intersection
 If you use the voxel remesher with all the objects hidden, the boolean intersection will be computed.
 
-<video width='360' preload='metadata' poster='./videos/merge_inter.jpg' controls>
-    <source src='./videos/merge_inter.mp4' type='video/mp4'>
-</video>
+![](./videos/merge_inter.mp4)
 
 
 ## Primitive
@@ -80,17 +74,17 @@ You can configure the primitive with some parameters.
 However, you need to `Validate` the primitive in order to sculpt or paint it.
 When you `Validate` a primitive you won't be able to edit the primitives settings anymore.
 
-| Primitive   | Icon                                                            | Description |
-| :---:       | :---:                                                           |:---:|
-| Box         | <img src='./images/common/cube.png'        class='icon-image'/> | It's a simple cube, you can control the division in X, Y and Z |
-| Sphere      | <img src='./images/common/sphere.png'      class='icon-image'/> | For convenience this is named a Sphere but it is actually a subdivided box, with the `Project on sphere` forced |
-| Cylinder    | <img src='./images/common/cylinder.png'    class='icon-image'/> | You can add a center hole for the cylinder primitive, for example to make an hollow pipe |
-| Torus       | <img src='./images/common/torus.png'       class='icon-image'/> | The torus can be a good starting point for rings |
-| Cone        | <img src='./images/common/cone.png'        class='icon-image'/> | - |
-| Icosahedron | <img src='./images/common/icosahedron.png' class='icon-image'/> | - |
-| UV-sphere   | <img src='./images/common/sphere.png'      class='icon-image'/> | You should probably not use this primitive, see [Warning below](#sphere-warning) |
-| Plane       | <img src='./images/common/rectangle.png'   class='icon-image'/> | It's a simple plane, note that this is the only primitive that is not closed |
-| Triplanar   | <img src='./images/common/sphere.png'      class='icon-image'/> | A special primitive, see [Triplanar](triplanar) |
+| Primitive   | Icon                                       | Description |
+| :---:       | :---:                                      |:---:|
+| Box         | ![](./icons/cube.png#small)        | It's a simple cube, you can control the division in X, Y and Z |
+| Sphere      | ![](./icons/sphere.png#small)      | For convenience this is named a Sphere but it is actually a subdivided box, with the `Project on sphere` forced |
+| Cylinder    | ![](./icons/cylinder.png#small)    | You can add a center hole for the cylinder primitive, for example to make an hollow pipe |
+| Torus       | ![](./icons/torus.png#small)       | The torus can be a good starting point for rings |
+| Cone        | ![](./icons/cone.png#small)        | - |
+| Icosahedron | ![](./icons/icosahedron.png#small) | - |
+| UV-sphere   | ![](./icons/sphere.png#small)      | You should probably not use this primitive, see [Warning below](#sphere-warning) |
+| Plane       | ![](./icons/rectangle.png#small)   | It's a simple plane, note that this is the only primitive that is not closed |
+| Triplanar   | ![](./icons/sphere.png#small)      | A special primitive, see [Triplanar](triplanar) |
 
 ::: tip
 If you wonder what is the base mesh when you launch Nomad: this is a subdivided box as well.
@@ -119,9 +113,8 @@ You can then use the `Overall Subdivision` slider to raise the number of polygon
 ### Triplanar
 This primitive is special in that you should use the [Masking tool](tools.md#mask) on it to shape the geometry.
 
-<video width='360' preload='metadata' poster='./videos/triplanar.jpg' controls>
-    <source src='./videos/triplanar.mp4' type='video/mp4'>
-</video>
+![](./videos/triplanar.mp4)
+
 
 ::: tip
 Double-tap on a plane and the camera will focus on this particular plane.

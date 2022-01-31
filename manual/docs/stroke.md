@@ -52,9 +52,8 @@ You can customize the [Dot behavior](#dot-settings).
 | Grab - dynamic radius    | Stamp-style where you change the radius by dragging |
 | Grab - dynamic intensity | Stamp-style where only the intensity can be modulated |
 
-<video width='360' preload='metadata' poster='./videos/stroke_type.jpg' controls>
-    <source src='./videos/stroke_type.mp4' type='video/mp4'>
-</video>
+![](./videos/stroke_type.mp4)
+
 
 ::: tip
 You can get interesting result by using `Grab - dynamic radius` along with the [Move](tools.md#move) or [Drag](tools.md#drag) tools.
@@ -96,9 +95,8 @@ If this option is enabled, there is no limit to how much matter you can add/remo
 This option will only sculpt the vertices that are linked to the picked surface.
 This is typically used for the Move tool, for example if you want to exclusively move a part that self-intersects with another part.
 
-<video width='360' preload='metadata' poster='./videos/connected_topology.jpg' controls>
-    <source src='./videos/connected_topology.mp4' type='video/mp4'>
-</video>
+![](./videos/connected_topology.mp4)
+
 
 ### Front-facing vertex only
 This option will ignore back facing vertices.

@@ -1,0 +1,44 @@
+// https://v2.vuepress.vuejs.org/reference/default-theme/styles.html#style-file
+
+img[src*="#small"] {
+    width:24px;
+    pointer-events:none;
+}
+
+img[src*="#medium"] {
+    width:32px;
+    pointer-events:none;
+}
+
+html.dark {
+    // brand colors
+    --c-brand: #ebbe6c;
+    --c-brand-light: #fbce7c;
+
+    // background colors
+    --c-bg: #262322;
+    --c-bg-light: #363332;
+    --c-bg-lighter: #464342;
+
+    // text colors
+    --c-text: #e2e2e2;
+    --c-text-light: #e6e6e6;
+    --c-text-lighter: #eaeaea;
+    --c-text-lightest: #f3f3f3;
+
+    --c-border: #4e4e4e;
+    --c-border-dark: #4e4e4e;
+
+    --c-tip: #318a62;
+    --c-warning: #ceab00;
+    --c-warning-bg: #524d3c;
+    --c-warning-title: #ceac03;
+    --c-warning-text: #c2c2c2;
+    --c-danger: #940000;
+    --c-danger-bg: #806161;
+    --c-danger-title: #610000;
+    --c-danger-text: #3a0000;
+    --c-details-bg: #323843;
+
+    --code-hl-bg-color: #363b46;
+}

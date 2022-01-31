@@ -67,9 +67,6 @@ The packing might change in future versions, if it happens, this manual will be 
 #### For blender:
 
 <br>
-<video width='360' preload='metadata' poster='./videos/blender_pbr.jpg' controls>
-    <source src='./videos/blender_pbr.mp4' type='video/mp4'>
-</video>
 
-
+![](./videos/blender_pbr.mp4)
 

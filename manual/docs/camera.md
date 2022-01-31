@@ -16,9 +16,9 @@ A saved view will save the [Projection Type](#projection-type) settings but also
 It can be useful if you want to cycle between front/left/back reference views with different backgrounds.
 :::
 
-| Action      | Icon                                                           | Description  |
-| :---:       | :---:                                                          | :---:        |
-| Update View | <img src='./images/common/update_view.png' class='icon-image'/> | Update the saved view with the current view point |
+| Action      | Icon                                       | Description  |
+| :---:       | :---:                                      | :---:        |
+| Update View | ![](./icons/update_view.png#small) | Update the saved view with the current view point |
 
 
 ## Interaction
