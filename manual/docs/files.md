@@ -31,7 +31,7 @@ For now you can import the following files:
 |                                    | GLB                             | OBJ                             | STL                             |
 |:----------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|
 | Layers<sup>[[layer]](#layer)</sup> | Yes                             | No                              | No                              |
-| Quad                               | Yes<sup>[[quad]](#quad)</sup> ] | Yes                             | No                              |
+| Quad                               | Yes<sup>[[quad]](#quad)</sup>   | Yes                             | No                              |
 | Color                              | Yes                             | Yes<sup>[[color]](#color)</sup> | Yes<sup>[[color]](#color)</sup> |
 | PBR Painting                       | Yes<sup>[[pbr]](#pbr)</sup>     | No                              | No                              |
 | Multiple objects                   | Yes                             | Yes                             | No                              |

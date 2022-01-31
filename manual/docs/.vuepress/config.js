@@ -74,7 +74,6 @@ module.exports = {
     plugins: [
         '@vuepress/plugin-back-to-top',
         '@vuepress/plugin-medium-zoom',
-        '@markspec/vuepress-plugin-footnote',
         'fulltext-search',
         ['@vuepress/google-analytics', { 'ga': 'UA-42431392-2' }]
     ]
