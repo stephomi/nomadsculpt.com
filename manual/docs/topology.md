@@ -40,7 +40,7 @@ One big difference is that the voxel approach won't accept self intersection, so
 Also it doesn't support mesh with holes in it.
 
 By holes, we don't mean the `genus hole` (`hole` of a donus), but instead mesh that are not `watertight`/`closed`.
-Typically, what it means is that before applying the remeshing, every holes will be filled, similarly to the [Trim tool](tools.md#trim) or [Hole filling feature](#scene.md#hole-filling).
+Typically, what it means is that before applying the remeshing, every holes will be filled, similarly to the [Trim tool](tools.md#trim) or [Hole filling feature](scene.md#hole-filling).
 :::
 
 
@@ -134,7 +134,7 @@ Whether you are using `Dynamic Topology` on your [Brush](#brush) or [Globally](#
 
 #### Separate
 If you have a single object based on several disconnected parts, you can split this object into several objects. 
-This can be seen as the opposite of [Simple Merging](#simple-merge).
+This can be seen as the opposite of [Simple Merging](scene.md#simple-merge).
 
 <video width='360' preload='metadata' poster='./videos/merge_separate.jpg' controls>
     <source src='./videos/merge_separate.mp4' type='video/mp4'>
