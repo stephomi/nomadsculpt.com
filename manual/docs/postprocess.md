@@ -100,7 +100,7 @@ Simulate the lens artifacts by darkening the screen edges.
 |![](./images/vignette-off.jpg)  |![](./images/vignette-on.jpg) |
 
 ## Grain
-Add a grain effect, it can break the *over-cleanliness* of 3d images.
+Add a grain effect, it will help reduce the artificial look of the image.
 
 | Grain off                  | Grain on   |
 | :---:                      |:---:                    |

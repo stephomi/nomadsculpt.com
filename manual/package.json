@@ -21,6 +21,7 @@
     "@vuepress/plugin-medium-zoom": "^1.9.7",
     "markdown-it-html5-embed": "^1.0.0",
     "vuepress": "^1.9.7",
+    "vuepress-plugin-clean-urls": "^1.1.2",
     "vuepress-plugin-fulltext-search": "^2.2.1",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
   }

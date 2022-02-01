@@ -14,7 +14,7 @@ You can access it through a separate app, for example [this app](https://play.go
 
 ## It crashes when I save or remesh my model!
 Your device is running out of memory (RAM).  
-To reduce memory usage in your scene, you can use some of [Topology](topology.md) tools to reduce the number of polygons.
+To reduce memory usage in your scene, you can use some of the [Topology](topology.md) options to reduce the number of polygons.
 
 ::: tip RAM/Storage
 What matters is the amount of RAM, not the storage (which is usually much bigger).
