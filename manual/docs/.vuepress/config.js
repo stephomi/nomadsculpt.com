@@ -78,7 +78,7 @@ module.exports = {
         '@vuepress/plugin-back-to-top',
         '@vuepress/plugin-medium-zoom',
         'fulltext-search',
-        'vuepress-plugin-clean-urls',
+        'clean-urls',
         [ '@vuepress/google-analytics', { 'ga' : 'UA-42431392-2' } ],
     ]
 }
