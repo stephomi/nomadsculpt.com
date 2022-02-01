@@ -5,9 +5,10 @@ module.exports = {
     base : '/manual/',
 
     head : [
+        [ 'link', { rel : 'icon', href : '/favicon.ico' } ],
         [ 'meta', { name : 'theme-color', content : '#ebbe6c' } ],
         [ 'meta', { name : 'apple-mobile-web-app-capable', content : 'yes' } ],
-        [ 'meta', { name : 'apple-mobile-web-app-status-bar-style', content : 'black' } ]
+        [ 'meta', { name : 'apple-mobile-web-app-status-bar-style', content : 'black' } ],
     ],
 
     theme : 'default-prefers-color-scheme',
