@@ -20,6 +20,7 @@ For now there is three main way to edit the topology of one object:
 | [Voxel Remesher](#voxel-remesher)     | Recompute a new topology with uniform density |
 | [Multiresolution](#multiresolution)   | Go back and forth between multiple resolution of your objects  |
 | [Dynamic Topology](#dynamic-topology) | Add/Remove faces locally in real-time when sculpting or painting |
+| [Decimation](#decimation)             | Remove faces by retains as much details as possible |
 
 
 ## Voxel Remesher
@@ -128,12 +129,32 @@ Whether you are using `Dynamic Topology` on your [Brush](#brush) or [Globally](#
 | Decimation          | Remove faces only, it cannot add new faces |
 
 
-#### Separate
-If you have a single object based on several disconnected parts, you can split this object into several objects. 
-This can be seen as the opposite of [Simple Merging](scene.md#simple-merge).
+## Decimate
 
-![](./videos/merge_separate.mp4)
+Reduce the number of polygons by trying to keep as many details as possible.
 
+This feature can be useful if you want to export for 3d printing.
+However you should probably not use it if you want to continue sculpting on it, as it can produce uneven triangles.
+
+Note that the masked area won't be decimated.
+
+![](./videos/decimate.mp4)
+
+
+## UV unwrap
+
+Compute texture coordinates (UVs) for the current mesh.
+
+At the moment Nomad can't make use of these UVs, but you can export the mesh directly to [Procreate](https://procreate.art/) or any texturing tool.
+
+::: warning
+Computing UVs can take some time, it is best to have a mesh with fewer than 100k vertices.
+:::
+
+![](./videos/unwrap.mp4)
+
+
+## Other
 
 #### Hole Filling
 Most of the time, your object will probably be watertight, meaning the mesh is 'closed'.
@@ -143,9 +164,12 @@ Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate
 
 ![](./videos/hole_filling.mp4)
 
-
 ::: tip
 When you run the Voxel remesher, all the holes are automatically closed, whether you are using it on 1 or multiple meshes.ul
 :::
 
 
+#### Triplanar
+
+Converts the mesh into a [triplanar](scene.md#triplanar) primitive.
+You might lose lot of details in the process.

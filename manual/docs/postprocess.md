@@ -64,20 +64,21 @@ Blooms will make the bright area of your scene glow.
 
 
 ## Tone Mapping
-A `Tone Mapping` operator is an operation that will remap HDR values to the `[0, 1]` range (what can be displayed on your screen).
-If you don't use `Tone Mapping` or leave it to none, then any values higher than 1 will be clamped to 1.
+`Tone Mapping` is an operation that will remap HDR values to the `[0, 1]` range.
+If you don't use it (or select `none`), any color component higher than 1 will be clamped.
+Any color variations above this range will then be lost.
 
 You can adjust the overall image with `exposure`, `contrast` and `saturation`.
 
-| Tone Mapping off                  | Tone Mapping on   |
+Notice that with `Tone Mapping` disabled, some details disappear because the pixels are too bright.
+
+| Tone Mapping off           | Tone Mapping on   |
 | :---:                      |:---:                    |
 |![](./images/tone-off.jpg) |![](./images/tone-on.jpg) |
 
-Notice that with Tone Mapping disabled, some details disappeared because some pixels are too much exposed.
-
 
 ## Curvature
-Accentuates edges of the model.
+Sharpen the edges of the model.
 
 | Curvature off              | Curvature on   |
 | :---:                      |:---:                    |
@@ -100,7 +101,7 @@ Simulate the lens artifacts by darkening the screen edges.
 |![](./images/vignette-off.jpg)  |![](./images/vignette-on.jpg) |
 
 ## Grain
-Add a grain effect, it will help reduce the artificial look of the image.
+Add a grain effect, it can help make the image a bit less artificial.
 
 | Grain off                  | Grain on   |
 | :---:                      |:---:                    |

@@ -37,7 +37,6 @@ This might be improved in the future.
 :::
 
 
-
 ## Simple Merge
 This option will simply make one single object entry from multiple selected objects.
 
@@ -51,6 +50,13 @@ More importantly, there won't be any separation between the two meshes, so the p
 When using the voxel merger you can change the resolution of the voxel by going in the [Topology](topology.md) menu.
 
 ![](./videos/merge_add.mp4)
+
+
+## Separate
+If you have a single object based on several disconnected parts, you can split this object into several objects. 
+This can be seen as the opposite of [Simple Merging](#simple-merge).
+
+![](./videos/merge_separate.mp4)
 
 
 ### Subtraction
