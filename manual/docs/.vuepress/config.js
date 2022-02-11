@@ -14,6 +14,7 @@ module.exports = {
     theme : 'default-prefers-color-scheme',
 
     themeConfig : {
+        overrideTheme: 'dark',
         // logo
         logo : '/logo_white.png',
 
