@@ -52,20 +52,23 @@ If it loads correctly, you can move the faulty file (probably the biggest one) o
 Otherwise try to rename the other folder (matcaps, backgrounds) and start Nomad again.
 
 
-## Can you do animation?
+## Can we animate inside Nomad?
+Not for now.
 A timeline feature that could animate the layers could be interesting, but not really planned at the moment.  
 I'd like to support rigging/skinning in the future, but it poses a few challenges (notably the interaction with sculpting tools...) so nothing sure for now.
 
 
-## Can you do low-poly modeling?
+## Can we do proper low-poly modeling?
+Not for now.
 This is not really Nomad *Sculpt*'s scope, but maybe I'll provide a few tools in the future.
 
 
-## Can you do uv and texturing?
-Not planned for now.
+## Can we do uv and texturing?
+For now texturing inside Nomad is not planned.
+However, you can [UV unwrap](topology.md#uv-unwrap) your model and do the texturing inside inside Procreate.
 
 
-## Can you do turntable video recording?
+## Can I record a turntable video?
 Not planned for now, iOS has a native video recording feature that is very easy to use.
 
 
@@ -96,6 +99,9 @@ However if you own both iOS and Android devices, you'll need to purchase the app
 
 ## How to restore my purchase?
 Google Play handles the synchronization automatically.
+
+You need to have access to the Google Play services, recent Huawei devices don't have access to Google services.
+In that case you’ll need to purchase the app again on AppGallery (Huawei app store).
 
 If it doesn't work:
 
