@@ -93,21 +93,23 @@ But the main reason is that I felt like paid Android apps are not really the nor
 
 
 ## Can it work on multiple devices?
-Yes, the purchase is tied to the store used.
+Nomad is available on iOS App Store, Google Play or AppGallery.
 
-However if you own both iOS and Android devices, you'll need to purchase the app twice.
+The purchase is tied to the store account used.
+If you want to use Nomad on several devices you need to make sure it's the same account and platform.
+
 
 ## How to restore my purchase?
-Google Play handles the synchronization automatically.
+Google Play and Huawei should handle the synchronization automatically.
 
 You need to have access to the Google Play services, recent Huawei devices don't have access to Google services.
 In that case you’ll need to purchase the app again on AppGallery (Huawei app store).
 
 If it doesn't work:
 
-- Double check that you are logged on Google Play with the same account.
+- Double check that you are logged on the exact same account you made the purchase with.
 - Go to the About menu (top left nomad icon), and hit `restore purchase`.
-- Wait a few hours, sometimes Google Play takes a bit of time for some reason.
+- Wait a few hours, sometimes the Store takes a bit of time for some reason.
 - Uninstall and reinstall Nomad, make sure to [backup your files](#where-are-my-projects-located-on-my-device) if you don't want to lose anything.
 - Contact me at <support@nomadsculpt.com>, ideally with a screenshot of the logs after trying to restore a purchase (logs can be enabled in the Debug menu).
 
