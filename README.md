@@ -16,7 +16,7 @@ yarn # install dependencies
 yarn dev # dev version (watch)
 yarn build # release version
 
-# visit in the brownser: localhost:8000
+# In browser: localhost:8080
 ```
 
 # Website
@@ -27,7 +27,7 @@ https://html5up.net/solid-state
 cd website
 python3 -m http.server 8000
 
-# visit in the brownser: localhost:8000
+# In browser: localhost:8000
 ```
 
 # Nomad colors
