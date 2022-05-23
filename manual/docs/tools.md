@@ -160,7 +160,7 @@ This tool is mostly similar to the [Masking tool](#mask), the main difference is
 
 
 ## Paint
-To learn more about material you can visit the [Paint & Material](#paint) section.
+To learn more about material you can visit the [Painting](paint.md) section.
 
 ![](./videos/tool_paint.mp4)
 

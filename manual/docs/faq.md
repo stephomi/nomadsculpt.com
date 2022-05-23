@@ -120,15 +120,5 @@ However you can see the list of bugs/fixes for the pending/incoming release in t
 The [web demo](https://stephaneginier.com/archive/nomad_demo) is usually updated with the pending/incoming release.
 
 
-## Can you translate in [my-language]?
-At the moment I rely on [the community](https://github.com/stephomi/nomad-translation) for translation, but it's not realistic since I vastly underestimated the number of texts in Nomad!
-My previous project SculptGL was [much smaller](https://github.com/stephomi/sculptgl/tree/master/src/gui/tr).
-
-And I don't really want to have an incomplete version with many of the text entries not translated.  
-You can't really rely on the community to regularly handle the update (although I've been very lucky with the chinese translation, thanks to [@CrisprHarrison!](https://github.com/CrisprHarrison)).
-
-My plan was to use an app translation service but I want to be sure it's not going to be too much work on maintenance (especially since I do updates regularly).
-So maybe later!
-
-
-
+## Can you translate or fix [my-language]?
+The translation files can be found [here](https://github.com/stephomi/nomad-translation)!
