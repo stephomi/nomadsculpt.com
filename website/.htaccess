@@ -1,7 +1,17 @@
 Options +FollowSymlinks
+
+ErrorDocument 404 /404
+
 RewriteEngine on
 RewriteCond %{SERVER_PORT} 80 
 RewriteRule ^(.*)$ https://nomadsculpt.com/$1 [R,L]
+
+RewriteCond %{REQUEST_URI} ^/404
+RewriteRule ^(.*)$ https://nomadsculpt.com/ [L]
+
+RewriteCond %{THE_REQUEST} \.html
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+RewriteRule ^/?index\.html$ / [R=301,L]
 
 SetOutputFilter DEFLATE
 BrowserMatch ^Mozilla/4 gzip-only-text/html
@@ -15,5 +25,3 @@ Header set Access-Control-Allow-Methods "GET, POST, OPTIONS, DELETE, PUT"
 Header set Access-Control-Allow-Headers "origin, accept, x-requested-with, content-type"
 
 AddType application/wasm wasm
-
-ErrorDocument 404 /

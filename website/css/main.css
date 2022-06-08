@@ -136,16 +136,15 @@ figure {
     align-items: stretch;
 }
 
-.gallery .image {
-    box-sizing: border-box;
+.gallery span {
     width: 50%;
-    padding: 10px 5px;
 }
 
-.gallery .image img {
+.gallery span img {
+    box-sizing: border-box;
+    padding: 10px 5px;
     width: 100%;
 }
-
 
 /* App access */
 .access {
@@ -663,25 +662,6 @@ body.is-preload #banner p {
 }
 
 /* Footer */
-#footer .inner {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 2em 2em 0.1em 2em;
-    margin: 0 auto;
-    width: 55em;
-    display: block;
-    width: 100%;
-}
-
-#footer .inner .copyright {
-    border-top: solid 2px rgba(255, 255, 255, 0.125);
-    list-style: none;
-    margin-right: 2em;
-    padding: 2em 0 0 0;
-    width: 100%;
-}
-
 #footer .inner .copyright li {
     border-left: solid 2px rgba(255, 255, 255, 0.125);
     color: rgba(255, 255, 255, 0.35);

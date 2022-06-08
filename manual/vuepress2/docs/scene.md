@@ -90,7 +90,7 @@ When you `Validate` a primitive you won't be able to edit the primitives setting
 | Icosahedron | ![](./icons/icosahedron.png#small) | - |
 | UV-sphere   | ![](./icons/sphere.png#small)      | You should probably not use this primitive, see [Warning below](#sphere-warning) |
 | Plane       | ![](./icons/rectangle.png#small)   | It's a simple plane, note that this is the only primitive that is not closed |
-| Triplanar   | ![](./icons/sphere.png#small)      | A special primitive, see [Triplanar](triplanar) |
+| Triplanar   | ![](./icons/sphere.png#small)      | A special primitive, see [Triplanar](#triplanar) |
 
 ::: tip
 If you wonder what is the base mesh when you launch Nomad: this is a subdivided box as well.

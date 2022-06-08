@@ -12,7 +12,7 @@ You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <supp
 | [Tools](tools.md)              | ![](./icons/tools.png#small)        | List of every tools/brushes |
 | [Topology](topology.md)        | ![](./icons/grid.png#small)         | Edit the topology of the model |
 | [Stroke](stroke.md)            | ![](./icons/pencil.png#small)       | Edit the current tool settings, stroke, falloff... |
-| [Vertex Paint](paint.md)       | ![](./icons/paint.png#small)        | Painting settings for painting tools |
+| [Painting](painting.md)	     | ![](./icons/paint.png#small)        | Painting settings for painting tools |
 | [Files](files.md)              | ![](./icons/open.png#small)         | Manage your projects, export, import, etc |
 | [Background](background.md)    | ![](./icons/image.png#small)        | Change the background and add a reference image |
 | [Lighting](lighting.md)        | ![](./icons/sun.png#small)          | How to lit your scene |
@@ -39,6 +39,12 @@ src="https://www.youtube.com/embed/videoseries?list=PLMiwb2mOovgx84CyRq1Mp9KGGW1
 
 <iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
 src="https://www.youtube.com/embed/videoseries?list=PLYgW0C-nQEFNSS2llnNjkx8NpN6MXhfdI"
+></iframe>
+
+### ProcreateFX
+
+<iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
+src="https://www.youtube.com/embed/videoseries?list=PLB7Y73iM30v7ccCdSeYt2A7p7eo7_g3Uy" 
 ></iframe>
 
 ### DM Art classes

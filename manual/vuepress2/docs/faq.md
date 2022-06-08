@@ -5,11 +5,13 @@
 ---
 
 ## Where are my projects located on my device?
-On iOS, it's simply in `Nomad/projects/`.  
+The projects are located in the `projects` folder inside the main Nomad folder.
 
-On Android, it's in `Android/data/com.stephaneginier.nomad/files/projects/`.  
+On iOS, you can access the Nomad folder with the iOS Files app.
+
+On Android, the Nomad folder is in `Android/data/com.stephaneginier.nomad/files/`.  
 On the recent Android version (10/11), you don't have access to the `Android/data`folder anymore.
-You can access it through a separate app, for example [this app](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager).
+You can access it through a separate app, for example [this one](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager).
 
 
 ## It crashes when I save or remesh my model!
@@ -46,26 +48,49 @@ With homebrew, simply do `brew install lz4` and then `lz4 myproject.glb.lz4`.
 
 
 ## It crashes when I start Nomad!
-Rename the [projects folder](#where-are-my-projects-located-on-my-device) and start Nomad to see if it's working.
-If it loads correctly, you can move the faulty file (probably the biggest one) outside the `projects` folder.
+If it crashes at loading, it means Nomad struggles with a certain file present in the Nomad folder.
 
-Otherwise try to rename the other folder (matcaps, backgrounds) and start Nomad again.
+Most of the time, it happens because the project is heavy and it will unfortunately exceed the RAM limit.
+
+Locate the [Nomad folder](#where-are-my-projects-located-on-my-device), and then rename or move some file to find the culprit.
+
+First, try to rename `settings.json`. That way it will stop loading the last project.
+
+If it doesn't work, try to move some recent files outside their respective resource folders (`projects`, `matcaps`, `environments`, etc).
+
+You can also rename the folder themselves so that Nomad completely ignores
+
+::: tip
+When Nomad loads a file at startup, it always moves the file in the `can_be_deleted/` folder.
+If the operation succeeds, then it is moved back to its original folder.
+
+If it crashes before the loading is finished, then Nomad will launch successfully on the next start, as it ignores the `can_be_deleted/` folder.
+
+You can simply try to load this file again if you think it can succeed.
+
+If you have issues with a relatively small file, you can contact me at <support@nomadsculpt.com> and I will take a look.
+
+If the file is big, you can always follow [steps 4 to 6](#it-crashes-when-i-load-my-project).
+:::
 
 
-## Can you do animation?
+## Can we animate inside Nomad?
+Not for now.
 A timeline feature that could animate the layers could be interesting, but not really planned at the moment.  
 I'd like to support rigging/skinning in the future, but it poses a few challenges (notably the interaction with sculpting tools...) so nothing sure for now.
 
 
-## Can you do low-poly modeling?
+## Can we do proper low-poly modeling?
+Not for now.
 This is not really Nomad *Sculpt*'s scope, but maybe I'll provide a few tools in the future.
 
 
-## Can you do uv and texturing?
-Not planned for now.
+## Can we do uv and texturing?
+For now texturing inside Nomad is not planned.
+However, you can [UV unwrap](topology.md#uv-unwrap) your model and do the texturing inside inside Procreate.
 
 
-## Can you do turntable video recording?
+## Can I record a turntable video?
 Not planned for now, iOS has a native video recording feature that is very easy to use.
 
 
@@ -90,18 +115,23 @@ But the main reason is that I felt like paid Android apps are not really the nor
 
 
 ## Can it work on multiple devices?
-Yes, the purchase is tied to the store used.
+Nomad is available on iOS App Store, Google Play or AppGallery.
 
-However if you own both iOS and Android devices, you'll need to purchase the app twice.
+The purchase is tied to the store account used.
+If you want to use Nomad on several devices you need to make sure it's the same account and platform.
+
 
 ## How to restore my purchase?
-Google Play handles the synchronization automatically.
+Google Play and Huawei should handle the synchronization automatically.
+
+You need to have access to the Google Play services, recent Huawei devices don't have access to Google services.
+In that case you’ll need to purchase the app again on AppGallery (Huawei app store).
 
 If it doesn't work:
 
-- Double check that you are logged on Google Play with the same account.
+- Double check that you are logged on the exact same account you made the purchase with.
 - Go to the About menu (top left nomad icon), and hit `restore purchase`.
-- Wait a few hours, sometimes Google Play takes a bit of time for some reason.
+- Wait a few hours, sometimes the Store takes a bit of time for some reason.
 - Uninstall and reinstall Nomad, make sure to [backup your files](#where-are-my-projects-located-on-my-device) if you don't want to lose anything.
 - Contact me at <support@nomadsculpt.com>, ideally with a screenshot of the logs after trying to restore a purchase (logs can be enabled in the Debug menu).
 
@@ -112,15 +142,5 @@ However you can see the list of bugs/fixes for the pending/incoming release in t
 The [web demo](https://stephaneginier.com/archive/nomad_demo) is usually updated with the pending/incoming release.
 
 
-## Can you translate in [my-language]?
-At the moment I rely on [the community](https://github.com/stephomi/nomad-translation) for translation, but it's not realistic since I vastly underestimated the number of texts in Nomad!
-My previous project SculptGL was [much smaller](https://github.com/stephomi/sculptgl/tree/master/src/gui/tr).
-
-And I don't really want to have an incomplete version with many of the text entries not translated.  
-You can't really rely on the community to regularly handle the update (although I've been very lucky with the chinese translation, thanks to [@CrisprHarrison!](https://github.com/CrisprHarrison)).
-
-My plan was to use an app translation service but I want to be sure it's not going to be too much work on maintenance (especially since I do updates regularly).
-So maybe later!
-
-
-
+## Can you translate or fix [my-language]?
+The translation files can be found [here](https://github.com/stephomi/nomad-translation)!

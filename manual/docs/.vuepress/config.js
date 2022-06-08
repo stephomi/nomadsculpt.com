@@ -42,7 +42,7 @@ module.exports = {
                 'tools',
                 'topology',
                 'stroke',
-                'paint',
+                'painting',
                 'files',
                 'background',
                 'lighting',

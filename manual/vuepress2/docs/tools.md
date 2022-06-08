@@ -17,7 +17,7 @@
 | [Selector Mask](#selector-mask) | ![](./images/tools/maskSelector.png#medium) |
 | [Drag](#drag)                   | ![](./images/tools/drag.png#medium)         |
 | [Move](#move)                   | ![](./images/tools/move.png#medium)         |
-| [Paint](#paint)                 | ![](./images/tools/paint.png#medium)        |
+| [Paint](#paint)		          | ![](./images/tools/paint.png#medium)        |
 | [Smudge](#smudge)               | ![](./images/tools/smudge.png#medium)       |
 | [Trim](#trim)                   | ![](./images/tools/trim.png#medium)         |
 | [Split](#split)                 | ![](./images/tools/split.png#medium)        |
@@ -160,7 +160,7 @@ This tool is mostly similar to the [Masking tool](#mask), the main difference is
 
 
 ## Paint
-To learn more about material you can visit the [Paint & Material](#paint) section.
+To learn more about material you can visit the [Painting](painting.md) section.
 
 ![](./videos/tool_paint.mp4)
 

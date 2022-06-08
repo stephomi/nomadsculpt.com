@@ -154,6 +154,14 @@ Computing UVs can take some time, it is best to have a mesh with fewer than 100k
 ![](./videos/unwrap.mp4)
 
 
+## Bake vertex colors to texture 
+
+If your model has UVs, you can transfer vertex painting into textures.
+For now only Color, Roughness and Metalness are supported.
+
+It can be useful if you want to export the object to a texturing tool, but you already started to paint it in Nomad.
+
+
 ## Other
 
 #### Hole Filling

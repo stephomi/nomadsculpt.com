@@ -40,7 +40,7 @@ The effect only depends on the model geometry.
 | Curvature bias | How sensitive the effect is relative to the surface variation |
 
 
-| SSAO off                   | SSAO off |
+| SSAO off                   | SSAO on |
 | :---:                      |:---:                      |
 |![](./images/ssao-off.jpg)  | ![](./images/ssao-on.jpg) |
 

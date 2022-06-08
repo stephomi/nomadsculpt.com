@@ -5,7 +5,7 @@
 ---
 
 Materials are properties that can change the look of your object.
-For precise control over the object's painting, see the [Vertex Paint options](paint.md);
+For precise control over the object's painting, see the [Vertex Paint options](painting.md);
 
 At the moment, each object has its own material, two objects cannot share the same material.
 

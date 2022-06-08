@@ -11,7 +11,7 @@ You can choose between two rendering modes:
 | [PBR](#pbr)       | Physically Based Rendering | Painting with metalness/roughness   |
 | [Matcap](#matcap) | Material Capture           | Mostly be useful for pure sculpting |
 
-If you want to learn more about what metalness and roughness stands for, see the [Vertex Paint](paint.md) section.
+If you want to learn more about what metalness and roughness stands for, see the [Vertex Paint](painting.md) section.
 
 
 ## PBR

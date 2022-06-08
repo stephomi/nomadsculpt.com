@@ -78,7 +78,7 @@ It can delete unused
 
 ### Load project GUI settings
 When you save in *.glTF* format, all the settings are saved in the file as well.
-However when you load a project, some settings are ignored, typically the that concerns the [Interface](#interface), but also some other "general purpose global settings".
+However when you load a project, some settings are ignored, typically the that concerns the [Interface](interface.md), but also some other "general purpose global settings".
 
 
 
