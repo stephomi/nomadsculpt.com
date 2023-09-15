@@ -1,6 +1,6 @@
 // https://v2.vuepress.vuejs.org/reference/default-theme/config.html
 
-import {defaultTheme} from '@vuepress/theme-default'
+import {defaultTheme} from 'vuepress'
 import html5embed from 'markdown-it-html5-embed'
 import fullTextSearchPlugin from 'vuepress-plugin-full-text-search2';
 

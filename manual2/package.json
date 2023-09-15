@@ -16,9 +16,16 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.67",
     "@vuepress/plugin-search": "^2.0.0-beta.67",
     "markdown-it-html5-embed": "^1.0.0",
-    "vuepress": "^2.0.0-beta.67",
+    "vue": "^3.3.4",
+    "vuepress": "2.0.0-beta.67",
     "vuepress-plugin-full-text-search2": "^0.4.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "markdown-it@<12.3.2": ">=12.3.2"
+    }
   }
 }

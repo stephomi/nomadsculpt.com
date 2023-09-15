@@ -12,9 +12,16 @@ git clone https://github.com/stephomi/nomadsculpt.com.git
 
 ```bash
 cd manual
+
+# with npm
 npm install
 npm run dev
 # npm run build
+
+# with pnpm
+pnpm install
+pnpm run dev
+# pnpm run build
 
 # In browser: localhost:8080
 ```
