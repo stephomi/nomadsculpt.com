@@ -27,28 +27,33 @@ You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <supp
 | [History](history.md)          | ![](./icons/history.png#small)      | Manage the undo/redo history stack |
 | [FAQ](faq.md)                  | ![](./icons/faq.png#small)          | Frequently Asked Questions |
 
-# Community tutorial
+# Community resources
+
+- [German manual (nomad-sculpting.de)](https://nomad-sculpting.de/nomad-sculpt/handbuch/)
+
+## Videos
 
 ### Glen southern
-
 <iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
 src="https://www.youtube.com/embed/videoseries?list=PLMiwb2mOovgx84CyRq1Mp9KGGW1pLVGun" 
 ></iframe>
 
-###  Small Robot Studio
+### Dave Reed
+<iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
+src="https://www.youtube.com/embed/videoseries?list=PL6MTHAIpepACvJC1EI4VbEJLjg6EvJqHD" 
+></iframe>
 
+###  Small Robot Studio
 <iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
 src="https://www.youtube.com/embed/videoseries?list=PLYgW0C-nQEFNSS2llnNjkx8NpN6MXhfdI"
 ></iframe>
 
 ### ProcreateFX
-
 <iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
-src="https://www.youtube.com/embed/videoseries?list=PLB7Y73iM30v7ccCdSeYt2A7p7eo7_g3Uy" 
+src="https://www.youtube.com/embed/videoseries?v=foz0qjpK-9Y&list=UULFibxHV5zDtzjuh7igigHqlQ" 
 ></iframe>
 
 ### DM Art classes
-
 <iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
 src="https://www.youtube.com/embed/videoseries?list=PLecwVdXezX3SRHBQ1_se93qOGtqvLZj_E"
 ></iframe>

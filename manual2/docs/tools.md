@@ -11,7 +11,7 @@
 | [Pinch](#pinch)                 | ![](./images/tools/pinch.png#medium)        |
 | [Nudge](#nudge)                 | ![](./images/tools/nudge.png#medium)        |
 | [Stamp](#stamp)                 | ![](./images/tools/stamp.png#medium)        |
-| [Delete Layer](#delete-Layer)   | ![](./images/tools/clearLayer.png#medium)   |
+| [Delete Layer](#delete-layer)   | ![](./images/tools/clearLayer.png#medium)   |
 | [Smooth](#smooth)               | ![](./images/tools/smooth.png#medium)       |
 | [Mask](#mask)                   | ![](./images/tools/mask.png#medium)         |
 | [Selector Mask](#selector-mask) | ![](./images/tools/maskSelector.png#medium) |

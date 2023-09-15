@@ -1,13 +1,13 @@
 // https://v2.vuepress.vuejs.org/reference/default-theme/config.html
 
-// import {searchPlugin} from '@vuepress/plugin-search'
 import {defaultTheme} from '@vuepress/theme-default'
 import html5embed from 'markdown-it-html5-embed'
+import fullTextSearchPlugin from 'vuepress-plugin-full-text-search2';
 
 export default {
     lang: 'en-US',
     description: 'Nomad Sculpt Manual',
-    base: '/manual/',
+    base: '/manual2/',
 
     head:
         [
@@ -78,14 +78,14 @@ export default {
             });
         },
 
-    // plugins : [
-    //     searchPlugin({
-    //         maxSuggestions : 10,
-    //         locales : {
-    //             '/' : {
-    //                 placeholder : 'Search...',
-    //             }
-    //         },
-    //     }),
-    // ],
+    plugins : [
+        fullTextSearchPlugin({
+            maxSuggestions : 10,
+            locales : {
+                '/' : {
+                    placeholder : 'Search...',
+                }
+            },
+        }),
+    ],
 }

@@ -8,7 +8,6 @@ img[src*="#small"] {
     width: 24px;
     pointer-events: none;
 }
-
 img[src*="#medium"] {
     width: 32px;
     pointer-events: none;
@@ -51,25 +50,20 @@ html.dark {
 .suggestion.focused a {
     color: var(--c-brand) !important;
 }
-
 .suggestion-content .highlight {
     text-decoration-line: underline;
     color: var(--c-brand);
     background-color: rgba(0, 0, 0, 0) !important;
 }
-
-.suggestion-content {
+.suggestions {
     width: 500px !important;
 }
-
-.search-box {
-    padding-left: 10px;
-}
-
 .parent-page-title {
     background: var(--c-bg-light) !important;
 }
-
 .page-title {
     background: var(--c-bg) !important;
+}
+.search-box {
+    padding-left: 10px;
 }

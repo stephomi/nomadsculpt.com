@@ -154,12 +154,35 @@ Computing UVs can take some time, it is best to have a mesh with fewer than 100k
 ![](./videos/unwrap.mp4)
 
 
-## Bake vertex colors to texture 
+## Bake to texture 
 
-If your model has UVs, you can transfer vertex painting into textures.
-For now only Color, Roughness and Metalness are supported.
+Texture baking will create textures by projecting other visible objects in the scene.
 
-It can be useful if you want to export the object to a texturing tool, but you already started to paint it in Nomad.
+Here is the typical workflow for baking:
+- You have a mesh with fine details and painting
+- Clone it
+- Decimate it (set `Preserve painting` to 0!)
+- UV unwrap it
+- Bake it!
+
+Nomad will take every visible mesh in the scene into account.
+You can also use the Solo mode to quickly hide most of the other meshes.
+If there is no other visible objects, then it will take the entire scene into account.
+
+You should now have a low-resolution mesh that retains most of the paint and details of your previous object.
+
+After the operation, vertex colors will be moved in a new disabled layer, so that it gets ignored instead of being multiplied against the colored texture.
+
+
+## Reproject to vertex
+
+Project sculpted details, painting and layers from the nearest visible objects.
+
+This is mostly meant to be used on a high-resolution mesh as well, typically with a clean topology.
+
+::: tip
+When using `Bake to texture` or `Reproject to vertex`, both the vertex colors and material textures will be taken into account.
+:::
 
 
 ## Other
