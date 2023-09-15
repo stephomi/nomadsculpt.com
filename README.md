@@ -12,9 +12,9 @@ git clone https://github.com/stephomi/nomadsculpt.com.git
 
 ```bash
 cd manual
-yarn # install dependencies
-yarn dev # dev version (watch)
-yarn build # release version
+npm install
+npm run dev
+# npm run build
 
 # In browser: localhost:8080
 ```

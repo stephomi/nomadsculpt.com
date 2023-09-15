@@ -15,12 +15,12 @@
     "build": "vuepress build docs"
   },
   "license": "MIT",
-  "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.9.7",
-    "@vuepress/plugin-google-analytics": "^1.9.7",
-    "@vuepress/plugin-medium-zoom": "^1.9.7",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.10",
+    "@vuepress/plugin-google-analytics": "^1.9.10",
+    "@vuepress/plugin-medium-zoom": "^1.9.10",
     "markdown-it-html5-embed": "^1.0.0",
-    "vuepress": "^1.9.7",
+    "vuepress": "^1.9.10",
     "vuepress-plugin-clean-urls": "^1.1.2",
     "vuepress-plugin-fulltext-search": "^2.2.1",
     "vuepress-theme-default-prefers-color-scheme": "^2.0.0"
