@@ -6,13 +6,6 @@
 
 Most of the options in this section concern the viewport display.
 
-
-## Wireframe
-Display the topology of the scene.
-
-Note that showing the Wireframe will lower the performance.
-
-
 ## Smooth Shading
 If Smooth Shading is disabled, the faces are shaded independently, so you can see the underlying topology.
 This is the reason why disabling it is preferred during the sculpting stage.
@@ -20,19 +13,15 @@ However for rendering purposes, sometimes you might want to enable it.
 
 Disabling Smooth Shading improves the performance a little bit.
 
+## Outline Selection
+You can display an outline on your current selection.
+
+This is useful to get visual feedback on your current selected meshes in case [Darken Unselected](#darken-unselected) is disabled.
+
+From a performance point of view, using [Darken Unselected](#darken-unselected) is much better than using the outline solution.
 
 ## Grid
 Display a planar grid so that you can get a better understanding of how your scene is positioned on the scene.
-
-
-## Render Resolution
-You can change the render resolution, it can be useful if you want to increase the performance in case the rendering is the bottleneck.
-
-
-## Scene Painting
-You can check this option if you want to ignore the object's painting.
-The default paint used is a white non-metallic material, at 25% roughness.
-
 
 ## Two sided
 All faces point in a certain direction.
@@ -46,12 +35,26 @@ Most of the time you shouldn't see the backface part of faces, so coloring them 
 Disabling `two sided` rendering can improve rendering performance a bit.
 
 
-## Outline Selection
-You can display an outline on your current selection.
+## Wireframe
+Display the topology of the scene.
 
-This is useful to get visual feedback on your current selected meshes in case [Darken Unselected](#darken-unselected) is disabled.
+Note that showing the Wireframe will lower the performance.
 
-From a performance point of view, using [Darken Unselected](#darken-unselected) is much better than using the outline solution.
+
+## Snap cube
+
+Display a helper icon in the corner of the scene, useful to quickly switch between front/back/left/right/top/bottom views.
+
+## Show Painting
+You can check this option if you want to ignore the object's painting.
+The default paint used is a white non-metallic material, at 25% roughness.
+
+## Stats
+Display information about your system memory, total scene vertex count, and the current selection vertex count.
+
+
+## Render Resolution
+You can change the render resolution, it can be useful if you want to increase the performance in case the rendering is the bottleneck.
 
 
 ## Darken Unselected
