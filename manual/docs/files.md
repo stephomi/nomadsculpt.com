@@ -1,28 +1,26 @@
 # Files
-
-[[toc]]
-
 ---
 # Project
-# Save
+
+## Save ![](./icons/save.png#icon#left)
 Save the Nomad project.
 
-## Save As...
+## Save As... ![](./icons/save_as.png#icon#left)
 Display the project browser to allow you to save the Nomad project with a new name.
 
-## Open...
+## Open... ![](./icons/open.png#icon#left)
 Display the project browser to open a project.
 
-## Add to scene...
+## Add to scene... ![](./icons/add_file.png#icon#left)
 Display the project browser, when a project is selected it's contents will be merged with the current scene.
 
-## Delete...
+## Delete... ![](./icons/trash.png#icon#left)
 Display the project browser, any selected projects will be deleted from the file system.
 
-## New
+## New ![](./icons/new_file.png#icon#left)
 Start a new project, if there are unsaved changes you will be asked if you want to save.
 
-## Advanced
+## Advanced ![](./icons/cog.png#icon#left)
 Display advanced options:
 
 ### Project/ glTF / OBJ / STL / FBX

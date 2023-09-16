@@ -1,11 +1,5 @@
 # Camera
 
-[[toc]]
-
----
-
-<!-- ![Camera](./overview/menu_camera.jpg) -->
-
 ## Views
 You can save camera view points by using `Add View`.
 If you click on the view name, then the camera will restore the view.
@@ -16,9 +10,9 @@ A saved view will save the [Projection Type](#projection-type) settings but also
 It can be useful if you want to cycle between front/left/back reference views with different backgrounds.
 :::
 
-| Action      | Icon                                       | Description  |
-| :---:       | :---:                                      | :---:        |
-| Update View | ![](./icons/update_view.png#small) | Update the saved view with the current view point |
+| Action      | Icon                             | Description  |
+| :---:       | :---:                            | :---:        |
+| Update View | ![](./icons/update_view.png#icon) | Update the saved view with the current view point |
 
 
 ## Interaction

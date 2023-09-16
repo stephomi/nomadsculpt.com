@@ -1,7 +1,5 @@
 # Lighting
 
-[[toc]]
-
 ---
 
 You can choose between two rendering modes:

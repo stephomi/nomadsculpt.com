@@ -1,7 +1,5 @@
 # Symmetry
 
-[[toc]]
-
 ---
 
 You can use symmetry to mirror sculpting operations from one side to the other.

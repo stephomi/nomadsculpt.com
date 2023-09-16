@@ -1,7 +1,5 @@
 # Settings
 
-[[toc]]
-
 ---
 
 Most of the options in this section concern the viewport display.

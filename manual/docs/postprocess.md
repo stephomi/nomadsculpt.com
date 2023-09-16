@@ -1,7 +1,5 @@
 # Post process
 
-[[toc]]
-
 ---
 
 Using post processing can dramatically improve the final look of your scene.
@@ -26,7 +24,7 @@ This effect is only effective with PBR mode.
 
 | SSR off                    | SSR off |
 | :---:                      |:---:                    |
-|![](./images/ssr-off.jpg)  | ![](./images/ssr-on.jpg) |
+|![](./images/ssr-off.jpg)   | ![](./images/ssr-on.jpg) |
 
 
 ## Ambient Occlusion (SSAO)

@@ -1,7 +1,5 @@
 # Layers
 
-[[toc]]
-
 ---
 
 Layers can record position offsets and painting, it can be useful for non-linear workflow.
@@ -17,15 +15,15 @@ You can clear part of this mask by using the [Delete Layer](#delete-layer) tool.
 
 ## Options
 
-| Action       | Icon                              | Description  |
-| :---:        | :---:                             | :---:        |
-| Visible      | ![](./icons/eye_open.png#small)   | Show/hide the layer influence |
-| Edit Name    | ![](./icons/pencil.png#small)     | Edit the layer name |
-| Delete       | ![](./icons/trash.png#small)      | Delete the layer |
-| Move         | ![](./icons/move.png#small)       | Hold to move the layer position in the list |
-| Duplicate    | ![](./icons/clone.png#small)      | Duplicate the layer |
-| Merge Down   | ![](./icons/merge_down.png#small) | Merge the layer with the lower layer (or base mesh) |
-| More         | ![](./icons/more.png#small)       | [More...](#more) options |
+| Action       | Icon                             | Description  |
+| :---:        | :---:                            | :---:        |
+| Visible      | ![](./icons/eye_open.png#icon)   | Show/hide the layer influence |
+| Edit Name    | ![](./icons/pencil.png#icon)     | Edit the layer name |
+| Delete       | ![](./icons/trash.png#icon)      | Delete the layer |
+| Move         | ![](./icons/move.png#icon)       | Hold to move the layer position in the list |
+| Duplicate    | ![](./icons/clone.png#icon)      | Duplicate the layer |
+| Merge Down   | ![](./icons/merge_down.png#icon) | Merge the layer with the lower layer (or base mesh) |
+| More         | ![](./icons/more.png#icon)       | [More...](#more) options |
 
 ### More...
 If you want more control you can change the intensity of each channel of a layer:

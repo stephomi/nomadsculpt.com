@@ -1,9 +1,5 @@
 # Painting
 
-[[toc]]
-
----
-
 ## Material
 
 [PBR](lighting.md#pbr) painting is using 3 channels at the moment.

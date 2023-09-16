@@ -1,7 +1,5 @@
 # Interface
 
-[[toc]]
-
 ---
 
 You can customize many interface settings.

@@ -1,7 +1,5 @@
 # Stroke
 
-[[toc]]
-
 ---
 
 You can customize the stroke behavior of most tool brushes.

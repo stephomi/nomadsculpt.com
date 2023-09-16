@@ -1,9 +1,5 @@
 # FAQ
 
-[[toc]]
-
----
-
 ## Where are my projects located on my device?
 The projects are located in the `projects` folder inside the main Nomad folder.
 

@@ -1,7 +1,5 @@
 # Background
 
-[[toc]]
-
 ---
 
 For now there are two options for the viewport background.

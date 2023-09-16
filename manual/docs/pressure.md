@@ -1,7 +1,5 @@
 # Pressure
 
-[[toc]]
-
 ---
 
 This menu lets you customize the behavior of the tablet pencil, such as the Apple Pencil or Samsung S Pen.

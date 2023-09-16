@@ -1,7 +1,5 @@
 # Topology
 
-[[toc]]
-
 ---
 
 Nomad is a polygonal software, it uses triangles and quads to handle the geometry.
@@ -196,7 +194,7 @@ Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate
 ![](./videos/hole_filling.mp4)
 
 ::: tip
-When you run the Voxel remesher, all the holes are automatically closed, whether you are using it on 1 or multiple meshes.ul
+When you run the Voxel remesher, all the holes are automatically closed, whether you are using it on 1 or multiple meshes.
 :::
 
 

@@ -1,7 +1,5 @@
 # Material
 
-[[toc]]
-
 ---
 
 Materials are properties that can change the look of your object.
