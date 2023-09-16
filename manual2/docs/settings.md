@@ -7,6 +7,7 @@
 Most of the options in this section concern the viewport display.
 
 # Display settings
+This section is quick launch shortcuts for most of the setting below.
 
 ## Smooth Shading
 If Smooth Shading is disabled, the faces are shaded independently, so you can see the underlying topology.
@@ -94,37 +95,49 @@ Activate the wireframe overlay, and set the wireframe colour and opacity.
 Acivate the grid, and set the grid color and opacity
 
 # Two sided
-<!--
-continue from here
- -->
+Enable seeing polygon faces from both sides.
+
+## Color Backface, Backface Color
+Enable tinting of the backfaces, and the tint color.
+
+# Outline
+Enable an outline aroudn the active object
+
+## Outline color, Thickness
+Set the colour and thickness of the outline.
 
 ## Render Resolution
 You can change the render resolution, it can be useful if you want to increase the performance in case the rendering is the bottleneck.
 
+# Highlight
+Enable a shot flash when the active object is changed
+## Colour, Duration
+Set the colour and length of time of the flash in miliseconds.
 
+# Snap cube
+Display a helper icon in the corner of the scene, useful to quickly switch between front/back/left/right/top/bottom views. Tap on the sides of the cube to swap between orthgraphic views.
 
+## Shape
+Choose between a cube, a sphere, or a gnomon shape for the snape cube.
 
-## Max Detail Range
-This slider can let you increase the maximum value of 2 details sliders: the one that drives the Voxel Remesher and the one for Dynamic Topology.
+## Restrict alignment
+Enable camera rotation locking when dragging on the snap cube. When active, a drag motion on the snap cube will only go left/right or up/down.
 
+## Size, Bottom, Left
+Set the size and location on screen of the snap cube.
 
-## Experimental
-### Partial Drawing
-If you want to sculpt a very small part of a big mesh or big scene, it can increase performance by a lot!
-However you can get noticeable artifacts
+## Flip 180
+Enable a tap behavior so that if the view is snapped, tapping on the front of the cube will rotate the view 180 degrees, so front will become back, left will become right, top will become bottom etc.
 
-<!--
-### Sculpt Parallel
-You should let this option disabled.
- -->
+# Stats
+Display information about your system memory, total scene vertex count, and the current selection vertex count.
+## Right
+Enable the stats information to be placed on the right side of the screen.
 
-### Keep Topology At Import
-When you import or load a mesh, a quick optimization will occur.
-It can delete unused
+# Multiresolution
+## Max vertices count
+Set a threshold to now allow a multires subdivide operation higher than this poly count, which would likely crash Nomad. The default is 10 million.
 
-### Load project GUI settings
-When you save in *.glTF* format, all the settings are saved in the file as well.
-However when you load a project, some settings are ignored, typically the that concerns the [Interface](interface.md), but also some other "general purpose global settings".
-
-
-
+# Settings
+## Reset to default
+Reset all the settings to their default values.
