@@ -8,28 +8,28 @@ You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <supp
 
 | Menu                           | Icon                                | Description  |
 | :---:                          | :---:                               | :---:        |
-| [Camera](camera.md)            | ![](./icons/camera.png#small)       | Camera control and interaction |
-| [Tools](tools.md)              | ![](./icons/tools.png#small)        | List of every tools/brushes |
-| [Topology](topology.md)        | ![](./icons/grid.png#small)         | Edit the topology of the model |
-| [Stroke](stroke.md)            | ![](./icons/pencil.png#small)       | Edit the current tool settings, stroke, falloff... |
-| [Painting](painting.md)	     | ![](./icons/paint.png#small)        | Painting settings for painting tools |
 | [Files](files.md)              | ![](./icons/open.png#small)         | Manage your projects, export, import, etc |
-| [Background](background.md)    | ![](./icons/image.png#small)        | Change the background and add a reference image |
-| [Lighting](lighting.md)        | ![](./icons/sun.png#small)          | How to lit your scene |
-| [Post Process](postprocess.md) | ![](./icons/post_process.png#small) | Post Processing (screen-space visual effects) |
-| [Material](material.md)        | ![](./icons/material.png#small)     | Material (object-level) |
 | [Scene](scene.md)              | ![](./icons/scene.png#small)        | Add new primitive and manage your scene objects |
-| [Layers](layers.md)            | ![](./icons/layers.png#small)       | Manage your current object layers |
+| [Topology](topology.md)        | ![](./icons/multires.png#small)     | Edit the topology of the model |
+| [Material](material.md)        | ![](./icons/material.png#small)     | Material (object-level) |
+| [Lighting](lighting.md)        | ![](./icons/sun.png#small)          | How to light your scene |
+| [Post Process](postprocess.md) | ![](./icons/post_process.png#small) | Post Processing (screen-space visual effects) |
+| [Background](background.md)    | ![](./icons/image.png#small)        | Change the background and add a reference image |
+| [Camera](camera.md)            | ![](./icons/camera.png#small)       | Camera control and interaction |
+| [Stroke](stroke.md)            | ![](./icons/pencil.png#small)       | Edit the current tool settings, stroke, falloff... |
 | [Pressure](pressure.md)        | ![](./icons/pressure.png#small)     | Manage the pressure of your pencil |
+| [Painting](painting.md)	     | ![](./icons/paint.png#small)        | Painting settings for painting tools |
 | [Symmetry](symmetry.md)        | ![](./icons/symmetry.png#small)     | Manage the mirror plane of your current mesh |
-| [Settings](settings.md)        | ![](./icons/settings.png#small)     | Customize the 3d viewport |
+| [Layers](layers.md)            | ![](./icons/layers.png#small)       | Manage your current object layers |
+| [Settings](settings.md)        | ![](./icons/cog.png#small)          | Customize the 3d viewport |
 | [Interface](interface.md)      | ![](./icons/interface.png#small)    | Customize the interface |
+| [Tools](tools.md)              | ![](./icons/tools.png#small)        | List of every tools/brushes |
 | [History](history.md)          | ![](./icons/history.png#small)      | Manage the undo/redo history stack |
 | [FAQ](faq.md)                  | ![](./icons/faq.png#small)          | Frequently Asked Questions |
 
 # Community resources
 
-- [German manual (nomad-sculpting.de)](https://nomad-sculpting.de/nomad-sculpt/handbuch/)
+- [German manual (nomad-sculpting.de)](https://nomad-sculpting.de/nomad-sculpt/handbuch/)a
 
 ## Videos
 

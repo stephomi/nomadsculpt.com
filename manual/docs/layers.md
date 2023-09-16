@@ -17,13 +17,13 @@ You can clear part of this mask by using the [Delete Layer](#delete-layer) tool.
 
 ## Options
 
-| Action       | Icon                                      | Description  |
-| :---:        | :---:                                     | :---:        |
-| Visible      | ![](./icons/show.png#small)       | Show/hide the layer influence |
+| Action       | Icon                              | Description  |
+| :---:        | :---:                             | :---:        |
+| Visible      | ![](./icons/eye_open.png#small)   | Show/hide the layer influence |
 | Edit Name    | ![](./icons/pencil.png#small)     | Edit the layer name |
 | Delete       | ![](./icons/trash.png#small)      | Delete the layer |
 | Move         | ![](./icons/move.png#small)       | Hold to move the layer position in the list |
-| Duplicate    | ![](./icons/duplicate.png#small)  | Duplicate the layer |
+| Duplicate    | ![](./icons/clone.png#small)      | Duplicate the layer |
 | Merge Down   | ![](./icons/merge_down.png#small) | Merge the layer with the lower layer (or base mesh) |
 | More         | ![](./icons/more.png#small)       | [More...](#more) options |
 
