@@ -1,0 +1,4 @@
+ErrorDocument 404 /manual/404
+ 
+Header set Cross-Origin-Embedder-Policy ""
+Header set Cross-Origin-Opener-Policy ""

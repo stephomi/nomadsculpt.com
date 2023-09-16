@@ -31,34 +31,34 @@ You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <supp
 
 # Community resources
 
-- [German manual (nomad-sculpting.de)](https://nomad-sculpting.de/nomad-sculpt/handbuch/)a
+- [German manual (nomad-sculpting.de)](https://nomad-sculpting.de/nomad-sculpt/handbuch/)
 
 ## Videos
 
 ### Glen southern
-<iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
-src="https://www.youtube.com/embed/videoseries?list=PLMiwb2mOovgx84CyRq1Mp9KGGW1pLVGun" 
-></iframe>
+<div class="video-responsive">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0Mj_yietOKI?si=-XhtDM-oZcMRAfnJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### Dave Reed
-<iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
-src="https://www.youtube.com/embed/videoseries?list=PL6MTHAIpepACvJC1EI4VbEJLjg6EvJqHD" 
-></iframe>
+<div class="video-responsive">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jm18bkWsAW0?si=Hnt3tdsRf_doFdZq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ###  Small Robot Studio
-<iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
-src="https://www.youtube.com/embed/videoseries?list=PLYgW0C-nQEFNSS2llnNjkx8NpN6MXhfdI"
-></iframe>
+<div class="video-responsive">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vw3qpp81rF0?si=xs0Thy6kEGvHVi3q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### ProcreateFX
-<iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
-src="https://www.youtube.com/embed/videoseries?v=foz0qjpK-9Y&list=UULFibxHV5zDtzjuh7igigHqlQ" 
-></iframe>
+<div class="video-responsive">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BPw16T6Ayck?si=q2WlYGp63OpukkuU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 ### DM Art classes
-<iframe width="360" height="202" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen
-src="https://www.youtube.com/embed/videoseries?list=PLecwVdXezX3SRHBQ1_se93qOGtqvLZj_E"
-></iframe>
+<div class="video-responsive">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5VO0ZqyopGo?si=rtOLMvjwjCfPsdb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 <!-- 
 ::: tip

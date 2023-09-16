@@ -69,7 +69,7 @@ export default defineConfig({
             { icon: 'github', link: 'https://github.com/stephomi/nomadsculpt.com' },
             { icon: 'instagram', link: 'https://instagram.com/nomadsculpt' },
             { icon: 'facebook', link: 'https://facebook.com/nomadsculpt' },
-            { icon: 'discord', link: 'https://discord.com/8h7BwpRz29' },
+            { icon: 'discord', link: 'https://discord.com/invite/8h7BwpRz29' },
         ]
     },
 
