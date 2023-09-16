@@ -1,33 +1,33 @@
 # Tools
 
-| Tables                          | Icon                                        |
-| :---:                           | :---:                                       |
-| [Clay](#clay)                   | ![](./images/tools/clay.png#medium)         |
-| [Brush](#brush)                 | ![](./images/tools/brush.png#medium)        |
-| [Flatten](#flatten)             | ![](./images/tools/flatten.png#medium)      |
-| [Inflate](#inflate)             | ![](./images/tools/inflate.png#medium)      |
-| [Layer](#layer)                 | ![](./images/tools/layer.png#medium)        |
-| [Crease](#crease)               | ![](./images/tools/crease.png#medium)       |
-| [Pinch](#pinch)                 | ![](./images/tools/pinch.png#medium)        |
-| [Nudge](#nudge)                 | ![](./images/tools/nudge.png#medium)        |
-| [Stamp](#stamp)                 | ![](./images/tools/stamp.png#medium)        |
-| [Delete Layer](#delete-layer)   | ![](./images/tools/clearLayer.png#medium)   |
-| [Smooth](#smooth)               | ![](./images/tools/smooth.png#medium)       |
-| [Mask](#mask)                   | ![](./images/tools/mask.png#medium)         |
-| [Selector Mask](#selector-mask) | ![](./images/tools/maskSelector.png#medium) |
-| [Drag](#drag)                   | ![](./images/tools/drag.png#medium)         |
-| [Move](#move)                   | ![](./images/tools/move.png#medium)         |
-| [Paint](#paint)		          | ![](./images/tools/paint.png#medium)        |
-| [Smudge](#smudge)               | ![](./images/tools/smudge.png#medium)       |
-| [Trim](#trim)                   | ![](./images/tools/trim.png#medium)         |
-| [Split](#split)                 | ![](./images/tools/split.png#medium)        |
-| [Project](#project)             | ![](./images/tools/project.png#medium)      |
-| [Gizmo](#gizmo)                 | ![](./images/tools/gizmo.png#medium)        |
-| [Transform](#transform)         | ![](./images/tools/transform.png#medium)    |
-| [Insert](#insert)               | ![](./images/tools/insert.png#medium)       |
-| [Tube](#tube)                   | ![](./images/tools/tube.png#medium)         |
-| [Lath](#lathe)                  | ![](./images/tools/lathe.png#medium)        |
-| [View](#view)                   | ![](./images/tools/view.png#medium)         |
+| Tables                          | Icon                                 |
+| :---:                           | :---:                                |
+| [Clay](#clay)                   | ![](./tools/clay.png#medium)         |
+| [Brush](#brush)                 | ![](./tools/brush.png#medium)        |
+| [Flatten](#flatten)             | ![](./tools/flatten.png#medium)      |
+| [Inflate](#inflate)             | ![](./tools/inflate.png#medium)      |
+| [Layer](#layer)                 | ![](./tools/layer.png#medium)        |
+| [Crease](#crease)               | ![](./tools/crease.png#medium)       |
+| [Pinch](#pinch)                 | ![](./tools/pinch.png#medium)        |
+| [Nudge](#nudge)                 | ![](./tools/nudge.png#medium)        |
+| [Stamp](#stamp)                 | ![](./tools/stamp.png#medium)        |
+| [Delete Layer](#delete-layer)   | ![](./tools/clearLayer.png#medium)   |
+| [Smooth](#smooth)               | ![](./tools/smooth.png#medium)       |
+| [Mask](#mask)                   | ![](./tools/mask.png#medium)         |
+| [Selector Mask](#selector-mask) | ![](./tools/maskSelector.png#medium) |
+| [Drag](#drag)                   | ![](./tools/drag.png#medium)         |
+| [Move](#move)                   | ![](./tools/move.png#medium)         |
+| [Paint](#paint)		          | ![](./tools/paint.png#medium)        |
+| [Smudge](#smudge)               | ![](./tools/smudge.png#medium)       |
+| [Trim](#trim)                   | ![](./tools/trim.png#medium)         |
+| [Split](#split)                 | ![](./tools/split.png#medium)        |
+| [Project](#project)             | ![](./tools/project.png#medium)      |
+| [Gizmo](#gizmo)                 | ![](./tools/gizmo.png#medium)        |
+| [Transform](#transform)         | ![](./tools/transform.png#medium)    |
+| [Insert](#insert)               | ![](./tools/insert.png#medium)       |
+| [Tube](#tube)                   | ![](./tools/tube.png#medium)         |
+| [Lath](#lathe)                  | ![](./tools/lathe.png#medium)        |
+| [View](#view)                   | ![](./tools/view.png#medium)         |
 
 ## Clay
 The Clay tool is useful for building up your sculpture.
