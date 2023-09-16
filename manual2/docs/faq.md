@@ -151,3 +151,12 @@ The [web demo](https://stephaneginier.com/archive/nomad_demo) is usually updated
 
 ## Can you translate or fix [my-language]?
 The translation files can be found [here](https://github.com/stephomi/nomad-translation)!
+
+## Is there a Windows or OSX version?
+No, but it is planned.
+
+# Can we rig in nomad?
+No, but it is planned. For now you can parent shapes together and alter pivot points, allowing for simple posable sculpts.
+
+# Can we use more than 4 lights?
+No, this is a limitation of the realtime render engine within Nomad. It is possible to fake this using emissive objects and global illumination in post process, as shown in [this tutorial](https://www.youtube.com/watch?v=QhrUGH7CuUA)
