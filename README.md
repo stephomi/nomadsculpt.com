@@ -23,7 +23,7 @@ pnpm install
 pnpm run dev
 # pnpm run build
 
-# In browser: localhost:8080
+# then simply localhost in your browser
 ```
 
 # Website
