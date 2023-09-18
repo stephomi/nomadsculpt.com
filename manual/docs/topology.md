@@ -315,9 +315,7 @@ A threshold of sharp corners that will try and help guide the remesh operation.
 ### Max fill hole
 The algorithm can sometimes produce unwanted holes. If a hole has fewer vertices than this value, then it will be filled.
 
-<!-- Continue from here, 'holes' in the app -->
-
-### Hole Filling
+### Holes
 Most of the time, your object will probably be watertight, meaning the mesh is 'closed'.
 
 However if you import You can fill the holes in your mesh If your object has holes, you can fill them.
@@ -329,11 +327,39 @@ Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate
 When you run the Voxel remesher, all the holes are automatically closed, whether you are using it on 1 or multiple meshes.
 :::
 
+#### Close holes
+Execute the hole close action.
+
+### Detail
+The polygon density used to fill the whole. While dragging this slider a checkerboard pattern will be shown on the model, this will give an indication of the triangle size to use. The checkbox will disable this, and only use the existing points, which will usually create long thin triangles over the hole, which can be difficult to sculpt.
+
+#### Fill non-manifold
+Try to fill non manifole hole.
+
+### Force Manifold
+Try to clean non manifold edge. It can be useful for external software that don't support edges that have more than 2 faces in common.
+
+#### Clean
+Execute the clean action.
+
+#### Delete small faces
+A threshold used to remove and join small polygons.
+
 
 ### Triplanar
 
 Converts the mesh into a [triplanar](scene.md#triplanar) primitive.
 You might lose lot of details in the process.
+
+#### Force cubic
+Enable the triplanar to be a cube. Otherwise the triplanar will fit to the closest bounding box around your object.
+
+#### Convert
+Execute the triplanar action.
+
+#### Resolution
+The detail of the 'voxels' used in the triplanar operation.
+
 
 ## Primitive
 If a primitive is selected, it's parameters will be displayed in this menu. Most of these options will be available from the viewport toolbar that is visible when a primitive is selected.
