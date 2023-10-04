@@ -1,6 +1,8 @@
 .DS_Store
 .yarn*
 .pnp*
+package-lock.json
+.gitignore
 
 node_modules
 cache

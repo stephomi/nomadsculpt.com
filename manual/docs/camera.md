@@ -12,8 +12,14 @@ It can be useful if you want to cycle between front/left/back reference views wi
 
 | Action      | Icon                             | Description  |
 | :---:       | :---:                            | :---:        |
+| Visibility | ![](./icons/eye_open.png#icon) | Toggle the camera. Hidden cameras will be skipped from previous/next buttonn |
+| Name | ![]() | Select the camera |
 | Update View | ![](./icons/update_view.png#icon) | Update the saved view with the current view point |
+| Edit Name | ![](./icons/pencil.png#icon) | Edit the camera name |
+| Delete | ![](./icons/trash.png#icon) | Delete the camera |
 
+## Add View
+Create a new camera based on the current view.
 
 ## Interaction
 
@@ -49,6 +55,9 @@ You can change the `Field of View` (FOV / focal length) of your camera.
 It is usually advised to use a low FOV for sculpting purposes, as it can help for proportion.  
 You can also use the `Orthographic` mode, which is more or less similar to a FOV equal to 0
 
+## First Person
+Enable setting the pivot to be directly on the camera, rather than on the sculpture. Dragging a finger on the background will keep the camera position locked, but change the rotation, similar to how first person games work. Useful when sculpting environments rather than single objects.
+
 
 ## Rotation Type
 By default the camera is using the `Orbit` rotation mode.
@@ -68,3 +77,25 @@ By default the pivot is update through these operations:
 ::: tip
 When you are used to it, you can hide the (hint) pink dot if you go in the [Settings](settings.md) menus.
 :::
+
+## Orthographic snap
+Enable the camera to swap to orthographic mode when the view cube is clicked on to snap to front/back/left/right/top/bottom. Often when looking in these directions you want to sculpt without perspective distortion, this will automatically turn off perspective for those views, and turn it back on when looking from other angles.
+
+## Reset view
+Move the camera to the default position when Nomad is started.
+
+## Snap view
+Snap to the closest front/back/left/right/top/bottom view. If you are already in one of those views, clicking again will snap 180 degrees to the opposite side.
+
+## Speed
+
+Set the speed of rotation, translation, zoom operations, useful if your sculpture is either very big or very small.
+
+## Update Pivot...
+Nomad does a best guess of where the pivot for the camera should be when rotating, but you can control it with these options. Eg when doing focusing on the nose of character, you could double click on the nose to set the pivot, then turn off all these options so the camera will only pivot around the nose. When finished, enable these options again.
+
+### Double tap on object
+When `Focus` is enabled, double tapping will move the pivot to the tapped object.
+
+## Double tap on background
+When enabled, set the pivot to be one of Selection, Scene, or toggle between them.

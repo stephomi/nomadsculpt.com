@@ -12,8 +12,21 @@ However, most of the time you want the post process to be disabled when you are 
 
 
 ## Quality
-Simply check the options (`Max samples` and `Full Resolution`) if you want to improve the quality of the postprocess.  
-`Full resolution` can makes a big difference with [Ambient Occlusion](#ambient-occlusion-ssao).
+### Max frame sampling
+Nomad will calculate a certain amount of post processing for a single frame render, which can look noisy. This control determines how many frames will be rendered, then blended together, which can remove most noisy artifacts. Some effects require no extra samples (eg colour grading), while others like global illumination can require hundreds of samples to be noise free. 
+
+In the viewport this can be seen whenever nomad is left alone, the image quality will gradually refine up to the max samples, then stop. This number of calculations is also used in the render section of the File menu, when 'export png' is clicked.
+
+### Resolution multiplier
+This slider controls the resolution of the post processing. A value of x1.0 will mean the render's are done at the pixel resolution of the device. A value of x0.5 will render at half resolution, then scale up to the device resolution, which will be fast but low quality. A value greater than 1 will render at a bigger size, then scale down. This result in higher quality, less noise, but longer render times.
+
+### Max samples
+
+### Full resolution
+When enabled will force the resolution multiplier to x1.0
+
+## Preset browser
+Clcking on the image will display a collection of post processing presets. To define your own presets, select one, click 'clone', make changes. To save, click the preset image, click again inside the preset browser, and choose 'save'.
 
 
 ## Reflection (SSR)
@@ -22,10 +35,20 @@ If you have metallic and shiny objects in your scene, then this option should pr
 This effect is only effective with PBR mode.
 
 
-| SSR off                    | SSR off |
+| SSR off                    | SSR on |
 | :---:                      |:---:                    |
 |![](./images/ssr-off.jpg)   | ![](./images/ssr-on.jpg) |
 
+## Global Illumination (SSGI)
+
+Global illumination simulates how light bounces between surfaces, eg a red wall will cast red onto a nearby white object. This can hugely enhance the realism of a render along with ambient occlusion and reflections. 
+
+### Tolerance
+The accuracy of the global illumination. A high value will do more accurate lighting, but will require high max frame sample values to remove noise.
+
+| SSGI off                    | SSGI on |
+| :---:                      |:---:                    |
+|![](./images/ssgi_off.jpg)   | ![](./images/ssgi_on.jpg) |
 
 ## Ambient Occlusion (SSAO)
 Ambient occlusion will darken areas where the light has less chance of reaching (corners, etc).
@@ -74,6 +97,16 @@ Notice that with `Tone Mapping` disabled, some details disappear because the pix
 | :---:                      |:---:                    |
 |![](./images/tone-off.jpg) |![](./images/tone-on.jpg) |
 
+::: tip
+Tone mapping can enhance the effect of global illumination. If you turn the instensity of the environment map down, the primary light source up, can increase the tone mapping `exposure` to see more of the bounce lighting effects.
+:::
+
+## Color Grading
+Similar to the curves tool in Photoshop, this allows you to control the balance and distribution of color in the image. The `main` control affects the entire colour balance, the `red`/`green`/`blue` controls allow for fine control. 
+
+| Color Grading off           | Color Grading on   |
+| :---:                      |:---:                    |
+|![](./images/grading_off.jpg) |![](./images/grading_on.jpg) |
 
 ## Curvature
 Sharpen the edges of the model.
@@ -113,6 +146,19 @@ Sharpen the model edges.
 | :---:                      |:---:                    |
 |![](./images/sharpen-off.jpg)  |![](./images/sharpen-on.jpg) |
 
+## Pixel Art
+Simulate retro game pixel art.
+
+| Pixel off                  | Pixel on   |
+| :---:                      |:---:                    |
+|![](./images/pixel_off.jpg)  |![](./images/pixel_on.jpg) |
+
+## Scanline
+Simulate the look of old CRT monitors.
+
+| Scanline off                  | Scanline on   |
+| :---:                      |:---:                    |
+|![](./images/scanline_off.jpg)  |![](./images/scanline_on.jpg) |
 
 ## Temporal Anti-Aliasing (TAA)
 This effect is enabled by default, this is not an artistic effect but a quality one.
@@ -123,3 +169,6 @@ Most of the time it should be ok, but it can introduce some artifacts when the r
 
 The effects that benefits the most from the accumulation are [Ambient Occlusion](#ambient-occlusion-ssao), [Reflection](#reflection-ssr) and [Ambient Occlusion](#ambient-occlusion-ssao), [Depth of Field](#dof) and [Bloom](#bloom).
 
+## Dithering
+
+Dither pixels to reduce banding artifacts. Usually this should be enabled, but can be turned off for specific operations (eg exporting depth maps or other data specific operations).
