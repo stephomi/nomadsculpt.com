@@ -12,7 +12,7 @@ The options are extensive enough to be split across 5 sub-menus:
 | Name      | Icon                             | Description  |
 | :---:       | :---:                            | :---:        |
 | Stroke | ![](./icons/stroke_dot.png#icon) | Control how the stroke gets applied to the model |
-| Alpha | ![](./icons/alpha.png#icon) | How a grayscale texture is used for the brush stamp |
+| Alpha | ![](./icons/alpha.png#icon) | How a greyscale texture is used for the brush stamp |
 | Falloff | ![](./icons/falloff.png#icon) | Control how the brush strength changes from the center to the edge |
 | Filter | ![](./icons/filter.png#icon) | How the brush is affected by the model geometry |
 | Pressure | ![](./icons/pressure.png#icon) | Control stylus pressure response  |
@@ -55,17 +55,17 @@ The `Move` and `Drag` tools have their own 3 options:
 
 ###  Drag ![](./icons/snake.png#icon) 
 
-Will keep updating what is inside the brush radius during the stroke. A fast stroke will leave the surface behind, while a slow stroke will hold onto material, making longer shapes. This is the default mode for the `Drag` tool. With `Dynamimc Topology` this can be used to make snake like extrusions. 
+Will keep updating what is inside the brush radius during the stroke. A fast stroke will leave the surface behind, while a slow stroke will hold onto material, making longer shapes. This is the default mode for the `Drag` tool. With `Dynamic Topology` this can be used to make snake like extrusions. 
 ![](./videos/stroke_drag.mp4) 
 
 
 ### Grab ![](./icons/grab.png#icon) 
-Will select what is inside the brush radius when the brush is started, and keep that selecton. This is useful for more precise move operations, as you can carefully adjust the distance of the move and not accidentally move more than you originally selected. This is the default mode for the `Move` tool.
+Will select what is inside the brush radius when the brush is started, and keep that selection. This is useful for more precise move operations, as you can carefully adjust the distance of the move and not accidentally move more than you originally selected. This is the default mode for the `Move` tool.
 ![](./videos/stroke_grab.mp4) 
 
 
 ### Lock + radius (drag)  ![](./icons/radius.png#icon) 
-The user radius is ignored, and is set dynmatically based on how far the stroke is dragged away from the starting point. A small distance=small radius, a larger distance = bigger radius. Use the intensity slider to control the shape of the falloff. Useful for blocking in organinc rubbery shapes.
+The user radius is ignored, and is set dynamically based on how far the stroke is dragged away from the starting point. A small distance=small radius, a larger distance = bigger radius. Use the intensity slider to control the shape of the falloff. Useful for blocking in organic rubbery shapes.
 ![](./videos/stroke_lockradius_drag.mp4) 
 
 
@@ -98,7 +98,7 @@ The projection direction can be set explicitly, the default 'Closest' method wil
 
 ### Randomize
 
-The intensity, translation, rotation and scale of the stroke can each be randomized. This can be used to create a range of effects, eg mottled colour with the paint tool, or the crease tool can be used to create skin detail.
+The intensity, translation, rotation and scale of the stroke can each be randomized. This can be used to create a range of effects, eg mottled color with the paint tool, or the crease tool can be used to create skin detail.
 
 ![](./videos/stroke_randomize.mp4) 
 
@@ -141,7 +141,7 @@ If you want the brush to push the surface in, or both push in AND pull out, you 
 
 How often the texture repeats within the brush profile. The tiling can be calculated from the mesh surface, or from the screen projection, allowing for a range of effects. In screen project, where you start the brush stroke is treated as the center of the screen projection. When screen project is active, and values are changed, an overlay will be shown to preview the results.
 
-The tiling modes allow you to limit to a single texture within the stroke, or repeated textures, or mirrored where every second texure is flipped to create patterns or help make seamless textures.
+The tiling modes allow you to limit to a single texture within the stroke, or repeated textures, or mirrored where every second texture is flipped to create patterns or help make seamless textures.
 
 ![](./videos/alpha_tiling.mp4) 
 
@@ -163,31 +163,31 @@ It doesn't change the behavior of the falloff, this is mostly for convenience.
 You can think of the curve as a cross section through the tip of the brush. The bottom section gives a preview of a what a single 'stamp' of the brush would look like on the model surface, and if there is an alpha texture for the brush, this will be shown too to preview how the falloff and alpha will interact.
 
 ### Preset
-With this selected, clickin on the curve graph will bring up a menu of presets. Rounded curves will give softer results, angular curves will ghve sharper results. The `Sub` button in the left toolbar will effectively reverse the falloff, so the top of the curve will push into the surface instead of pulling out, or vice versa.
+With this selected, clicking on the curve graph will bring up a menu of presets. Rounded curves will give softer results, angular curves will have sharper results. The `Sub` button in the left toolbar will effectively reverse the falloff, so the top of the curve will push into the surface instead of pulling out, or vice versa.
 
 ### Catmull-Rom
 When selected, the user can draw their own falloff curves. The curve editor works the same as curves in the rest of Nomad:
 
 * Click on the curve to create a new point
 * Drag a point to reposition it
-* Click on a point to toggle betwween sharp and smooth
-* Drag a point into a neighbour point to remove it
+* Click on a point to toggle between sharp and smooth
+* Drag a point into a neighbor point to remove it
 
 ### B-spline
-When selected, the user can drawo their own falloff curves. The editor works the same as Catmull-Rom, but curve points influence the curve instead of being directly on the curve, which can help in creating smoother curve shapes.
+When selected, the user can draw their own falloff curves. The editor works the same as Catmull-Rom, but curve points influence the curve instead of being directly on the curve, which can help in creating smoother curve shapes.
 
 The curve editor has 3 extra buttons:
 
 | Item                     | Icon | Description  |
 | :---:                    | :---: | :---:        |
-| Maximise                      | ![](./icons/maximize.png#icon) | Expand the curve editor    |
+| Maximize                      | ![](./icons/maximize.png#icon) | Expand the curve editor    |
 | Symmetry   | ![](./icons/symmetric.png#icon) | Display the curve as a symmetric 'brush tip' |
 | Reset | ![](./icons/reset.png#icon)  | Revert the curve to the default state |
 
 ### Influence
 
 * Sphere (3d) - Influence is computed by taking the distance from the vertex to the brush's center.
-* Circle (2d) - The vertex is first projeced on the area plane, before taking its distance to the brush's center. This is similar to how alphas are sampled. 
+* Circle (2d) - The vertex is first projected on the area plane, before taking its distance to the brush's center. This is similar to how alphas are sampled. 
 
 
 ## Filter
@@ -197,7 +197,7 @@ The curve editor has 3 extra buttons:
 Enable no limit to how much matter can be added/removed per stroke. Eg the `Clay` tool has this enabled, so material can keep building up, while the `Brush` tool has this disabled, so strokes will stop adding material if you keep moving the same stroke over the same region of the mesh. 
 
 ### Connected topology
-Enable only sculpting the verticies that are linked to the picked surface. For example when used with the `Move` tool, will alow you to exclusively move a part that self intersects with another part.
+Enable only sculpting the vertices that are linked to the picked surface. For example when used with the `Move` tool, will alow you to exclusively move a part that self intersects with another part.
 ![](./videos/connected_topology.mp4)
 
 ### Front-facing vertex only
@@ -214,7 +214,7 @@ Exclude points whose normals differ too much from the surface normal.
 
 It will change how the plane area is computed (Area sampling).
 
-This option can be useful for flatten-based tools, or if you want to colour a planar surface without over-spill.
+This option can be useful for flatten-based tools, or if you want to color a planar surface without over-spill.
 
 ![](./videos/filter_keep_sharp_edges.mp4)
 
@@ -225,7 +225,7 @@ You can control how to compute this average plane by setting the sampling area a
 
 At 100%, every point inside the selection circle is taken into account.
 
-At 0%, only the nearest vertex or triangle is taken into account. These values can be linked for both `Normal radius` and `Position radius`, or unlocked and set independantly.
+At 0%, only the nearest vertex or triangle is taken into account. These values can be linked for both `Normal radius` and `Position radius`, or unlocked and set independently.
 
 
 ### Depth masking
@@ -262,7 +262,7 @@ If you want constant radius, disable this section.
 
 ### Pressure - Intensity
 
-Similar to the radius slider, but for controlling intensity. If you want constant instensity, disable this section.
+Similar to the radius slider, but for controlling intensity. If you want constant intensity, disable this section.
 
 ### Pressure smoothing
 
