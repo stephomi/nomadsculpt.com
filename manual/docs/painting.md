@@ -34,7 +34,7 @@ One example of workflow:
 ## Painting - Paint
 
 You can enable painting with most tools.
-For sculpting tools, the `Paint intensity`` has its own slider, independent of the main deformation slider.
+For sculpting tools, the `Paint intensity` has its own slider, independent of the main deformation slider.
 
 
 ## Material
