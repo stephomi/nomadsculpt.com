@@ -20,7 +20,6 @@
 
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-DSF8ZS1RCC');
 
     </script>
@@ -45,7 +44,7 @@
         </header>
         <!-- Privacy policy -->
         <section class="wrapper alt-start alt-end style3">
-            <div class="inner">
+            <div class="inner lang_en">
                 <h2 class="major">Privacy Policy</h2>
                 <p>
                     Nomad Sculpt is developed by Hexanomad as a commercial app.
@@ -71,19 +70,61 @@
                     If you have any questions or suggestions, do not hesitate to contact us at <a href='mailto:support@nomadsculpt.com'> support@nomadsculpt.com</a>.
                 </p>
             </div>
+            <div class="inner lang_zh" hidden>
+                <h2 class="major">Privacy Policy</h2>
+                <p>
+                    Nomad Sculpt 是由 Hexanomad 开发的一款商业应用程序。
+                </p>
+                <strong>游牧雕塑（应用）</strong>
+                <p />
+                <p>
+                    除了 Apple、Google 或华为向开发者提供的信息外，Nomad Sculpt 不会收集任何个人数据。
+                </p>
+                <strong>nomadsculpt.com（网站）</strong>
+                <p />
+                <p>
+                    本网站使用 Google Analytics（_gat、_ga、_gid）来分析流量，您可以在此 <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/ 上了解有关 cookie 使用情况的更多信息 cookie 使用”target=" _blank">链接</a>。
+                </p>
+                <strong>支持电子邮件</strong>
+                <p />
+                <p>
+                    如果您向我们发送电子邮件，该电子邮件将被保留，但仅用于回复提出的疑虑或建议，绝不会用于任何营销目的。
+                </p>
+                <strong>联系我们</strong>
+                <p />
+                <p>
+                    如果您有任何问题或建议，请随时通过 <a href='mailto:support@nomadsculpt.com'> support@nomadsculpt.com</a> 与我们联系。
+                </p>
+            </div>
         </section>
         <!-- Footer -->
         <section class="wrapper" id="footer">
             <div class="inner">
                 <ul class="copyright">
                     <li>&copy; Hexanomad</li>
-                    <li><a href="policy.html">Privacy Policy</a></li>
+                    <li><a href="policy.html" class="lang_en" hidden>Privacy Policy</a></li>
+                    <li><a href="policy.html" class="lang_zh" hidden>隐私政策</a></li>
                     <li class="far fa-envelope"><a href='mailto:support@nomadsculpt.com'> &#8203; support@nomadsculpt.com </a></li>
                     <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
                 </ul>
             </div>
         </section>
     </div>
+    <!-- Scripts -->
+    <script type='text/javascript'>
+    window.onload = function () {
+        var known = { en: true, zh: true };
+        var lang = ((navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'en').substr(0, 2);
+        if (!known[lang]) lang = 'en';
+        for (var k in known) {
+            var docs = document.querySelectorAll('.lang_' + k);
+            for (var i = 0; i < docs.length; ++i) {
+                docs[i].hidden = k != lang;
+            }
+        }
+    }
+
+    </script>
 </body>
 
 </html>

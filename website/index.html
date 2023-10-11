@@ -43,10 +43,15 @@
         </header>
         <!-- Banner -->
         <section id="banner" class="wrapper">
-            <div class="inner">
+            <div class="inner lang_en">
                 <span class="logo"><img src="images/logo_blanc.png" alt="" width=150px /></span>
                 <h2>Nomad Sculpt</h2>
                 <p>A sculpting and painting mobile application</p>
+            </div>
+            <div class="inner lang_zh" hidden>
+                <span class="logo"><img src="images/logo_blanc.png" alt="" width=150px /></span>
+                <h2>Nomad Sculpt - 3D雕刻建模</h2>
+                <p>专业数字雕刻与模型绘画</p>
             </div>
         </section>
         <!-- Spot light 1 -->
@@ -59,7 +64,7 @@
                     </picture>
                     <figcaption><a class="credits" target="_blank" href='https://www.instagram.com/dolon_sculpt/'>Dolon</a></figcaption>
                 </figure>
-                <div class="content">
+                <div class="content lang_en">
                     <h2 class="major">Extensive toolset</h2>
                     <p>
                         <ul>
@@ -67,6 +72,17 @@
                             <li>Stroke customization with falloff, alpha and other options</li>
                             <li>Matcap rendering or Physically Based Rendering</li>
                             <li>Vertex painting, with roughness/metalness control</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="content lang_zh" hidden>
+                    <h2 class="major">广泛的工具集</h2>
+                    <p>
+                        <ul>
+                            <li>粘土、折痕、修剪、平滑、蒙版和许多其他画笔</li>
+                            <li>使用衰减、Alpha 和其他选项自定义笔画</li>
+                            <li>Matcap 渲染或基于物理的渲染</li>
+                            <li>顶点绘制，具有粗糙度/金属度控制</li>
                         </ul>
                     </p>
                 </div>
@@ -82,7 +98,7 @@
                     </picture>
                     <figcaption><a class="credits" target="_blank" href='https://www.instagram.com/mikko_draws/'>Mikko</a></figcaption>
                 </figure>
-                <div class="content">
+                <div class="content lang_en">
                     <h2 class="major">Topology Helpers</h2>
                     <p>
                         <ul>
@@ -90,6 +106,17 @@
                             <li>Voxel Uniform Remeshing, along with subtractive boolean</li>
                             <li>Dynamic Topology, to refine locally your mesh</li>
                             <li>Robust layers that supports topology change</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="content lang_zh" hidden>
+                    <h2 class="major">拓扑助手</h2>
+                    <p>
+                        <ul>
+                            <li>多分辨率雕刻</li>
+                            <li>体素均匀重新网格化，以及减法布尔</li>
+                            <li>动态拓扑，用于本地优化网格</li>
+                            <li>支持拓扑更改的稳健层</li>
                         </ul>
                     </p>
                 </div>
@@ -106,17 +133,26 @@
                     <figcaption><a class="credits" target="_blank" href='https://www.instagram.com/dolon_sculpt/'>Dolon</a></figcaption>
                 </figure>
                 <!--                 <figure class="image" style="width:90%;">
-                    <img src="images/baby_enkhtur.jpg" alt=""/>
+                    <img src="images/baby_enkhtur.jpg" alt="" />
                     <figcaption><a class="credits" target="_blank" href='https://www.instagram.com/enkhturbayarsaikhan/'>Dolon</a></figcaption>
-                </figure>
- -->
-                <div class="content">
+                </figure> -->
+                <div class="content lang_en">
                     <h2 class="major">Intuitive Interface</h2>
                     <p>
                         <ul>
                             <li>Designed from the ground up for a mobile experience</li>
                             <li>Support pencil pressure (Apple Pencil, Samsung S Pen)</li>
                             <li>OBJ, STL and glTF support</li>
+                        </ul>
+                    </p>
+                </div>
+                <div class="content lang_zh" hidden>
+                    <h2 class="major">直观的界面</h2>
+                    <p>
+                        <ul>
+                            <li>专为移动体验而设计</li>
+                            <li>支持铅笔压力（Apple Pencil、Samsung S Pen）</li>
+                            <li>支持 OBJ、STL 和 glTF</li>
                         </ul>
                     </p>
                 </div>
@@ -138,7 +174,8 @@
         <!-- App access -->
         <section class="fit-wrapper">
             <div class="inner">
-                <h3 class="major">Access</h3>
+                <h3 class="major lang_en">Access</h3>
+                <h3 class="major lang_zh" hidden>使用权</h3>
                 <div class="access">
                     <a target="_blank" href='https://apps.apple.com/app/id1519508653?mt=8&platform=ipad'>
                         <img class="image" style="height:110px;padding:20px;" src="images/badge-apple.svg"></img>
@@ -160,7 +197,8 @@
                 <h3 class="major"></h3>
                 <ul class="copyright">
                     <li>&copy; Hexanomad</li>
-                    <li><a href="policy.html">Privacy Policy</a></li>
+                    <li><a href="policy.html" class="lang_en" hidden>Privacy Policy</a></li>
+                    <li><a href="policy.html" class="lang_zh" hidden>隐私政策</a></li>
                     <li class="far fa-envelope"><a href='mailto:support@nomadsculpt.com'> &#8203; support@nomadsculpt.com </a></li>
                     <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
                 </ul>
@@ -169,7 +207,18 @@
     </div>
     <!-- Scripts -->
     <script type='text/javascript'>
-    window.onload = function () { document.body.classList.remove("is-preload"); }
+    window.onload = function () {
+        document.body.classList.remove("is-preload");
+        var known = { en: true, zh: true };
+        var lang = ((navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'en').substr(0, 2);
+        if (!known[lang]) lang = 'en';
+        for (var k in known) {
+            var docs = document.querySelectorAll('.lang_' + k);
+            for (var i = 0; i < docs.length; ++i) {
+                docs[i].hidden = k != lang;
+            }
+        }
+    }
 
     </script>
 </body>
