@@ -1,24 +1,52 @@
 # Painting
 
-## Material
+![](./images/paint_menu.jpg)  
 
-[PBR](lighting.md#pbr) painting is using 3 channels at the moment.
-- `Color` As the name suggests it represents the base color
-- `Metalness` It simply tells if the surface is metallic or not. The value should be either 0% or 100% most of the time, in-between values should be exceptional.
-- `Roughness` It tells how "rough" or "smooth" a surface is. A low value for the roughness means that the reflections will be sharp.
+## Overview
 
-You can choose to disable some of these channels.
+Nomad uses PBR vertex painting. What does this mean?
+
+### PBR
+PBR, or Physically Based Rendering is a common rendering and texturing method in CGI in film, television, games and mobile, as it supports a wide variety of looks, is easy for artists to understand, and produces results that look photoreal.
+
+### Vertex painting
+
+Vertex painting means that the paint information is stored in the vertices of the model, rather than in textures. Because Nomad can handle models with hundreds of thousands, often millions of vertices, your models should be able to have highly detailed surface paint; if you can sculpt the detail, you can also paint that detail. This also means that painting in Nomad doesn't require UV mapping, often a slow and technical process in other 3d applications. Many other 3d applications don't support the high vertex counts that Nomad can, however Nomad also has good texture baking and decimation tools to help.
+
+### Texturing
+
+Nomad supports textures, but they have to be present in an imported model, or via baking vertex painting to textures. 
+
+A texture is simply an image, but in the 3d context it usually refers to an image assigned to an object.
+In order to wrap an image around a model, the model needs texture coordinates (UV).
+
+Nomad can compute [them automatically](topology.md#uv-unwrap) but you don't have much control on the overall quality.
 
 ::: tip
-You might consider turning on `Smooth Shading` [globally](settings.md#smooth-shading) or [per-object](material.md#smooth-shading) if you are painting a metallic surface on on object with polycount.
+One example of workflow:
+- Sculpt on Nomad, then [UV unwrap](topology.md#uv-unwrap)
+- If you already started to paint in Nomad you can [transfer the vertex painting to textures](topology.md#bake-vertex-colors-to-texture)
+- Export to Procreate
+- Texture in Procreate
+- Export back to Nomad for rendering purpose
 :::
 
-<!--
-| Metalness | Roughness 0%                    | Roughness 50%                    | Roughness 100%                    |
-| :---:     | :---:                           |:---:                             |:---:                              |
-| 0%        | ![](./images/dielectric_r0.jpg) | ![](./images/dielectric_r50.jpg) | ![](./images/dielectric_r100.jpg) |
-| 100%      | ![](./images/metal_r0.jpg)      | ![](./images/metal_r50.jpg)      | ![](./images/metal_r100.jpg)      |
--->
+## Painting - Paint
+
+You can enable painting with most tools.
+For sculpting tools, the `Paint intensity` has its own slider, independent of the main deformation slider.
+
+
+## Material
+
+Clicking on the material ball will display a preset browser of Color/Roughness/Metalness combinations for skin, metal, plastics. These can be cloned to define your own presets.
+
+[PBR](lighting.md#pbr) painting uses 3 channels:
+- `Color` The color that will be painted. The eyedropper can be used to select color from other parts of the model, or from reference images.
+- `Roughness` It tells how "rough" or "smooth" a surface is. A low value for the roughness means that the reflections will be sharp.
+- `Metalness` It simply tells if the surface is metallic or not. The value should be either 0% or 100% most of the time, in-between values should be exceptional.
+
+By default when you paint, all 3 channels are painted simultaneously. This means that instead of just painting 'red', you can be painting 'a red rough metal' or 'a white smooth plastic'. If you need to, you can use the checkboxes to toggle the channels, so that you are only painting, color, or only painting roughness, for example. 
 
 |                | Metalness 0%                      | Metalness 100%               |
 | :---:          | :---:                             |:---:                         |
@@ -30,44 +58,28 @@ You might consider turning on `Smooth Shading` [globally](settings.md#smooth-sha
 Metalness and roughness can't be supported if you are using [Matcap rendering](lighting.md#matcap), so if you paint you will only see the colors.
 :::
 
-## Vertex Painting
+Each channel also supports loading a texture, so you can paint with a color image. When using this feature, it's often useful to swap to something like the `Stamp` tool, or use the stroke menu to use a mode other than dot, which can smear the texture.
 
-Nomad only supports Vertex Painting.
-
-With this method the material information is stored on the vertices (unlike [Texturing](#texturing), which stores the information on an image).
+![](./videos/paint_color_texture.mp4)  
 
 ::: tip
-You can enable painting with most tools.
-For sculpting tools, the paint intensity has its own slider, independent of the main deformation slider.
+You might consider turning on `Smooth Shading` [globally](settings.md#smooth-shading) or [per-object](material.md#smooth-shading) if you are painting a metallic surface on on object with a lower polycount.
 :::
 
-## Texturing
+### Paint all
+Apply the current material to the object. Masked areas and disabled channels won't be painted.
 
-Nomad supports textures, but only if they are already present in an imported model.
+### Force paint all
+Apply the current material to the object, ignoring masks and disabled channels.
 
-A texture is simply an image, but in the 3d context it usually refers to an image assigned to an object.
-In order to wrap an image around a model, the model needs texture coordinates (UV).
+### Use stroke alpha
+Use the tool alpha to modulate the painting intensity.
 
-Nomad can compute [them automatically](topology.md#uv-unwrap) but you don't have much control on the overall quality.
-Since Nomad cannot do texturing, generating UVs is only useful if you plan on exporting the object to a texturing application.
+### Use stroke falloff
+Use the tool falloff to modulate the painting intensity.
 
-::: tip
-One example of workflow:
-- Sculpt on Nomad, then [UV unwrap](topology.md#uv-unwrap)
-- If you already started to paint in Nomad you can [transfer the vertex painting to textures](topology.md#bake-vertex-colors-to-texture)
-- Export to Procreate
-- Texture in Procreate
-- Export back to Nomad for rendering purpose
-:::
+### Use stroke randomize
+Use the tool randomization to modulate the painting intensity.
 
-## Stamp
-
-In the 3d context, most of the time you assign textures:
-- to a brush stamp, for texturing purpose
-- to a brush stamp, for vertex painting purpose
-- or directly to an [object](#texturing), if it has UVs
-
-In Nomad you can only assign a Color texture to the brush (for vertex painting then).
-Roughness and Metalness stamps are not supported.
-
-However the [Alpha](stroke.md#alpha) texture will impact all 3 channels: Color, Roughness and Metalness.
+### Global material
+If this option is enabled, the selected material will be the same as the other tools. Note that it only takes into account roughness, metalness and color settings.

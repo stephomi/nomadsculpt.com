@@ -37,7 +37,6 @@ export default defineConfig({
                 { text: 'Background', link: '/background' },
                 { text: 'Camera', link: '/camera' },
                 { text: 'Stroke', link: '/stroke' },
-                { text: 'Pressure', link: '/pressure' },
                 { text: 'Painting', link: '/painting' },
                 { text: 'Symmetry', link: '/symmetry' },
                 { text: 'Layers', link: '/layers' },
