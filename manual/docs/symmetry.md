@@ -57,7 +57,7 @@ Make the left side the right side, and vice versa. Similar in appearance to if y
 It is possible to edit the symmetry location and orientation (but not recommended!). If needed, 'object center' and 'orientation' will reset the symmetry location and orientation to their default values.
 
 ## Advanced
-'Show line' and 'Show plane' will toggle a viewport overlay of the symmetry locations. 
+'Show line' and 'Show plane' will toggle a viewport overlay of the symmetry locations. Note that turning off these options will only take effect when the symmetry menu is closed.
 
 ### Gizmo edit
 Enable a gizmo to move and rotate the symmetry location. Using this can get symmetry out of alignment very quickly and difficult to recover from, so use with caution!
