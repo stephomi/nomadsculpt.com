@@ -156,3 +156,6 @@ No, but it is planned. For now you can parent shapes together and alter pivot po
 
 ## Can we use more than 4 lights?
 No, this is a limitation of the realtime render engine within Nomad. It is possible to fake this using emissive objects and global illumination in post process, as shown in [this tutorial](https://www.youtube.com/watch?v=QhrUGH7CuUA)
+
+# Can we import Zbrush tools?
+No, Zbrush uses a proprietary format. You should be able to extract the alpha maps and use them in Nomad however. 
