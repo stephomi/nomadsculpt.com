@@ -89,9 +89,17 @@ This is not really Nomad *Sculpt*'s scope, but maybe I'll provide a few tools in
 
 
 ## Can we do uv and texturing?
-For now texturing inside Nomad is not planned.
-However, you can [UV unwrap](topology.md#uv-unwrap) your model and do the texturing inside Procreate.
-You can also transfer the vertex colors painted inside Nomad into texture through [the baking option](topology.md#bake-to-texture).
+For now painting directly on textures inside Nomad is not planned. That said, Nomad supports several ways to work with textures:
+
+* Nomad allows you to paint color, roughness, material properties directly into the vertices of your sculpt.
+* Nomad allows very high vertex counts so that you can paint without worrying about uv's.
+* Nomad can load textures to use in brushes, allowing for stamping and painting with textures.
+* Nomad can load objects that have textures pre-assigned, for rendering purposes.
+* Nomad can [UV unwrap](topology.md#uv-unwrap) lower poly objects.
+* Color/roughness/metalness can be transferred from textures to vertices via [the project options](topology.md#reproject-to-vertex).
+* Color/roughness/metalness/normals can be baked from vertices to textures via [the baking options](topology.md#bake-to-texture)
+* Baking and projecting can be handled between single objects or many objects, or between the highest and lowest subdivision levels of a single object, allowing for a variety of bake and project workflows.
+* After baking, exporting an obj will also export textures, which can be taken to an app like Procreate to paint directly on textures.
 
 ## Can I record a turntable video?
 Not planned for now, iOS has a native video recording feature that is very easy to use.
@@ -157,5 +165,5 @@ No, but it is planned. For now you can parent shapes together and alter pivot po
 ## Can we use more than 4 lights?
 No, this is a limitation of the realtime render engine within Nomad. It is possible to fake this using emissive objects and global illumination in post process, as shown in [this tutorial](https://www.youtube.com/watch?v=QhrUGH7CuUA)
 
-# Can we import Zbrush tools?
+## Can we import Zbrush tools?
 No, Zbrush uses a proprietary format. You should be able to extract the alpha maps and use them in Nomad however. 

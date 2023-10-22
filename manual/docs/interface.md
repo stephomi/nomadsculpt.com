@@ -17,7 +17,7 @@ The bottom toolbar can have these shortcuts enabled:
 * `Wireframe` - Toggle a wireframe overlay. A long tap or swipe up will enable you to change the color and opacity of the wireframe.
 
 ### Hide toolbox
-Normally the toolbox icon in the top bar will toggle between a long single column, or a multi-column list of tools. This option will toggl betweeen the multi column list, or being hidden.
+Normally the toolbox icon in the top bar will toggle between a long single column, or a multi-column list of tools. This option will toggle between the multi column list, or being hidden.
 
 ### Reset toolbox order
 Reset the default tools in the toolbox to the default order. Custom icons will remain in the toolbox at the end of the list.
@@ -52,6 +52,11 @@ Scale the fonts.
 The spacing between elements in menus and panels.
 ## Edge offset
 You should change these values only if you have issues interacting with the buttons on the screen edges. If these sliders are disabled, Nomad will use the safe area values returned by the device itself.
+
+::: tip
+When migrating Nomad to a new device (eg replacing an iPhone 12 with an iPhone 15), make sure to reset edge options to defaults!
+:::
+
 ### Reset style
 Reset all the UI elements to their default values.
 
@@ -97,7 +102,7 @@ A shortcut to go to the `Camera` menu (camera options used to be here in Interfa
 
 ### Pencil buttons
 
-If your style has buttons, you can set their function by enabling `Pencil button 1` and `Pencil button 2`. Options are
+If your stylus has buttons, you can set their function by enabling `Pencil button 1` and `Pencil button 2`. Options are
 * None
 * Smooth
 * Mask
@@ -107,7 +112,9 @@ If your style has buttons, you can set their function by enabling `Pencil button
 
 
 ## Bindings
-Nearly all functions in Nomad can be bound to keyboard shortcuts (if your device has a keyboard). To create a binding, click the rectangle next to the function, and press the key. Options can be disable, and the search function at the top of this menu can be used to find functions.
+Nearly all functions in Nomad can be bound to keyboard shortcuts (if your device has a keyboard). To create a binding, click the rectangle next to the function, and press the key. 
+
+Individual bindings can be disabled via the checkbox next to the binding name, and the search function at the top of this menu can be used to find functions.
 
 ## Keyboard shortcuts
 
