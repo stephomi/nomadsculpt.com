@@ -9,7 +9,7 @@ You can choose between several rendering modes:
 | [Lit(PBR)](#pbr)       | Physically Based Rendering | Painting with metalness/roughness   |
 | [Matcap](#matcap) | Material Capture           | Mostly be useful for pure sculpting |
 | [Unlit](#unlit) | Surface Color           | Surface color only with no shading or lighting |
-| [Id](#d) | Object ID          | A random colour per object, useful for painting applications |
+| [Id](#id) | Object ID          | A random colour per object, useful for painting applications |
 
 If you want to learn more about what metalness and roughness stands for, see the [Vertex Paint](painting.md) section.
 
