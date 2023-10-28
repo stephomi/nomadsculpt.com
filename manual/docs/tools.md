@@ -423,20 +423,6 @@ When pivot mode is active, a menu is displayed to allow quick pivot changes:
 * `Tangent roll threshold` - Control how the rotation UI behaves when dragging on the circle handles to rotate on X/Y/Z. If this value is 0, rotating works like a dial, drag the gizmo in circles. If this value is 90, rotating works like pulling the string of a yo-yo; drag in a straight line towards or away from where you first clicked. Values between 0 and 90 will do a combination of both; below the value will be the linear move, above the value will be circular move.
 * `Numerical input` - when enabled, a single tap on the gizmo will pop up a window to enter an exact value for the tapped widget axis.
 
-#### Method
-| Method  | Description |
-| :---:   | :---: |
-| Auto    | Let Nomad choose between Vertex or Object mode. Typically, object is preferred unless symmetry is enabled or if there is masking on the mesh |
-| Vertex  | Vertices are transformed individually. Symmetry and mask are taken into account. For primitives that are not validated, Object mode is forced |
-| Object  | The object is transformed as a whole. Symmetry and mask are ignored. If you use non-uniform scaling, Vertex mode will be forced |
-
-#### Action
-| Action       | Description |
-| :---:        | :---: |
-| Move origin  | Move the mesh to the world origin, vertices are not modified |
-| Reset        | Reset the mesh transform to identity, vertices are not modified |
-| Bake         | Apply the matrix transform to the vertices and then reset the matrix, nothing is changing visually |
-
 ::: warning
 The [Gizmo](#gizmo), [Translate](#translate), [Rotate](#rotate) and [Scale](#scale) are using their own symmetry checkbox!
 
