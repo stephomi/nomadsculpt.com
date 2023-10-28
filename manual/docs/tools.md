@@ -108,6 +108,14 @@ So if you have many polygons, the smoothing will be less effective.
 
 The alternate mode is the `Relax` mode, which only smooths the wireframe but tries to retain the geometric details.
 
+#### Smooth settings
+
+![](./images/tool_smooth_settings.jpg)
+
+* `Sticky vertex on border` - For meshes with open edges, eg a plane, it is possible to smooth out the corners. Enabling this option will lock the open edges.
+* `Relax` - the same as the relax alternate mode in the left hand toolbar.
+* `Stable smoothing` - Tries to make the smoothing topology independent. This works best with varying topology density and with a high smoothing intensity value.
+
 ::: tip
 Higher polygon densities can require raising the intensity above 100%. Very high values (300%, 500%) can also work well as a sculpting tool, forcing areas to go flat and smooth quickly under the brush, like hitting clay with a mallet!
 :::
@@ -118,40 +126,41 @@ Higher polygon densities can require raising the intensity above 100%. Very high
 This tool lets you mask points.
 Masked vertices can't be sculpted or painted afterwards, this is a way to "protect" areas. `Unmask` will erase where the mask has been painted.
 
-If you go in the tool settings, you can also perform other operations on the mask.
+![](./videos/tool_mask1.mp4)
+
+#### Mask settings
+![](./images/tool_mask_settings.jpg)
+
+
+The top section of the settings let you manipulate the mask:
 
 | Action       | Description     |
 | :---:        | :---:           |
 | Clear        | Clear the mask  |
 | Invert       | Invert the mask |
-| Blur         | Blur the mask   |
-| Sharpen      | Edit the object |
+| Blur         | Blur the mask edge  |
+| Sharpen      | Sharpen the mask edge |
 
-
-![](./videos/tool_mask1.mp4)
-
-
-#### Extraction
-
-You can also create other objects by extracting the mask.
-When you use one of these operations, you can specify how to handle the holes.
-
-| Action    | Description     |
-| :---:     | :---:           |
-| None      | Simply extract the part and let the extracted part opened |
-| Blur      | Hole is filled and smoothed. Do not use this option for flat surface |
-| Shell     | Close the extracted shape by using the thickness value |
-
-::: tip
-When you are using an extraction method that makes use of the thickness, the mask value will also impact the thickness.
-
-This can be useful if you have custom made [Alphas](stroke.md#alpha) and you are using the `Grab - dynamic radius` [stroke type](stroke.md#stroke-type). 
-:::
+##### Shell/Extraction
 
 ![](./videos/tool_mask2.mp4)
 
+Masks can also be used to extract geometry. The `Carve`, `Extract` and `Split` buttons will create new shapes from the masked region. The following settings offer more control:
 
-#### Quick gesture
+* `Uniform thickness` - Sets the height of the extraction. When disabled, the mask strength is multiplied by the thickness slider, allowing for varying height. This can be useful if you have custom made [Alphas](stroke.md#alpha) and you are using the `Grab - dynamic radius` [stroke type](stroke.md#stroke-type). 
+* `Thickness` - The distance of the extraction. Use the ± button to set the distance to be positive, negative, or centered from the surface.
+* `Auto Edge-loop (side)` - Will calculate the amount of divisions on the sides of the extracted shape to make square polygons that match the polygons of the masked area. When disabled, you can set the number of edge loops yourself with the edge loop slider.
+* `Smoothness` - Will smooth the border of the extracted shape, it works better with higher polygon counts. 
+* `All/Sharp border/Borders only` - Smoothing can work in all directions, smoothing both the sides and top of the extracted shape, or smooth the top and sides but maintain a sharp edge, or only smooth the border, leaving the top surface unaffected.
+* `Carve` - In default mode, behave a if you had trimmed into the surface by the 'thickness' amount, like cutting a section of orange peel. 
+* `Extract` - In default mode 'shell' mode, behave like an extrude in other 3d apps, pulling the mask section out from the surface.
+* `Closing action` - How extract should behave. 'None' will duplicate the masked polys into a new shape. 'Fill' will do the same, and try and patch the back surface. 'Shell' will extrude to the amount set in 'thickness'.
+* `Split` - Will extract the masked region into a new shape, but also apply an operation to the unmasked region. By default ths operation is 'shell', resulting in a fat extruded mask and a matching unmasked shape.
+* `Closing action` - Control what the masked and unmasked zones will do, identical to the closing actions explained earlier.
+* `Sync border` - Ensure the border between the masked and unmasked extracted shapes stay close together. When disabled, because the shell operation will extrude each face along its normal, a gap can form between the shapes.
+
+
+##### Quick gesture
 You can perform zbrush-style gestures while holding the quick masking button:
 | Action   | Gesture (hold lower-left shortcut) |
 | :---:    | :---: |
@@ -163,15 +172,20 @@ You can perform zbrush-style gestures while holding the quick masking button:
 ### Selector Mask ![](./tools/maskSelector.png#tool#left)
 This tool is mostly similar to the [Masking tool](#mask), the main difference is that you don't use stroke to paint mask, but instead use the shape selector.
 
+Selector mask shares the same tool settings as the `Mask` tool.
+
 ![](./videos/tool_selector_mask.mp4)
 
 ### Paint ![](./tools/paint.png#tool#left)
 To learn more about material you can visit the [Painting](painting.md) section. `Erase` will remove paint.
 
+#### Paint settings
+* `Layer fitering` - This functions like the alpha lock in photoshop or procreate. If you're painting on a layer, when this is enabled, you can only modify where paint already exists; unpainted areas will be protected.
+
 ![](./videos/tool_paint.mp4)
 
 ### Smudge ![](./tools/smudge.png#icon#left)
-The smudge tool is only active on painting.
+The smudge tool is only active on painting. It's settings menu contains a `Quality` slider, lower values mean faster strokes.
 
 ![](./videos/tool_smudge.mp4)
 
@@ -179,11 +193,20 @@ The smudge tool is only active on painting.
 ### Flatten ![](./tools/flatten.png#tool#left)
 Flatten the area by projecting the points onto the average plane. `Fill` will define a plane set by the highest point, and tend to pull points up.
 
+#### Flatten settings
+
+* `Lock plane direction` - Use the plane direction calculated at the first click. By default this is disabled.
+* `Lock plane origin`- Use the first click as the center of the plane. By default this is disabled.
+
+When either or both of these are disabled, the flatten can be gradually deepened or the plane angle altered by using long strokes that move over different depths and curvatures. This in conjunction with the area sampling options of the brush menu can offer very precise control.
+
 ![](./videos/tool_flatten.mp4)
 
 
 ### Planar ![](./tools/planar.png#tool#left)
 Make points planar by projecting onto the average plane, but with less buildup than the flatten brush. This creates cleaner hard-edge surfaces. Quick strokes will push and pull on the surface more, slower strokes that start from already planar areas and work out will maintain the plane more. `Fill` will define a plane set by the highest point, and tend to pull points up.
+
+Planar is actually the same tool as `Flatten`, but with `Lock plane direction` enabled, meaning it will tend to make more stable, hard edged surface, while flatten can be more sculptural and used to create semi-flat areas.
 
 ![](./videos/tool_planar.mp4)
 
@@ -195,15 +218,34 @@ Sculpt by limiting the maximum height displacement, this tool is more useful whe
 ### Crease ![](./tools/crease.png#tool#left)
 Crease tools can be useful to sculpt small cuts or dents. `Sub` will create a raised crease.
 
+#### Crease Settings
+
+* `Pinch factor` - How much to pull vertices sideways towards the brush. If pinch is at 1, and offset at 0, the surface won't have any depth changes, just topology changes, pulling edges towards the stroke.
+* `Offset factor` - How much to push/pull vertices in depth. If pinch is at 0, and offset at 1, deep creases or raised dents will be made, but will look jagged because not enough geo is pulled towards the crease to define the sides or the bottom of the crease accurately.
+
 ![](./videos/tool_crease.mp4)
 
 ### Trim ![](./tools/trim.png#icon#left)
-The Trim tool works by removing a chunk of your mesh and then filling the hole.
+The Trim tool works by removing a chunk of your mesh, and gives options for how to process the gap left behind.
+
+#### Trim settings
+
+* `Fill holes` - If the trimmed area should be patched or not.
+* `Stroke painting` - If paint is enabled in the paint menu, the patched region will be filled with the selected color.
+* `Fill/Boolean/Legacy` - Fill will use a triangulated patch, similar to a soap bubble surface. Boolean will create a quad poly region, projecting the trim shape from the camera. Legacy will create a triangulated region, projecting the trim shape from the camera.
+* `Detail` - The approximate size of the triangles or polys used during the trim operation.
 
 ![](./videos/tool_trim.mp4)
 
 ### Split ![](./tools/split.png#icon#left)
 Similar to the [Trim](#trim) tool, except that it produces two different objects instead of one.
+
+#### Split settings
+
+* `Fill holes` - If the split areas should be patched or not.
+* `Stroke painting` - If paint is enabled in the paint menu, the patched region will be filled with the selected color.
+* `Fill/Boolean/Legacy` - Fill will use a triangulated patch, similar to a soap bubble surface. Boolean will create a quad poly region, projecting the split shape from the camera. Legacy will create a triangulated region, projecting the split shape from the camera.
+* `Detail` - The approximate size of the triangles or polys used during the split operation.
 
 ![](./videos/tool_split.mp4)
 
@@ -282,17 +324,104 @@ If an object is using a custom gizmo pivot, then it will be used as an anchor po
 
 
 ### Transform ![](./tools/transform.png#icon#left)
-Translate, rotate and scale the model by using two fingers.
-The interaction is more or less similar to the camera movement.
-* Panning will translate the model
-* Pinching will scale the model
-* Twisting will rotate the model
+Move/Rotate/Scale a model directly with 1 and 2 fingers. 
 
-You can disable each of these movements separately, for example if you disable Scaling you will only be able to translate and rotate at the same time.
+The tool is controlled with the left toolbar, and has 4 buttons:
 
+* `Snap` - snap the model onto other surfaces
+* `Move` - Single finger drag will move the object. When snap is active, this will slide the object along the surface under your finger.
+* `Rotate` - Single finger drag will rotate the object. When snap is active, will rotate around the normal of the surface under your finger.
+* `Scale` - Single finger drag will scale the object.
+
+Transform can be used to operate 2 of these modes quickly by using 2 fingers:
+
+* Drag an object to place it. Stop moving your first finger, but don't lift it from the screen.
+* Touch your second finger on the screen while keeping the first finger down. As the second finger is dragged, the object will scale.
+* Lift the second finger, and continue to drag the first finger, the object will be in move mode again.
+
+You can also change the second mode with a second finger tap gesture:
+
+* Drag the object to place it, stop moving, but don't lift your finger from the screen.
+* Tap your second finger while holding the first finger down
+* The tool is swapped to rotation mode. Drag your first finger to set the rotation.
+* Tap the second finger as before, the tool is swapped back to move mode.
+
+This presents a fast workflow for cloning objects over another, eg rocks over a landscape. Notice that the clone button is also in the left toolbar for easy access:
+
+* Use the transform tool to move a rock into place.
+* Let go, press the clone button
+* Move this rock, rotate/scale as needed
+* Let go, press the clone button
+* Move this rock, repeat.
+
+![](./videos/tool_transform.mp4)
 
 ### Gizmo ![](./tools/gizmo.png#tool#left)
-This tool lets you translate, rotate and scale your mesh with a single tool.
+This tool lets you move, rotate and scale your mesh with a single tool. It also lets you do certain operatations on the scene hierarchy.
+
+The viewport handle has the following features:
+
+* `Move` - Drag on the line+arrow to move on X/Y/Z. Drag on the peach dot in the middle of the gizmo to translate freely in screen-space. Click on the red, green, blue squares to translate on the X/Y/Z planes.
+* `Rotate` - Drag on the red/green/blue circles to rotate on X/Y/Z. Drag the sphere within the circles to free rotate.
+* `Scale`- Drag on the outer red/green/blue dots to scale on X/Y/Z. Drag on the outer red/green/blue cones to scale on the X/Y/Z planes. Drag on the outer peach circle to uniform scale.
+
+![](./images/tool_gizmo.png)
+
+#### Nodes and vertices 
+
+Every object in Nomad is made of a node and vertices:
+
+* `Node` - The 'handle' of the object, which stores its translation, rotation, scale, called its transformation matrix.
+* `Vertices` - The points that define the surface of an object, they store position and paint information.
+
+If you have a simple box made up of 8 vertices, you could translate it by modifying its transformation matrix, or by modifying the vertex positions. When sculpting you usually want to modify the vertices, when moving objects with the gizmo, you usually want to modify the node. Nomad lets you do both. 
+
+#### Left menu toolbar
+
+The left hand toolbar controls if the gizmo will work on the node or the vertices, as well as other functions:
+
+* `Clone` - Make a standalone copy of the current object, which can be dragged away with the gizmo.
+* `Instance` - Make an instance copy pf the current object. The objects are linked, so sculpting changes on one object will appear on all the instanced objects.
+* `Group/Object/Vertex/Auto` - Will set if the gizmo will affect the node or the vertices of an object. The default 'auto' mode will attempt a best guess. If there are several objects parented together in a hierarchy, 'Object' will only move the current object, child objects will remain stationary. The gizmo can also take masking and symmetry into account.
+* `Pin` - By default the gizmo will move to the pivot of the selected object. When pin is enabled, the gizmo will stay where it currently is.
+* `Align` - Toggle the pivot being aligned with the current object, or being aligned with the world.
+* `Snap rotation` - Enable rotation values being snapped to increments, the snap value is displayed and can be edited when snap is active.
+* `Snap translation` - Enable translation values being snapped to increments, the snap value is displayed and can be edited when snap is active.
+* `Pivot` - When enabled, the gizmo can be moved and rotated without moving the object. It has an extra menu explained below.
+
+#### Pivot
+When pivot mode is active, a menu is displayed to allow quick pivot changes:
+
+**Reset** 
+* `Center` - Move the pivot to the center of the object
+* `Bottom` - Move the pivot to the bottom of the object
+* `Align` - Reset the rotations to be aligned to the world.
+* `Mask` 
+
+**On Tap**
+* `None` - do nothing when the object is tapped
+* `Normal` - Move and rotate the pivot to align to where the surface is tapped
+* `First` - Move (but don't rotate) the pivot to where the surface is tapped
+* `Medial` - Move the pivot to the middle of the object, under where the surface is tapped.
+
+#### Gizmo settings
+
+* `Move origin` - Move the object to the center of the scene, called the origin.
+* `Reset` - A shortcut that sets the translation values to 0, rotation values to 0, scale to 1, moving and rotating the object.
+* `Bake` - Freeze the object where it currently is, and set the translate/rotate values to 0, scale to 1.
+
+* `Translation` - the translate X, Y, Z values
+* `Rotation` - the rotate X, Y, Z values
+* `Scale` - The uniform scale if that is enable, or the scale X, Y Z if disabled.
+* `Uniform scale` - Toggle the ability to scale uniformly or independantly on each axis
+
+* `Compact` - toggle the gizmo layout to put the extra handles outside or inside the rotation sphere
+* `Widget size` - the size of the gizmo
+* `Thickness` - the size of the lines on the gizmo
+* `Hide on interaction` - toggle if the gizmo should be temporarily hidden when being dragged
+
+* `Tangent roll threshold` - Control how the rotation UI behaves when dragging on the circle handles to rotate on X/Y/Z. If this value is 0, rotating works like a dial, drag the gizmo in circles. If this value is 90, rotating works like pulling the string of a yo-yo; drag in a straight line towards or away from where you first clicked. Values between 0 and 90 will do a combination of both; below the value will be the linear move, above the value will be circular move.
+* `Numerical input` - when enabled, a single tap on the gizmo will pop up a window to enter an exact value for the tapped widget axis.
 
 #### Method
 | Method  | Description |
@@ -320,7 +449,7 @@ This is especially useful for the rotation, as it doesn't change anything for tr
 ![](./videos/tool_gizmo.mp4)
 
 ### Measure ![](./tools/measure.png#icon#left)
-Drag to meaure the distance between 2 points.
+Drag to measure the distance between 2 points.
 
 ### View ![](./tools/view.png#icon#left)
 This "tool" does nothing in particular, this is simply a way to view the model without modifying your scene.
