@@ -396,7 +396,7 @@ When pivot mode is active, a menu is displayed to allow quick pivot changes:
 * `Center` - Move the pivot to the center of the object
 * `Bottom` - Move the pivot to the bottom of the object
 * `Align` - Reset the rotations to be aligned to the world.
-* `Mask` 
+* `Mask` - Move the pivot to the center of the unmasked region.
 
 **On Tap**
 * `None` - do nothing when the object is tapped
