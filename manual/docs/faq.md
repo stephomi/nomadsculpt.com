@@ -113,9 +113,6 @@ Handling a small screen is challenging.
 
 ## What are the next features?
 For the mid/long term roadmap I got a lot of ideas but I don't know yet.  
-For the short term roadmap, what is planned:
-* scene tree/hierarchy, with instancing support
-* improving Trim tool to be more robust
 
 Bug fixes and improving existing features will always have higher priority over adding new features.
 
