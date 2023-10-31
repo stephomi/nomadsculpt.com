@@ -1,5 +1,33 @@
 # Interface
 
+![](./images/interface_overview.jpg)
+
+* `Top menus` - The menus to access most of Nomads features, split broadly into scene and object features in the top right, and tool features in the top left. On smaller screens these functions will adaptively collapse together.
+* `Stats` - Information about the scene, the current object, mask status, memory usage.
+* `Nav Cube` - A UI to select different views, and to help orient you in relation to your sculpt. Tapping the cube will move the view. Dragging will rotate. Tap the icons to the side of the cube to frame the current object, or reset to the default home view.
+* `Toolbox` - Nomad's tools are available from this scrollable region.
+* `Left toolbar` - Sliders for radius and intensity for most tools, context specific buttons for other tools, and shortcuts for symmetry, the tool alt/sub mode, masking, smoothing, the gizmo, and paint options.
+* `Bottom toolbar` - Shortcuts for commonly used features, explained below:
+
+## Bottom toolbar
+
+![](./images/interface_bottom_toolbar.jpg)
+
+* `Undo` - revert the last operation
+* `Redo` - restore the last undo operation
+* `History` - acccess history options, explained in the [History](history.md) menu.
+* `Solo` - Toggle showing only the current object, or all objects
+* `Grid` - Toggle displayig the grid. A long press or swipe up will reveal options for the grid.
+* `Mask` - Toggle hiding the masked region of the current object, useful to focus on specific regions.
+* `Voxel` - A shortcut for the [Voxel Remesher](topology.md#voxel-remesher) voxel remesh button. A long press or swipe up will reveal shortcuts to set voxel remesh quality.
+* `Wire` - Toggle a wireframe overlay. A long press or swipe up will reveal options for the wireframe.
+* `Inspect` - Toggle viewing extra data about the current mesh. By default it will display UVs, but a long press or swipe up will allow you to inspect other properties if they exist, and if this is displayed in the background or on the mesh.
+
+
+----
+
+# Interface Menu
+
 ![](./images/interface_menu.jpg)
 
 Nomad can be customized to quite a deep level, this is split across 4 sections; Interface, Gesture, Bindings, Debug.

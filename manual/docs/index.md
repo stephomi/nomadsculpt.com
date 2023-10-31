@@ -6,7 +6,10 @@
 You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <support@nomadsculpt.com>.
 :::
 
-# Table of content
+::: tip An overview of the interface can be found in the [Interface](interface.md) section.
+:::
+
+# Table of contents
 
 | Menu                           | Icon                               | Description  |
 | :---:                          | :---:                              | :---:        |
@@ -28,6 +31,8 @@ You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <supp
 | [Tools](tools.md)              | ![](./icons/tools.png#icon)        | List of every tools/brushes |
 | [History](history.md)          | ![](./icons/history.png#icon)      | Manage the undo/redo history stack |
 | [FAQ](faq.md)                  | ![](./icons/faq.png#icon)          | Frequently Asked Questions |
+
+# User interface
 
 # Community resources
 
