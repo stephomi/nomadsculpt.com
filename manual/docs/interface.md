@@ -7,7 +7,11 @@
 * `Nav Cube` - A UI to select different views, and to help orient you in relation to your sculpt. Tapping the cube will move the view. Dragging will rotate. Tap the icons to the side of the cube to frame the current object, or reset to the default home view.
 * `Toolbox` - Nomad's tools are available from this scrollable region.
 * `Left toolbar` - Sliders for radius and intensity for most tools, context specific buttons for other tools, and shortcuts for symmetry, the tool alt/sub mode, masking, smoothing, the gizmo, and paint options.
-* `Bottom toolbar` - Shortcuts for commonly used features, explained below:
+* `Bottom toolbar` - Shortcuts for commonly used features, explained below.
+
+::: tip Left handed?
+You can mirror the placement and ordering of all the toolbars, see [Mirror top bar](#mirror-top-bar) and other related options.
+:::
 
 ## Bottom toolbar
 
@@ -68,6 +72,21 @@ The colors used for the menu panels. The menus can be made transparent and blurr
 ::: tip
 On small devices it can be useful to make the color panel nearly white, transparent, and low blur strength, so menu's won't obscure the scene.
 :::
+
+----
+
+### Mirror top bar
+Reverse the order of menus in the top bar.
+
+### Mirror side bars
+Swap the side bars so that the toolbox is on the left, tool options on the right.
+
+### Mirror bottom bar
+Move the bottom bar to the bottom right corner, and reverse the button order
+
+### Material colour preview
+When you select a colour for a material, a preview of this material is displayed on the currently selected object.
+
 
 ----
 ### Overall scale
