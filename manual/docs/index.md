@@ -31,6 +31,7 @@ You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <supp
 | [Tools](tools.md)              | ![](./icons/tools.png#icon)        | List of every tools/brushes |
 | [History](history.md)          | ![](./icons/history.png#icon)      | Manage the undo/redo history stack |
 | [FAQ](faq.md)                  | ![](./icons/faq.png#icon)          | Frequently Asked Questions |
+| [Tips](tips.md)                  | ![](./icons/manual.png#icon)     | Workflow tips |
 
 # User interface
 
