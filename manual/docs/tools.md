@@ -291,7 +291,7 @@ This tool can reset layers locally, you need an active layer otherwise nothing w
 Create a tube by drawing a curve. 
 ![](./images/tool_tube_new.jpg)
 
-Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Polygon editing](#polygon-editing) and curve editing tools. It has extra controls that appear at the top of the viewport:
+Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Shape editing](#shape-editing) and curve editing tools. It has extra controls that appear at the top of the viewport:
 
 * `Validate` - bake the curve into regular polygons so it can be sculpted.
 * `Edit` - display the curve points so they can be manipulated

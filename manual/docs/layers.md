@@ -12,7 +12,7 @@ Nomad also users layers for sculpting, which can function like layers for detail
 
 In this case the changes stored in a layer are purely additive, so layering in the stack doesn't matter like it does for paint.
 
-Layers can be partially erased via the [Delete Layer](#delete-layer) tool, and layers can also be used to create masks based on the different information stored in the layer.
+Layers can be partially erased via the [Delete Layer](tools.md#delete-layer) tool, and layers can also be used to create masks based on the different information stored in the layer.
 
 ![](./videos/layer.mp4)
 
