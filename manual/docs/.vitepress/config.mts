@@ -45,6 +45,7 @@ export default defineConfig({
                 { text: 'Tools', link: '/tools' },
                 { text: 'History', link: '/history' },
                 { text: 'Faq', link: '/faq' },
+                { text: 'Tips', link: '/tips' },
                 
             ]
         }],

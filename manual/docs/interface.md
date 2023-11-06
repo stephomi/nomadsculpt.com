@@ -1,5 +1,37 @@
 # Interface
 
+![](./images/interface_overview.jpg)
+
+* `Top menus` - The menus to access most of Nomads features, split broadly into scene and object features in the top right, and tool features in the top left. On smaller screens these functions will adaptively collapse together.
+* `Stats` - Information about the scene, the current object, mask status, memory usage.
+* `Nav Cube` - A UI to select different views, and to help orient you in relation to your sculpt. Tapping the cube will move the view. Dragging will rotate. Tap the icons to the side of the cube to frame the current object, or reset to the default home view.
+* `Toolbox` - Nomad's tools are available from this scrollable region.
+* `Left toolbar` - Sliders for radius and intensity for most tools, context specific buttons for other tools, and shortcuts for symmetry, the tool alt/sub mode, masking, smoothing, the gizmo, and paint options.
+* `Bottom toolbar` - Shortcuts for commonly used features, explained below.
+
+::: tip Left handed?
+You can mirror the placement and ordering of all the toolbars, see [Mirror top bar](#mirror-top-bar) and other related options.
+:::
+
+## Bottom toolbar
+
+![](./images/interface_bottom_toolbar.jpg)
+
+* `Undo` - revert the last operation
+* `Redo` - restore the last undo operation
+* `History` - acccess history options, explained in the [History](history.md) menu.
+* `Solo` - Toggle showing only the current object, or all objects
+* `Grid` - Toggle displayig the grid. A long press or swipe up will reveal options for the grid.
+* `Mask` - Toggle hiding the masked region of the current object, useful to focus on specific regions.
+* `Voxel` - A shortcut for the [Voxel Remesher](topology.md#voxel-remesher) voxel remesh button. A long press or swipe up will reveal shortcuts to set voxel remesh quality.
+* `Wire` - Toggle a wireframe overlay. A long press or swipe up will reveal options for the wireframe.
+* `Inspect` - Toggle viewing extra data about the current mesh. By default it will display UVs, but a long press or swipe up will allow you to inspect other properties if they exist, and if this is displayed in the background or on the mesh.
+
+
+----
+
+# Interface Menu
+
 ![](./images/interface_menu.jpg)
 
 Nomad can be customized to quite a deep level, this is split across 4 sections; Interface, Gesture, Bindings, Debug.
@@ -17,7 +49,7 @@ The bottom toolbar can have these shortcuts enabled:
 * `Wireframe` - Toggle a wireframe overlay. A long tap or swipe up will enable you to change the color and opacity of the wireframe.
 
 ### Hide toolbox
-Normally the toolbox icon in the top bar will toggle between a long single column, or a multi-column list of tools. This option will toggl betweeen the multi column list, or being hidden.
+Normally the toolbox icon in the top bar will toggle between a long single column, or a multi-column list of tools. This option will toggle between the multi column list, or being hidden.
 
 ### Reset toolbox order
 Reset the default tools in the toolbox to the default order. Custom icons will remain in the toolbox at the end of the list.
@@ -42,6 +74,21 @@ On small devices it can be useful to make the color panel nearly white, transpar
 :::
 
 ----
+
+### Mirror top bar
+Reverse the order of menus in the top bar.
+
+### Mirror side bars
+Swap the side bars so that the toolbox is on the left, tool options on the right.
+
+### Mirror bottom bar
+Move the bottom bar to the bottom right corner, and reverse the button order
+
+### Material colour preview
+When you select a colour for a material, a preview of this material is displayed on the currently selected object.
+
+
+----
 ### Overall scale
 A size multiplier on all the UI elements.
 ### Panel width
@@ -52,6 +99,11 @@ Scale the fonts.
 The spacing between elements in menus and panels.
 ## Edge offset
 You should change these values only if you have issues interacting with the buttons on the screen edges. If these sliders are disabled, Nomad will use the safe area values returned by the device itself.
+
+::: tip
+When migrating Nomad to a new device (eg replacing an iPhone 12 with an iPhone 15), make sure to reset edge options to defaults!
+:::
+
 ### Reset style
 Reset all the UI elements to their default values.
 
@@ -97,7 +149,7 @@ A shortcut to go to the `Camera` menu (camera options used to be here in Interfa
 
 ### Pencil buttons
 
-If your style has buttons, you can set their function by enabling `Pencil button 1` and `Pencil button 2`. Options are
+If your stylus has buttons, you can set their function by enabling `Pencil button 1` and `Pencil button 2`. Options are
 * None
 * Smooth
 * Mask
@@ -107,7 +159,9 @@ If your style has buttons, you can set their function by enabling `Pencil button
 
 
 ## Bindings
-Nearly all functions in Nomad can be bound to keyboard shortcuts (if your device has a keyboard). To create a binding, click the rectangle next to the function, and press the key. Options can be disable, and the search function at the top of this menu can be used to find functions.
+Nearly all functions in Nomad can be bound to keyboard shortcuts (if your device has a keyboard). To create a binding, click the rectangle next to the function, and press the key. 
+
+Individual bindings can be disabled via the checkbox next to the binding name, and the search function at the top of this menu can be used to find functions.
 
 ## Keyboard shortcuts
 

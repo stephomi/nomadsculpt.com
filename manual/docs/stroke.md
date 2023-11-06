@@ -3,31 +3,32 @@
 ---
 ![](./images/stroke_stroke.jpg) 
 
+## Overview 
 
 You can customize the stroke behavior of most tool brushes.
-The settings should be fairly similar to the ones present in 2d painting applications, however some options are specific to the sculpting and 3d field.
+The settings should be similar to the ones present in 2d painting applications, however some options are specific to the sculpting and 3d field.
 
-The options are extensive enough to be split across 5 sub-menus:
+The options are split across 5 sub-menus:
 
 | Name      | Icon                             | Description  |
 | :---:       | :---:                            | :---:        |
 | Stroke | ![](./icons/stroke_dot.png#icon) | Control how the stroke gets applied to the model |
-| Alpha | ![](./icons/alpha.png#icon) | How a greyscale texture is used for the brush stamp |
+| Alpha | ![](./icons/alpha.png#icon) | How a grey-scale texture is used for the brush stamp |
 | Falloff | ![](./icons/falloff.png#icon) | Control how the brush strength changes from the center to the edge |
 | Filter | ![](./icons/filter.png#icon) | How the brush is affected by the model geometry |
 | Pressure | ![](./icons/pressure.png#icon) | Control stylus pressure response  |
 
 ::: tip
-Nomad has many different tool types. Stroke options that aren't used by the current tool will be disabled or hidden. 
+Not all stroke options apply for all tools. Stroke options that aren't used by the current tool will be disabled or hidden. 
 :::
-
-
 
 
 ## Stroke
 
 ### World-space radius
-When enabled, the brush radius is set in world units. For example if you create a sphere, use the clay tool, and make the radius be half the sphere, if you zoom out or zoom in, the radius will still be half a sphere.
+When enabled, the brush radius is set in world units.
+
+For example if you create a sphere and make the clay tool radius match the sphere, the radius will be the same as the sphere as you zoom in and out.
 
 When disabled, the radius is set in screen units. So if you make the radius 100 pixels wide, when you zoom out or zoom in, the radius will remain 100 pixels wide.
 
@@ -44,11 +45,11 @@ Drag like a regular paint stroke.
 ![](./videos/stroke_dot.mp4) 
 
  ### Lock + radius ![](./icons/radius.png#icon) 
- Stamp a brush stroke with fixed height. Drag will set the scale and rotation.
+ Stamp a brush stroke with fixed **height**. Drag will set the scale and rotation.
 ![](./videos/stroke_lock_radius.mp4) 
 
 ### Lock + intensity  ![](./icons/falloff.png#icon) 
-Stamp a brush stroke with fixed radius. Drag will set height and rotation.
+Stamp a brush stroke with fixed **radius**. Drag will set height and rotation.
 ![](./videos/stroke_lock_intensity.mp4) 
 
 The `Move` and `Drag` tools have their own 3 options:
@@ -241,7 +242,7 @@ To paint only cavity regions, set the height offset to -100%, and adjust the top
 ![](./videos/stroke_depth_cavity.mp4)
 
 #### Example: Paint on bumps
-To only paint in high regions, se the height offset to +90%, so that the bottom of the circle intersects the horizontal line by a small amount.  When you click on the top of a 'high' zone, this will set the depth, so that anything at that depth, plus a little below it, and anything higher than it, will be painted. Deep cavities will be skipped.
+To only paint in high regions, set the height offset to +90%, so that the bottom of the circle intersects the horizontal line by a small amount.  When you click on the top of a 'high' zone, this will set the depth, so that anything at that depth, plus a little below it, and anything higher than it, will be painted. Deep cavities will be skipped.
 ![](./videos/stroke_depth_bump.mp4)
 
 
