@@ -17,9 +17,9 @@ Disabling Smooth Shading improves the performance a little bit.
 ### Outline
 You can display an outline on your current selection.
 
-This is useful to get visual feedback on your current selected meshes in case [Darken Unselected](#darken-unselected) is disabled.
+This is useful to get visual feedback on your current selected meshes in case [Darken Unselected](#darken-unselected-objects) is disabled.
 
-From a performance point of view, using [Darken Unselected](#darken-unselected) is much better than using the outline solution.
+From a performance point of view, using [Darken Unselected](#darken-unselected-objects) is much better than using the outline solution.
 
 ### Grid
 Display a planar grid so that you can get a better understanding of how your scene is positioned on the scene.
