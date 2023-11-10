@@ -17,11 +17,13 @@ cd manual
 npm install
 npm run dev
 # npm run build
+# npm run pdf
 
 # with pnpm
 pnpm install
 pnpm run dev
 # pnpm run build
+# pnpm run pdf
 
 # then simply localhost in your browser
 ```
