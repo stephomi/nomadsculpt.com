@@ -28,6 +28,7 @@ title: 'Nomad',
         sidebar: [{
             items: [
                 { text: 'Overview', link: '/' },
+                { text: 'Getting Started', link: '/gettingstarted' },
                 { text: 'Files', link: '/files' },
                 { text: 'Scene', link: '/scene' },
                 { text: 'Topology', link: '/topology' },
