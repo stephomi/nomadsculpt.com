@@ -6,6 +6,26 @@
 Read the [Getting Started](gettingstarted.md) guide.
 :::
 
+<!-- 
+::: tip
+This is a tip
+:::
+
+::: warning
+This is a warning
+:::
+
+::: danger Error
+This is a dangerous warning
+:::
+
+::: details
+This is a details block, which does not work in IE / Edge
+:::
+-->
+
+
+
 # Table of contents
 
 | Menu                           | Icon                               | Description  |
@@ -60,21 +80,3 @@ Read the [Getting Started](gettingstarted.md) guide.
 <div class="video-responsive">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5VO0ZqyopGo?si=rtOLMvjwjCfPsdb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-
-<!-- 
-::: tip
-This is a tip
-:::
-
-::: warning
-This is a warning
-:::
-
-::: danger Error
-This is a dangerous warning
-:::
-
-::: details
-This is a details block, which does not work in IE / Edge
-:::
--->
