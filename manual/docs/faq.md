@@ -125,21 +125,33 @@ But the main reason is that I felt like paid Android apps are not really the nor
 ## Can it work on multiple devices?
 Nomad is available on iOS App Store, Google Play and AppGallery.
 
-The purchase is tied to the store account used.
-If you want to use Nomad on several devices you need to make sure it's the same account.
+Each platform is a separate platform, there is no Nomad licensing server.
+
+You can use Nomad on multiple devices as long as you are using the same Google, iCloud or AppGallery account.
 
 
 ## How to restore my purchase?
 Google Play and AppGallery both handle the synchronization automatically.
 
-- Double check that you are logged on the exact same account you made the purchase with.
-- Go in the About menu (top left nomad icon), and hit `restore purchase`.
-- Wait a few hours, sometimes Google Play takes a bit of time for some reason.
-- Uninstall and reinstall Nomad, make sure to [backup your files](#where-are-my-projects-located-on-my-device) if you don't want to lose anything.
-- Contact me at <support@nomadsculpt.com>, ideally with a screenshot of the logs after trying to restore a purchase (logs can be enabled in the Debug menu).
+- Go in the About menu (top left nomad icon), and hit `restore purchase`
+- Double check that you are logged into the same account you used to purchase Nomad.
+- Reboot the device
+- Sometimes you need to wait a couple of hours
+- Make sure that the Google Play application is up-to-date
+- Re-install Nomad (make sure to [backup your files](#where-are-my-projects-located-on-my-device) if you don't want to lose anything)
+<!-- - You can try the purchase button (you cannot buy twice the same item on the same account) -->
 
-::: tip
-You need to have access to the Google Play services, recent Huawei devices don't have access to Google services.
+:::tip
+You can contact me at <support@nomadsculpt.com> but the *only* thing I'll be able to do is confirm if an email has a purchase associated with it.
+
+Note that I regularly receive reports concerning licenses not updating correctly after acquiring a new device.
+I don't have any control on the payment and account synchronization, it's all handled by Google/AppGallery!
+
+Eventually the purchase is always restored, but the necessary steps to speed up the process is unclear.
+:::
+
+::: warning
+Recent Huawei devices don't have access to Google services.
 In that case you’ll need to purchase the app again on AppGallery (Huawei app store).
 :::
 

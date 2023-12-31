@@ -2,6 +2,24 @@
 
 <!-- [[toc]] -->
 
+<!-- 
+::: tip
+This is a tip
+:::
+
+::: warning
+This is a warning
+:::
+
+::: danger Error
+This is a dangerous warning
+:::
+
+::: details
+This is a details block, which does not work in IE / Edge
+:::
+-->
+
 ::: tip Any questions?
 You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <support@nomadsculpt.com>.
 :::
@@ -65,21 +83,3 @@ You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <supp
 <div class="video-responsive">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5VO0ZqyopGo?si=rtOLMvjwjCfPsdb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-
-<!-- 
-::: tip
-This is a tip
-:::
-
-::: warning
-This is a warning
-:::
-
-::: danger Error
-This is a dangerous warning
-:::
-
-::: details
-This is a details block, which does not work in IE / Edge
-:::
--->
