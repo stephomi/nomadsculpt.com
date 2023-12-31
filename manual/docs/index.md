@@ -24,7 +24,13 @@ This is a details block, which does not work in IE / Edge
 :::
 -->
 
+<<<<<<< HEAD
 
+=======
+::: tip New to Nomad?
+Read the [Getting Started](gettingstarted.md) guide.
+:::
+>>>>>>> 9a0b32b (added getting started guide, with videos, moved stuff in index and interface pages to getting started)
 
 # Table of contents
 
