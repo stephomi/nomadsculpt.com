@@ -124,7 +124,7 @@ Do you want to want to learn *everything* about Nomad? Good choice! This manual 
 
 If you still have questions after reading the manual and watching the tutorial videos, there's three main ways to talk to other Nomad users or the developer of Nomad:
 
-* Visit the forums at you visit the [www.nomadsculpt.com/forum](http://www.nomadsculpt.com/forum)
-* Join the Nomad discord chat [https://discord.com/invite/8h7BwpRz29](https://discord.com/invite/8h7BwpRz29)
+* Visit the forums: [www.nomadsculpt.com/forum](http://www.nomadsculpt.com/forum)
+* Join the Nomad discord chat: [https://discord.com/invite/8h7BwpRz29](https://discord.com/invite/8h7BwpRz29)
 * Contact the developer directly at support@nomadsculpt.com
 
