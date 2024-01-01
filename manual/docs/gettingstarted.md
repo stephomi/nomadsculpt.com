@@ -123,6 +123,9 @@ Do you want to work with more objects? Combine simple objects and primitives int
 
 Do you want to want to learn *everything* about Nomad? Good choice! This manual covers all of Nomad, includes lots of tips and tricks, and has a great search function at the top. Use the navigation on the left to learn more.
 
+If you prefer video, Holger Schönischka has made a huge collection of tips and tricks for Nomad on Youtube: https://www.youtube.com/@ProcreateFX/videos
+
+
 ## Getting help
 
 If you still have questions after reading the manual and watching the tutorial videos, there's three main ways to talk to other Nomad users or the developer of Nomad:
