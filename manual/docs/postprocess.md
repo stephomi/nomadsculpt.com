@@ -13,7 +13,7 @@ However, most of the time you want the post process to be disabled when you are 
 
 ## Quality
 ### Max frame sampling
-Nomad will calculate a certain amount of post processing for a single frame render, which can look noisy. This control determines how many frames will be rendered, then blended together, which can remove most noisy artifacts. Some effects require no extra samples (eg colour grading), while others like global illumination can require hundreds of samples to be noise free. 
+Nomad will calculate a certain amount of post processing for a single frame render, which can look noisy. This control determines how many frames will be rendered, then blended together, which can remove most noisy artifacts. Some effects require no extra samples (eg color grading), while others like global illumination can require hundreds of samples to be noise free. 
 
 In the viewport this can be seen whenever nomad is left alone, the image quality will gradually refine up to the max samples, then stop. This number of calculations is also used in the render section of the File menu, when 'export png' is clicked.
 
@@ -102,7 +102,7 @@ Tone mapping can enhance the effect of global illumination. If you turn the inst
 :::
 
 ## Color Grading
-Similar to the curves tool in Photoshop, this allows you to control the balance and distribution of color in the image. The `main` control affects the entire colour balance, the `red`/`green`/`blue` controls allow for fine control. 
+Similar to the curves tool in Photoshop, this allows you to control the balance and distribution of color in the image. The `main` control affects the entire color balance, the `red`/`green`/`blue` controls allow for fine control. 
 
 | Color Grading off           | Color Grading on   |
 | :---:                      |:---:                    |

@@ -54,7 +54,7 @@ Display information about your system memory, total scene vertex count, and the 
 ----- 
 
 ### Highlight selection
-Temporarily flash object(s) in the hightlight colour (pink by default) when selected by tap or with the select tool.
+Temporarily flash object(s) in the hightlight color (pink by default) when selected by tap or with the select tool.
 
 ### Darken Unselected objects
 The objects that are not selected will be darkened so that the current selection can stand out.
@@ -82,7 +82,7 @@ The color of the indicator.
 Controls to adjust the size of the indicator and shapes within the indicator.
 
 ## Wireframe
-Activate the wireframe overlay, and set the wireframe colour and opacity.
+Activate the wireframe overlay, and set the wireframe color and opacity.
 
 ## Grid
 Activate the grid, and set the grid color and opacity

@@ -55,8 +55,8 @@ Swap the side bars so that the toolbox is on the left, tool options on the right
 ### Mirror bottom bar
 Move the bottom bar to the bottom right corner, and reverse the button order
 
-### Material colour preview
-When you select a colour for a material, a preview of this material is displayed on the currently selected object.
+### Material color preview
+When you select a color for a material, a preview of this material is displayed on the currently selected object.
 
 
 ----

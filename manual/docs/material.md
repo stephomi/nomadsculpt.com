@@ -109,7 +109,7 @@ If the Scale parameter is greater than 1, making the texture smaller than the ob
 Same as Tiling-X, but for the Y axis.
 
 ### Transform
-Extra 2d transformations applied to the texture in UV space. The reset button resets to defaults, the chain icon (when textures other than color are selected) will link or unlink the transform to be the same as the colour texture.
+Extra 2d transformations applied to the texture in UV space. The reset button resets to defaults, the chain icon (when textures other than color are selected) will link or unlink the transform to be the same as the color texture.
 
 #### Translation
 The X and Y offset of the texture

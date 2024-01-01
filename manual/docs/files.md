@@ -39,11 +39,11 @@ Enable savng of the gui and project settings within the Nomad .nom or glTF file.
 Enable splitting OBJ groups into separate objects.
 
 #### Color Space
-Set the colour mode interpreted from the obj as Linear, sRGB, or Auto.
+Set the color mode interpreted from the obj as Linear, sRGB, or Auto.
 
 ### FBX
 #### Color Space
-Set the colour mode interpreted from the obj as Linear, sRGB, or Auto.
+Set the color mode interpreted from the obj as Linear, sRGB, or Auto.
 
 ## Import
 
@@ -93,7 +93,7 @@ Save to a 3d geometry format that can be used in other software.
 Enable only exporting the selected objects instead of the entire scene.
 
 ### Vertex colors
-Export vertex colours if supported by the file format.
+Export vertex colors if supported by the file format.
 
 ### PBR paint
 PBR vertex colors are exported as secondary vertex colors attributes.
