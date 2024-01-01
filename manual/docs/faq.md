@@ -164,3 +164,19 @@ No, this is a limitation of the realtime render engine within Nomad. It is possi
 
 ## Can we import Zbrush tools?
 No, Zbrush uses a proprietary format. You should be able to extract the alpha maps and use them in Nomad however. 
+
+## Why don't the colors match what I painted? Why can't I get white in the render?
+Imagine taking a photo of a piece of paper, vs a photo of a desk lamp, vs a photo of the sun. Older cameras and screens will just make them all ‘white’. More modern systems can show a difference between reflected white of paper vs emitted light of a lamp, vs the super bright of the sun.
+
+Modern computer graphics tries to work in a similar way, emulating the physics of light and surfaces. This is called `Physically Based Rendering`, or PBR, and Nomad's PBR renderer is based on this. This looks realistic and balanced, but often brightly painted colors will appear darker.
+
+If you need the render to match closer to the painted colors, you can fix this in both non-physically based and physically based ways:
+
+Non PBR:
+* `Use the 'Unlit' mode in the lighting menu`. Colors will be shown exactly as painted, but you also lose all shading. Handy for quick checks, and more graphic output.
+* `Use the 'Matcap' mode in the lighting menu`. Choose a brighter matcap that is mostly white, with no color tint.
+
+PBR:
+* `Boost the lighting`. If you were taking a photo of white paper in a dark room, you’d simply add more light. On the environment light, turn up the exposure slider until the colors start to feel right to you, or add more individual lights with more intensity.
+* `Boost the camera exposure`. If the dark room didn't have any extra lights, you could have the camera hold the shutter open for longer, or use a more sensitive ISO. In Nomad you can achieve a similar result with post processing. Go to post process, enable, down to tone mapping, enable, and raise the exposure slider until the colors feel right.
+* `Use emmisive color`. In the material menu, you can enable 'emissive' under textures, which will make an object appear to be a light source. If you turn on global illmination in the post process settings, it will cast light onto other objects in the scene. You can also enable 'unlit' for that material, which will achieve a similar look without a texture.
