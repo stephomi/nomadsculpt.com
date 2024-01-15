@@ -20,12 +20,28 @@ This is a details block, which does not work in IE / Edge
 :::
 -->
 
-::: tip Any questions?
-You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <support@nomadsculpt.com>.
+::: tip New to Nomad?
+Read the [Getting Started](gettingstarted.md) guide.
 :::
 
-::: tip An overview of the interface can be found in the [Interface](interface.md) section.
+<!-- 
+::: tip
+This is a tip
 :::
+
+::: warning
+This is a warning
+:::
+
+::: danger Error
+This is a dangerous warning
+:::
+
+::: details
+This is a details block, which does not work in IE / Edge
+:::
+-->
+
 
 # Table of contents
 
@@ -50,8 +66,6 @@ You can visit the [forum](https://forum.nomadsculpt.com), or contact me at <supp
 | [History](history.md)          | ![](./icons/history.png#icon)      | Manage the undo/redo history stack |
 | [FAQ](faq.md)                  | ![](./icons/faq.png#icon)          | Frequently Asked Questions |
 | [Tips](tips.md)                  | ![](./icons/manual.png#icon)     | Workflow tips |
-
-# User interface
 
 # Community resources
 
