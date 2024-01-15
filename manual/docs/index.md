@@ -24,24 +24,6 @@ This is a details block, which does not work in IE / Edge
 Read the [Getting Started](gettingstarted.md) guide.
 :::
 
-<!-- 
-::: tip
-This is a tip
-:::
-
-::: warning
-This is a warning
-:::
-
-::: danger Error
-This is a dangerous warning
-:::
-
-::: details
-This is a details block, which does not work in IE / Edge
-:::
--->
-
 
 # Table of contents
 
