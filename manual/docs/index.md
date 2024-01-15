@@ -2,6 +2,24 @@
 
 <!-- [[toc]] -->
 
+<!-- 
+::: tip
+This is a tip
+:::
+
+::: warning
+This is a warning
+:::
+
+::: danger Error
+This is a dangerous warning
+:::
+
+::: details
+This is a details block, which does not work in IE / Edge
+:::
+-->
+
 ::: tip New to Nomad?
 Read the [Getting Started](gettingstarted.md) guide.
 :::
