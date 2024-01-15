@@ -119,7 +119,7 @@ Want to export your models? Or import models to sculpt on? Or create images of y
 
 Do you want to learn more about controlling detail on your sculpt? Head to the [Topology](topology.md) section and learn about multires and decimation.
 
-Do you want to work with more objects? Combine simple objects and primitives into a bigger scene? Head to the [Scene](secne.md) section.
+Do you want to work with more objects? Combine simple objects and primitives into a bigger scene? Head to the [Scene](scene.md) section.
 
 Do you want to want to learn *everything* about Nomad? Good choice! This manual covers all of Nomad, includes lots of tips and tricks, and has a great search function at the top. Use the navigation on the left to learn more.
 
