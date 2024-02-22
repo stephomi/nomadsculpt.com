@@ -189,6 +189,7 @@ Non PBR:
 * `Use the 'Matcap' mode in the lighting menu`. Choose a brighter matcap that is mostly white, with no color tint.
 
 PBR:
+* `Use a neutral environment`. You can [change the environment](lighting.md#environment) to a more neutral one. Avoid indoor environment as they tend to be more colored. Prefer a daylight outdoor or studio environment instead.
 * `Boost the lighting`. If you were taking a photo of white paper in a dark room, you’d simply add more light. On the environment light, turn up the exposure slider until the colors start to feel right to you, or add more individual lights with more intensity.
 * `Boost the camera exposure`. If the dark room didn't have any extra lights, you could have the camera hold the shutter open for longer, or use a more sensitive ISO. In Nomad you can achieve a similar result with post processing. Go to post process, enable, down to tone mapping, enable, and raise the exposure slider until the colors feel right.
 * `Use emmisive color`. In the material menu, you can enable 'emissive' under textures, which will make an object appear to be a light source. If you turn on global illmination in the post process settings, it will cast light onto other objects in the scene. You can also enable 'unlit' for that material, which will achieve a similar look without a texture.
