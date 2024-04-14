@@ -26,7 +26,7 @@ The intensity slider for many tools can go above 100%, worth experimenting with!
 
 ![](./images/tools_shape_selector_panel.jpg)
 
-The [Trim](#trim), [Split](#split) and [Project](#project) all use similar tools for selecting areas of the mesh, and are chosen with the shape selector panel on the left of the screen. 
+The [Trim](#trim), [Split](#split), [Project](#project), [Facegroup](#facegroup) and [Hide](#hide) tools all use similar controls for selecting areas of the mesh, and are chosen with the shape selector panel on the left of the screen. 
 
 * `Lasso` - A freehand drawn shape
 * `Polygon` - An enclosed shape defined by a combination of curves and/or straight lines. See [Shape editing](#shape-editing) below for more info.
@@ -66,14 +66,15 @@ A right click or long press on a tool will bring up a context menu. This menu ha
 
 |      |     |     |     |
 | ---  | --- | --- | --- |
-| ![](./tools/clay.png#tool#left)       [Clay](#clay)                 | ![](./tools/brush.png#tool#left)      [Brush](#brush)     | ![](./tools/move.png#tool#left)         [Move](#move)                   | ![](./tools/drag.png#tool#left)    [Drag](#drag)       |
-| ![](./tools/smooth.png#tool#left)     [Smooth](#smooth)             | ![](./tools/mask.png#icon#left)       [Mask](#mask)       | ![](./tools/maskSelector.png#tool#left) [Selector Mask](#selector-mask) | ![](./tools/paint.png#tool#left)   [Paint](#paint)     |
-| ![](./tools/smudge.png#icon#left)     [Smudge](#smudge)             | ![](./tools/flatten.png#tool#left)    [Flatten](#flatten) | ![](./tools/planar.png#tool#left)       [Planar](#planar)               | ![](./tools/layer.png#tool#left)   [Layer](#layer)     |
-| ![](./tools/crease.png#tool#left)     [Crease](#crease)             | ![](./tools/trim.png#icon#left)       [Trim](#trim)       | ![](./tools/split.png#icon#left)        [Split](#split)                 | ![](./tools/project.png#icon#left) [Project](#project) |
-| ![](./tools/inflate.png#tool#left)    [Inflate](#inflate)           | ![](./tools/pinch.png#tool#left)      [Pinch](#pinch)     | ![](./tools/nudge.png#tool#left)        [Nudge](#nudge)                 | ![](./tools/stamp.png#tool#left)   [Stamp](#stamp)     |
-| ![](./tools/clearLayer.png#tool#left) [Delete Layer](#delete-layer) | ![](./tools/tube.png#icon#left)       [Tube](#tube)       | ![](./tools/lathe.png#icon#left)        [Lathe](#lathe)                 | ![](./tools/insert.png#icon#left)  [Insert](#insert)   |
-| ![](./tools/transform.png#icon#left)  [Transform](#transform)       | ![](./tools/gizmo.png#tool#left)      [Gizmo](#gizmo)     | ![](./tools/measure.png#tool#left)      [Measure](#measure)             | ![](./tools/view.png#icon#left)    [View](#view)       |
-| ![](./tools/select.png#icon#left)     [Select](#select)             |                                                           |                                                                         |                                                        |
+| ![](./tools/clay.png#tool#left)       [Clay](#clay)                 | ![](./tools/brush.png#tool#left)   [Brush](#brush)     | ![](./tools/move.png#tool#left)           [Move](#move)                   | ![](./tools/drag.png#tool#left)    [Drag](#drag)       |
+| ![](./tools/smooth.png#tool#left)     [Smooth](#smooth)             | ![](./tools/mask.png#icon#left)    [Mask](#mask)       | ![](./tools/maskSelector.png#tool#left)   [Selector Mask](#selector-mask) | ![](./tools/paint.png#tool#left)   [Paint](#paint)     |
+| ![](./tools/smudge.png#icon#left)     [Smudge](#smudge)             | ![](./tools/flatten.png#tool#left) [Flatten](#flatten) | ![](./tools/planar.png#tool#left)         [Planar](#planar)               | ![](./tools/layer.png#tool#left)   [Layer](#layer)     |
+| ![](./tools/crease.png#tool#left)     [Crease](#crease)             | ![](./tools/trim.png#icon#left)    [Trim](#trim)       | ![](./tools/split.png#icon#left)          [Split](#split)                 | ![](./tools/project.png#icon#left) [Project](#project) |
+| ![](./tools/inflate.png#tool#left)    [Inflate](#inflate)           | ![](./tools/pinch.png#tool#left)   [Pinch](#pinch)     | ![](./tools/nudge.png#tool#left)          [Nudge](#nudge)                 | ![](./tools/stamp.png#tool#left)   [Stamp](#stamp)     |
+| ![](./tools/clearLayer.png#tool#left) [Delete Layer](#delete-layer) | ![](./tools/tube.png#icon#left)    [Tube](#tube)       | ![](./tools/lathe.png#icon#left)          [Lathe](#lathe)                 | ![](./tools/insert.png#icon#left)  [Insert](#insert)   |
+| ![](./tools/transform.png#icon#left)  [Transform](#transform)       | ![](./tools/gizmo.png#tool#left)   [Gizmo](#gizmo)     | ![](./icons/tool_faceGroup.png#icon#left) [FaceGroup](#facegroup)         | ![](./icons/tool_hide.png#icon#left)    [Hide](#hide)  |
+| ![](./tools/measure.png#tool#left)    [Measure](#measure)           | ![](./icons/tool_remesh.png#icon#left)    [Quad Remesher](#quad-remesher) | ![](./tools/select.png#icon#left)    [Select](#select) | ![](./tools/view.png#icon#left)    [View](#view)            |
+
 
 
 ### Clay ![](./tools/clay.png#tool#left)
@@ -434,7 +435,7 @@ This is especially useful for the rotation, as it doesn't change anything for tr
 
 ![](./videos/tool_gizmo.mp4)
 
-### Facegroup
+### Facegroup ![](./icons/tool_faceGroup.png#icon#left)
 
 Facegroups let you organise your object into differently colored faces. You can use these groups in many ways in Nomad:
 
@@ -450,16 +451,16 @@ Its controls are in the left hand menu:
 * `Patch ` - Display the available facegroups as patches. Unused patches can be deleted. Tap on a patch to rename or change its color. The plus icon lets you create new patches
 * `Dot` - Paint on the object to define facegroups. When '+ Face Group' is enabled, every new stroke will automatically create a new facegroup, useful for quickly defining regions. A tap will flood fill the selected regon. The slider sets the radius of the dot.
 * `Relax` - Smooth the borders of facegroups. Very useful for defining clean edges for quad remeshing, or for defining panels for hard surface modelling. The sliders control the radius and intensity of the relax operation.
-* `Facegroup shapes` - Similar to the way the mask tool lets you draw masks, while the selector mask lets you define masks with shapes, you can define facegroups with shape via `Lock+Radius`, `Lasso`, `Polygon`, `Rect` and `Ellipse`. See [Shape editing](#shape-editing) for more info.
+* `Shape selector` - Create facegroups with shapes instead of a brush, via `Lock+Radius`, `Lasso`, `Polygon`, `Rect` and `Ellipse`. See [Shape Selector](#shape-selector) for more info.
 * `Auto-pick` - When enabled, will select the patch where the stroke starts, and apply that patch for the rest of the stroke. Very useful for tidying up facegroup regions; if a facegroup has extended too far, enable auto-pick, start a stroke from where the facegroup patch is correct, and drag up to the border to reassign the correct patch.
 
-### Hide
+### Hide ![](./icons/tool_hide.png#icon#left)
 Hide or isolate parts of the object. 
 
 The primary modes are controlled from the left hand menu:
 
 * `Dot` - Brush on the object to hide parts of the object.
-* `Hide shapes` -  Similar to the way the mask tool lets you draw masks, while the selector mask lets you define masks with shapes, you can hide parts of the mesh with shapes via `Lasso`, `Polygon`, `Line`, `Rect` and `Ellipse`. See [Shape editing](#shape-editing) for more info.
+* `Shape selector` -  Hide with shapes instead of a brush, via `Lasso`, `Polygon`, `Line`, `Rect` and `Ellipse`. See [Shape Selector](#shape-selector) for more info.
 * `Show` - invert the operation, so the selected mode will show instead of hide parts of the object.
 
 A toolbar will appear at the top of the viewport with extra controls:
@@ -474,7 +475,11 @@ A toolbar will appear at the top of the viewport with extra controls:
 ### Measure ![](./tools/measure.png#icon#left)
 Drag to measure the distance between 2 points.
 
-### Quad Remesher (iOS only)
+### Quad Remesher ![](./icons/tool_remesh.png#icon#left)
+
+iOS only. 
+
+Placeholder text
 
 ### Select ![](./tools/select.png#icon#left)
 Use the shape modes to select objects in the scene. `Unselect` will remove objects from the selection.
