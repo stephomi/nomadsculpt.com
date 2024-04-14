@@ -3,7 +3,7 @@ import markdownHtml5 from 'markdown-it-html5-embed';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-title: 'Nomad',
+    title: 'Nomad',
     description: 'Nomad Sculpt Manual',
     cleanUrls: true,
     appearance: 'dark',
@@ -93,16 +93,16 @@ title: 'Nomad',
                         return tag.replace('$0', prop.url.replace('.mp4', '.jpg')).replace('$1', prop.url);
                     }
                 },
-})
-}
-}
-,
+            })
+        }
+    },
 
-    head : [
-        [ 'link', { rel : 'icon', href : '/favicon.ico' } ], [ 'meta', { name : 'theme-color', content : '#ebbe6c' } ],
-        [ 'meta', { name : 'apple-mobile-web-app-capable', content : 'yes' } ],
-        [ 'meta', { name : 'apple-mobile-web-app-status-bar-style', content : 'black' } ],
-        [ 'script', { async : '', src : 'https://www.googletagmanager.com/gtag/js?id=G-DSF8ZS1RCC' } ],
+    head: [
+        ['link', { rel: 'icon', href: '/favicon.ico' }],
+        ['meta', { name: 'theme-color', content: '#ebbe6c' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-DSF8ZS1RCC' }],
         [
             'script', {},
             `window.dataLayer = window.dataLayer || [];

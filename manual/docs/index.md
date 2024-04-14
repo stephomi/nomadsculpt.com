@@ -34,7 +34,7 @@ Read the [Getting Started](gettingstarted.md) guide.
 | [Topology](topology.md)        | ![](./icons/multires.png#icon)     | Edit the topology of the model |
 | [Material](material.md)        | ![](./icons/material.png#icon)     | Material (object-level) |
 | [Lighting](lighting.md)        | ![](./icons/sun.png#icon)          | How to light your scene |
-| [Post Process](postprocess.md) | ![](./icons/post_process.png#icon) | Post Processing (screen-space visual effects) |
+| [Post Process](postprocess.md) | ![](./icons/postprocess.png#icon)  | Post Processing (screen-space visual effects) |
 | [Background](background.md)    | ![](./icons/image.png#icon)        | Change the background and add a reference image |
 | [Camera](camera.md)            | ![](./icons/camera.png#icon)       | Camera control and interaction |
 | [Stroke](stroke.md)            | ![](./icons/pencil.png#icon)       | Edit the current tool settings, stroke, falloff... |
@@ -44,7 +44,7 @@ Read the [Getting Started](gettingstarted.md) guide.
 | [Layers](layers.md)            | ![](./icons/layers.png#icon)       | Manage your current object layers |
 | [Settings](settings.md)        | ![](./icons/cog.png#icon)          | Customize the 3d viewport |
 | [Interface](interface.md)      | ![](./icons/interface.png#icon)    | Customize the interface |
-| [Tools](tools.md)              | ![](./icons/tools.png#icon)        | List of every tools/brushes |
+| [Tools](tools.md)              | ![](./icons/toolbox.png#icon)      | List of every tools/brushes |
 | [History](history.md)          | ![](./icons/history.png#icon)      | Manage the undo/redo history stack |
 | [FAQ](faq.md)                  | ![](./icons/faq.png#icon)          | Frequently Asked Questions |
 | [Tips](tips.md)                  | ![](./icons/manual.png#icon)     | Workflow tips |
