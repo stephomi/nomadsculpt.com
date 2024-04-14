@@ -132,7 +132,7 @@ Masked vertices can't be sculpted or painted afterwards, this is a way to "prote
 ![](./images/tool_mask_settings.jpg)
 
 
-The top section of the settings let you manipulate the mask:
+ A toolbar will appear at the top of the viewport with extra controls:
 
 | Action       | Description     |
 | :---:        | :---:           |
@@ -291,7 +291,7 @@ This tool can reset layers locally, you need an active layer otherwise nothing w
 Create a tube by drawing a curve. 
 ![](./images/tool_tube_new.jpg)
 
-Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Shape editing](#shape-editing) and curve editing tools. It has extra controls that appear at the top of the viewport:
+Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Shape editing](#shape-editing) and curve editing tools. A toolbar will appear at the top of the viewport with extra controls:
 
 * `Validate` - bake the curve into regular polygons so it can be sculpted.
 * `Edit` - display the curve points so they can be manipulated
@@ -434,11 +434,50 @@ This is especially useful for the rotation, as it doesn't change anything for tr
 
 ![](./videos/tool_gizmo.mp4)
 
+### Facegroup
+
+Facegroups let you organise your object into differently colored faces. You can use these groups in many ways in Nomad:
+
+* A quick selection method for masks
+* Hide/show sections of your object
+* Organize your object without having to split it into separate parts
+* Define uv regions
+* Guide the quad remesher
+* Additional control for tools like smooth.
+
+Its controls are in the left hand menu:
+
+* `Patch ` - Display the available facegroups as patches. Unused patches can be deleted. Tap on a patch to rename or change its color. The plus icon lets you create new patches
+* `Dot` - Paint on the object to define facegroups. When '+ Face Group' is enabled, every new stroke will automatically create a new facegroup, useful for quickly defining regions. A tap will flood fill the selected regon. The slider sets the radius of the dot.
+* `Relax` - Smooth the borders of facegroups. Very useful for defining clean edges for quad remeshing, or for defining panels for hard surface modelling. The sliders control the radius and intensity of the relax operation.
+* `Facegroup shapes` - Similar to the way the mask tool lets you draw masks, while the selector mask lets you define masks with shapes, you can define facegroups with shape via `Lock+Radius`, `Lasso`, `Polygon`, `Rect` and `Ellipse`. See [Shape editing](#shape-editing) for more info.
+* `Auto-pick` - When enabled, will select the patch where the stroke starts, and apply that patch for the rest of the stroke. Very useful for tidying up facegroup regions; if a facegroup has extended too far, enable auto-pick, start a stroke from where the facegroup patch is correct, and drag up to the border to reassign the correct patch.
+
+### Hide
+Hide or isolate parts of the object. 
+
+The primary modes are controlled from the left hand menu:
+
+* `Dot` - Brush on the object to hide parts of the object.
+* `Hide shapes` -  Similar to the way the mask tool lets you draw masks, while the selector mask lets you define masks with shapes, you can hide parts of the mesh with shapes via `Lasso`, `Polygon`, `Line`, `Rect` and `Ellipse`. See [Shape editing](#shape-editing) for more info.
+* `Show` - invert the operation, so the selected mode will show instead of hide parts of the object.
+
+A toolbar will appear at the top of the viewport with extra controls:
+
+* `Clear` - Restore the object, all hidden parts will be unhidden.
+* `Invert` - Swap the hidden and unhidden parts.
+* `Facegroup` - Use facegroups to quickly hide sections, tapping on a facegroup will hide the entire facegroup.
+* `Mask` - If a mask is active, tapping this button will hide the masked section.
+* `Delete` - Delete the hidden part of the object
+* `Split` - Split the hidden part of the object into a new shape.
+
 ### Measure ![](./tools/measure.png#icon#left)
 Drag to measure the distance between 2 points.
 
-### View ![](./tools/view.png#icon#left)
-This "tool" does nothing in particular, this is simply a way to view the model without modifying your scene.
+### Quad Remesher (iOS only)
 
 ### Select ![](./tools/select.png#icon#left)
 Use the shape modes to select objects in the scene. `Unselect` will remove objects from the selection.
+
+### View ![](./tools/view.png#icon#left)
+This "tool" does nothing in particular, this is simply a way to view the model without modifying your scene.
