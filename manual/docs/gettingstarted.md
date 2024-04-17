@@ -92,7 +92,7 @@ Now that you know the basics of Nomad, lets look at the rest of the interface.
 * `Bottom toolbar` - Shortcuts for commonly used features, explained below.
 
 ::: tip Left handed?
-You can mirror the placement and ordering of all the toolbars, see [Mirror top bar](#mirror-top-bar) and other related options.
+You can mirror the placement and ordering of all the toolbars, see [Mirror top bar](interface.md#mirror-top-bar) and other related options.
 :::
 
 ## Bottom toolbar
@@ -103,9 +103,9 @@ You can mirror the placement and ordering of all the toolbars, see [Mirror top b
 * `Redo` - restore the last undo operation
 * `History` - acccess history options, explained in the [History](history.md) menu.
 * `Solo` - Toggle showing only the current object, or all objects
-* `Grid` - Toggle displayig the grid. A long press or swipe up will reveal options for the grid.
-* `Mask` - Toggle hiding the masked region of the current object, useful to focus on specific regions.
+* `X-Ray` - Make all other objects render in x-ray mode, and the current object solid. A long press or swipe up will allow you to set the colour and opacity of the x-ray mode.
 * `Voxel` - A shortcut for the [Voxel Remesher](topology.md#voxel-remesher) voxel remesh button. A long press or swipe up will reveal shortcuts to set voxel remesh quality.
+* `Grid` - Toggle displaying the grid. A long press or swipe up will reveal options for the grid.
 * `Wire` - Toggle a wireframe overlay. A long press or swipe up will reveal options for the wireframe.
 * `Inspect` - Toggle viewing extra data about the current mesh. By default it will display UVs, but a long press or swipe up will allow you to inspect other properties if they exist, and if this is displayed in the background or on the mesh.
 
@@ -130,7 +130,7 @@ If you prefer video, Holger Schönischka has made a huge collection of tips and 
 
 If you still have questions after reading the manual and watching the tutorial videos, there's three main ways to talk to other Nomad users or the developer of Nomad:
 
-* Visit the forums: [www.nomadsculpt.com/forum](http://www.nomadsculpt.com/forum)
+* Visit the forums: [forum.nomadsculpt.com](http://forum.nomadsculpt.com)
 * Join the Nomad discord chat: [https://discord.com/invite/8h7BwpRz29](https://discord.com/invite/8h7BwpRz29)
 * Contact the developer directly at support@nomadsculpt.com
 
