@@ -448,7 +448,7 @@ Facegroups let you organise your object into differently colored faces. You can 
 
 Its controls are in the left hand menu:
 
-* `Patch ` - Display the available facegroups as patches. Unused patches can be deleted. Tap on a patch to rename or change its color. The plus icon lets you create new patches
+* `Patch ` - Display the available facegroups as patches. Unused patches can be deleted. Tap on a patch to rename or change its color. The plus icon lets you create new patches.
 * `Dot` - Paint on the object to define facegroups. When '+ Face Group' is enabled, every new stroke will automatically create a new facegroup, useful for quickly defining regions. A tap will flood fill the selected regon. The slider sets the radius of the dot.
 * `Relax` - Smooth the borders of facegroups. Very useful for defining clean edges for quad remeshing, or for defining panels for hard surface modelling. The sliders control the radius and intensity of the relax operation.
 * `Shape selector` - Create facegroups with shapes instead of a brush, via `Lock+Radius`, `Lasso`, `Polygon`, `Rect` and `Ellipse`. See [Shape Selector](#shape-selector) for more info.
@@ -477,9 +477,41 @@ Drag to measure the distance between 2 points.
 
 ### Quad Remesher ![](./icons/tool_remesh.png#icon#left)
 
-iOS only. 
+This toll will convert the selected object into a clean quad topology layout, with controls for density, edge flow, symmetry. 
 
-Placeholder text
+::: tip
+The quad remesher is available as an in-app purchase for iOS only. Android users can use 'Quad Remesh - Instant' available under the Topology -> Misc menu.
+:::
+
+When this tool is activated for the first time, it will ask if you want to enable it as an in-app purchase. Once active, the left and top toolbars will be enabled.
+
+* `Dot` - This brush will set the target density. Intensity at 100% will paint in red, which will use twice the target quad density at those regions. Intensity at 0% will paint in cyan, which will use half the target quad density in those regions. Intensity at 50% will paint in gray, which will use the default target quad density.
+* `Smooth` - Smooth the red/gray/cyan density transitions.
+* `Curve` - Sketch curves on the surface of the sculpt, quad remesher will use these as guides for the edge flow. Tap on a curve to delete it.
+* `Path` - Draw paths on the the surface of the sculpt, quad remesher will use these as guides for the edge flow. Tap on a path to delete it. 
+* `Rect` - Draw rectangles on the the surface of the sculpt, quad remesher will use these as guides for the edge flow. Tap on a path to delete it.
+* `Ellipse` - Draw ellipses on the the surface of the sculpt, quad remesher will use these as guides for the edge flow. Tap on a path to delete it.
+
+A toolbar will appear at the top of the viewport with extra controls:
+
+* `Remesh` - Click this to start the quad remesher process.
+* `Quads` - Set the target quad count by sliding left and right, or tap to set an exact number. Note that this is a guide more than a fixed number, the various controls on the quad remesher will often mean the result will not exactly match this target.
+* `Guides` - indicate the total number of guides, or tap to delete all guides.
+* `Density X` - tap to remove all density painting.
+* `Density (painting)` - toggle to use or ignore density painting.
+* `Face Group` - toggle to use or ignore facegroups to steer the quad remesher.
+* `Relax` - toggle to automatically relax facegroup borders during quad remeshing. If your have already relaxed/smoothed your facegroup borders, disable this option.
+* `Symmetry` - Toggle to enable a symmetrical result. Note that symmetry is always calculated around the world x-axis, so ensure your model is at the origin if you expect a symmetrical result.
+
+The ... menu contains further options, note that the top toolbar has shortcuts for most of these:
+
+* `Remesh` - Same as the `Remesh` button in the top toolbar
+* `Target Quads` - Same as the `Quads` button in the top toolbar
+* `Adaptive quad count` - toggle to enable using smaller quads in areas of high curvature, and larger quads in lower curvature.
+* `Adaptive size` - Set the amount of adaptivity. 100% will alow maximum adaptive size, at 0% quads will be uniform.
+* `Auto-Detect Hard Edges` - toggle to adapt the quad remesh layout to better follow sharp surfaces.
+* `Density (painting)` - Same as the `Density (painting)` button in the top toolbar
+* `Face Group` - Same as the `Face Group` button in the top toolbar
 
 ### Select ![](./tools/select.png#icon#left)
 Use the shape modes to select objects in the scene. `Unselect` will remove objects from the selection.
