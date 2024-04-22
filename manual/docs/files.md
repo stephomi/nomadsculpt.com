@@ -1,27 +1,50 @@
 # Files
----
-# Project
 
-## Save ![](./icons/save.png#icon#left)
+## Project
+
+A thumbnail is shown of the last save at the top of this menu. Clicking this thumbnail brings up a mini browser, tap twice on another project to bring up a mini menu to open, ad, save, clone, rename, delete that project.
+
+### Save ![](./icons/save.png#icon#left)
 Save the Nomad project.
 
-## Save As... ![](./icons/save_as.png#icon#left)
+### Save As... ![](./icons/save_as.png#icon#left)
 Display the project browser to allow you to save the Nomad project with a new name.
 
-## Open... ![](./icons/open.png#icon#left)
+### Rename ![](./icons/pencil.png#icon#left)
+Display a text box to rename the current project.
+
+### Open... ![](./icons/open.png#icon#left)
 Display the project browser to open a project.
 
-## Add to scene... ![](./icons/add_file.png#icon#left)
+### Add to scene... ![](./icons/add_file.png#icon#left)
 Display the project browser, when a project is selected it's contents will be merged with the current scene.
 
-## Delete... ![](./icons/trash.png#icon#left)
+### Delete... ![](./icons/trash.png#icon#left)
 Display the project browser, any selected projects will be deleted from the file system.
 
-## New ![](./icons/new_file.png#icon#left)
+### New ![](./icons/new_file.png#icon#left)
 Start a new project, if there are unsaved changes you will be asked if you want to save.
 
-## Advanced ![](./icons/cog.png#icon#left)
-Display advanced options:
+## Import
+
+### Import ![](./icons/add_file.png#icon#left)
+For importing 3d files that aren't Nomad projects.
+
+When you import an external scene file to Nomad, you can either *import* or *add* it.
+
+Adding a file will simply add the objects into the current scene.
+Importing a file will create a new Nomad project with the new objects in it.
+
+Nomad can import these formats:
+- Nomad (.nom)
+- glTF (.glb, .gltf)
+- OBJ (.obj)
+- STL (.stl)
+- PLY (.ply)
+- FBX (.fbx, experimental)
+
+### Advanced ![](./icons/cog.png#icon#left)
+Display advanced import options:
 
 ### Project/ glTF / OBJ / STL / FBX
 #### Keep topology
@@ -30,7 +53,7 @@ Nomad by default will attempt to fix problem geometry on load. Enabling this wil
 #### Skip textures
 Skip loading of textures for formats that support it like glTF
 
-### Project /glTF
+### Project / glTF
 #### Keep gui settings
 Enable savng of the gui and project settings within the Nomad .nom or glTF file.
 
@@ -41,23 +64,14 @@ Enable splitting OBJ groups into separate objects.
 #### Color Space
 Set the color mode interpreted from the obj as Linear, sRGB, or Auto.
 
+### PLY
+#### Color Space
+Set the color mode interpreted from the ply as Linear, sRGB, or Auto.
+
+
 ### FBX
 #### Color Space
 Set the color mode interpreted from the obj as Linear, sRGB, or Auto.
-
-## Import
-
-For importing 3d files that aren't Nomad projects.
-
-When you import an external scene file to Nomad, you can either *import* or *add* it.
-
-Adding a file will simply add the objects into the current scene.
-Importing a file will create a new Nomad project with the new objects in it.
-
-For now you can import the following files:
-- glTF (glb format only)
-- OBJ
-- STL
 
 
 ## Autosave
@@ -74,23 +88,26 @@ How frequently will the timer popup appear.
 ### Popup timeout
 Enable popup timeout
 
+### Discard autosave
+If an auto save file exists for a project, it will automatically be loaded instead of the original project. If this isn't required, this button will delete the autosave. Loading the fill will then load the last manual save of the project.
+
 ## Export
 
 Save to a 3d geometry format that can be used in other software. 
 
 <!-- https://www.tablesgenerator.com/markdown_tables# -->
 <!-- http://markdowntable.com/ -->
-|                                    | GLB                             | OBJ                             | STL                             |
-|:----------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|
-| Layers<sup>[[layer]](#layer)</sup> | Yes                             | No                              | No                              |
-| Quad                               | Yes<sup>[[quad]](#quad)</sup>   | Yes                             | No                              |
-| Color                              | Yes                             | Yes<sup>[[color]](#color)</sup> | Yes<sup>[[color]](#color)</sup> |
-| PBR Painting                       | Yes<sup>[[pbr]](#pbr)</sup>     | No                              | No                              |
-| Multiple objects                   | Yes                             | Yes                             | No                              |
-| Metadata<sup>[[meta]](#meta)</sup> | Yes                             | No                              | No                              |
+|                                    | GLB                             | OBJ                             | PLY                             | STL                             |
+|:----------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|
+| Layers<sup>[[layer]](#layer)</sup> | Yes                             | No                              | No                              | No                              |
+| Quad                               | Yes<sup>[[quad]](#quad)</sup>   | Yes                             | No                              | No                              |
+| Color                              | Yes                             | Yes<sup>[[color]](#color)</sup> | Yes<sup>[[color]](#color)</sup> | Yes<sup>[[color]](#color)</sup> |
+| PBR Painting                       | Yes<sup>[[pbr]](#pbr)</sup>     | No                              | No                              | No                              |
+| Multiple objects                   | Yes                             | Yes                             | No                              | No                              |
+| Metadata<sup>[[meta]](#meta)</sup> | Yes                             | No                              | No                              | No                              |
 
-### Only include selected objects
-Enable only exporting the selected objects instead of the entire scene.
+### All/Visible/Selected
+The active button state will set which objects will be exported. The number next to the icons indicate how many objects will be exported for that option.
 
 ### Vertex colors
 Export vertex colors if supported by the file format.
@@ -121,15 +138,23 @@ If textures have been added to the material, they will be exported. Note that th
 ### Export button
 Click this to export the geometry using the selected settiings.
 
-#### For blender:
+::: tip Tip: Import roughness and metalness to Blender
 
-<br>
+Blender can import gltf/glb, but doesn't automatically understand vertex attributes for metalness and roughness. To use them, in the material editor create a Vertex Color node, set its property to the next color attribute (usually Col.001). Connect a 'Separate XYZ' node, send X to roughness, and Y to Metallic.
+
+This video shows the process:
 
 ![](./videos/blender_pbr.mp4)
 
+::: 
+
 ## Render
 
-Export an image that is the combination of all the settings in the project (lights, materials, post processing etc)
+Export an image that is the combination of all the settings in the project (lights, materials, post processing etc). 
+
+### Preview
+
+The small preview button next to the menu title will dim the toolbars to help preview the final result.
 
 ### Transparent background
 Enable an alpha channel for the render, useful to combine the render with other images in 2d programs. Note that partial transparency is not supported.
@@ -141,7 +166,9 @@ Enable including Nomad's UI in the render.
 A multiplier on the image resolution.
 
 ### Final size
-The resolution to use for the render. When the File menu is active, a dashed overlay will be drawn in the viewport to indicate the render region if it does not match the screen resolution (note that you must be in landscape mode for this to be correct).
+The resolution to use for the render. When `Custom` is selected, the width and height sliders will be enabled. 
 
-### Export button
-Click this to start the render process, when complete you can then choose how to save the image.
+When the File menu is active, a dashed overlay will be drawn in the viewport to indicate the render region if it does not match the screen resolution (note that you must be in landscape mode for this to be correct).
+
+### Export png
+Click this button to start the render process. When complete you can then choose how to save or share the image.
