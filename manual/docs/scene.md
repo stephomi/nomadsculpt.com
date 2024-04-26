@@ -7,17 +7,18 @@ This menu lets you manage the different objects that you might have in Nomad. It
 ## Shortcut bar
 | Action       | Icon                                   | Description  |
 | :---:        | :---:                                  | :---:        |
-| Add...       | ![](./icons/plus.png#icon)             | Add a primitive to the scene |
+| [Add...](#add-menu)      | ![](./icons/plus.png#icon)             | Display the [Add Menu](#add-menu) to add an object to the scene |
 | Delete       | ![](./icons/trash.png#icon)            | Delete the object            |
-| Clone        | ![](./icons/clone.png#icon)            | Duplicate the object into a new object         |
 | Join         | ![](./icons/merge.png#icon)            | Join the selected objects into a single object with no geometry changes         |
-| Boolean...   | ![](./icons/subtract_circle.png#icon)  | Boolean the selected objects      |
+| Separate     | ![](./icons/diagonal.png#icon)         | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation         |
+| [Boolean...](#boolean)   | ![](./icons/subtract_circle.png#icon)  | Display the [Boolean](#boolean) menu      |
+| Clone        | ![](./icons/clone.png#icon)            | Duplicate the object into a new object         |
 | Instance     | ![](./icons/link.png#icon)             | Duplicate the object as an instance, so modelling changes to one are made to all instances.      |
 | Un-instance  | ![](./icons/unlink.png#icon)           | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances. |
 
 
 ## Tree view
-Each entry in the tree view has 3 buttons for rapid selection and modification. Select and visible icons can be tapped to toggle, or can be dragged vertically to change the selected state or visibility of many objects at once.
+![](./images/scene_treeview.png) 
 
 | Action       | Icon                           | Description  |
 | :---:        | :---:                          | :---:        |
@@ -25,7 +26,23 @@ Each entry in the tree view has 3 buttons for rapid selection and modification. 
 | Visible      | ![](./icons/eye_open.png#icon) | Toggle visibility |
 | Menu         | ![](./icons/more.png#icon)     | Display object menu |
 
-## Object menu
+::: tip TIP: Quickly select or hide many objects
+
+Tap the select icon to toggle a single object, or drag vertically on the select column to select many objects. The same can be done with the visible column.
+
+:::
+
+### Tree view manipulation
+
+Long press on an item in the tree view until it turns yellow. You can then move it up or down in the tree view, as well as drag it over another item to make it a child of that item.
+
+When many items are selected, most will be a dark yellow, one will be a lighter yellow. Long press and drag on the lighter item to move all the objects at once.
+
+When you select a parent item, by default all the child items will also be selected. Tapping the parent icon will toggle between selecting just the parent, or the parent and children.
+
+### Object menu
+
+Clicking the elipsis button (...) for an object in the tree view will show the object menu. 
 Many of these options are similar to the shortcut bar at the top, repeated for convenience.
 
 | Action       | Icon                              | Description  |
@@ -36,10 +53,10 @@ Many of these options are similar to the shortcut bar at the top, repeated for c
 | Delete       | ![](./icons/trash.png#icon)       | Delete the object |
 | Delete+      | ![](./icons/trash.png#icon)       | Delete the object and its children |
 | Un-instance  | ![](./icons/unlink.png#icon)      | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances. |
-| Separate     |                                   | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation. |
+| Separate     | ![](./images/scene_separate_button.png)                                 | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation. |
 
 
-## Multiselection
+### Multiselection
 You can select multiple objects to help achieve two things:
 - using the gizmo tool to move several objects at once
 - merge objects using join and boolean operations.
@@ -67,41 +84,41 @@ This option will simply make one single object entry from multiple selected obje
 You can see an example in video in the [Separate](#separate) section.
 
 ## Boolean
-Combine objects into a single surface either through voxel merge or boolean methods.
+![](./images/scene_boolean_menu.png) 
+Combine objects into a single surface either through a `Voxel Merge` or a `Boolean` operation.
 
-Each method has pros and cons.
 
-Voxel merge will retain the volume of the objects, and calculate new evenly spaced polygons on the surface. Because of the calculation step a voxel merge can handle complex geometry, but can lose fine detail if the target resolution isn't high enough.
+`Voxel merge` will retain the volume of the objects, and calculate new evenly spaced polygons on the surface. Because of the calculation step a voxel merge can handle complex geometry, but can lose fine detail if the target resolution isn't high enough.
 
-Boolean will attempt to leave the polygons in their original layout, and stitch the polygons where objects overlap. This can make much cleaner and sharper results than a voxel merge, however it requires 'watertight' meshes; there cannot be holes or malformed shapes in the objects. If this fails, usually a voxel merge will work.
+`Boolean` will attempt to leave the polygons in their original layout, and stitch the polygons where objects overlap. This can make much cleaner and sharper results than a voxel merge, however it requires 'watertight' meshes; there cannot be holes or malformed shapes in the objects. If this fails, usually a voxel merge will work.
 
 ### Boolean operations
 Both Voxel Merge and Boolean will use object visibility to control the operation:
 
-* Both objects visible = boolean union
-* One object invisible = boolean subtract, the invisible object will be subtracted from the visible object
-* Both objects invisible = boolean intersection, create a new shape only where the two objects overlap.
+#### Union
+Both objects visible will create a boolean **union**, the outer skin of the objects are combined, with no interior surfaces. ![](./images/boolean_union.png)
 
-![](./videos/merge_add.mp4)
-![](./videos/merge_sub.mp4)
-![](./videos/merge_inter.mp4)
+#### Subtract
+One object invisible = boolean **subtract**, the invisible object will be subtracted from the visible object. ![](./images/boolean_subtract.png)
 
-## Voxel Merge Button
+#### Intersect
+Both objects invisible = boolean **intersection**, create a new shape only where the two objects overlap. ![](./images/boolean_intersect.png)
+
+
+### Voxel Merge Button
 Pressing this button will do a voxel merge operation on the selected objects. When done on a single object it will retopologize into evenly spaced polygons, useful for when an object has stretched polygons.
 
 ### Resolution
 The resolution of the voxel 3d grid used to do the calculation. When this value is changed, a checkerboard pattern is overlayed on the object to preview the size of the polygons.
 
-### Build multiresolition
-Create multiresolition levels below your target resolution. So if your resolution is 400 and build multiresolution is 3, you will get a new mesh with say 296,000 polygons, but there will 3 subdiv levels lower at 74,000, 18,000, 4,000k.
+### Build multiresolution
+Create multiresolution levels below your target resolution. So if your resolution is 400 and build multiresolution is 3, you will get a new mesh with say 296,000 polygons, but there will 3 subdiv levels lower at 74,000, 18,000, 4,000k.
 
 ### Keep sharp edges
-Enable snapping the voxel mesh to edges, this works best on simple shapes.
+Enable snapping the voxel mesh to edges. This works best on simple shapes.
 
-
-## Boolean button
+### Boolean button
 Pressing this button will do a polygon boolean operation using the Manifold library by Emmett Lalish. 
-
 
 
 ## Separate
@@ -113,17 +130,21 @@ This can be seen as the opposite of [Simple Merging](#simple-merge).
 
 ## Add menu
 
-If you need to add a new object in your scene, you can add primitive.
-You can configure the primitive with some parameters.
+This menu will create `primitives`, which are basic shape types that can be adjusted using parameters. Once you have the primitive adjusted to your needs, you then 'validate' it, which bakes those parameters, so that you can sculpt or paint it. A primitive cannot have its parameters adjusted after it has been validated.
 
-However, you need to `Validate` the primitive in order to sculpt or paint it.
-When you `Validate` a primitive you won't be able to edit the primitives settings anymore.
+This menu also allows you to create cameras, lights, and special object types to control other objects, called groups and repeaters.
+
+![](./images/scene_addmenu_top.png)
 
 ### On gizmo
 Enable putting the new primitive where the current selected shape or gizmo is. When disabled, the primitive will be placed at the center of the scene.
 
 ### Select gizmo
 Enable automatically switching to the gizmo tool when a new primitive is created. 
+
+### UV's
+Enable uv's on primitives. UV's (often called texture coordinates), and are extra data used in 3d to allow textures to be applied to surfaces. They take up more memory, but for most devices this shouldn't be a concern unless you're getting into very high poly counts (eg 10 million polys or more). 
+
 
 | Primitive   | Icon                              | Description |
 | :---:       | :---:                             |:---:|
@@ -260,13 +281,3 @@ The Nomad pivot is the pivot used by the Transform and Gizmo tools. If this opti
 ## Bottom toolbar
 These icons will toggle visibility of Group, Light, Canera, Repeater and Hierarchy lines in the viewport.
 
-## Scene manipulation
-The scene tree-view lets you affect the hierarchy in several ways.
-
-Long press on an item in the tree view until it turns yellow. You can then move it up or down in the tree view, as well as drag it over another item to make it a child of that item.
-
-Drag through the selection checkbox on many items to select them all at once.
-
-When many items are selected, most will be a dark yellow, one will be a lighter yellow. Long press and drag on the lighter item to move all the objects at once.
-
-When you select a parent item, by default all the child items will also be selected. Tapping the parent icon will toggle between selecting just the parent, or the parent and children.
