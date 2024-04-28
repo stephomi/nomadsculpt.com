@@ -327,42 +327,59 @@ Adjust where the bake calculations start from on the bake object. By default the
 
 ### Reproject to vertex
 
-Project sculpted details, painting and layers from the nearest visible objects.
+![](./images/topology_reproject_menu.png)
 
-This is mostly meant to be used on a high-resolution mesh as well, typically with a clean topology.
+Project sculpted details, painting, layers, textures into vertex values.
 
 ::: tip
 When using `Bake to texture` or `Reproject to vertex`, both the vertex colors and material textures will be taken into account.
 :::
 
 #### From itself
+Convert textures from the material into vertex values. This button will only be active if the object has UV's, and textures are active in the material.
+
+::: tip TIP: Texture painting
+Nomad doesn't directly support painting and editing textures, but very similar results can be achieved by projecting textures -> vertex values, painting on vertices, then bake vertex -> textures:
+
+1. Setup a low poly object with UV's
+1. Load textures into it's material
+1. Subdivide it enough to paint on
+1. `Reproject to vertex` in `From itself` mode, now the texture has been converted to vertex values
+1. Paint, smooth, smudge, stamp, do whatever edits you need
+1. `Bake to texture`, in `From itself` mode. Those edits are converted back into textures.
+:::
 
 #### From high-res ()
-Start the reproject operation. Any visible objects will be used as projection targets to modify the current selection. The number on this button indicates the number of projection targets.
+Convert any visible objects into vertex values on the selected object. The number on this button indicates the number of visible objects.
+
+::: tip
+Reprojecting other objects can be used not just for transferring color information from other objects, but to project vertices onto other objects, eg bandages can be projected onto a character.
+:::
 
 #### Reproject gear menu ![](./icons/cog.png#icon#left)
 The gear menu has these advanced options:
 
-#### Vertices, Roughness, Metalness, Color, Mask, Sync (Layers)
+#### Vertices, Roughness, Metalness, Color, Opacity, Opacity->Mask, Mask, Layers, Face Group
 These checkboxes determine which properties will be projected to the selected object. 
 
-#### Ray bias
-Lower values will favor projection to the nearest point on the target surface. Higher values will favor an intersecton point using the surface normal. 
-
-#### Cage offset
-Adjust where the bake calculations start from on the selected object. By default they start 5% away from the surface, which avoids certain artifacts. If the target objects are very far away from the bake object, this offset might need to be increased.
-
-#### Cage radius
-Adjust how far away from the selected object rays are sent to look for target objects. By default this distance is kept low to avoid artifacts, but can be increased if the target objects are far away from the bake object.
-
 #### Relax
-The selected mesh can have its layout smoothed or relaxed a certain amount to better fit the reprojection targets. Smooth is better for high poly meshes, relax is better for low poly meshes, Auto will let Nomad determine the best method.
+The selected mesh can have its layout smoothed or relaxed a certain amount to better fit the reprojection targets. Smooth is better for high poly meshes. Relax is better for low poly meshes. Auto will let Nomad determine the best method.
 
 #### Iterations
 How many times the relax operation should be applied during the reprojection.
 
+#### Cage radius
+Adjust how far away from the selected object rays are sent to look for target objects. By default this distance is kept low to avoid artifacts, but can be increased if the target objects are far away from the bake object.
+
+#### Ray bias
+Lower values will favor projection to the nearest point on the target surface. Higher values will favor an intersecton point using the surface normal. 
+
+#### Ray offset
+Adjust where the bake calculations start from on the selected object. By default they start 5% away from the surface, which avoids certain artifacts. If the target objects are very far away from the bake object, this offset might need to be increased.
+
+
 ### Quad Remesh - Instant
-Remesh using the Instant Meshes algorithm by Wenzel Jakob, Marco Tarini, Daniele Panozzo, Olga Sorkine-Hornung. It will analyse the flow of a mesh and create clean quad topology.
+Remesh using the Instant Meshes algorithm by Wenzel Jakob, Marco Tarini, Daniele Panozzo, Olga Sorkine-Hornung. It will analyze the flow of a mesh and create clean quad topology.
 
 #### Remesh
 Start the instant meshes operation.
