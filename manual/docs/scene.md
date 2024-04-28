@@ -2,7 +2,9 @@
 
 ---
 
-This menu lets you manage the different objects that you might have in Nomad. It displays the scene hierarchy as a tree-view, allowing you to modify many aspects of your objects.
+![](./images/scene_menu_summary.png)
+
+This menu lets you manage objects in Nomad. It displays the scene hierarchy as a tree-view, allowing you to modify many aspects of your objects.
 
 ## Shortcut bar
 | Action       | Icon                                   | Description  |
