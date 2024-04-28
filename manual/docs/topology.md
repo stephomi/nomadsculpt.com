@@ -2,7 +2,9 @@
 
 ---
 
-Nomad is a polygonal software, it uses triangles and quads to handle the geometry.
+![](./images/topology_overview.png)
+
+Nomad is based on polygons, it uses triangles and quads to handle the geometry.
 By topology, we refer to both the number of faces but also the way points (vertices) are connected.
 
 It's important to keep track of the topology, especially if you want to sculpt or paint fine details.
@@ -11,6 +13,8 @@ It's important to keep track of the topology, especially if you want to sculpt o
 You can display the [Wireframe](settings.md#wireframe) or simply disable [Smooth Shading](settings.md#smooth-shading).
 :::
 
+![](./images/topology_top.png)
+
 The topology menu of Nomad has several sections:
 
 | Method                                | Icon | Description  |
@@ -18,16 +22,22 @@ The topology menu of Nomad has several sections:
 | [Multiresolution](#multiresolution)   | ![](./icons/multires.png#icon) | Edit multiple levels of detail using subdivision  |
 | [Voxel Remesher](#voxel-remesher)     | ![](./icons/voxel.png#icon)  | Recompute a new topology with uniform density |
 | [Dynamic Topology](#dynamic-topology) | ![](./icons/dyntopo.png#icon) | Add/Remove faces locally in real-time when sculpting or painting |
-| [Misc](#misc)             | ![](./icons/topo_extra.png#icon) | Decimation, UVs, baking |
+| [Misc](#misc)             | ![](./icons/topo_extra.png#icon) | Decimation, UVs, baking, remeshing, reprojection |
 | [Primitive](#msc)             | ![](./icons/dot.png#icon) | Primitive options |
 
 
 ## Polygon stats
+
+![](./images/topology_stats.png)
+
 The top section of the topology menu displays polygon information for the selected object and the entire scene. The numbers show the total number of vertices, total number of triangles, and total number of quads (4 sided polygons).
 
 Tapping on this section will bring up a list of polygon statistics for all the polygon objects in the scene.
 
-## Multiresolution
+## Multiresolution ![](./icons/multires.png#icon#left)
+
+![](./images/topology_multires_menu.png)
+
 ### What is multiresolution?
 The multiresolution feature is useful for two main scenarios:
 - The smooth subdivision algorithm to increase the polycount of your object
@@ -65,7 +75,7 @@ You can disable this *Smooth* behavior by checking the `Linear` option.
 If there are subdivisions below the currently displayed level, delete them. If you do this by accident, you can recreate them with the Reverse button.
 
 ### Delete higher
-If ther are subdivisionss above the currently displayed level, delete them.
+If there are subdivisions above the currently displayed level, delete them.
 
 ### Keep triangles
 Most standard subdivision surface systems will attempt to convert all polygons to quads during a subdivision operation. This toggle will force the subdivision to use triangles instead.
@@ -73,9 +83,16 @@ Most standard subdivision surface systems will attempt to convert all polygons t
 ### Linear subdivision
 Subdivide the mesh without applying smoothing.
 
+::: tip 
+
+Subdivision will smooth all sharp edges by default. To keep edges slightly sharp, experiment with using linear subdivision on the first 2 subdivide levels, then turn it off for the higher levels. This will create a semi-sharp subdivided mesh.
+
+:::
 
 
-## Voxel Remesher
+
+## Voxel Remesher ![](./icons/voxel.png#icon#left)
+![](./images/topology_voxel_menu.png)
 When using the `Voxel Remesher`, the entire mesh will force the topology to have an uniform resolution, meaning all the polygons have more or less the same size. This is very useful when you don't want to think about topology and simply do free-form sculpting.
 
 A typical sculpting workflow can start by using the `Voxel Remesher` to block-out a rough shape with a low resolution.
@@ -106,16 +123,14 @@ Create lower multiresolution levels for the voxel remesh. If you use the checker
 ### Keep sharp edges
 Enable snapping of the new points to sharp edges on the original mesh. It can introduce distortion.
 
-### Boolean
-Because we are using voxel for the remeshing, it also means you can easily merge two objects into one or subtract one from another.  
-You can learn more in the [voxel booleans](scene.md#subtraction) section.
+## Dynamic Topology ![](./icons/dyntopo.png#icon#left)
 
+![](./images/topology_dyntopo_menu.png)
+Multiresolution and voxel remeshing are common industry methods to control topology, but both require you to watch that you're not stretching polygons too far, or squeezing polgyons too tight. 
 
+Dynamic Topology is an alternative method. As you sculpt, Nomad will adaptively add and remove polygons during the brush stroke, so carving in small details will add many small polygons where you need them, and smoothing elsewhere will take away polygons.
 
-
-## Dynamic Topology
-
-When you enable `Dynamic Topology`, most sculpting brushes will have the ability to update the topology under your brushes in real-time.
+Note that dynamic topology will use triangle polygons rather than quads. This can look a little messy, but it's almost better to not look at the wireframe, just concentrate on making a nice looking sculpt without worrying about topology, then later you can use one of Nomad's other remeshing tools to generate a clean quad mesh.
 
 See the video below in action.
 
@@ -126,6 +141,13 @@ Turn on dynamic topology. A DynTopo icon will be placed below the brush radius a
 
 ### Detail
 The target polygon density when the detail mode is in `Constant`. A checkboard preview will be displayed when changing detail to indicate polygon size.
+
+### Detail based on...
+| Method              | Description  |
+| :---:               | :---:        |
+| Screen           | The level of detail will depend how big the object is on screen |
+| Radius          | The tool radius defines the amount of detail |
+| Constant          | The detail slider defines the amount of detail |
 
 ### Prefer...
 | Method              | Description  |
@@ -139,12 +161,6 @@ When you favor `Quality`, the 2 main differences are:
  
 That way, if you sculpt very small details or do quick strokes, the topology will always be refined as expected
 
-### Detail based on...
-| Method              | Description  |
-| :---:               | :---:        |
-| Zoom Level          | The level of detail will depend of the camera position |
-| Radius          | The tool radius defines the amount of detail |
-| Constant          | The detail slider defines the amount of detail |
 
 
 ### Use pressure on radius
@@ -173,62 +189,97 @@ However one advantage over the voxels is that the masked area will be protected,
 
 
 
-## Misc
-Many of the tools in this menu have extra advanced features. They can be accesssed through the gear menu near the section title, and then placed within the menu with the ![](./icons/inline.png#icon) icon.
+## Misc ![](./icons/topo_extra.png#icon#left)
+
+![](./images/topology_misc_menu.png)
+
+##### Gear menu ![](./icons/cog.png#icon#left)
+Many of the tools in this menu have extra options. They can be accessed through the gear icon next to the section title.
 
 ### Decimation
 
-Reduce the number of polygons by trying to keep as many details as possible.
+![](./images/topology_decimation.png)
+
+Reduce the number of polygons by trying to keep as many details as possible, using triangle polygons.
 
 This feature can be useful if you want to export for 3d printing.
 However you should probably not use it if you want to continue sculpting on it, as it can produce uneven triangles.
 
-Note that the masked area won't be decimated.
+Note that the masked areas won't be decimated.
 
 ![](./videos/decimate.mp4)
 
 #### Decimate
 Start the decimate operation.
 
-#### Target triangles
-Set the target triangle count. The default value is 50%, when the % button is pressed, you can chose an exact target poly count.
+#### Decimate gear menu ![](./icons/cog.png#icon#left)
+The gear menu has these advanced options:
+##### Target triangles
+Set the target triangle count. The default value is 50%, the %/target button will toggle between a percentage or an exact target poly count.
 
-#### Preserve painting
+##### Preserve painting
 The checkbox will toggle this mode, the value will determine how accurately painting detail will be preserved. Higher values will preserve more painting. Set to 0 if you do not care about painting.
 
-#### Unform faces
+##### Uniform faces
 The checkbox will toggle this mode. Higher values will output triangles with similar size.
 
-#### Preserve borders
-Enable to stop borders being decimated.
+##### Preserve borders
+Enable to stop borders being decimated. Border weights can be selected for `Geometry`, `Face Group` or `UV` borders.
 
 
 ### UV Unwrap - UVAtlas
 
-Compute texture coordinates (UVs) for the current mesh.
-
-Uv's combined with baking will allow yout o export the mesh and textures directly to [Procreate](https://procreate.art/) or any texturing tool. Uvs will also enable you to add textures in the materials menu.
+![](./images/topology_uvatlas_menu.png)
+Compute texture coordinates (UVs) for the current mesh, generally preferring to make more islands with cuts, to minimise distortion.
 
 ::: warning
 Computing UVs can take some time, it is best to have a mesh with fewer than 100k vertices.
 :::
 
+::: tip UVs?
+A common analogy for UV's is wrapping a gift; what is the best way to cut wrapping paper to completely cover an object, with no overlaps? 
+
+Uv's are similar, but instead of cutting the paper, you cut the object. Imagine if your model was made of thin plastic, how would you cut your model apart to unwrap it to lie flat, paint on it in that flat state, then reassemble it?
+
+Now imagine the surface of your model is made of stretchy lycra. You could stretch the model flat, or cut it, or a combination of both. But if you painted a checkerboard on the object when flattened, the checkerboard would be distorted when you reassemble it. Which is a better method, more cuts with less distortion, or less cuts with more distortion?
+
+Uv's are instructions to tell 3d software how to 'cut and stretch' the object when applying textures. The UV Atlas tool generally uses a 'more cuts, less distortion' approach.
+
+
+:::
+
+::: tip UV's and Nomad and other apps
+
+Most textured models you find online will be textured with UVs. Nomad can import and display this via the [material](material#textures) panel.
+
+When models are made in Nomad, you can paint directly onto objects without UVs. If you need to export them to other apps, eg [Procreate](https://procreate.art/), you can 'bake' Nomad color information into textures via UVs. 
+
+:::
+
 ![](./videos/unwrap.mp4)
 
 #### Unwrap
-Calculate UVs for the selected object, which will be dispalyed in the background.
+Calculate UVs for the selected object, which will be displayed in the background.
 
 #### Delete UVs
 Delete UVs on the object.
 
-#### Max Stretch
+#### UVAtlas gear menu ![](./icons/cog.png#icon#left)
+The gear menu has these advanced options:
+
+#### Face Group
+
+Use facegroups to define the cuts for the UV's.
+
+##### Max Stretch
 Low values create less distortion and more islands, high values create more distortion and less islands. 
 
-#### Island spacing
+##### Island spacing
 The amount of padding between the islands. Low values will waste less space, but will risk textures bleeding between islands. 
 
 
 ### Bake -> texture 
+![](./images/topology_bake_menu.png)
 
 Texture baking will create textures by projecting other visible objects in the scene.
 
@@ -254,17 +305,24 @@ Bake the highest multiresolution level to the lowest level on the current object
 Bake from the other visible objects in the scene to the selected object. The number in brackets indicate the number of other visible objects that will be used as high-res targets, and baked into the current low-res object with uv's. The other objects do not need to be similar in layout or topology to the object being baked, allowing for interesting bake workflows.
 
 #### Resolution
-The resolution of the baked texture. Bake textures are always square, so 1024 will create a 1024x1024 image.
+The resolution of the baked texture. Bake textures are always square, so 1024 will create a 1024x1024 image. 
 
-#### Normal, Color, Roughness, Metalness, Emissive, Opacity, Mask->Opacity
+The buttons below are shortcuts for commonly used resolutions. For reference, 512x512 is relatively small, say for web graphics and simple geometry. 4096x4096 (4k for short) is for high quality renders.
+
+#### Bake gear menu ![](./icons/cog.png#icon#left)
+The gear menu has these advanced options:
+
+##### Normal, Roughness, Metalness, Color, Emissive, Opacity
 These checkboxes will determine which properties will be baked, each into separate maps. After the bake is complete, these will be added as textures to the material of the current object.
 
-#### Cage offset
-Adjust where the bake calculations start from on the bake object. By default they start 5% away from the surface, which avoids certain artifacts. If the target objects are very far away from the bake object, this offset might need to be increased.
+##### Backup
+To preview the baked textures, the object's paint information should be disabled. This option will transfer any paint information to a new layer as a backup, and so it can be easily enabled/disabled.
 
 #### Cage radius
 Adjust how far away from the bake object rays are sent to look for target objects. By default this distance is kept low to avoid artifacts, but can be increased if the target objects are far away from the bake object.
 
+##### Ray offset
+Adjust where the bake calculations start from on the bake object. By default they start 5% away from the surface, which avoids certain artifacts. If the target objects are very far away from the bake object, this offset might need to be increased.
 
 
 ### Reproject to vertex
@@ -282,7 +340,10 @@ When using `Bake to texture` or `Reproject to vertex`, both the vertex colors an
 #### From high-res ()
 Start the reproject operation. Any visible objects will be used as projection targets to modify the current selection. The number on this button indicates the number of projection targets.
 
-#### Vertices, Roughness, Metalnss, Color, Mask, Sync (Layers)
+#### Reproject gear menu ![](./icons/cog.png#icon#left)
+The gear menu has these advanced options:
+
+#### Vertices, Roughness, Metalness, Color, Mask, Sync (Layers)
 These checkboxes determine which properties will be projected to the selected object. 
 
 #### Ray bias
