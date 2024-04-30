@@ -379,7 +379,12 @@ Adjust where the bake calculations start from on the selected object. By default
 
 
 ### Quad Remesh - Instant
-Remesh using the Instant Meshes algorithm by Wenzel Jakob, Marco Tarini, Daniele Panozzo, Olga Sorkine-Hornung. It will analyze the flow of a mesh and create clean quad topology.
+![](./images/topology_quadremesh_menu.png)
+Remesh using the [Instant Meshes algorithm by Wenzel Jakob, Marco Tarini, Daniele Panozzo, Olga Sorkine-Hornung](https://igl.ethz.ch/projects/instant-meshes/). It will analyze the flow of a mesh and create clean quad topology.
+
+::: tip
+On iOS, the [Quad remesher](tools#quad-remesher) tool gives better results.
+:::
 
 #### Remesh
 Start the instant meshes operation.
@@ -387,17 +392,20 @@ Start the instant meshes operation.
 #### Target quads
 The number of quad polygons quad remesh will attempt to create.
 
-#### Crease angle
+#### Quad Remesh Instant gear menu ![](./icons/cog.png#icon#left)
+The gear menu has these advanced options:
+
+##### Crease angle
 A threshold of sharp corners that will try and help guide the remesh operation.
 
-### Max fill hole
+#### Max fill hole
 The algorithm can sometimes produce unwanted holes. If a hole has fewer vertices than this value, then it will be filled.
 
 ### Holes
+![](./images/topology_holes_menu.png)
 Most of the time, your object will probably be watertight, meaning the mesh is 'closed'.
 
-However if you import You can fill the holes in your mesh If your object has holes, you can fill them.
-Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate borders.
+If your object has holes, you can fill them. Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate borders.
 
 ![](./videos/hole_filling.mp4)
 
@@ -408,23 +416,30 @@ When you run the Voxel remesher, all the holes are automatically closed, whether
 #### Close holes
 Execute the hole close action.
 
-### Detail
+#### Holes gear menu ![](./icons/cog.png#icon#left)
+The gear menu has these advanced options:
+
+##### Detail
 The polygon density used to fill the whole. While dragging this slider a checkerboard pattern will be shown on the model, this will give an indication of the triangle size to use. The checkbox will disable this, and only use the existing points, which will usually create long thin triangles over the hole, which can be difficult to sculpt.
 
-#### Fill non-manifold
-Try to fill non manifole hole.
+##### Fill non-manifold
+Try to fill non manifold hole.
 
 ### Force Manifold
+![](./images/topology_forcemanifold_menu.png)
 Try to clean non manifold edge. It can be useful for external software that don't support edges that have more than 2 faces in common.
 
 #### Clean
 Execute the clean action.
+#### Force manifold gear menu ![](./icons/cog.png#icon#left)
+The gear menu has these advanced options:
 
 #### Delete small faces
 A threshold used to remove and join small polygons.
 
 
 ### Triplanar
+![](./images/topology_triplanar_menu.png)
 Converts the mesh into a [triplanar](scene.md#triplanar) primitive.
 You might lose lot of details in the process.
 
@@ -438,5 +453,5 @@ Execute the triplanar action.
 The detail of the 'voxels' used in the triplanar operation.
 
 
-## Primitive
+## Primitive ![](./icons/dot.png#icon#left)
 If a primitive is selected, it's parameters will be displayed in this menu. Most of these options will be available from the viewport toolbar that is visible when a primitive is selected.
