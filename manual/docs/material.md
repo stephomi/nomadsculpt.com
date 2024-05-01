@@ -37,7 +37,11 @@ The default mode that treats surfaces as a simple material that supports painted
 
 ### Blending
 
-Similar to Opaque, but supports the opacity slider to allow the material to mix between solid and transparent. This is a simple single slider for opacity, vs the paintable opacity supported by the opaque material.
+Similar to Opaque, but supports the opacity slider to allow the material to mix between solid and transparent. This is a simple single slider for opacity, vs the paintable opacity supported by the opaque material. 
+
+::: warning
+Blending mode can cause flickering and popping in complex or intersecting shapes.
+:::
 
 ### Refraction
 This mode can be used to simulate glass material. Because of real time constraints, self-refraction and multi-layered refraction is somewhat limited.
