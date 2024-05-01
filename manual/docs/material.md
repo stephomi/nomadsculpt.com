@@ -74,6 +74,8 @@ Make the object semi-transparent by discarding some pixels in a random fashion.
 
 ## Controls
 
+![](./images/material_controls.png)
+
 ### Opacity
 How solid or opaque an object will appear; 100% is solid, 0% is transparent. You can also paint opacity for finer control.
 
@@ -110,6 +112,8 @@ See the [global option](settings.md#wireframe).
 
 
 ## Textures
+
+![](./images/material_textures.png)
 
 If an object has UVs, then textures can be applied to the material in addition to the vertex color/roughness/metalness/opacity. Usually these are the result of a texture bake, but images created outside of Nomad can also be used.
 
