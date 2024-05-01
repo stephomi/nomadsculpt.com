@@ -165,3 +165,9 @@ The scale of the texture, bigger numbers will make the texture smaller on the ob
 
 ### Uniform scale
 When turned off Nomad will show separate controls for Scale-X and Scale-Y.
+
+::: tip
+
+Further information about transparency and blending modes can be found at https://support.fab.com/s/article/Transparency-Opacity
+
+:::
