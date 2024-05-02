@@ -27,7 +27,7 @@ Not all stroke options apply for all tools. Stroke options that aren't used by t
 
 ### Radius
 
-![](./images/stroke_radius.jpg)
+![](./images/stroke_radius.png)
 
 #### Share radius
 
