@@ -1,6 +1,6 @@
 # Painting
 
-![](./images/paint_menu.jpg)  
+![](./images/paint_menu.png)  
 
 ## Overview
 
@@ -67,10 +67,20 @@ You might consider turning on `Smooth Shading` [globally](settings.md#smooth-sha
 :::
 
 ### Paint all
-Apply the current material to the object. Masked areas and disabled channels won't be painted.
 
-### Force paint all
-Apply the current material to the object, ignoring masks and disabled channels.
+![](./images/paint_paint_all.png)
+
+Apply the current material to the object. If the checkboxes next to color/material/roughness/opacity are disabled, they will not be applied.
+
+The buttons control how the paint all can be further affected:
+
+| Icon                            | Description                  |
+| :---:                           |:---:                         |
+| ![](./icons/tool_mask.png#icon) |Masked areas won't be affected.                        |
+| ![](./icons/tool_hide.png#icon)                           | Hidden areas won't be affected.                        |
+| ![](./icons/opacity.png#icon)                          | use the tool painting factor above.                        |
+| ![](./icons/layers.png#icon)                          | Unpainted areas of a layer won't be affected.                         |
+
 
 ### Use stroke alpha
 Use the tool alpha to modulate the painting intensity.
