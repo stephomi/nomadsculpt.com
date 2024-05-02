@@ -1,8 +1,10 @@
-# Post process
+# Post process ![](./icons/postprocess.png#icon#left) 
 
 ---
+Using post processing can substantially change the final look of your scene.
 
-Using post processing can dramatically improve the final look of your scene.
+![](./images/postprocess_overview.png)
+*The same scene before and after post processing, no additional lights or material changes.*
 
 Post process can impact the performance by a lot depending on your device.
 There's a global checkbox to disable all the postprocess, so that you can quickly go back to sculpting/modeling without losing your presets.
@@ -12,6 +14,8 @@ However, most of the time you want the post process to be disabled when you are 
 
 
 ## Quality
+
+![](./images/postprocess_quality.png)
 ### Max frame sampling
 Nomad will calculate a certain amount of post processing for a single frame render, which can look noisy. This control determines how many frames will be rendered, then blended together, which can remove most noisy artifacts. Some effects require no extra samples (eg color grading), while others like global illumination can require hundreds of samples to be noise free. 
 
@@ -26,6 +30,7 @@ This slider controls the resolution of the post processing. A value of x1.0 will
 When enabled will force the resolution multiplier to x1.0
 
 ## Preset browser
+![](./images/postprocess_presets.png)
 Clcking on the image will display a collection of post processing presets. To define your own presets, select one, click 'clone', make changes. To save, click the preset image, click again inside the preset browser, and choose 'save'.
 
 
@@ -65,6 +70,10 @@ The effect only depends on the model geometry.
 | :---:                      |:---:                      |
 |![](./images/ssao-off.jpg)  | ![](./images/ssao-on.jpg) |
 
+::: tip
+AO will be most visible in areas lit mainly by environment light. Areas that are under strong direct light will receive a much weaker AO effect.
+
+:::
 
 ## Depth of Field (DOF)
 Add a blur effect on the region that is outside the focus.

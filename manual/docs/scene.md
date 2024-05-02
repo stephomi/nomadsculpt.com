@@ -2,7 +2,9 @@
 
 ---
 
-This menu lets you manage the different objects that you might have in Nomad. It displays the scene hierarchy as a tree-view, allowing you to modify many aspects of your objects.
+![](./images/scene_menu_summary.png)
+
+This menu lets you manage objects in Nomad. It displays the scene hierarchy as a tree-view, allowing you to modify many aspects of your objects.
 
 ## Shortcut bar
 | Action       | Icon                                   | Description  |
@@ -42,7 +44,7 @@ When you select a parent item, by default all the child items will also be selec
 
 ### Object menu
 
-Clicking the elipsis button (...) for an object in the tree view will show the object menu. 
+Clicking the ellipsis button (...) for an object in the tree view will show the object menu. 
 Many of these options are similar to the shortcut bar at the top, repeated for convenience.
 
 | Action       | Icon                              | Description  |
@@ -130,9 +132,12 @@ This can be seen as the opposite of [Simple Merging](#simple-merge).
 
 ## Add menu
 
-This menu will create `primitives`, which are basic shape types that can be adjusted using parameters. Once you have the primitive adjusted to your needs, you then 'validate' it, which bakes those parameters, so that you can sculpt or paint it. A primitive cannot have its parameters adjusted after it has been validated.
+![](./images/scene_addmenu_overview.png)
 
-This menu also allows you to create cameras, lights, and special object types to control other objects, called groups and repeaters.
+This menu will create primitives, groups, cameras, repeaters, and lights.
+
+Primitives are basic shape types that can be adjusted using parameters. Once you have the primitive adjusted to your needs, you then 'validate' it, which bakes those parameters down into a polygon mesh that can be sculpted and painted. A primitive cannot have its parameters adjusted after it has been validated.
+
 
 ![](./images/scene_addmenu_top.png)
 
@@ -143,8 +148,9 @@ Enable putting the new primitive where the current selected shape or gizmo is. W
 Enable automatically switching to the gizmo tool when a new primitive is created. 
 
 ### UV's
-Enable uv's on primitives. UV's (often called texture coordinates), and are extra data used in 3d to allow textures to be applied to surfaces. They take up more memory, but for most devices this shouldn't be a concern unless you're getting into very high poly counts (eg 10 million polys or more). 
+Enable UV's on primitives. UV's (often called texture coordinates), are extra data used in 3d to allow textures to be applied to surfaces. They take up more memory, but for most devices this shouldn't be a concern unless you're getting into very high poly counts (eg 10 million polys or more). 
 
+### Primitives
 
 | Primitive   | Icon                              | Description |
 | :---:       | :---:                             |:---:|
@@ -154,32 +160,72 @@ Enable uv's on primitives. UV's (often called texture coordinates), and are extr
 | Torus       | ![](./icons/torus.png#icon)       | The torus can be a good starting point for rings |
 | Cone        | ![](./icons/cone.png#icon)        | - |
 | Icosahedron | ![](./icons/icosahedron.png#icon) | - |
-| UV-sphere   | ![](./icons/circle.png#icon)      | You should probably not use this primitive, see [Warning below](#sphere-warning) |
+| UV-sphere   | ![](./icons/circle.png#icon)      | A sphere with uneven poly layout, see [Warning below](#sphere-warning) |
 | Plane       | ![](./icons/rectangle.png#icon)   | It's a simple plane, note that this is the only primitive that is not closed |
-| Triplanar   | ![](./icons/triplanar.png#icon)   | A special primitive, see [Triplanar](#triplanar) |
-| Head        | ![](./icons/face.png#icon)        | - |
+| Tube        | ![](./icons/tool_tube.png#icon)   | see [Tube](tools#tube) |
+| Lathe       | ![](./icons/tool_lathe.png#icon)   | see [Lathe](tools#lathe) |
+| Triplanar   | ![](./icons/triplanar.png#icon)   | see [Triplanar](#triplanar) |
+| Head        | ![](./icons/face.png#icon)        | A simple head with a layer to blend between male/female |
 
 ::: tip
 If you wonder what is the base mesh when you launch Nomad: this is a subdivided box as well.
 However the base mesh in Nomad doesn't use `Project on sphere`, meaning it is not perfectly round.
 :::
 
-### Primitive Config
-Here are a some options that you can find in some primitive:
-- `Flat subdivision` Preserve hard-edges by not smoothing the mesh when subdividing
-- `Overall subdivision` The number of subdivision
-- `Constant density` It means that the topology of the primitive will be kept uniform when you play with the settings
-- `Project on sphere` To get a perfect geometrical sphere but keeping the underlying primitive topology
+### Primitive Toolbar
+
+![](./images/scene_primitive_toolbar.gif)
+
+Once a primitive is created, a toolbar will appear to control it's parameters.
+
+* `Validate` Bake the primitive into a standard object so it can be sculpted and painted.
+* `Edit` Toggle displaying the primitive gizmo. This is shown directly on the primitive to control its parameters, eg the cube width, or a cylinder hole radius.
+* `Mirror` Toggle placing a mirror repeater above the primitive.
+* `...` Displays the primitive menu.
+
+Different primitives will have extra options on the toolbar:
+
+* `Project` The sphere is constructed as a subdivided cube, as this is better for sculpting, but this means it is not perfectly round. This option option will force the shape closer to a perfect sphere. The icosahedron shares this option.
+* `Cap` Toggle end caps on a shape, eg a cylinder can have caps on top, or bottom, or both, or none.
+* `Hole` Toggle a hole to be created through the center of a shape. This will cycle through no holes, hole with a single radius, or hole with different radius at top and bottom.
+* `Radius` Toggle if a cylinder should have a single radius, or a different radius at its top and bottom.
+* `Disk` Toggle if a plane should be a 4 sided shape, or a circle shape.
+
+The small toolbar below the main toolbar will let you toggle between the primitive gizmo and the transform gizmo.
+
+### Primitive menu
+
+![](./images/scene_primitive_menu.png)
+
+This contains all the parameters for the selected primitive. Parameters are the basic descriptions for a shape. To describe a ring, for example, you would describe it's outer, radius, its inner radius, and the number of polygons.
+
+Most primitive parameters should be self-explanatory, and there are some common parameters shared across all primitives:
+
+* `UVs` The small UVs button at the top of the menu will toggle the creation of UV coordinates
+* `Validate` The small validate button will bake the primitive into a standard object so it can be sculpted and painted.
+* `Max faces` Set an upper limit on the amount of polygons in the object to avoid crashing your device.
+* `Post subdivision` Enable the chosen number of subdivisions from the multiresolution section of the topology menu. This can be used to make smoothed, soft cornered primitives in combination with low topology divisions. For example, setting a box topology divisions to 2, and post subdivisions to 4, will make a box with smooth corners.
+* `Linear subdivision` Set how many levels of linear subdivision to use before using regular smooth subdivision. This can be used to control how sharp or soft the corners are on the subdivided surfaces. Eg, set a box topology divisions to 2, post subdivisions to 4, then try changing the linear subdivisions between 0 and 4. The corners of the box will go from soft to sharp.
+
+### Topology
+
+This controls the number of polygons in a primitive. Usually the controls are linked, so changing the one active slider will adjust all the polygons evenly. You can tap the unlink button, and control the X/Y/Z divisions on a shape separately.
+
+### Geometry
+
+This controls the overall size of a primitive, in X/Y/Z units for square shapes, and in radius for round shapes.
 
 
 ### UV Sphere
 ::: warning
-You should probably never use it, the topology of the UV Sphere is not well suited for sculpting, especially on the poles.
+The UV Sphere is not well suited for sculpting, especially on the poles.
 
 Please prefer the [Sphere](#sphere), [Box](#box) or [Icosahedron](#icosahedron) primitive, along with the `Project on sphere` option.
 
 Note that the topology can be acceptable for sculpting if you use a very low value for the `Division` sliders.
 You can then use the `Overall Subdivision` slider to raise the number of polygons.
+
+While not suitable for general sculpting, it is useful for eyes; if you rotate the sphere so that the poles sit at the pupil, the polygon layout will naturally fit to paint and sculpt the iris and pupil.
 :::
 
 
@@ -206,10 +252,6 @@ You can use the [Connected Topology](stroke.md#connected-topology) to help a lit
 :::
 
 
-### Keep primitive UVs
-Enable adding UVs to certain primitives on creation. Currently this is Box, Sphere, Icosehedron, Plane. 
-
----
 ## Group/Camera
 ### Group
 Create an 'empty' object, that you can parent other objects underneath. This can be used to simply organise the hierarchy by putting many objects under a group, then closing it. A group can also be used as a helper for moving objects; many objects can be placed under a group, and then the group moved, rotated, scaled with the gizmo tool.
@@ -217,11 +259,14 @@ Create an 'empty' object, that you can parent other objects underneath. This can
 ### Add view
 Create a camera.
 
----
 ## Repeaters
+![](./images/scene_primitive_repeaters.png)
+
 Repeaters are nodes that make instances of objects below it. 
 
 ### Array
+![](./images/scene_primitive_array.png)
+
 When objects are made children of this node, they can be instanced into a grid layout. When selected, it has controls for:
 * Fit inside - toggle between controlling the size of the grid/box of the array, or controlling the space between the array instances
 * CountX/Y/Z - the number of instances on each axis
@@ -229,6 +274,7 @@ When objects are made children of this node, they can be instanced into a grid l
 * SizeX/Y/Z - the width/height/depth of the total array grid when fit inside is toggled.
 
 ### Curve
+![](./images/scene_primitive_curve.png)
 This will create a curve, children of this node will be repeated along the curve. When selected, it has controls for:
 * Edit - allow adding of points to the curve, and moving points on the curve.
 * Snap - will snap curve points to other geometry
@@ -240,10 +286,16 @@ This will create a curve, children of this node will be repeated along the curve
 * B-spline - Toggle the instances to follow the curve exactly, or use b-spline interpolation which has smoother results. 
 
 ### Radial
-Children of this node will be instanced into a circle. When selected, it has controls for:
+![](./images/scene_primitive_radial.png)
+
+Children of this node will be instanced into a circle. Move the child object to alter the radius of this repeater. When selected, it has controls for:
 * RadialX/Y/Z - selecting these buttons will set the radial axis, and set the number of instances.
 
+
+
 ### Mirror
+![](./images/scene_primitive_mirror.png)
+
 Children of this node will be mirrored across an axis. When selected it has controls for:
 * Gizmo - enable the transform gizmo to set the center of the mirror. This can also be rotated and scaled. When done, tap gizmo again to reveal the standard controls.
 * X/Y/Z - set the mirror plane
@@ -253,7 +305,20 @@ All the repeaters have a `Validate` control, which will bake the results of the 
 * Keep instances - the instances remain as instances, but are no longer have the repeater 'parent'
 * Un-instances - the instances are converted into unique objects
 
+::: tip Combine repeaters
+Repeaters can be parented under each other, and several objects can be made children of repeaters, leading to complex effects.
+
+![](./images/scene_repeater_combine.png)
+:::
+
+::: tip Repeater pivots
+
+Some repeaters will try to auto-pivot the child objects, so even if you move or rotate them with the gizmo tool, they won't move. If you need to override this behavior, insert a group in between the repeater and the child. Now you can move the child shape independently of the repeater.
+:::
+
 ## Light
+
+![](./images/scene_primitive_light.png)
 
 ### Directional
 Create a directional light, an infinitely far away light source like the sun.
@@ -276,8 +341,8 @@ Set the size of the group, light, camera, mirror icons in the viewport
 Display a line between parent and its children in the viewport
 
 ### Use Nomad pivot
-The Nomad pivot is the pivot used by the Transform and Gizmo tools. If this option is disabled, it wull us the natural base pivo. In some cases this base pivot can be far away from the object center itself!
+The Nomad pivot is the pivot used by the Transform and Gizmo tools. If this option is disabled, it will use the natural base pivot. In some cases this base pivot can be far away from the object center itself!
 
 ## Bottom toolbar
-These icons will toggle visibility of Group, Light, Canera, Repeater and Hierarchy lines in the viewport.
+These icons will toggle visibility of Group, Light, Camera, Repeater and Hierarchy lines in the viewport.
 

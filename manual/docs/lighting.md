@@ -1,4 +1,4 @@
-# Lighting
+# Lighting ![](./icons/sun.png#icon#left)
 
 ---
 
@@ -7,12 +7,15 @@ You can choose between several rendering modes:
 | Mode              | Meaning                    | Description                         |
 | :---:             | :---:                      | :---:                               |
 | [Lit(PBR)](#pbr)       | Physically Based Rendering | Painting with metalness/roughness   |
-| [Matcap](#matcap) | Material Capture           | Mostly be useful for pure sculpting |
+| [Matcap](#matcap) | Material Capture           | Using during sculpting with lower gpu/cpu use than PBR |
 | [Unlit](#unlit) | Surface Color           | Surface color only with no shading or lighting |
 | [Id](#id) | Object ID          | A random color per object, useful for painting applications |
 
-If you want to learn more about what metalness and roughness stands for, see the [Vertex Paint](painting.md) section.
+If you want to learn more about metalness and roughness, see the [Vertex Paint](painting.md) section.
 
+---
+
+![](./images/lighting_second.png)
 
 ### Use textures
 
@@ -24,8 +27,20 @@ Nomad can store color, roughness, metalness in the verticies of your sculpt. You
 
 Note that if you have both vertex properties and textures, and both are enabled, the values will be multiplied together.
 
+### Face Group
+Overlay facegroup colours. Facegroups are coloured selections of polygons that can be created with the [Face group](tools#facegroup) tool, and are made automatically with some of the primitives.
 
-## PBR
+Some tools will automatically filter by facegroups when facegroups are visible.
+
+### Show mask
+
+Toggle the grayscale mask overlay of the [mask tools](tools#mask). When this is disabled, the mask is also disabled, useful for making quick changes without the mask, then you can enable it again and not lose your mask.
+
+## Lights
+
+![](./images/lighting_lights.png)
+
+### PBR and lights
 This manual won't dive into the details about Physically Based Rendering.
 
 One important thing to keep in mind is that lighting and material are fully separated.
@@ -40,20 +55,28 @@ You can load a glTF file with more than 4 lights in it and Nomad will keep all o
 However it won't necessarily perform well.
 :::
 
+### Light types
+
 Here are the type of lights currently supported:
 
 | Mode                        | Description                      | Can cast shadows |
 | :---:                       | :---:                            | :---: |
 | [Directional](#directional) | Infinitely far away sun light    | yes   |
+| [Environment](#environment) | A distant light that is matched to the environment  HDR | yes   |
 | [Spot](#spot)               | Cone shaped lights				 | Yes   |
 | [Point](#point)             | Omni-directional point of light  | No    |
 
 ### Directional
 It emits light from infinitely far away, with a uniform intensity.
-Unlike the other type of lights, its 3d position in the scene doesn't matter, only its orientation does.
+It's 3d position in the scene doesn't matter, only its orientation does.
 
 You can attach this light to the camera, that way it has consistent lighting.  
 For example you can use it to make a rim light (a strong light that emits from the back of your model, pointing towards the camera) that always lights the back of your model.
+
+### Environment light
+Using a [environment hdr](#environment) works well for overall soft lighting, but if there is a strong sharp light visible in the HDR, the shadow created by it will be very soft, often not visible at all. Using a directional light in combination with the environment HDR can help, but it can be difficult to get them aligned.
+
+This light does the work for you. The light will automatically be rotated to align with the brightest part of the HDR, then you can control its intensity and angle (shadow softness) separately. 
 
 ### Spot
 Spot light emits light in a single direction, restricted by a cone shape.
@@ -84,7 +107,7 @@ Add a light to the scene, to a maxiumum of 4. When a light is added, the light l
 
 ![](./images/lights_list.jpg) 
 
-* The light icon will bring up a full light editor. Most of this functionality is availabel from the toolbar that apppears in the viewport. 
+* The light icon will bring up a full light editor. Most of this functionality is available from the toolbar that appears in the viewport. 
 * The text shows the name of the light and the brightness.
 * The eye icon toggles visibility.
 * The pencil icon allows you to rename the light.
@@ -106,21 +129,23 @@ This toolbar will appear at the top of the viewport when a light is selected.
 
 ### Light extra controls
 
-![](./images/lights_extra_controls.jpg) 
+![](./images/lights_extra_controls.png) 
 
 * Clone will duplicate the light.
 * Recenter will move the light back to the origin.
 * Delete will delete the light.
-* Intensity is the same conrol for light strength.
-* Attachment - fixed will mean the light will stay fixed with the scene, so you can tumble around and see different lighting effects. Camera means it is parented to the camera, and will always appear to be in the same orientation as the camera is moved.
+* Directional/Environment/Spot/Point allow you to change the light type.
+* Intensity is the same control for light strength.
+* Angle is the apparent size of distant and spot lights. High angles will make bigger highlights and softer shadows.
 * Shadow will toggle shadows for the current light
 * Shadow map and screenspace are different ways to calculate shadows, generally shadow map is more reliable.
-* Softness will blur the shadows
-* Contact adjust how shadow are calculated. Shadows are an awkward problem in computer graphics, and can cause artifacts in rendering. More accurate shadows can be seelcted for the most important light in a scene, this control determines if the most important light is selected automatically by nomad, or if the user selects.
+* Contact adjust how shadow are calculated. Shadows are a difficult problem in computer graphics, and can cause artifacts in rendering. More accurate shadows can be selected for the most important light in a scene, this control determines if the most important light is selected automatically by nomad, or if the user selects.
 * Tolerance if shadow artifacts are visible (either shadows don't appear to contact surfaces, or there's noise and patterns within shadows), adjusting tolerance can help fix those issues.
 
 
-### Environment
+## Environment
+
+![](./images/lighting_environment.png)
 
 Light in the real world comes from all directions; the blue of the sky, the green of the grass, the red of a building all this light from the 'environment' can be simulated with an environment map. This is usually created with a panoramc photo at various exposures, and can used to create soft lighting effects on rough surfaces, but also simulated reflections and refractions on shiny surfaces.
 
@@ -142,6 +167,9 @@ It will force the lighting to be consistent, whcih can be useful during sculptin
 
 
 ## Matcap
+
+![](./images/lighting_matcap.png)
+
 As the name suggests (MATerial CAPture), a matcap takes care of both the lighting and material information in a single image.
 Since the material itself is already present in the matcap, roughness and metalness painting channel will be ignored.
 The painting color will be multiplied against the matcap, meaning if you have a black/gray matcap, using white paint won't make it brighter.
@@ -150,11 +178,11 @@ Artists tend to favor this mode for sculpting purposes since they allow them to 
 
 Tapping on the sphere will bring up an image browser. You can also add your own matcap, generally any photo, render, even a painting of a sphere that has been cropped tightly into a square can be used. Many matcap libraries are available online, a useful resource is the [nidorx matcap library](https://github.com/nidorx/matcaps).
 
-## Use global Matcap
+### Use global Matcap
 
 Usually artists will use a single matcap for the entire sculpt, but if this togle is disabled, each object can have its own matcap. This can be used artistically to get striking results.
 
-# Rotation
+### Rotation
 A matcap is a specialised form of an environment map, so like an environment map, it can be rotated. You can also do this at any time in the viewport by dragging with 3 fingers left and right.
 
 
