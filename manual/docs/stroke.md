@@ -6,7 +6,7 @@
 ## Overview 
 
 You can customize the stroke behavior of most tool brushes.
-The settings should be similar to the ones present in 2d painting applications, however some options are specific to the sculpting and 3d field.
+The settings should be similar to the ones present in 2d painting applications, however some options are specific to sculpting and 3d.
 
 The options are split across 5 sub-menus:
 
@@ -25,24 +25,37 @@ Not all stroke options apply for all tools. Stroke options that aren't used by t
 
 ## Stroke
 
-### World-space radius
-When enabled, the brush radius is set in world units.
+### Radius
 
-For example if you create a sphere and make the clay tool radius match the sphere, the radius will be the same as the sphere as you zoom in and out.
+![](./images/stroke_radius.jpg)
 
-When disabled, the radius is set in screen units. So if you make the radius 100 pixels wide, when you zoom out or zoom in, the radius will remain 100 pixels wide.
-
-### Share radius
+#### Share radius
 
 When enabled, all tools will use the same radius, the default is for each tool to have its own radius.
 
-## Stroke behavior
+#### Size
 
-Strokes can act in 3 ways:
+* Screen - the radius is set in screen units. So if you make the radius 100 pixels wide, when you zoom out or zoom in, the radius will remain 100 pixels wide.
+* Constant (3d) - the radius is set in 3d units. For example if you create a sphere and make the clay tool radius match the sphere, the radius will be the same as the sphere as you zoom in and out.
+
+
+### Stroke
+
+![](./images/stroke_strokemode.png)
+
+Strokes can act in multiple modes:
 
 ###  Dot ![](./icons/stroke_dot.png#icon) 
 Drag like a regular paint stroke. 
 ![](./videos/stroke_dot.mp4) 
+
+###  Roll ![](./icons/stroke_roll.png#icon) 
+The brush alpha will be rotated to follow the direction of the stroke, useful for making fabric stitches. 
+![](./videos/stroke_roll.mp4) 
+
+###  Tile ![](./icons/stroke_tile.png#icon) 
+The brush alpha will be treated as a repeating pattern, and the brush stroke will reveal that pattern. The tiling is controlled from [Alpha -> Tiling](stroke#tiling).
+![](./videos/stroke_tile.mp4) 
 
  ### Lock + radius ![](./icons/radius.png#icon) 
  Stamp a brush stroke with fixed **height**. Drag will set the scale and rotation.
@@ -69,7 +82,7 @@ Will select what is inside the brush radius when the brush is started, and keep 
 The user radius is ignored, and is set dynamically based on how far the stroke is dragged away from the starting point. A small distance=small radius, a larger distance = bigger radius. Use the intensity slider to control the shape of the falloff. Useful for blocking in organic rubbery shapes.
 ![](./videos/stroke_lockradius_drag.mp4) 
 
-
+![](./images/stroke_space_smooth.png)
 
 ### Adjust spacing intensity
 Strokes with a low spacing (lower than 50%) can accumulate quickly, making more intense strokes than higher spacing values. This toggle will compensate for this, so strokes will be of approximately the same intensity regardless of spacing.
@@ -99,6 +112,8 @@ The projection direction can be set explicitly, the default 'Closest' method wil
 
 ### Randomize
 
+![](./images/stroke_randomize.png)
+
 The intensity, translation, rotation and scale of the stroke can each be randomized. This can be used to create a range of effects, eg mottled color with the paint tool, or the crease tool can be used to create skin detail.
 
 ![](./videos/stroke_randomize.mp4) 
@@ -108,14 +123,18 @@ The intensity, translation, rotation and scale of the stroke can each be randomi
 Apply a constant offset on the stroke. This is useful for small screens where your finger would cover the stroke. 
 
 
-## Alpha
+## Alpha ![](./icons/alpha.png#icon#left)
 ![](./images/stroke_alpha.jpg) 
 The `Alpha` is a texture that will modulate your brush behavior.
 It's a grayscale image, where black pixels mean no deformation and white pixels full deformation.
 
-For now the texture is never resized, so beware that huge image can slow down the performance a bit.
+Click on the alpha image to change it.
 
-### Invert value
+::: tip
+The texture is never resized, so huge textures can slow down performance.
+:::
+
+### Invert pixels
 This will reverse the values of the image, so black pixels will become white, and white pixels will become black. This only works for user-imported textures.
 
 ### Scaling
@@ -136,7 +155,7 @@ The alpha texture will be rotated to follow the direction of the stroke. You can
 
 By default black pixels will mean no deformation, and white pixels will mean full positive deformation, so for example, a clay brush with a alpha texture of rocks will only pull the surface out where the alpha is not black.
 
-If you want the brush to push the surface in, or both push in AND pull out, you can modify the mid value. So if you set the value to 0.5, a middle gray in the alpha will do nothing, a black value will push in, a white will pull out.
+If you want the brush to push the surface in, or both push in AND pull out, you can modify the mid value. So if you set the value to 0.5, a middle gray in the alpha will do nothing, a black value will push in, white will pull out.
 
 ### Tiling
 
@@ -206,6 +225,12 @@ This option will ignore back facing vertices.
 It can be useful if you want to paint part of a thin geometry without impacting the other side.
 It also works for sculpting but you might experience some artifacts.
 
+### Face Group
+This option will limit the brush to the current face group.
+* Auto will filter when face groups are set to be visible from the [Lighting](lighting) menu, and be disabled when they are turned off.
+* On will always filter regardless if the face groups are visible or hidden.
+* Off will never filter regardless if the face groups are visible or hidden.
+
 ### Allow dynamic topology
 This option is only available if your mesh is in [Dynamic Topology](topology.md#dynamic-topology) mode.
 You can disable or enable the refinement for a specific tool.
@@ -230,6 +255,8 @@ At 0%, only the nearest vertex or triangle is taken into account. These values c
 
 
 ### Depth masking
+![](./images/stroke_depthmask.png)
+
 Exclude points that are above or below a certain distance of the computed plane (Area sampling).
 
 This can be used to paint only on bumpy regions, or only on cavity regions.
