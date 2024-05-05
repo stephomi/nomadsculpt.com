@@ -1,4 +1,4 @@
-# Painting
+# Painting ![](./icons/paint.png#icon#left)  
 
 ![](./images/paint_menu.png)  
 

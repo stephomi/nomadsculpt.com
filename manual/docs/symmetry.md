@@ -1,6 +1,6 @@
-# Symmetry
+# Symmetry ![](./icons/symmetry.png#icon#left) 
 
-![](./images/symmetry_menu.jpg) 
+![](./images/symmetry_menu.png) 
 
 ## Overview 
 You can use symmetry to mirror sculpting operations in several ways:
@@ -11,15 +11,15 @@ You can use symmetry to mirror sculpting operations in several ways:
 * Mirrors can operate at the origin, or can operate relative to a user defined location
 * Sculpts that started non-symmetrical can be forced to be symmetrical
 
-A shortcut to enable/disable symmetry can also be found on the left quick panel (*"Sym"*).
+A shortcut to enable/disable symmetry can also be found on the left quick panel (*"Sym"*). The small 'L/W' indicates if Nomad is in Local or World symmetry mode.
 
 ![](./images/symmetry_button.jpg) 
 
-Note that this is a global option, so the state will carry over the different tools.
+This is a global option, so the state will carry over the different tools.
 The only exception are the transforms tool ([Move](#translate), [Rotate](#rotate), [Scale](#scale) and [Gizmo](#gizmo)) which have their own symmetry state.
 
 ## Enabled
-Toggle the mirror operation, this is the same as the `Sym` button in the left quick panel. 
+Toggle the mirror mode, this is the same as the `Sym` button in the left quick panel. 
 
 ## Planes
 
@@ -33,37 +33,38 @@ The axis and repeat count for radial symmetry. Note that these also aren't restr
 The mirror can either be 'Local', and move with the object, or be 'World', and not move. If you're not sure which mode you need, observe the mirror plane and radial indicators that are overlaid on the object. When in local mode, if you use the transform gizmo and move the model, the mirror indicators will move as well. When in world mode, the mirror indicators will stay fixed, and the object will slide through them.
 
 ## Mirroring
-When sculpting near the symmetry planes, some brushes will have imperfect symmetry behavior.
+![](./images/symmetry_mirroring.png)
 
-In that case you can use the 'Left to Right' or 'Right to Left' button to force symmetry again.
+When sculpting near the symmetry planes, some brushes will have imperfect symmetry behavior. This section allows you to restore symmetry by copying one side of your sculpt to the other. 
 
-This operation only succeeds if the algorithm detects that the mesh is symmetrical.
-In case the detection fails, you will be asked if you want to force the mirroring.
+![](./icons/tool_mask.png#icon#left) The mask button lets you isolate what will be mirrored; masking the destination side will protect that region, masking the source side will stop that area from being mirrored to the destination. 
 
-The main difference is that forcing the mirroring will change the topology, thus you might lose the [Multiresolution](topology.md#multiresolution).
+The << and >> buttons determine which side will be copied to the other. Nomad calculates this from your current viewport, so setting it to << for example will always copy from screen right to screen left.
 
-::: tip
-'Left' and 'Right' are calculated from your current point of view, so 'Left to Right' will copy the detail on what is currently on the left side of the screen, to the right side of the screen, while 'Right to Left' will do the opposite.
-:::
+`Mirror` will try to identify if the topology is the same on both sides of the mirror, and if so, just move vertices. This is the more common scenario.
 
-### Protect masked area
-Keep masked area intact. This option will be ignored with non-symmetric topology, or for disconnected surfaces, eg a pair of eyes.
+`Split & Mirror` will essentially cut the object along the mirror, copy one side, mirror it to the other, and weld vertices along the mirror. It is a more destructive option, and will delete multiresolution, but sometimes this method is required if the model is very different across the mirror.
 
 ### Flip object
+![](./images/symmetry_flip.png)
 Make the left side the right side, and vice versa. Similar in appearance to if you used the gizmo tool menu and set the scale to -1 on X.
 
 ## Reset
 
 It is possible to edit the symmetry location and orientation (but not recommended!). If needed, 'object center' and 'orientation' will reset the symmetry location and orientation to their default values.
 
-## Advanced
-'Show line' and 'Show plane' will toggle a viewport overlay of the symmetry locations. Note that turning off these options will only take effect when the symmetry menu is closed.
+## Edit
+![](./images/symmetry_edit.png)
 
-### Gizmo edit
-Enable a gizmo to move and rotate the symmetry location. Using this can get symmetry out of alignment very quickly and difficult to recover from, so use with caution!
+Nomad usually knows where to put the symmetry plane. It is not recommended to adjust this manually, but the `Gizmo (Edit)` button allows this for advanced users. When this button is clicked, a gizmo is shown to let you translate and rotate the symmetry plane. If you want to restore the default center and orientation, the `object center` and `orientation` buttons will do this.
 
-Note that the behavior of these options will change depending on what space (*Local/World*) you are in.
+The behavior of these options will change depending on what space (*Local/World*) you are in.
 So if it doesn't work as you would expect, make sure to check if you are in the correct space.
 
+::: tip
+The `Gizmo (Edit)` button is intentionally grayed out as a reminder that you probably shouldn't use this!
+:::
+
+'Show line' and 'Show plane' will toggle a viewport overlay of the symmetry locations. Note that turning off these options will only take effect when the symmetry menu is closed.
 
 
