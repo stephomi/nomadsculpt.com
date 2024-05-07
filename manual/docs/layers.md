@@ -22,13 +22,15 @@ Unlike most sculpting software, changing the topology of a mesh will not discard
 
 ----
 
+## Layer menu 
+
 ![](./images/layers_menu.png)
 
 Press `Add layer` to create a new layer.
 
 Each layer has a name, a slider to control it's strength/factor, and option buttons.
 
-## Options
+### Options
 
 | Action       | Icon                             | Description  |
 | :---:        | :---:                            | :---:        |
@@ -41,13 +43,13 @@ Each layer has a name, a slider to control it's strength/factor, and option butt
 
 To move a layer to another part of the layer stack, press and hold on its name, then drag.
 
-## More...
+### More...
 
 The 'More...' button will show extra options for the current layer:
 
 ![](./images/layers_more.png) 
 
-### Channel factors
+#### Channel factors
 
 These controls let you change how much of the sculpt/color/roughness/metalness/opacity are shown. These values are multiplied against the layer factor slider, so for example if the layer strength is 1, but the color channel factor is 0.5, then the color displayed will be at 0.5 strength.
 
@@ -73,10 +75,10 @@ Maybe in the future, each channel will have its own alpha channel to remove this
 :::
 
 
-### Mask ![](./icons/tool_mask.png#icon#left)
+#### Mask ![](./icons/tool_mask.png#icon#left)
 The mask button next to each slider will create a mask from that channel. Similar to using layers to make selections in painting applications, this allows you to reuse work you have done in a layer for other operations.
 
-### Extract
+#### Extract
 
 ![](./videos/layer_shell.mp4)
 
@@ -89,7 +91,7 @@ The `Extract` button will duplicate the contents of the layer into a new object.
 
 Smoothness - If the edges of the region to be extracted are jagged, this slider will attempt to blur the edge into a smoother shape. 
 
-### Shell
+#### Shell
 This section is visible when the closing action is 'Shell'. 
 
 Thickness - The depth of the shell extrusion. 
@@ -101,7 +103,7 @@ The plus/minus next to this value will set the direction of the extrusion:
 
 Auto Edge-loop (side) and Edge loop (side) control the sides of the shell extrusion. Auto will calculate the number of edge loops along the shell sides to create square polygons. If disabled, the Edge loop slider will set the number of divisions on the sides.
 
-## Keep top layers details
+### Keep top layers details
 
 Ensure that small details on higher layers remain visible when large changes are made to lower changes.
 
@@ -110,7 +112,7 @@ By default if you sculpt small wrinkles on a layer, then go and make large chang
 ![](./videos/layers_details.mp4)
 
 
-## UI: Expand list
+### UI: Expand list
 
 The default layer menu lets you toggle layer visibility and the layer opacity. Enabling this option expands the full controls for every layer.
 
