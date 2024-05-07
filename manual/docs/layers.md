@@ -1,14 +1,14 @@
 # Layers
 
-![](./images/layers_menu.jpg) 
+![](./images/layers_overview.png) 
 
 ## Overview
 
 Nomad layers serve multiple purposes.
 
-When used with paint information (Color, Roughness, Metalness) layers work similar to 2d paint applications. A layer can be created and paint applied to a model. The layer can be toggled on or off, have its opacity adjusted, the layer can be duplicated, its order can be changed in the layer stack.
+Paint information (Color, Roughness, Metalness, Opacity) work with layers similar to 2d paint applications. A layer can be created and paint applied to a model. The layer can be toggled on or off, have its opacity adjusted, the layer can be duplicated, its order can be changed in the layer stack.
 
-Nomad also users layers for sculpting, which can function like layers for detail, and they can also store large changes to a model, allowing layers to function like blendshapes in 3d applications. For example you could sculpt different facial expressions on different layers, and blend them together.
+Nomad also users layers for sculpting. A layer can store fine details like wrinkles, or it can store large changes, allowing them to function like blendshapes in 3d applications. For example you could sculpt different facial expressions on different layers, and adjust the layer sliders to combine them into new expressions.
 
 In this case the changes stored in a layer are purely additive, so layering in the stack doesn't matter like it does for paint.
 
@@ -17,10 +17,12 @@ Layers can be partially erased via the [Delete Layer](tools.md#delete-layer) too
 ![](./videos/layer.mp4)
 
 ::: tip
-Unlike many sculpting softwares, changing the topology of a mesh will not discard the layers. You can use the [Voxel Remesher](topology.md#voxel-remesher), the [Multiresolution](topology.md#multiresolution) or the [Trim](tools.md#trim)/[Split](tools.md#split) tools, but note that when using [Voxel Remesher](topology.md#voxel-remesher), the quality of the layer will be impacted.
+Unlike most sculpting software, changing the topology of a mesh will not discard the layers. You can use the [Voxel Remesher](topology.md#voxel-remesher), the [Multiresolution](topology.md#multiresolution) or the [Trim](tools.md#trim)/[Split](tools.md#split) tools, but note that when using [Voxel Remesher](topology.md#voxel-remesher), the quality of the layer will be impacted.
 :::
 
 ----
+
+![](./images/layers_menu.png)
 
 Press `Add layer` to create a new layer.
 
@@ -43,11 +45,11 @@ To move a layer to another part of the layer stack, press and hold on its name, 
 
 The 'More...' button will show extra options for the current layer:
 
-![](./images/layers_more.jpg) 
+![](./images/layers_more.png) 
 
 ### Channel factors
 
-These controls let you change how much of the sculpt/color/roughness/metalness are shown. These values are multiplied against the layer factor slider, so for example if the layer strength is 1, but the color channel factor is 0.5, then the color displayed will be at 0.5 strength.
+These controls let you change how much of the sculpt/color/roughness/metalness/opacity are shown. These values are multiplied against the layer factor slider, so for example if the layer strength is 1, but the color channel factor is 0.5, then the color displayed will be at 0.5 strength.
 
 `Offset` is a slider for the layer sculpt strength. While color/roughness/metalness are clamped between 0 and 1, offset can be any value, both positive and negative. 
 
@@ -71,7 +73,7 @@ Maybe in the future, each channel will have its own alpha channel to remove this
 :::
 
 
-### Mask
+### Mask ![](./icons/tool_mask.png#icon#left)
 The mask button next to each slider will create a mask from that channel. Similar to using layers to make selections in painting applications, this allows you to reuse work you have done in a layer for other operations.
 
 ### Extract
@@ -99,3 +101,17 @@ The plus/minus next to this value will set the direction of the extrusion:
 
 Auto Edge-loop (side) and Edge loop (side) control the sides of the shell extrusion. Auto will calculate the number of edge loops along the shell sides to create square polygons. If disabled, the Edge loop slider will set the number of divisions on the sides.
 
+## Keep top layers details
+
+Ensure that small details on higher layers remain visible when large changes are made to lower changes.
+
+By default if you sculpt small wrinkles on a layer, then go and make large changes to the base layer, the wrinkles will be lost. Enabling this toggle will allow those small details to always float above the lower large changes. In the following video, see how the wrinkle detail gets removed by default, but remains visible when 'keep top layers details' is enabled:
+
+![](./videos/layers_details.mp4)
+
+
+## UI: Expand list
+
+The default layer menu lets you toggle layer visibility and the layer opacity. Enabling this option expands the full controls for every layer.
+
+![](./images/layers_expand.png)
