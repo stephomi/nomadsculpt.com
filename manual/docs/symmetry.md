@@ -3,13 +3,12 @@
 ![](./images/symmetry_menu.png) 
 
 ## Overview 
-You can use symmetry to mirror sculpting operations in several ways:
+You can use symmetry in several ways:
 
-* Mirroring can work across the X Y Z planes either independently or in combination
-* Radial symmetry can be set on X Y Z with a number of repeats
-* The mirror can operate as a helper for sculpting tools, or as a repeater at the object level
-* Mirrors can operate at the origin, or can operate relative to a user defined location
-* Sculpts that started non-symmetrical can be forced to be symmetrical
+* As a mirror, flipping work across X (left/right), Y (top/bottom), Z(back/front), or a combination. 
+* Radial symmetry can be set on X Y Z with a number of repeats, eg sculpting a starfish. 
+* Mirrors can operate around the origin (called world mode)  or around the center of an object (called local mode).
+* Sculpts that started non-symmetrical can be forced to be symmetrical.
 
 A shortcut to enable/disable symmetry can also be found on the left quick panel (*"Sym"*). The small 'L/W' indicates if Nomad is in Local or World symmetry mode.
 
@@ -17,6 +16,10 @@ A shortcut to enable/disable symmetry can also be found on the left quick panel 
 
 This is a global option, so the state will carry over the different tools.
 The only exception are the transforms tool ([Move](#translate), [Rotate](#rotate), [Scale](#scale) and [Gizmo](#gizmo)) which have their own symmetry state.
+
+::: tip
+The symmetry menu is mainly for controlling stroke symmetry. You can also mirror and repeat objects via [repeaters found in the scene menu](scene#repeaters). 
+:::
 
 ## Enabled
 Toggle the mirror mode, this is the same as the `Sym` button in the left quick panel. 
