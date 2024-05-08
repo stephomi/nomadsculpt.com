@@ -1,6 +1,5 @@
 # History
-
----
+![](./images/history_overview.png)
 
 Like most content creation tools, you can undo/redo all editing in Nomad.
 There is a limit to how many operations can be undoable, but you can control this behavior.
@@ -11,25 +10,31 @@ You can use quick gestures to undo/redo:
 - 3 fingers tap to redo
 :::
 
-## Limitation
+## History
+![](./images/history_history.png)
+
+This panel displays the history stack, showing the number of steps, the operation name, and the amount of memory that step is using.
+
+## Settings
+![](./images/history_settings.png)
 
 ### History limit (Mb)
 If the history stack exceeds this value, the older operations will be removed so that the memory budget fits into this limit.
 
 
-### Stack limit
+### Maximum undoable
 You can control the maximum number of operations.
-
-
-### Range protection
-If you enable this option, a prompt will popup and ask you if you really want to undo all the operations.
-
-You can still redo the operations but the prompt is mostly there to prevent unwanted errors.
-For example by sculpting a bit after redoing many operations, you will lose the opportunity to redo.
-
 
 ## Restore camera
 For each operation, the viewpoint of the camera is saved.
 If you enable this option, undoing or redoing an operation will reset the camera to the saved viewpoint.
 
+## Include actions
 
+* `Lights` - When disabled, light operations (apart from gizmo moves) will be ignored by the history stack
+* `Matcaps & HDRIs` - When disabled, changes to matcaps and hdri's will be ignored by the history stack
+* `PostProcess` - When disabled, changes to the postprocess options will be ignored by the history stack
+
+## Memory stats
+
+This section gives a breakdown of memory used by Nomad.
