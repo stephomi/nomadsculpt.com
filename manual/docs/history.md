@@ -1,4 +1,4 @@
-# History
+# History ![](./icons/history.png#icon#left) 
 ![](./images/history_overview.png)
 
 Like most content creation tools, you can undo/redo all editing in Nomad.

@@ -1,4 +1,4 @@
-# Settings
+# Settings ![](./icons/cog.png#icon#left) 
 
 The settings menu contains many options to control the appearance and behavior of Nomad.
 

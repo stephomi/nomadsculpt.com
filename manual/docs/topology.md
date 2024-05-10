@@ -1,4 +1,4 @@
-# Topology
+# Topology ![](./icons/multires.png#icon#left) 
 
 This menu controls the topology of objects in Nomad, as well as tools to bake and transfer details between objects, and between textures.
 
