@@ -1,13 +1,15 @@
 # Camera ![](./icons/camera.png#icon#left) 
 
+This menu lets you create and modify cameras, as well as control how you interact with cameras.
+
+![](./images/camera_overview2.png)
+
 Cameras in Nomad have several uses:
 
 * Setup views for sculpting from precise angles
 * Used like a photo camera to frame your objects
 * as a first person perspective camera to navigate your scene
 * as an orthographic camera for isometric games or industrial style rendering.
-
-![](./images/camera_overview.png)
 
 ## Controlling the camera
 

@@ -1,4 +1,4 @@
-# Tools
+# Tools ![](./icons/toolbox.png#icon#left)
 
 ![](./images/tools_menu.jpg)
 

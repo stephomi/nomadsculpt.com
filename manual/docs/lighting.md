@@ -1,6 +1,10 @@
 # Lighting ![](./icons/sun.png#icon#left)
 
----
+This menu controls the lighting mode used by Nomad, lighting properties, and the environment light/matcap properties.
+
+![](./images/lighting_overview.png)
+
+
 
 You can choose between several rendering modes:
 

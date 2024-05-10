@@ -1,7 +1,7 @@
-# Stroke
+# Stroke ![](./icons/pencil.png#icon#left)    
 
 ---
-![](./images/stroke_stroke.jpg) 
+![](./images/stroke_overview.png) 
 
 ## Overview 
 

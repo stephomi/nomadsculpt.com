@@ -1,6 +1,9 @@
 # Post process ![](./icons/postprocess.png#icon#left) 
 
----
+This menu controls many aspects of Nomad to affect the look of the render.
+
+![](./images/postprocess_overview_drac.png)
+
 Using post processing can substantially change the final look of your scene.
 
 ![](./images/postprocess_overview.png)

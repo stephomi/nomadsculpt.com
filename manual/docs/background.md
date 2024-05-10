@@ -1,7 +1,10 @@
 # Background ![](./icons/image.png#icon#left) 
 
----
+This menu controls the background color of Nomad, as well as any reference images to be used.
 
+![](./images/background_overview.png)
+
+## Background 
 ![](./images/background_selector.png)
 
 There are three options for the viewport background.

@@ -1,8 +1,13 @@
-# Files
+# Files ![](./icons/open.png#icon#left) 
+
+The files menu allows you to save and load nomad projects, import and export 3d models, and export rendered images.
+
+![](./images/file_menu.png)
 
 ## Project
+![](./images/file_project.png)
 
-A thumbnail is shown of the last save at the top of this menu. Clicking this thumbnail brings up a mini browser, tap twice on another project to bring up a mini menu to open, ad, save, clone, rename, delete that project.
+A thumbnail is shown of the last save at the top of this menu. Clicking this thumbnail brings up a mini browser, tap twice on another project to bring up a mini menu to open, add, save, clone, rename, delete that project.
 
 ### Save ![](./icons/save.png#icon#left)
 Save the Nomad project.
@@ -92,8 +97,11 @@ Enable popup timeout
 If an auto save file exists for a project, it will automatically be loaded instead of the original project. If this isn't required, this button will delete the autosave. Loading the fill will then load the last manual save of the project.
 
 ## Export
-
 Save to a 3d geometry format that can be used in other software. 
+
+![](./images/file_export.png)
+
+Note that the options available will change depending pn the file type selected.
 
 <!-- https://www.tablesgenerator.com/markdown_tables# -->
 <!-- http://markdowntable.com/ -->
@@ -152,6 +160,7 @@ This video shows the process:
 
 Export an image that is the combination of all the settings in the project (lights, materials, post processing etc). 
 
+![](./images/file_render.png)
 ### Preview
 
 The small preview button next to the menu title will dim the toolbars to help preview the final result.
