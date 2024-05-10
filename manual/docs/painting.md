@@ -1,6 +1,8 @@
 # Painting ![](./icons/paint.png#icon#left)  
 
-![](./images/paint_menu.png)  
+Control the color, roughness, metalness of paint strokes, allow for flood filling of paint attributes, and how paint tools interact with layers, masks, hidden selections.
+
+![](./images/paint_overview.png)  
 
 ## Overview
 

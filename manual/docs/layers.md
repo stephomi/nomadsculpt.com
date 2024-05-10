@@ -1,5 +1,7 @@
 # Layers
 
+This menu contains the layer stack, a way to store edits to your object in a non destructive way, and many ways to combine and repurpose layers.
+
 ![](./images/layers_overview.png) 
 
 ## Overview

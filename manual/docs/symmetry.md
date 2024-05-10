@@ -1,6 +1,8 @@
 # Symmetry ![](./icons/symmetry.png#icon#left) 
 
-![](./images/symmetry_menu.png) 
+This menu controls how strokes will be repeated acroos a mirror plane or radially, and ways to restore symmetry on non-symmetrical objects.
+
+![](./images/symmetry_overview.png) 
 
 ## Overview 
 You can use symmetry in several ways:

@@ -1,6 +1,8 @@
 # Settings
 
-Most of the options in this section concern the viewport display.
+The settings menu contains many options to control the appearance and behavior of Nomad.
+
+![](./images/settings_overview.png)
 
 ## Display settings
 This section is quick launch shortcuts for most of the setting below.

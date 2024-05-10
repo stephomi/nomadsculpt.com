@@ -1,7 +1,7 @@
 # Stroke
 
 ---
-![](./images/stroke_stroke.jpg) 
+![](./images/stroke_overview.png) 
 
 ## Overview 
 

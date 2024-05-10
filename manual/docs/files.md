@@ -1,5 +1,7 @@
 # Files ![](./icons/open.png#icon#left) 
 
+The files menu allows you to save and load nomad projects, import and export 3d models, and export rendered images.
+
 ![](./images/file_menu.png)
 
 ## Project

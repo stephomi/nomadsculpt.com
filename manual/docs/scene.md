@@ -1,10 +1,10 @@
 # Scene
 
----
+This menu lets you manage objects, lights, cameras and repeaters in Nomad. It displays the scene hierarchy as a tree-view, allowing you to modify many aspects of your objects. It also lets you create new objects, as well as combine and split objects in various ways.
+
 
 ![](./images/scene_menu_summary.png)
 
-This menu lets you manage objects in Nomad. It displays the scene hierarchy as a tree-view, allowing you to modify many aspects of your objects.
 
 ## Shortcut bar
 | Action       | Icon                                   | Description  |

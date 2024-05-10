@@ -1,8 +1,13 @@
 # Interface Menu
 
+This menu controls many options to customise Nomad's interface. 
+
+![](./images/interface_overview2.png)
+
+Nomad can be customized to quite a deep level, this menu is split across 4 sections; Interface, Gesture, Bindings, Debug.
+
 ![](./images/interface_menu.jpg)
 
-Nomad can be customized to quite a deep level, this is split across 4 sections; Interface, Gesture, Bindings, Debug.
 
 ::: tip
 This page is for the interface menu, not the interface itself! The overall interface is described in [Getting Started](gettingstarted.md).
