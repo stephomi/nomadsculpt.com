@@ -66,9 +66,13 @@ The translation files can be found [here](https://github.com/stephomi/nomad-tran
 
 
 ## Features
+
+### Why is the gizmo not moving?
+You might have [pin enabled in the left menu toolbar](tools#left-menu-toolbar). 
+
 ### Can we animate inside Nomad?
-Not for now.
-A timeline feature that could animate the layers could be interesting, but not really planned at the moment.  
+Not for now. A timeline feature that could animate the layers could be interesting, but not really planned at the moment.  
+
 I'd like to support rigging/skinning in the future, but it poses a few challenges (notably the interaction with sculpting tools...) so nothing sure for now.
 
 
