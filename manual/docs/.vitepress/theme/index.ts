@@ -21,7 +21,9 @@ export default {
     setup() {
         const route = useRoute();
         const initZoom = () => {
-            var images = document.querySelectorAll('img[src*=images]');
+            var imagesDev = document.querySelectorAll('img[src*=images]');
+            var imagesBuild = document.querySelectorAll('img[src*=assets]');
+            var images = imagesBuild.length ? imagesBuild : imagesDev;
             new mediumZoom(images, {
                 background: 'var(--vp-c-bg)',
                 scrollOffset: 10,

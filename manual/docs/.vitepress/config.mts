@@ -8,6 +8,7 @@ export default defineConfig({
     cleanUrls: true,
     appearance: 'dark',
     base: '/manual/',
+    outDir: '../dist/manual',
 
     // https://vitepress.dev/reference/default-theme-config
     themeConfig: {
