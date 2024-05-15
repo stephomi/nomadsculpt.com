@@ -1,5 +1,7 @@
 # Tips
 
+[[toc]]
+
 ## Working on small screens
 
 Nomad is designed to work on tablets, but works well on phones as well. Sculpting on a small screen like a phone can be made easier with a few UI and workflow tweaks:
@@ -11,9 +13,6 @@ Nomad is designed to work on tablets, but works well on phones as well. Sculptin
 * If sculpting with a finger, use the offset option to move the brush center a little away from your finger.
 * These and many more options can be found in the [Interface menu](./interface.md). 
 
-## Recording a turntable video
-
-Under iOS, this is done by swiping down from the top left, and tapping the record button. It will give you a 3 second countdown, swipe the menu away to reveal Nomad, and use the turntable feature. When complete, swipe down again from the top right, and tap the record button again. Edit the movie from the photo library to remove excess footage at the start and end of the video.
 
 ## Inflate or peak deformer
 
@@ -45,7 +44,7 @@ To fix the topolgy itself, use a new primitive, or the quad remesh tools, or an 
 
 ![](./videos/tip_pimples_reproject.mp4)
 
-## Nice lighting
+## Daylight lighting
 
 The default PBR render is, as its name suggests, physically based, which like an unprocessed digital photo can look a little washed out and flat. Nomad's lights and post processing can be used to make renders look more vibrant.
 

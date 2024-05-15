@@ -18,7 +18,7 @@ However you can see the list of bugs/fixes for the pending/incoming release in t
 The [web demo](https://stephaneginier.com/archive/nomad_demo) is usually updated with the pending/incoming release.
 
 ### Is there a Windows or OSX version?
-No, but it is planned.
+No, but it is planned for 2024.
 
 ### Why is there a free trial on Android? But not on iOS?
 Because old Android devices suck (and some recent ones as well...), and I didn't want people to buy the app and be welcomed with a black screen.
@@ -78,7 +78,7 @@ This is not really Nomad *Sculpt*'s scope, but maybe I'll provide a few tools in
 
 
 ### Can we do uv and texturing?
-For now painting directly on textures inside Nomad is not planned. That said, Nomad supports several ways to work with textures:
+Short answer: Yes. Long answer: Not directly, but there are several ways to combine Nomad's excellent vertex paint tools with uv's and textures.
 
 * Nomad allows you to paint color, roughness, material properties directly into the vertices of your sculpt.
 * Nomad allows very high vertex counts so that you can paint without worrying about uv's.
@@ -91,8 +91,9 @@ For now painting directly on textures inside Nomad is not planned. That said, No
 * After baking, exporting an obj will also export textures, which can be taken to an app like Procreate to paint directly on textures.
 
 ### Can I record a turntable video?
-Not planned for now, iOS has a native video recording feature that is very easy to use.
+Not planned for now, iOS has a [video recording feature](https://support.apple.com/en-au/guide/ipad/ipaddf78ce08/ipados) that is very easy to use.
 
+Under iOS, this is done by swiping down from the top left, and tapping the record button. It will give you a 3 second countdown, swipe the menu away to reveal Nomad, and use the turntable feature. When complete, swipe down again from the top right, and tap the record button again. Edit the movie from the photo library to remove excess footage at the start and end of the video.
 
 ### Can you add [insert-favorite-feature] as a top-level button?
 If I did that each time I received such a request, Nomad wouldn't be usable.  
@@ -101,12 +102,9 @@ Handling a small screen is challenging.
 
 
 ### What are the next features?
-For the mid/long term roadmap I got a lot of ideas but I don't know yet.  
+For the mid/long term roadmap I have a lot of ideas but I don't know yet.  
 
 Bug fixes and improving existing features will always have higher priority over adding new features.
-
-
-
 
 
 ### Can we rig in nomad?
@@ -116,7 +114,7 @@ No, but it is planned. For now you can parent shapes together and alter pivot po
 No, this is a limitation of the realtime render engine within Nomad. It is possible to fake this using emissive objects and global illumination in post process, as shown in [this tutorial](https://www.youtube.com/watch?v=QhrUGH7CuUA)
 
 ### Can we import Zbrush tools?
-No, Zbrush uses a proprietary format. You should be able to extract the alpha maps and use them in Nomad however. 
+No, Zbrush uses a proprietary format. You should be able to extract the alpha maps and use them in Nomad. 
 
 ### Why don't the colors match what I painted? Why can't I get white in the render?
 Imagine taking a photo of a piece of paper, vs a photo of a desk lamp, vs a photo of the sun. Older cameras and screens will just make them all ‘white’. More modern systems can show a difference between reflected white of paper vs emitted light of a lamp, vs the super bright of the sun.
