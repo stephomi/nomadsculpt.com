@@ -10,8 +10,10 @@ On iOS, you can access the Nomad folder with the iOS Files app.
 
 On Android, the Nomad folder is in `Android/data/com.stephaneginier.nomad/files/`.  
 On the recent Android version (10/11), you don't have access to the `Android/data`folder anymore.
-You can access it through a separate app, for example [this one](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager).
-
+You can access it through a separate app, for example [this one](https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer).
+ <!-- [this one](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) -->
+ <!-- [this one](https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer) -->
+ 
 ### Is there a way to beta test?
 There is no Android/iOS beta version.  
 However you can see the list of bugs/fixes for the pending/incoming release in the [Logs](https://forum.nomadsculpt.com/t/nomad-change-log/139/500).  
