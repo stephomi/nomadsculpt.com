@@ -2,6 +2,60 @@
 
 [[toc]]
 
+## Facegroups
+
+The facegroup tool can be used for many things, as explained in this youtube video: https://youtu.be/qtjYcxS8f9s?si=HGWTG-NqXGstWehx
+
+This is a text summary of the features covered in that video.
+
+### Why facegroups?
+
+Facegroups let you organise and select faces ('faces' and 'polygons' are the same thing, the corners of polygons are called 'vertices'). This is easier to explain compared to Nomad's other selection and organization tools. Nomad lets you create objects, name them, parent them, it's easy to create a structure of objects to define a room made up of floor, walls, chair, table and so on.
+
+For a character you might do an initial block-out using separate objects for head, arm, leg, but once you merge all the pieces into a single mesh, this structure is lost. You can work on sub-sections of a character with masks, but it can get tiresome to keep painting a mask for the hands, then the nose, then the hands again.
+
+This is where facegroups come in handy. It lets you mark polygon faces with a color, and then be able to select and manipulate polys that have the same facegroup color.
+
+The closest analogy would be painting colors on a map, then later on being able to select countries or regions based on color.
+
+For character heads you could paint zones to mark the eye sockets, nose, lips, chin, ears, then easily select those zones later. For hard surface and mechanical sculpting it can be useful to define panels and sections.
+
+### Creating and editing facegroups
+
+Facegroups can be applied with a brush, where each new stroke creates a new facegroup, or they can select the facegroup under the cursor and extend it. They can also be created using shapes.
+
+* Dot, auto-pick enabled - a single drag will define a new facegroup colour and assign it to the faces you drag over. Every new drag will define a new facegroup. A tap will flood fill a new facegroup.
+* Dot, auto-pick disabled - when the auto-pick button is in its 'sub' mode, nomad will select the facegroup under the cursor, and apply it during the rest of the drag. This is useful to refine facegroups without having to manually select them.
+
+### Masking
+
+When the mask tool is active, and the facegroup button is active on its toolbar, tapping a facegroup will mask it.
+
+
+### Hiding
+
+When the hide tool is active, and the facegroup button is active on its toolbar, tapping a facegroup will hide it.
+
+### Organizing
+
+As mentioned earlier facegroups can be used to organise your mesh without requiring you to make separate objects. You may not want to split a head into separate objects for nose, chin, ears, but it is very useful to have them defined via facegroups.
+
+### UV regions
+
+The UV Atlas tool will attempt to define seams automatically, but will sometimes put seams where you don't want them to. If facegroups exist on an object, and the facegroup option is active in the UV Atlas options, it will use the facegroup borders as UV seams instead.
+
+### Quad remesher
+
+The quad remesher plugin will usually flow edges nicely on your model, but you can use facegroups to help steer it when the facegroup option is enabled. This can make it easy to define a clean edge flow around eyes, a eyebrow ridge, lips, cheek fold for example.
+
+### Filter with other tools
+
+Many tools will have options to be facegroup aware, either from their primary tool menu, or via the stroke -> filtering menu. For example the smooth tool at strengths above 100% can aggresively smooth away detail within a facegroup, but keep the facegroup border relatively intact
+
+### Relax and smooth facegroup borders
+
+The relax option within the facegroup tool does an excellent job of smoothign facegroup borders while keeping other features intact. This can be a great way to define smooth facegropu border regions before quad remeshing.
+
 ## Working on small screens
 
 Nomad is designed to work on tablets, but works well on phones as well. Sculpting on a small screen like a phone can be made easier with a few UI and workflow tweaks:
