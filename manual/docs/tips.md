@@ -2,6 +2,45 @@
 
 [[toc]]
 
+## How to start a model
+
+Beginners in 3d sculpting often ask which is the best way to start a model. There is no best way, different people have different preferences. Here's some of the more common approaches.
+
+### Sculpt on sphere, multires
+
+The default model when Nomad launches is the most common way. Use the move, clay, crease tools to push and pull the sphere into shape, use the lower subdivision levels when you want to make big changes quickly, user higher subdivision levels for detail work.
+
+A common issue is you'll often run out of polygons where you need them, while you have too many polygons elsewhere. Eg if you push the default sphere into a full body, its likely you won't have enough detail to do the fingers, while you'll have lots of wasted polygons on the back of the head. For mostly spherical shapes like a head, this can be fine.
+
+### Dyntopo
+
+Enabling Dyntopo will adaptively add and remove polygons as you sculpt. These polygons will be triangles, and beginners often don't like the messy layout compared to the clean look of multires. It's worth persisting with though! If you can turn on smooth shading, turn off wireframe and stop worrying about it, this mode can give a very clay like feel. Don't forget that if you use a large brush, or a smooth brush, this mode can also remove polygons, so the tool always feels fast and responsive. Once you have a first pass of the sculpt finished, you can clone it and run it through quad remesher to get a nice layout, and reproject the original details onto a high subdivision level.
+
+### Voxel remesh
+
+Voxel remesh will apply a mostly quad based topology on your sculpt. This operation is quick at lower resolutions, and can be used to quickly replace stretched polygons or overly dense polygons with an evenly spaced layout. This can be a great way to start a full body from a sphere; say you start with a head, you can stretch out a neck, voxel remesh. Stretch out a body, voxel remesh, arms, voxel remesh, and so on, until you have the basic forms down.
+
+### Use multiple objects
+
+Many anatomy guides will represent a body out of simple spheres, cylinders, cubes, you can also sculpt this way in Nomad. This has the advantage of allowing you to parent objects together in the scene hierarchy, so you can rotate the neck and the head will follow, for example. When the basic blocks are in the right place, you can select them all and voxel remesh or boolean them into a single surface for more detailed sculpting.
+
+### Tubes
+
+The tube tool is a great way to start a sculpt. Reptile tails, arms, legs, fingers, eyebrows, they can all be quickly sketched out with the tube tool. It also allows you to modify the cross section profile, allowing for fast shape changes. You can validate the shape to start sculpting on it, and voxel remesh it along with other objects to get a full body mesh.
+
+### Use other apps
+
+Some people prefer to start a model in other apps, thats also fine. Tools like Blender or Valence allow models to be started in ways popular in the 1990s/2000s, they can then be imported into Nomad for sculpting.
+
+### Use online models
+
+There are many free models available online, eg polyhaven, sketchfab, turbosquid. Usually these models can be imported to Nomad, and ether sculpted on directly, or used as reference.
+
+### No rules!
+
+Ultimately you can use any combination of these techniques, or none at all! Nomad is very flexible in this regard, advanced users might use tubes to start with, then dyntopo, then combine with a downloaded head, then quad remesh it all, then multires for final detail. Whatever works for you.
+
+
 ## Facegroups
 
 The facegroup tool can be used for many things, as explained in this youtube video: https://youtu.be/qtjYcxS8f9s?si=HGWTG-NqXGstWehx
