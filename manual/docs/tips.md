@@ -10,11 +10,11 @@ This is a text summary of the features covered in that video.
 
 ### Why facegroups?
 
-Facegroups let you organise and select faces ('faces' and 'polygons' are the same thing, the corners of polygons are called 'vertices'). This is easier to explain compared to Nomad's other selection and organization tools. Nomad lets you create objects, name them, parent them, it's easy to create a structure of objects to define a room made up of floor, walls, chair, table and so on.
+Facegroups let you organise and select faces ('faces' and 'polygons' are used interchangeably in this manual). This is easier to explain compared to Nomad's other selection and organization tools. Nomad lets you create objects, name them, parent them, it's easy to create a structure of objects to define a room made up of floor, walls, chair, table and so on.
 
 For a character you might do an initial block-out using separate objects for head, arm, leg, but once you merge all the pieces into a single mesh, this structure is lost. You can work on sub-sections of a character with masks, but it can get tiresome to keep painting a mask for the hands, then the nose, then the hands again.
 
-This is where facegroups come in handy. It lets you mark polygon faces with a color, and then be able to select and manipulate polys that have the same facegroup color.
+This is where facegroups are useful. It lets you tag polygon faces with a color, and then be able to select and manipulate polys that have the same color. Note that facegroup colour and vertex colour are different things.
 
 The closest analogy would be painting colors on a map, then later on being able to select countries or regions based on color.
 
@@ -50,11 +50,31 @@ The quad remesher plugin will usually flow edges nicely on your model, but you c
 
 ### Filter with other tools
 
-Many tools will have options to be facegroup aware, either from their primary tool menu, or via the stroke -> filtering menu. For example the smooth tool at strengths above 100% can aggresively smooth away detail within a facegroup, but keep the facegroup border relatively intact
+Many tools will have options to be facegroup aware, either from their primary tool menu, or via the stroke -> filtering menu. For example the smooth tool at strengths above 100% can aggresively smooth away detail within a facegroup, but keep the facegroup border relatively intact.
 
 ### Relax and smooth facegroup borders
 
-The relax option within the facegroup tool does an excellent job of smoothign facegroup borders while keeping other features intact. This can be a great way to define smooth facegropu border regions before quad remeshing.
+The relax option within the facegroup tool does an excellent job of smoothing facegroup borders while keeping other features intact. This can be a great way to define smooth facegroup border regions before quad remeshing.
+
+## Limitations on tablet/mobile
+
+Current tablets and mobiles are very powerful, but have important differences to desktop computers and laptops:
+
+### No active cooling
+
+Computers have fans and/or large heatsinks to keep them cool, and are designed to run at high temperatures. Mobile hardware is usually designed for thinness first, not for helping to keep the internals cool. If Nomad is pushed to its highest quality settings (PBR lighting mode, complex materials, many objects, many post processing options enabled), this can both overheat the device and drain the battery very quickly. 
+
+A better approach is to use a matcap lighting mode, and use a lower render multiplier (top of the post process menu). These choices will keep the device cool and allow you to sculpt for longer.
+
+### Limited memory
+
+Nomad can achieve results equal to most desktop sculpting apps, but it can't bend the laws of physics! Most desktop computers have double the memory of mobile devices, workstations built for 3d animation often have 4x or 8x the memory. Because of this, it is good to be aware of how many polygons you're using, run some tests on your device to see when it starts to get laggy. Nearly all devices that can run Nomad can handle 1 million polygons pretty easily. An M2 Ipad Pro can handle 8 million comfortably, people have tested on the latest Ipads going well above that.
+
+That said, only the most detailed of sculpts need more than 4 million polys; if you're making relatively simple objects and find yourself often going above 500,000, 1 million, 4 million, you're using too many polygons! Make sure you have smooth shaded mode enabled in the options.
+
+### OS is less forgiving with intensive apps
+
+Apple and Android expect apps will save and load small files very quickly. They also assume apps can task switch very quickly. Again Nomad does some clever tricks to keep file sizes relatively small and save them very quickly, but if the mobile OS decides Nomad is taking too long, it will simply kill it before it's finished it's task. This is another reason to keep files on the smaller side; it's possible to work with 37 million poly sculpts as one user reported on discord, but it's not recommended!
 
 ## Working on small screens
 
