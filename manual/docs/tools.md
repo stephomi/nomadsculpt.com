@@ -477,7 +477,7 @@ Drag to measure the distance between 2 points.
 
 ### Quad Remesher ![](./icons/tool_remesh.png#icon#left)
 
-This toll will convert the selected object into a clean quad topology layout, with controls for density, edge flow, symmetry. 
+This tool will convert the selected object into a clean quad topology layout, with controls for density, edge flow, symmetry. 
 
 ::: tip
 The quad remesher is available as an in-app purchase for iOS only. Android users can use 'Quad Remesh - Instant' available under the Topology -> Misc menu.
