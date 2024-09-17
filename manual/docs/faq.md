@@ -39,12 +39,12 @@ You can use Nomad on multiple devices as long as you are using the same Google, 
 Google Play and AppGallery both handle the synchronization automatically.
 
 - Go in the About menu (top left nomad icon), and hit `restore purchase`
-- Double check that you are logged into the same account you used to purchase Nomad.
+- Double check that you are logged into the same account you used to purchase Nomad (on Google Play).
 - Reboot the device
 - Sometimes you need to wait a couple of hours
 - Make sure that the Google Play application is up-to-date
 - Re-install Nomad (make sure to [backup your files](#where-are-my-projects-located-on-my-device) if you don't want to lose anything)
-<!-- - You can try the purchase button (you cannot buy twice the same item on the same account) -->
+- You can try to purchase again to see what happens (note: you cannot buy twice the same item on the same account)
 
 :::tip
 You can contact me at <support@nomadsculpt.com> but the *only* thing I'll be able to do is confirm if an email has a purchase associated with it.
