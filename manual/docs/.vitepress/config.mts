@@ -88,10 +88,12 @@ export default defineConfig({
             md.use(markdownHtml5, {
                 html5embed: {
                     renderFn: function (prop, att) {
-                        var tag = '<video controls preload="metadata" poster="$0">';
+                        var tag = '<video controls preload="metadata" alt="$0">';
                         tag += '<source src="$1" type="video/mp4">';
                         tag += '</video>\n';
-                        return tag.replace('$0', prop.url.replace('.mp4', '.jpg')).replace('$1', prop.url);
+                        tag = tag.replace('$0', prop.url.replace('.mp4', '.jpg'));
+                        tag = tag.replace('$1', prop.url);
+                        return tag;
                     }
                 },
             })

@@ -13,17 +13,10 @@ git clone https://github.com/stephomi/nomadsculpt.com.git
 ```bash
 cd manual
 
-# with npm
 npm install
 npm run dev
 # npm run build
 # npm run pdf
-
-# with pnpm
-pnpm install
-pnpm run dev
-# pnpm run build
-# pnpm run pdf
 
 # then simply localhost in your browser
 ```

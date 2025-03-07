@@ -101,18 +101,21 @@ Save to a 3d geometry format that can be used in other software.
 
 ![](./images/file_export.png)
 
-Note that the options available will change depending pn the file type selected.
-
 <!-- https://www.tablesgenerator.com/markdown_tables# -->
 <!-- http://markdowntable.com/ -->
-|                                    | GLB                             | OBJ                             | PLY                             | STL                             |
-|:----------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|
-| Layers<sup>[[layer]](#layer)</sup> | Yes                             | No                              | No                              | No                              |
-| Quad                               | Yes<sup>[[quad]](#quad)</sup>   | Yes                             | No                              | No                              |
-| Color                              | Yes                             | Yes<sup>[[color]](#color)</sup> | Yes<sup>[[color]](#color)</sup> | Yes<sup>[[color]](#color)</sup> |
-| PBR Painting                       | Yes<sup>[[pbr]](#pbr)</sup>     | No                              | No                              | No                              |
-| Multiple objects                   | Yes                             | Yes                             | No                              | No                              |
-| Metadata<sup>[[meta]](#meta)</sup> | Yes                             | No                              | No                              | No                              |
+|                                 | NOM    | GLTF/GLB             | OBJ  | PLY  | STL   | FBX                    |
+|:-------------------------------:|:------:|:--------------------:|:----:|:----:|:-----:|:----------------------:|
+| [Vertex Colors](#vertex-colors) | ✅     | ✅                   | ✅   | ✅    | ✅    | ✅                     |
+| [Vertex PBR](#vertex-pbr)       | ✅     | Nomad ✅<br>Other ⚠️ | ❌   | ✅    | ❌    | ❌                     |
+| Quad                            | ✅     | Nomad ✅<br>Other ⚠️ | ✅   | ✅    | ❌    | ✅                     |
+| [Layers](#layers)               | ✅     | ✅                   | ❌   | ❌    | ❌    | ✅                     |
+| Objects                         | ✅     | ✅                   | ✅   | ❌    | ❌    | ✅                     |
+| Face Group                      | ✅     | ✅                   | ✅   | ❌    | ❌    | ✅                     |
+| Hierarchy                       | ✅     | ✅                   | ❌   | ❌    | ❌    | ✅                     |
+| Lights                          | ✅     | ✅                   | ❌   | ❌    | ❌    | ✅                     |
+| Textures                        | ✅     | ✅                   | ✅   | ❌    | ❌    | Import ✅<br>Export ❌ |
+| Primitives, Postprocess, etc    | ✅     | Nomad ✅<br>Other ❌ | ❌   | ❌    | ❌    | ❌                     |
+
 
 ### All/Visible/Selected
 The active button state will set which objects will be exported. The number next to the icons indicate how many objects will be exported for that option.
@@ -120,7 +123,7 @@ The active button state will set which objects will be exported. The number next
 ### Vertex colors
 Export vertex colors if supported by the file format.
 
-### PBR paint
+### Vertex PBR
 PBR vertex colors are exported as secondary vertex colors attributes.
 The channels are packed in the following way:
 
@@ -132,7 +135,8 @@ The channels are packed in the following way:
 
 
 ### Layers
-Layers are supported through glTF morph targets. Nomad also exports per-layer colors, roughness and metalness but it will be ignored by other software.
+Layers are supported through glTF morph targets.
+Nomad also exports per-layer colors, roughness and metalness but it will be ignored by other software.
 
 ### Layer painting
 Export layer painting, usually ignored by other software.
@@ -148,7 +152,7 @@ Click this to export the geometry using the selected settiings.
 
 ::: tip Tip: Import roughness and metalness to Blender
 
-Blender can import gltf/glb, but doesn't automatically understand vertex attributes for metalness and roughness. To use them, in the material editor create a Vertex Color node, set its property to the next color attribute (usually Col.001). Connect a 'Separate XYZ' node, send X to roughness, and Y to Metallic.
+Blender can import glTF/glb, but doesn't automatically understand vertex attributes for metalness and roughness. To use them, in the material editor create a Vertex Color node, set its property to the next color attribute (usually Col.001). Connect a 'Separate XYZ' node, send X to roughness, and Y to Metallic.
 
 This video shows the process:
 

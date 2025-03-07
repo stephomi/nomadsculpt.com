@@ -3,6 +3,7 @@
 .pnp*
 package-lock.json
 .gitignore
+.temp
 
 node_modules
 cache
