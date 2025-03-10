@@ -20,13 +20,11 @@ However you can see the list of bugs/fixes for the pending/incoming release in t
 The [web demo](https://stephaneginier.com/archive/nomad_demo) is usually updated with the pending/incoming release.
 
 ### Is there a Windows or OSX version?
-No, but it is planned for 2024.
+No, but it is planned for 2025.
 
 ### Why is there a free trial on Android? But not on iOS?
 Because old Android devices suck (and some recent ones as well...), and I didn't want people to buy the app and be welcomed with a black screen.
 But the main reason is that I felt like paid Android apps are not really the norm.
-
-Hows this?  (edited to make the android performance compared to ipad clear based on some info stephomi shared in the discord a while back) 
 
 ### What is the best tablet to run Nomad on?
 
