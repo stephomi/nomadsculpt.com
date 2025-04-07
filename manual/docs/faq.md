@@ -80,12 +80,9 @@ Recent Huawei devices don't have access to Google services.
 In that case you’ll need to purchase the app again on AppGallery (Huawei app store).
 :::
 
-
-
-
 ### Can you translate or fix [my-language]?
-The translation files can be found [here](https://github.com/stephomi/nomad-translation)!
-
+I can relatively easily add another language, but I am relying on AI translation as it's much easier to handle for regular updates.
+The translation files can be found [here](https://github.com/stephomi/nomad-translation).
 
 ## Features
 
