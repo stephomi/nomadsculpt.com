@@ -212,7 +212,9 @@
     window.onload = function () {
         document.body.classList.remove("is-preload");
         var known = { en: true, zh: true };
-        var lang = ((navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'en').substr(0, 2);
+        var lang = new URL(window.location.href).searchParams.get('lang');
+        if (lang == 'cn') lang = 'zh';
+        if (!known[lang]) lang = ((navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || 'en').substr(0, 2);
         if (!known[lang]) lang = 'en';
         for (var k in known) {
             var docs = document.querySelectorAll('.lang_' + k);

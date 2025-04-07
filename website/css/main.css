@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
 
 html,
 body {
@@ -16,11 +17,17 @@ body {
     background-attachment: fixed, fixed;
     background-position: center, center;
 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     color: #ffffff;
     font-size: 13pt;
     font-weight: 300;
     line-height: 1.65;
+}
+
+#banner h2 {
+    font-family: "Dongle", sans-serif;
+    font-size-adjust: ex-height 0.5;
+    font-size: 2.25em;
 }
 
 *,
@@ -278,7 +285,6 @@ figure {
     filter: blur(0);
     opacity: 1;
     border-bottom: solid 2px rgba(255, 255, 255, 0.125);
-    font-size: 2.25em;
     margin-bottom: 0.8em;
     padding-bottom: 0.4em;
 }
