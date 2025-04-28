@@ -1,4 +1,4 @@
-# Tools ![](./icons/toolbox.png#icon#left)
+# ![](./icons/toolbox.png) Tools
 
 ![](./images/tools_menu.jpg)
 
@@ -64,30 +64,30 @@ A right click or long press on a tool will bring up a context menu. This menu ha
 
 ## Tools
 
-|      |     |     |     |
-| ---  | --- | --- | --- |
-| ![](./tools/clay.png#tool#left)       [Clay](#clay)                 | ![](./tools/brush.png#tool#left)   [Brush](#brush)     | ![](./tools/move.png#tool#left)           [Move](#move)                   | ![](./tools/drag.png#tool#left)    [Drag](#drag)       |
-| ![](./tools/smooth.png#tool#left)     [Smooth](#smooth)             | ![](./tools/mask.png#icon#left)    [Mask](#mask)       | ![](./tools/maskSelector.png#tool#left)   [Selector Mask](#selector-mask) | ![](./tools/paint.png#tool#left)   [Paint](#paint)     |
-| ![](./tools/smudge.png#icon#left)     [Smudge](#smudge)             | ![](./tools/flatten.png#tool#left) [Flatten](#flatten) | ![](./tools/planar.png#tool#left)         [Planar](#planar)               | ![](./tools/layer.png#tool#left)   [Layer](#layer)     |
-| ![](./tools/crease.png#tool#left)     [Crease](#crease)             | ![](./tools/trim.png#icon#left)    [Trim](#trim)       | ![](./tools/split.png#icon#left)          [Split](#split)                 | ![](./tools/project.png#icon#left) [Project](#project) |
-| ![](./tools/inflate.png#tool#left)    [Inflate](#inflate)           | ![](./tools/pinch.png#tool#left)   [Pinch](#pinch)     | ![](./tools/nudge.png#tool#left)          [Nudge](#nudge)                 | ![](./tools/stamp.png#tool#left)   [Stamp](#stamp)     |
-| ![](./tools/clearLayer.png#tool#left) [Delete Layer](#delete-layer) | ![](./tools/tube.png#icon#left)    [Tube](#tube)       | ![](./tools/lathe.png#icon#left)          [Lathe](#lathe)                 | ![](./tools/insert.png#icon#left)  [Insert](#insert)   |
-| ![](./tools/transform.png#icon#left)  [Transform](#transform)       | ![](./tools/gizmo.png#tool#left)   [Gizmo](#gizmo)     | ![](./icons/tool_faceGroup.png#icon#left) [FaceGroup](#facegroup)         | ![](./icons/tool_hide.png#icon#left)    [Hide](#hide)  |
-| ![](./tools/measure.png#tool#left)    [Measure](#measure)           | ![](./icons/tool_remesh.png#icon#left)    [Quad Remesher](#quad-remesher) | ![](./tools/select.png#icon#left)    [Select](#select) | ![](./tools/view.png#icon#left)    [View](#view)            |
+|                                                                |                                                               |                                                                    |                                                   |
+| -------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------- |
+| ![](./icons/tool_clay.png)       [Clay](#clay)                 | ![](./icons/tool_brush.png)   [Brush](#brush)                 | ![](./icons/tool_move.png)         [Move](#move)                   | ![](./icons/tool_drag.png)    [Drag](#drag)       |
+| ![](./icons/tool_smooth.png)     [Smooth](#smooth)             | ![](./icons/tool_mask.png)    [Mask](#mask)                   | ![](./icons/tool_maskSelector.png) [Selector Mask](#selector-mask) | ![](./icons/tool_paint.png)   [Paint](#paint)     |
+| ![](./icons/tool_smudge.png)     [Smudge](#smudge)             | ![](./icons/tool_flatten.png) [Flatten](#flatten)             | ![](./icons/tool_planar.png)       [Planar](#planar)               | ![](./icons/tool_layer.png)   [Layer](#layer)     |
+| ![](./icons/tool_crease.png)     [Crease](#crease)             | ![](./icons/tool_trim.png)    [Trim](#trim)                   | ![](./icons/tool_split.png)        [Split](#split)                 | ![](./icons/tool_project.png) [Project](#project) |
+| ![](./icons/tool_inflate.png)    [Inflate](#inflate)           | ![](./icons/tool_pinch.png)   [Pinch](#pinch)                 | ![](./icons/tool_nudge.png)        [Nudge](#nudge)                 | ![](./icons/tool_stamp.png)   [Stamp](#stamp)     |
+| ![](./icons/tool_clearLayer.png) [Delete Layer](#delete-layer) | ![](./icons/tool_tube.png)    [Tube](#tube)                   | ![](./icons/tool_lathe.png)        [Lathe](#lathe)                 | ![](./icons/tool_insert.png)  [Insert](#insert)   |
+| ![](./icons/tool_transform.png)  [Transform](#transform)       | ![](./icons/tool_gizmo.png)   [Gizmo](#gizmo)                 | ![](./icons/tool_faceGroup.png)    [FaceGroup](#facegroup)         | ![](./icons/tool_hide.png)    [Hide](#hide)       |
+| ![](./icons/tool_measure.png)    [Measure](#measure)           | ![](./icons/tool_remesh.png)  [Quad Remesher](#quad-remesher) | ![](./icons/tool_select.png)       [Select](#select)               | ![](./icons/tool_view.png)    [View](#view)       |
 
 
 
-### Clay ![](./tools/clay.png#tool#left)
+### ![](./icons/tool_clay.png) Clay
 The Clay tool is useful for building up your sculpture. `Sub` will remove material from your sculpture.
 
 ![](./videos/tool_clay.mp4)
 
-### Brush ![](./tools/brush.png#tool#left)
+### ![](./icons/tool_brush.png) Brush
 The standard brush. `Sub` will remove material.
 
 ![](./videos/tool_brush.mp4)
 
-### Move ![](./tools/move.png#tool#left)
+### ![](./icons/tool_move.png) Move
 The area under the brush will stick to the brush, allowing for elastic deformation. The selection is maintained during the move, so if you move the brush away, then move it back where you started, you will see no deformation.
 `Normal` will move the area under the brush along the surface normal.
 
@@ -95,7 +95,7 @@ This brush is good for both large scale deformation and careful small deformatio
 
 ![](./videos/tool_move.mp4)
 
-### Drag ![](./tools/drag.png#tool#left)
+### ![](./icons/tool_drag.png) Drag
 The area under the brush will stick to the brush, allowing for elastic deformation. Unlike the move brush, the selection is continuously updated during the stroke, so it is possible to make longer, snake like objects, especially when Dynamic Topology is activated.
 `Normal` will move the area under the brush along the surface normal.
 
@@ -103,7 +103,7 @@ This brush is good for more loose, gestural shape changes.
 
 ![](./videos/tool_drag.mp4)
 
-### Smooth ![](./tools/smooth.png#tool#left)
+### ![](./icons/tool_smooth.png) Smooth
 Smooth the area by average the point positions. This tool is highly dependent on the polygon density.
 So if you have many polygons, the smoothing will be less effective.
 
@@ -123,7 +123,7 @@ Higher polygon densities can require raising the intensity above 100%. Very high
 
 ![](./videos/tool_smooth.mp4)
 
-### Mask ![](./tools/mask.png#icon#left)
+### ![](./icons/tool_mask.png) Mask
 This tool lets you mask points.
 Masked vertices can't be sculpted or painted afterwards, this is a way to "protect" areas. `Unmask` will erase where the mask has been painted.
 
@@ -135,12 +135,12 @@ Masked vertices can't be sculpted or painted afterwards, this is a way to "prote
 
  A toolbar will appear at the top of the viewport with extra controls:
 
-| Action       | Description     |
-| :---:        | :---:           |
-| Clear        | Clear the mask  |
-| Invert       | Invert the mask |
-| Blur         | Blur the mask edge  |
-| Sharpen      | Sharpen the mask edge |
+| Action  | Description           |
+| :-----: | :-------------------: |
+| Clear   | Clear the mask        |
+| Invert  | Invert the mask       |
+| Blur    | Blur the mask edge    |
+| Sharpen | Sharpen the mask edge |
 
 ##### Shell/Extraction
 
@@ -163,21 +163,21 @@ Masks can also be used to extract geometry. The `Carve`, `Extract` and `Split` b
 
 ##### Quick gesture
 You can perform zbrush-style gestures while holding the quick masking button:
-| Action   | Gesture (hold lower-left shortcut) |
-| :---:    | :---: |
-| Invert   | Tap on the background |
-| Clear    | Drag on the background |
-| Blur     | Tap on masked area |
-| Sharpen  | Tap on unmasked area |
+| Action  | Gesture (hold lower-left shortcut) |
+| :-----: | :--------------------------------: |
+| Invert  | Tap on the background              |
+| Clear   | Drag on the background             |
+| Blur    | Tap on masked area                 |
+| Sharpen | Tap on unmasked area               |
 
-### Selector Mask ![](./tools/maskSelector.png#tool#left)
+### ![](./icons/tool_maskSelector.png) Selector Mask
 This tool is mostly similar to the [Masking tool](#mask), the main difference is that you don't use stroke to paint mask, but instead use the shape selector.
 
 Selector mask shares the same tool settings as the `Mask` tool.
 
 ![](./videos/tool_selector_mask.mp4)
 
-### Paint ![](./tools/paint.png#tool#left)
+### ![](./icons/tool_paint.png) Paint
 To learn more about material you can visit the [Painting](painting.md) section. `Erase` will remove paint.
 
 #### Paint settings
@@ -185,13 +185,13 @@ To learn more about material you can visit the [Painting](painting.md) section. 
 
 ![](./videos/tool_paint.mp4)
 
-### Smudge ![](./tools/smudge.png#icon#left)
+### ![](./icons/tool_smudge.png) Smudge
 The smudge tool is only active on painting. It's settings menu contains a `Quality` slider, lower values mean faster strokes.
 
 ![](./videos/tool_smudge.mp4)
 
 
-### Flatten ![](./tools/flatten.png#tool#left)
+### ![](./icons/tool_flatten.png) Flatten
 Flatten the area by projecting the points onto the average plane. `Fill` will define a plane set by the highest point, and tend to pull points up.
 
 #### Flatten settings
@@ -204,19 +204,19 @@ When either or both of these are disabled, the flatten can be gradually deepened
 ![](./videos/tool_flatten.mp4)
 
 
-### Planar ![](./tools/planar.png#tool#left)
+### ![](./icons/tool_planar.png) Planar
 Make points planar by projecting onto the average plane, but with less buildup than the flatten brush. This creates cleaner hard-edge surfaces. Quick strokes will push and pull on the surface more, slower strokes that start from already planar areas and work out will maintain the plane more. `Fill` will define a plane set by the highest point, and tend to pull points up.
 
 Planar is actually the same tool as `Flatten`, but with `Lock plane direction` enabled, meaning it will tend to make more stable, hard edged surface, while flatten can be more sculptural and used to create semi-flat areas.
 
 ![](./videos/tool_planar.mp4)
 
-### Layer ![](./tools/layer.png#tool#left)
+### ![](./icons/tool_layer.png) Layer
 Sculpt by limiting the maximum height displacement, this tool is more useful when a layer is active. `Sub` will use a minimum depth displacement, creating grooves.
 
 ![](./videos/tool_layer.mp4)
 
-### Crease ![](./tools/crease.png#tool#left)
+### ![](./icons/tool_crease.png) Crease
 Crease tools can be useful to sculpt small cuts or dents. `Sub` will create a raised crease.
 
 #### Crease Settings
@@ -226,7 +226,7 @@ Crease tools can be useful to sculpt small cuts or dents. `Sub` will create a ra
 
 ![](./videos/tool_crease.mp4)
 
-### Trim ![](./tools/trim.png#icon#left)
+### ![](./icons/tool_trim.png) Trim
 The Trim tool works by removing a chunk of your mesh, and gives options for how to process the gap left behind.
 
 #### Trim settings
@@ -238,7 +238,7 @@ The Trim tool works by removing a chunk of your mesh, and gives options for how 
 
 ![](./videos/tool_trim.mp4)
 
-### Split ![](./tools/split.png#icon#left)
+### ![](./icons/tool_split.png) Split
 Similar to the [Trim](#trim) tool, except that it produces two different objects instead of one.
 
 #### Split settings
@@ -251,44 +251,43 @@ Similar to the [Trim](#trim) tool, except that it produces two different objects
 ![](./videos/tool_split.mp4)
 
 
-### Project ![](./tools/project.png#icon#left)
+### ![](./icons/tool_project.png) Project
 The Project tool will project the points on a shape that you draw, but unlike the [Trim](#trim) tool, the topology is kept intact.
 
 ![](./videos/tool_project.mp4)
 
 
-### Inflate ![](./tools/flatten.png#tool#left)
+### ![](./icons/tool_flatten.png) Inflate
 Move the vertices along their own normals. `Sub` will move vertices along their inverted normal.
 
 ![](./videos/tool_inflate.mp4)
 
 
-### Pinch ![](./tools/pinch.png#tool#left)
+### ![](./icons/tool_pinch.png) Pinch
 This tool can be used to sharpen edges. `Sub` will spread vertices apart.
 
 ![](./videos/tool_pinch.mp4)
 
 
-### Nudge ![](./tools/nudge.png#tool#left)
+### ![](./icons/tool_nudge.png) Nudge
 Move points along the stroke.
 
 ![](./videos/tool_nudge.mp4)
 
 
-### Stamp ![](./tools/stamp.png#tool#left)
+### ![](./icons/tool_stamp.png) Stamp
 This is simply the [Brush tool](#brush) with a stroke type set to `Grab - dynamic radius`. `Sub` will push the stamp in rather than pull it out from the surface.
 
 ![](./videos/tool_stamp.mp4)
 
 
-### Delete Layer ![](./tools/clearLayer.png#tool#left)
+### ![](./icons/tool_clearLayer.png) Delete Layer
 This tool can reset layers locally, you need an active layer otherwise nothing will happen.
 
 ![](./videos/tool_delete_layer.mp4)
 
 
-
-### Tube ![](./tools/tube.png#icon#left)
+### ![](./icons/tool_tube.png) Tube
 Create a tube by drawing a curve. 
 ![](./images/tool_tube_new.jpg)
 
@@ -309,13 +308,13 @@ Once the tube is created, the path can be edited in 3d space using similar contr
 ![](./videos/tool_tube.mp4)
 
 
-### Lathe ![](./tools/lathe.png#icon#left)
+### ![](./icons/tool_lathe.png) Lathe
 Create a revolution surface by drawing a curve.
 
 ![](./videos/tool_lathe.mp4)
 
 
-### Insert ![](./tools/insert.png#icon#left)
+### ![](./icons/tool_insert.png) Insert
 Insert an object in the scene.  
 When the insertion takes place, Nomad switches automatically to the [Transform tool](#transform) for quick adjustment and then switches back the [Insert](#insert) tool when you release your fingers.
 
@@ -324,7 +323,7 @@ If an object is using a custom gizmo pivot, then it will be used as an anchor po
 ![](./videos/tool_insert.mp4)
 
 
-### Transform ![](./tools/transform.png#icon#left)
+### ![](./icons/tool_transform.png) Transform
 Move/Rotate/Scale a model directly with 1 and 2 fingers. 
 
 The tool is controlled with the left toolbar, and has 4 buttons:
@@ -357,7 +356,7 @@ This presents a fast workflow for cloning objects over another, eg rocks over a 
 
 ![](./videos/tool_transform.mp4)
 
-### Gizmo ![](./tools/gizmo.png#tool#left)
+### ![](./icons/tool_gizmo.png) Gizmo
 This tool lets you move, rotate and scale your mesh with a single tool. It also lets you do certain operatations on the scene hierarchy.
 
 The viewport handle has the following features:
@@ -435,7 +434,7 @@ This is especially useful for the rotation, as it doesn't change anything for tr
 
 ![](./videos/tool_gizmo.mp4)
 
-### Facegroup ![](./icons/tool_faceGroup.png#icon#left)
+### ![](./icons/tool_faceGroup.png) Facegroup
 
 Facegroups let you organise your object into differently colored faces. You can use these groups in many ways in Nomad:
 
@@ -454,7 +453,7 @@ Its controls are in the left hand menu:
 * `Shape selector` - Create facegroups with shapes instead of a brush, via `Lock+Radius`, `Lasso`, `Polygon`, `Rect` and `Ellipse`. See [Shape Selector](#shape-selector) for more info.
 * `Auto-pick` - When enabled, will select the patch where the stroke starts, and apply that patch for the rest of the stroke. Very useful for tidying up facegroup regions; if a facegroup has extended too far, enable auto-pick, start a stroke from where the facegroup patch is correct, and drag up to the border to reassign the correct patch.
 
-### Hide ![](./icons/tool_hide.png#icon#left)
+### ![](./icons/tool_hide.png) Hide
 Hide or isolate parts of the object. 
 
 The primary modes are controlled from the left hand menu:
@@ -472,10 +471,10 @@ A toolbar will appear at the top of the viewport with extra controls:
 * `Delete` - Delete the hidden part of the object
 * `Split` - Split the hidden part of the object into a new shape.
 
-### Measure ![](./tools/measure.png#icon#left)
+### ![](./icons/tool_measure.png) Measure
 Drag to measure the distance between 2 points.
 
-### Quad Remesher ![](./icons/tool_remesh.png#icon#left)
+### ![](./icons/tool_remesh.png) Quad Remesher
 
 This tool will convert the selected object into a clean quad topology layout, with controls for density, edge flow, symmetry. 
 
@@ -513,8 +512,8 @@ The ... menu contains further options, note that the top toolbar has shortcuts f
 * `Density (painting)` - Same as the `Density (painting)` button in the top toolbar
 * `Face Group` - Same as the `Face Group` button in the top toolbar
 
-### Select ![](./tools/select.png#icon#left)
+### ![](./icons/tool_select.png) Select
 Use the shape modes to select objects in the scene. `Unselect` will remove objects from the selection.
 
-### View ![](./tools/view.png#icon#left)
+### ![](./icons/tool_view.png) View
 This "tool" does nothing in particular, this is simply a way to view the model without modifying your scene.

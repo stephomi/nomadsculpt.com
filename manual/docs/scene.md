@@ -1,4 +1,4 @@
-# Scene ![](./icons/scene.png#icon#left) 
+# ![](./icons/scene.png) Scene 
 
 This menu lets you manage objects, lights, cameras and repeaters in Nomad. It displays the scene hierarchy as a tree-view, allowing you to modify many aspects of your objects. It also lets you create new objects, as well as combine and split objects in various ways.
 
@@ -7,26 +7,26 @@ This menu lets you manage objects, lights, cameras and repeaters in Nomad. It di
 
 
 ## Shortcut bar
-| Action       | Icon                                   | Description  |
-| :---:        | :---:                                  | :---:        |
-| [Add...](#add-menu)      | ![](./icons/plus.png#icon)             | Display the [Add Menu](#add-menu) to add an object to the scene |
-| Delete       | ![](./icons/trash.png#icon)            | Delete the object            |
-| Join         | ![](./icons/merge.png#icon)            | Join the selected objects into a single object with no geometry changes         |
-| Separate     | ![](./icons/diagonal.png#icon)         | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation         |
-| [Boolean...](#boolean)   | ![](./icons/subtract_circle.png#icon)  | Display the [Boolean](#boolean) menu      |
-| Clone        | ![](./icons/clone.png#icon)            | Duplicate the object into a new object         |
-| Instance     | ![](./icons/link.png#icon)             | Duplicate the object as an instance, so modelling changes to one are made to all instances.      |
-| Un-instance  | ![](./icons/unlink.png#icon)           | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances. |
+| Action                 | Icon                             | Description                                                                                                         |
+| :--------------------: | :------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
+| [Add...](#add-menu)    | ![](./icons/plus.png)            | Display the [Add Menu](#add-menu) to add an object to the scene                                                     |
+| Delete                 | ![](./icons/trash.png)           | Delete the object                                                                                                   |
+| Join                   | ![](./icons/merge.png)           | Join the selected objects into a single object with no geometry changes                                             |
+| Separate               | ![](./icons/diagonal.png)        | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation |
+| [Boolean...](#boolean) | ![](./icons/subtract_circle.png) | Display the [Boolean](#boolean) menu                                                                                |
+| Clone                  | ![](./icons/clone.png)           | Duplicate the object into a new object                                                                              |
+| Instance               | ![](./icons/link.png)            | Duplicate the object as an instance, so modelling changes to one are made to all instances.                         |
+| Un-instance            | ![](./icons/unlink.png)          | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances                 |
 
 
 ## Tree view
 ![](./images/scene_treeview.png) 
 
-| Action       | Icon                           | Description  |
-| :---:        | :---:                          | :---:        |
-| Select       | ![](./icons/checked.png#icon)  | Toggle select/unselected |
-| Visible      | ![](./icons/eye_open.png#icon) | Toggle visibility |
-| Menu         | ![](./icons/more.png#icon)     | Display object menu |
+| Action       | Icon                      | Description              |
+| :----------: | :-----------------------: | :----------------------: |
+| Select       | ![](./icons/checked.png)  | Toggle select/unselected |
+| Visible      | ![](./icons/eye_open.png) | Toggle visibility        |
+| Menu         | ![](./icons/more.png)     | Display object menu      |
 
 ::: tip TIP: Quickly select or hide many objects
 
@@ -47,15 +47,16 @@ When you select a parent item, by default all the child items will also be selec
 Clicking the ellipsis button (...) for an object in the tree view will show the object menu. 
 Many of these options are similar to the shortcut bar at the top, repeated for convenience.
 
-| Action       | Icon                              | Description  |
-| :---:        | :---:                             | :---:        |
-| Instance     | ![](./icons/link.png#icon)        | Duplicate the object as an instance, so modelling changes to one are made to all instances.  |
-| Clone        | ![](./icons/clone.png#icon)       | Duplicate the object into a new object         |
-| Name         | ![](./icons/pencil.png#icon)      | Change the name of the object         |
-| Delete       | ![](./icons/trash.png#icon)       | Delete the object |
-| Delete+      | ![](./icons/trash.png#icon)       | Delete the object and its children |
-| Un-instance  | ![](./icons/unlink.png#icon)      | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances. |
-| Separate     | ![](./images/scene_separate_button.png)                                 | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation. |
+| Action                                   | Icon                                    | Description  |
+| :--------------------------------------: | :-------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
+| Instance                                 | ![](./icons/link.png)                   | Duplicate the object as an instance, so modelling changes to one are made to all instances.                          |
+| Clone                                    | ![](./icons/clone.png)                  | Duplicate the object into a new object                                                                               |
+| Name                                     | ![](./icons/pencil.png)                 | Change the name of the object                                                                                        |
+| Delete                                   | ![](./icons/trash.png)                  | Delete the object                                                                                                    |
+| Delete+                                  | ![](./icons/trash.png)                  | Delete the object and its children                                                                                   |
+| Un-instance                              | ![](./icons/unlink.png)                 | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances.                 |
+| Separate                                 | ![](./images/scene_separate_button.png) | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation. |
+| Separate ![](./icons/tool_faceGroup.png) | ![](./images/scene_separate_button.png) | If an object has multiple face groups, break the mesh into separate objects.                                         |
 
 
 ### Multiselection
@@ -152,20 +153,20 @@ Enable UV's on primitives. UV's (often called texture coordinates), are extra da
 
 ### Primitives
 
-| Primitive   | Icon                              | Description |
-| :---:       | :---:                             |:---:|
-| Box         | ![](./icons/cube.png#icon)        | It's a simple cube, you can control the division in X, Y and Z |
-| Sphere      | ![](./icons/circle.png#icon)      | For convenience this is named a Sphere but it is actually a subdivided box, with the `Project on sphere` forced |
-| Cylinder    | ![](./icons/cylinder.png#icon)    | You can add a center hole for the cylinder primitive, for example to make an hollow pipe |
-| Torus       | ![](./icons/torus.png#icon)       | The torus can be a good starting point for rings |
-| Cone        | ![](./icons/cone.png#icon)        | - |
-| Icosahedron | ![](./icons/icosahedron.png#icon) | - |
-| UV-sphere   | ![](./icons/circle.png#icon)      | A sphere with uneven poly layout, see [Warning below](#sphere-warning) |
-| Plane       | ![](./icons/rectangle.png#icon)   | It's a simple plane, note that this is the only primitive that is not closed |
-| Tube        | ![](./icons/tool_tube.png#icon)   | see [Tube](tools#tube) |
-| Lathe       | ![](./icons/tool_lathe.png#icon)   | see [Lathe](tools#lathe) |
-| Triplanar   | ![](./icons/triplanar.png#icon)   | see [Triplanar](#triplanar) |
-| Head        | ![](./icons/face.png#icon)        | A simple head with a layer to blend between male/female |
+| Primitive   | Icon                         | Description                                                                                                     |
+| :---------: | :--------------------------: | :-------------------------------------------------------------------------------------------------------------: |
+| Box         | ![](./icons/cube.png)        | It's a simple cube, you can control the division in X, Y and Z                                                  |
+| Sphere      | ![](./icons/circle.png)      | For convenience this is named a Sphere but it is actually a subdivided box, with the `Project on sphere` forced |
+| Cylinder    | ![](./icons/cylinder.png)    | You can add a center hole for the cylinder primitive, for example to make an hollow pipe                        |
+| Torus       | ![](./icons/torus.png)       | The torus can be a good starting point for rings                                                                |
+| Cone        | ![](./icons/cone.png)        | -                                                                                                               |
+| Icosahedron | ![](./icons/icosahedron.png) | -                                                                                                               |
+| UV-sphere   | ![](./icons/circle.png)      | A sphere with uneven poly layout, see [Warning below](#sphere-warning)                                          |
+| Plane       | ![](./icons/rectangle.png)   | It's a simple plane, note that this is the only primitive that is not closed                                    |
+| Tube        | ![](./icons/tool_tube.png)   | see [Tube](tools#tube)                                                                                          |
+| Lathe       | ![](./icons/tool_lathe.png)  | see [Lathe](tools#lathe)                                                                                        |
+| Triplanar   | ![](./icons/triplanar.png)   | see [Triplanar](#triplanar)                                                                                     |
+| Head        | ![](./icons/face.png)        | A simple head with a layer to blend between male/female                                                         |
 
 ::: tip
 If you wonder what is the base mesh when you launch Nomad: this is a subdivided box as well.

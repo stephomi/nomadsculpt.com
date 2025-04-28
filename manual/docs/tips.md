@@ -1,4 +1,4 @@
-# Tips
+# ![](./icons/manual.png) Tips
 
 [[toc]]
 

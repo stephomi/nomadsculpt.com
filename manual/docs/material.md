@@ -1,4 +1,4 @@
-# Material ![](./icons/material.png#icon#left)
+# ![](./icons/material.png) Material
 
 This menu allows you to change the material of the current object, various render properties of the object/material, and assign textures to the material.
 

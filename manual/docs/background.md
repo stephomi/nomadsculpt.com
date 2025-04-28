@@ -1,4 +1,4 @@
-# Background ![](./icons/image.png#icon#left) 
+# ![](./icons/image.png) Background
 
 This menu controls the background color of Nomad, as well as any reference images to be used.
 
@@ -9,11 +9,11 @@ This menu controls the background color of Nomad, as well as any reference image
 
 There are three options for the viewport background.
 
-| Method              | Description  |
-| :---:               | :---:        |
-| Environment         | Show the image of the current environment  |
-| Color               | A flat color that you can choose |
-| Gradient            | A ramp of colour from top to bottom |
+| Method      | Description                               |
+| :---------: | :---------------------------------------: |
+| Environment | Show the image of the current environment |
+| Color       | A flat color that you can choose          |
+| Gradient    | A ramp of colour from top to bottom       |
 
 ## Reference Image
 

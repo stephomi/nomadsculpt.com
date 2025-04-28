@@ -1,4 +1,4 @@
-# Files ![](./icons/open.png#icon#left) 
+# ![](./icons/open.png) Files
 
 The files menu allows you to save and load nomad projects, import and export 3d models, and export rendered images.
 
@@ -9,30 +9,30 @@ The files menu allows you to save and load nomad projects, import and export 3d 
 
 A thumbnail is shown of the last save at the top of this menu. Clicking this thumbnail brings up a mini browser, tap twice on another project to bring up a mini menu to open, add, save, clone, rename, delete that project.
 
-### Save ![](./icons/save.png#icon#left)
+### ![](./icons/save.png) Save
 Save the Nomad project.
 
-### Save As... ![](./icons/save_as.png#icon#left)
+### ![](./icons/save_as.png) Save As...
 Display the project browser to allow you to save the Nomad project with a new name.
 
-### Rename ![](./icons/pencil.png#icon#left)
+### ![](./icons/pencil.png) Rename
 Display a text box to rename the current project.
 
-### Open... ![](./icons/open.png#icon#left)
+### ![](./icons/open.png) Open...
 Display the project browser to open a project.
 
-### Add to scene... ![](./icons/add_file.png#icon#left)
+### ![](./icons/add_file.png) Add to scene...
 Display the project browser, when a project is selected it's contents will be merged with the current scene.
 
-### Delete... ![](./icons/trash.png#icon#left)
+### ![](./icons/trash.png) Delete...
 Display the project browser, any selected projects will be deleted from the file system.
 
-### New ![](./icons/new_file.png#icon#left)
+### ![](./icons/new_file.png) New
 Start a new project, if there are unsaved changes you will be asked if you want to save.
 
 ## Import
 
-### Import ![](./icons/add_file.png#icon#left)
+### ![](./icons/add_file.png) Import
 For importing 3d files that aren't Nomad projects.
 
 When you import an external scene file to Nomad, you can either *import* or *add* it.
@@ -48,7 +48,7 @@ Nomad can import these formats:
 - PLY (.ply)
 - FBX (.fbx, experimental)
 
-### Advanced ![](./icons/cog.png#icon#left)
+### ![](./icons/cog.png) Advanced
 Display advanced import options:
 
 ### Project/ glTF / OBJ / STL / FBX
@@ -104,7 +104,7 @@ Save to a 3d geometry format that can be used in other software.
 <!-- https://www.tablesgenerator.com/markdown_tables# -->
 <!-- http://markdowntable.com/ -->
 |                                 | NOM    | GLTF/GLB             | OBJ  | PLY  | STL   | FBX                    |
-|:-------------------------------:|:------:|:--------------------:|:----:|:----:|:-----:|:----------------------:|
+| :-----------------------------: | :----: | :------------------: | :--: | :--: | :---: | :--------------------: |
 | [Vertex Colors](#vertex-colors) | ✅     | ✅                   | ✅   | ✅    | ✅    | ✅                     |
 | [Vertex PBR](#vertex-pbr)       | ✅     | Nomad ✅<br>Other ⚠️ | ❌   | ✅    | ❌    | ❌                     |
 | Quad                            | ✅     | Nomad ✅<br>Other ⚠️ | ✅   | ✅    | ❌    | ✅                     |
@@ -128,7 +128,7 @@ PBR vertex colors are exported as secondary vertex colors attributes.
 The channels are packed in the following way:
 
 |           | Channel  |
-|:---------:|:--------:|
+| :-------: | :------: |
 | Roughness | R        |
 | Metalness | G        |
 | Masking   | B        |
@@ -142,7 +142,7 @@ Nomad also exports per-layer colors, roughness and metalness but it will be igno
 Export layer painting, usually ignored by other software.
 
 ### Normals
-Export normal information. Note that Nomad will always compute it own normals when importing other file formats.
+Export normal information. Note that Nomad will always compute its own normals when importing other file formats.
 
 ### Textures
 If textures have been added to the material, they will be exported. Note that this will not bake textures, that is done via the bake options in topology.

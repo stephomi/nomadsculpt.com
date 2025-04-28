@@ -1,4 +1,4 @@
-# Layers ![](./icons/layers.png#icon#left) 
+# ![](./icons/layers.png) Layers 
 
 This menu contains the layer stack, a way to store edits to your object in a non destructive way, and many ways to combine and repurpose layers.
 
@@ -34,14 +34,14 @@ Each layer has a name, a slider to control it's strength/factor, and option butt
 
 ### Options
 
-| Action       | Icon                             | Description  |
-| :---:        | :---:                            | :---:        |
-| Visible      | ![](./icons/eye_open.png#icon)   | Show/hide the layer influence |
-| Edit Name    | ![](./icons/pencil.png#icon)     | Edit the layer name |
-| Delete       | ![](./icons/trash.png#icon)      | Delete the layer |
-| Duplicate    | ![](./icons/clone.png#icon)      | Duplicate the layer |
-| Merge Down   | ![](./icons/merge_down.png#icon) | Merge the layer with the lower layer (or base mesh) |
-| More         | ![](./icons/more.png#icon)       | [More...](#more) options |
+| Action       | Icon                        | Description                                         |
+| :----------: | :-------------------------: | :-------------------------------------------------: |
+| Visible      | ![](./icons/eye_open.png)   | Show/hide the layer influence                       |
+| Edit Name    | ![](./icons/pencil.png)     | Edit the layer name                                 |
+| Delete       | ![](./icons/trash.png)      | Delete the layer                                    |
+| Duplicate    | ![](./icons/clone.png)      | Duplicate the layer                                 |
+| Merge Down   | ![](./icons/merge_down.png) | Merge the layer with the lower layer (or base mesh) |
+| More         | ![](./icons/more.png)       | [More...](#more) options                            |
 
 To move a layer to another part of the layer stack, press and hold on its name, then drag.
 
@@ -77,7 +77,7 @@ Maybe in the future, each channel will have its own alpha channel to remove this
 :::
 
 
-#### Mask ![](./icons/tool_mask.png#icon#left)
+#### ![](./icons/tool_mask.png) Mask
 The mask button next to each slider will create a mask from that channel. Similar to using layers to make selections in painting applications, this allows you to reuse work you have done in a layer for other operations.
 
 #### Extract

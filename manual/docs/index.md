@@ -27,27 +27,27 @@ Read the [Getting Started](gettingstarted.md) guide.
 
 # Table of contents
 
-| Menu                           | Icon                               | Description  |
-| :---:                          | :---:                              | :---:        |
-| [Files](files.md)              | ![](./icons/open.png#icon)         | Manage your projects, export, import, etc |
-| [Scene](scene.md)              | ![](./icons/scene.png#icon)        | Add new primitive and manage your scene objects |
-| [Topology](topology.md)        | ![](./icons/multires.png#icon)     | Edit the topology of the model |
-| [Material](material.md)        | ![](./icons/material.png#icon)     | Material (object-level) |
-| [Lighting](lighting.md)        | ![](./icons/sun.png#icon)          | How to light your scene |
-| [Post Process](postprocess.md) | ![](./icons/postprocess.png#icon)  | Post Processing (screen-space visual effects) |
-| [Background](background.md)    | ![](./icons/image.png#icon)        | Change the background and add a reference image |
-| [Camera](camera.md)            | ![](./icons/camera.png#icon)       | Camera control and interaction |
-| [Stroke](stroke.md)            | ![](./icons/pencil.png#icon)       | Edit the current tool settings, stroke, falloff... |
-| [Pressure](pressure.md)        | ![](./icons/pressure.png#icon)     | Manage the pressure of your pencil |
-| [Painting](painting.md)	     | ![](./icons/paint.png#icon)        | Painting settings for painting tools |
-| [Symmetry](symmetry.md)        | ![](./icons/symmetry.png#icon)     | Manage the mirror plane of your current mesh |
-| [Layers](layers.md)            | ![](./icons/layers.png#icon)       | Manage your current object layers |
-| [Settings](settings.md)        | ![](./icons/cog.png#icon)          | Customize the 3d viewport |
-| [Interface](interface.md)      | ![](./icons/interface.png#icon)    | Customize the interface |
-| [Tools](tools.md)              | ![](./icons/toolbox.png#icon)      | List of every tools/brushes |
-| [History](history.md)          | ![](./icons/history.png#icon)      | Manage the undo/redo history stack |
-| [FAQ](faq.md)                  | ![](./icons/faq.png#icon)          | Frequently Asked Questions |
-| [Tips](tips.md)                  | ![](./icons/manual.png#icon)     | Workflow tips |
+| Menu                           | Icon                         | Description                                        |
+| :----------------------------: | :--------------------------: | :------------------------------------------------: |
+| [Files](files.md)              | ![](./icons/open.png)        | Manage your projects, export, import, etc          |
+| [Scene](scene.md)              | ![](./icons/scene.png)       | Add new primitive and manage your scene objects    |
+| [Topology](topology.md)        | ![](./icons/multires.png)    | Edit the topology of the model                     |
+| [Material](material.md)        | ![](./icons/material.png)    | Material (object-level)                            |
+| [Lighting](lighting.md)        | ![](./icons/sun.png)         | How to light your scene                            |
+| [Post Process](postprocess.md) | ![](./icons/postprocess.png) | Post Processing (screen-space visual effects)      |
+| [Background](background.md)    | ![](./icons/image.png)       | Change the background and add a reference image    |
+| [Camera](camera.md)            | ![](./icons/camera.png)      | Camera control and interaction                     |
+| [Stroke](stroke.md)            | ![](./icons/pencil.png)      | Edit the current tool settings, stroke, falloff... |
+| [Pressure](pressure.md)        | ![](./icons/pressure.png)    | Manage the pressure of your pencil                 |
+| [Painting](painting.md)	     | ![](./icons/paint.png)       | Painting settings for painting tools               |
+| [Symmetry](symmetry.md)        | ![](./icons/symmetry.png)    | Manage the mirror plane of your current mesh       |
+| [Layers](layers.md)            | ![](./icons/layers.png)      | Manage your current object layers                  |
+| [Settings](settings.md)        | ![](./icons/cog.png)         | Customize the 3d viewport                          |
+| [Interface](interface.md)      | ![](./icons/interface.png)   | Customize the interface                            |
+| [Tools](tools.md)              | ![](./icons/toolbox.png)     | List of every tools/brushes                        |
+| [History](history.md)          | ![](./icons/history.png)     | Manage the undo/redo history stack                 |
+| [FAQ](faq.md)                  | ![](./icons/faq.png)         | Frequently Asked Questions                         |
+| [Tips](tips.md)                | ![](./icons/manual.png)      | Workflow tips                                      |
 
 # Community resources
 

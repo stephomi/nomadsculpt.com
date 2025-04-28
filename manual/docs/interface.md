@@ -1,4 +1,4 @@
-# Interface Menu ![](./icons/interface.png#icon#left) 
+# ![](./icons/interface.png) Interface Menu 
 
 This menu controls many options to customise Nomad's interface. 
 

@@ -48,7 +48,6 @@ export default defineConfig({
                 { text: 'History', link: '/history' },
                 { text: 'Faq', link: '/faq' },
                 { text: 'Tips', link: '/tips' },
-
             ]
         }],
 
@@ -85,24 +84,56 @@ export default defineConfig({
 
     markdown: {
         config: md => {
-            md.use(markdownHtml5, {
-                html5embed: {
-                    renderFn: function (prop, att) {
-                        var tag = '<video controls preload="metadata" alt="$0">';
-                        tag += '<source src="$1" type="video/mp4">';
-                        tag += '</video>\n';
-                        tag = tag.replace('$0', prop.url.replace('.mp4', '.jpg'));
-                        tag = tag.replace('$1', prop.url);
-                        return tag;
-                    }
-                },
-            })
+            const colored = [
+                'faceGroup.png',
+                'gizmo.png',
+                'flag_',
+                'tool_planar.png',
+                'tool_pinch.png',
+                'tool_paint.png',
+                'tool_nudge.png',
+                'tool_move.png',
+                'tool_layer.png',
+                'tool_inflate.png',
+                'tool_gizmo.png',
+                'tool_flatten.png',
+                'tool_faceGroup.png',
+                'tool_drag.png',
+                'tool_crease.png',
+                'tool_clearLayer.png',
+                'tool_clay.png',
+                'tool_brush.png',
+                'tool_stamp.png',
+                'tool_smooth.png'
+            ];
+            md.renderer.rules.image = function (tokens, idx, options, env, self) {
+                const token = tokens[idx];
+                const src = token.attrGet('src');
+                if (src && src.startsWith('./videos')) {
+                    var tag = '<video controls preload="metadata" alt="$0">';
+                    tag += '<source src="$1" type="video/mp4">';
+                    tag += '</video>\n';
+                    tag = tag.replace('$0', src.replace('.mp4', '.jpg'));
+                    tag = tag.replace('$1', src);
+                    return tag;
+                }
+                if (src && src.startsWith('./images')) {
+                    token.attrJoin('class', 'image');
+                }
+                if (src && src.startsWith('./icons')) {
+                    token.attrJoin('class', 'icon');
+                    if (!colored.some(color => src.includes(color))) token.attrJoin('class', 'can_invert');
+                }
+                return self.renderToken(tokens, idx, options);
+            }
         }
     },
 
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }],
         ['meta', { name: 'theme-color', content: '#ebbe6c' }],
+        ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-title', content: 'Nomad Sculpt' }],
         ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
         ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
         ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-DSF8ZS1RCC' }],

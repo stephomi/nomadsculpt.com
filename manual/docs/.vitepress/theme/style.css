@@ -6,39 +6,59 @@
 video {
     width: 360px;
 }
-.video-responsive { 
-overflow:hidden; 
-padding-bottom:56.25%; 
-position:relative; 
-height:0;
-}
-.video-responsive iframe {
-left:0; 
-top:0; 
-height:100%;
-width:100%;
-position:absolute;
+
+/*-------------------------------------------------*/
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
 
 /*-------------------------------------------------*/
-img[src*='#tool'] {
-    width: 32px;
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/*-------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: flex;
+    align-items: center;
+}
+
+/*-------------------------------------------------*/
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: auto;
+    width: 1.9em;
     pointer-events: none;
 }
-/*-------------------------------------------------*/
-img[src*='#icon'] {
-    width: 26px;
-    pointer-events: none;
+
+.image {
+    width: auto;
 }
-/*-------------------------------------------------*/
-img[src*='#left'] {
-    float: left;
-    margin-right: 5px;
+
+:is(h1, h2, h3, h4, h5, h6)>.icon {
+    width: 1em;
+    margin-right: 0.2em;
 }
-/*-------------------------------------------------*/
-html:not(.dark) img[src*='#icon'] {
+
+html:not(.dark) .can_invert {
     filter: invert(1);
 }
+
+/*-------------------------------------------------*/
 
 .medium-zoom-overlay,
 .medium-zoom-image--opened {

@@ -1,4 +1,4 @@
-# Pressure
+# ![](./icons/pressure.png) Pressure 
 
 ---
 

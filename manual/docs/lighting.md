@@ -1,4 +1,4 @@
-# Lighting ![](./icons/sun.png#icon#left)
+# ![](./icons/sun.png) Lighting
 
 This menu controls the lighting mode used by Nomad, lighting properties, and the environment light/matcap properties.
 
@@ -8,12 +8,12 @@ This menu controls the lighting mode used by Nomad, lighting properties, and the
 
 You can choose between several rendering modes:
 
-| Mode              | Meaning                    | Description                         |
-| :---:             | :---:                      | :---:                               |
-| [Lit(PBR)](#pbr)       | Physically Based Rendering | Painting with metalness/roughness   |
-| [Matcap](#matcap) | Material Capture           | Using during sculpting with lower gpu/cpu use than PBR |
-| [Unlit](#unlit) | Surface Color           | Surface color only with no shading or lighting |
-| [Id](#id) | Object ID          | A random color per object, useful for painting applications |
+| Mode              | Meaning                    | Description                                                 |
+| :---------------: | :------------------------: | :---------------------------------------------------------: |
+| [Lit(PBR)](#pbr)  | Physically Based Rendering | Painting with metalness/roughness                           |
+| [Matcap](#matcap) | Material Capture           | Using during sculpting with lower gpu/cpu use than PBR      |
+| [Unlit](#unlit)   | Surface Color              | Surface color only with no shading or lighting              |
+| [Id](#id)         | Object ID                  | A random color per object, useful for painting applications |
 
 If you want to learn more about metalness and roughness, see the [Vertex Paint](painting.md) section.
 
@@ -63,12 +63,12 @@ However it won't necessarily perform well.
 
 Here are the type of lights currently supported:
 
-| Mode                        | Description                      | Can cast shadows |
-| :---:                       | :---:                            | :---: |
-| [Directional](#directional) | Infinitely far away sun light    | yes   |
-| [Environment](#environment) | A distant light that is matched to the environment  HDR | yes   |
-| [Spot](#spot)               | Cone shaped lights				 | Yes   |
-| [Point](#point)             | Omni-directional point of light  | No    |
+| Mode                        | Description                                             | Can cast shadows                                       |
+| :-------------------------: | :-----------------------------------------------------: | :----------------------------------------------------: |
+| [Directional](#directional) | Infinitely far away sun light                           | yes                                                    |
+| [Environment](#environment) | A distant light that is matched to the environment  HDR | yes                                                    |
+| [Spot](#spot)               | Cone shaped lights				                        | Yes                                                    |
+| [Point](#point)             | Omni-directional point of light                         | Yes, but only through less robust screen-space shadows |
 
 ### Directional
 It emits light from infinitely far away, with a uniform intensity.

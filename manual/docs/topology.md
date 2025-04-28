@@ -1,4 +1,4 @@
-# Topology ![](./icons/multires.png#icon#left) 
+# ![](./icons/multires.png) Topology 
 
 This menu controls the topology of objects in Nomad, as well as tools to bake and transfer details between objects, and between textures.
 
@@ -17,13 +17,13 @@ You can display the [Wireframe](settings.md#wireframe) or simply disable [Smooth
 
 The topology menu of Nomad has several sections:
 
-| Method                                | Icon | Description  |
-| :---:                                 | :---: | :---:        |
-| [Multiresolution](#multiresolution)   | ![](./icons/multires.png#icon) | Edit multiple levels of detail using subdivision  |
-| [Voxel Remesher](#voxel-remesher)     | ![](./icons/voxel.png#icon)  | Recompute a new topology with uniform density |
-| [Dynamic Topology](#dynamic-topology) | ![](./icons/dyntopo.png#icon) | Add/Remove faces locally in real-time when sculpting or painting |
-| [Misc](#misc)             | ![](./icons/topo_extra.png#icon) | Decimation, UVs, baking, remeshing, reprojection |
-| [Primitive](#msc)             | ![](./icons/dot.png#icon) | Primitive options |
+| Method                                | Icon                        | Description                                                      |
+| :-----------------------------------: | :-------------------------: | :--------------------------------------------------------------: |
+| [Multiresolution](#multiresolution)   | ![](./icons/multires.png)   | Edit multiple levels of detail using subdivision                 |
+| [Voxel Remesher](#voxel-remesher)     | ![](./icons/voxel.png)      | Recompute a new topology with uniform density                    |
+| [Dynamic Topology](#dynamic-topology) | ![](./icons/dynamic.png)    | Add/Remove faces locally in real-time when sculpting or painting |
+| [Misc](#misc)                         | ![](./icons/topo_extra.png) | Decimation, UVs, baking, remeshing, reprojection                 |
+| [Primitive](#msc)                     | ![](./icons/dot.png)        | Primitive options                                                |
 
 
 ## Polygon stats
@@ -34,7 +34,7 @@ The top section of the topology menu displays polygon information for the select
 
 Tapping on this section will bring up a list of polygon statistics for all the polygon objects in the scene.
 
-## Multiresolution ![](./icons/multires.png#icon#left)
+## ![](./icons/multires.png) Multiresolution
 
 ![](./images/topology_multires_menu.png)
 
@@ -90,8 +90,7 @@ Subdivision will smooth all sharp edges by default. To keep edges slightly sharp
 :::
 
 
-
-## Voxel Remesher ![](./icons/voxel.png#icon#left)
+## ![](./icons/voxel.png) Voxel Remesher
 ![](./images/topology_voxel_menu.png)
 When using the `Voxel Remesher`, the entire mesh will force the topology to have an uniform resolution, meaning all the polygons have more or less the same size. This is very useful when you don't want to think about topology and simply do free-form sculpting.
 
@@ -123,7 +122,7 @@ Create lower multiresolution levels for the voxel remesh. If you use the checker
 ### Keep sharp edges
 Enable snapping of the new points to sharp edges on the original mesh. It can introduce distortion.
 
-## Dynamic Topology ![](./icons/dyntopo.png#icon#left)
+## ![](./icons/dynamic.png) Dynamic Topology
 
 ![](./images/topology_dyntopo_menu.png)
 Multiresolution and voxel remeshing are common industry methods to control topology, but both require you to watch that you're not stretching polygons too far, or squeezing polgyons too tight. 
@@ -143,24 +142,23 @@ Turn on dynamic topology. A DynTopo icon will be placed below the brush radius a
 The target polygon density when the detail mode is in `Constant`. A checkboard preview will be displayed when changing detail to indicate polygon size.
 
 ### Detail based on...
-| Method              | Description  |
-| :---:               | :---:        |
-| Screen           | The level of detail will depend how big the object is on screen |
-| Radius          | The tool radius defines the amount of detail |
-| Constant          | The detail slider defines the amount of detail |
+| Method   | Description                                                     |
+| :------: | :-------------------------------------------------------------: |
+| Screen   | The level of detail will depend how big the object is on screen |
+| Radius   | The tool radius defines the amount of detail                    |
+| Constant | The detail slider defines the amount of detail                  |
 
 ### Prefer...
-| Method              | Description  |
-| :---:               | :---:        |
-| Speed               | Favor performance |
-| Quality             | Favor quality |
+| Method  | Description       |
+| :-----: | :---------------: |
+| Speed   | Favor performance |
+| Quality | Favor quality     |
 
 When you favor `Quality`, the 2 main differences are:
 - refinement is applied before sculpting, so you will get less interpolating artifact when painting or sculpting very small details
 - refinement is running until it converges to the correct level of detail, in contrast to an incremental behavior.
  
 That way, if you sculpt very small details or do quick strokes, the topology will always be refined as expected
-
 
 
 ### Use pressure on radius
@@ -170,11 +168,11 @@ Only relevant if `Radius` is activated. When enabled, the level of detail will a
 ### Method
 Whether you are using `Dynamic Topology` on your [Brush](#brush) or [Globally](#global), you can choose in which mode it operates:
 
-| Method              | Description  |
-| :---:               | :---:        |
-| Uniformisation      | It can add and remove faces, this is the mode used in the video above |
-| Subdivision         | Add new faces only, it cannot remove faces  |
-| Decimation          | Remove faces only, it cannot add new faces |
+| Method         | Description                                                           |
+| :------------: | :-------------------------------------------------------------------: |
+| Uniformisation | It can add and remove faces, this is the mode used in the video above |
+| Subdivision    | Add new faces only, it cannot remove faces                            |
+| Decimation     | Remove faces only, it cannot add new faces                            |
 
 ### Protect masked area
 Enable masked areas protecting the topology from being changed.
@@ -189,11 +187,11 @@ However one advantage over the voxels is that the masked area will be protected,
 
 
 
-## Misc ![](./icons/topo_extra.png#icon#left)
+## ![](./icons/topo_extra.png) Misc
 
 ![](./images/topology_misc_menu.png)
 
-##### Gear menu ![](./icons/cog.png#icon#left)
+##### ![](./icons/cog.png) Gear menu
 Many of the tools in this menu have extra options. They can be accessed through the gear icon next to the section title.
 
 ### Decimation
@@ -212,7 +210,7 @@ Note that the masked areas won't be decimated.
 #### Decimate
 Start the decimate operation.
 
-#### Decimate gear menu ![](./icons/cog.png#icon#left)
+#### ![](./icons/cog.png) Decimate gear menu
 The gear menu has these advanced options:
 ##### Target triangles
 Set the target triangle count. The default value is 50%, the %/target button will toggle between a percentage or an exact target poly count.
@@ -264,7 +262,7 @@ Calculate UVs for the selected object, which will be displayed in the background
 #### Delete UVs
 Delete UVs on the object.
 
-#### UVAtlas gear menu ![](./icons/cog.png#icon#left)
+#### ![](./icons/cog.png) UVAtlas gear menu
 The gear menu has these advanced options:
 
 #### Face Group
@@ -309,7 +307,7 @@ The resolution of the baked texture. Bake textures are always square, so 1024 wi
 
 The buttons below are shortcuts for commonly used resolutions. For reference, 512x512 is relatively small, say for web graphics and simple geometry. 4096x4096 (4k for short) is for high quality renders.
 
-#### Bake gear menu ![](./icons/cog.png#icon#left)
+#### ![](./icons/cog.png) Bake gear menu
 The gear menu has these advanced options:
 
 ##### Normal, Roughness, Metalness, Color, Emissive, Opacity
@@ -356,7 +354,7 @@ Convert any visible objects into vertex values on the selected object. The numbe
 Reprojecting other objects can be used not just for transferring color information from other objects, but to project vertices onto other objects, eg bandages can be projected onto a character.
 :::
 
-#### Reproject gear menu ![](./icons/cog.png#icon#left)
+#### ![](./icons/cog.png) Reproject gear menu
 The gear menu has these advanced options:
 
 #### Vertices, Roughness, Metalness, Color, Opacity, Opacity->Mask, Mask, Layers, Face Group
@@ -392,7 +390,7 @@ Start the instant meshes operation.
 #### Target quads
 The number of quad polygons quad remesh will attempt to create.
 
-#### Quad Remesh Instant gear menu ![](./icons/cog.png#icon#left)
+#### ![](./icons/cog.png) Quad Remesh Instant gear menu
 The gear menu has these advanced options:
 
 ##### Crease angle
@@ -416,7 +414,7 @@ When you run the Voxel remesher, all the holes are automatically closed, whether
 #### Close holes
 Execute the hole close action.
 
-#### Holes gear menu ![](./icons/cog.png#icon#left)
+#### ![](./icons/cog.png) Holes gear menu
 The gear menu has these advanced options:
 
 ##### Detail
@@ -431,7 +429,7 @@ Try to clean non manifold edge. It can be useful for external software that don'
 
 #### Clean
 Execute the clean action.
-#### Force manifold gear menu ![](./icons/cog.png#icon#left)
+#### ![](./icons/cog.png) Force manifold gear menu
 The gear menu has these advanced options:
 
 #### Delete small faces
@@ -452,6 +450,5 @@ Execute the triplanar action.
 #### Resolution
 The detail of the 'voxels' used in the triplanar operation.
 
-
-## Primitive ![](./icons/dot.png#icon#left)
+## ![](./icons/dot.png) Primitive
 If a primitive is selected, it's parameters will be displayed in this menu. Most of these options will be available from the viewport toolbar that is visible when a primitive is selected.

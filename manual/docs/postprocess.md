@@ -1,4 +1,4 @@
-# Post process ![](./icons/postprocess.png#icon#left) 
+# ![](./icons/postprocess.png) Post process 
 
 This menu controls many aspects of Nomad to affect the look of the render.
 
@@ -43,9 +43,9 @@ If you have metallic and shiny objects in your scene, then this option should pr
 This effect is only effective with PBR mode.
 
 
-| SSR off                    | SSR on |
-| :---:                      |:---:                    |
-|![](./images/ssr-off.jpg)   | ![](./images/ssr-on.jpg) |
+| SSR off                    | SSR on                   |
+| :------------------------: | :----------------------: |
+| ![](./images/ssr-off.jpg)  | ![](./images/ssr-on.jpg) |
 
 ## Global Illumination (SSGI)
 
@@ -54,24 +54,24 @@ Global illumination simulates how light bounces between surfaces, eg a red wall 
 ### Tolerance
 The accuracy of the global illumination. A high value will do more accurate lighting, but will require high max frame sample values to remove noise.
 
-| SSGI off                    | SSGI on |
-| :---:                      |:---:                    |
-|![](./images/ssgi_off.jpg)   | ![](./images/ssgi_on.jpg) |
+| SSGI off                   | SSGI on                   |
+| :------------------------: | :-----------------------: |
+| ![](./images/ssgi_off.jpg) | ![](./images/ssgi_on.jpg) |
 
 ## Ambient Occlusion (SSAO)
 Ambient occlusion will darken areas where the light has less chance of reaching (corners, etc).
 The effect only depends on the model geometry.
 
-| Mode           | Description            |
-| :---:          | :---:                  |
-| Strength       | Intensity of the effect         |
-| Radius         | How widespread the effect is    |
+| Mode           | Description                                                   |
+| :------------: | :-----------------------------------------------------------: |
+| Strength       | Intensity of the effect                                       |
+| Radius         | How widespread the effect is                                  |
 | Curvature bias | How sensitive the effect is relative to the surface variation |
 
 
-| SSAO off                   | SSAO on |
-| :---:                      |:---:                      |
-|![](./images/ssao-off.jpg)  | ![](./images/ssao-on.jpg) |
+| SSAO off                   | SSAO on                   |
+| :------------------------: | :-----------------------: |
+| ![](./images/ssao-off.jpg) | ![](./images/ssao-on.jpg) |
 
 ::: tip
 AO will be most visible in areas lit mainly by environment light. Areas that are under strong direct light will receive a much weaker AO effect.
@@ -83,17 +83,17 @@ Add a blur effect on the region that is outside the focus.
 
 Simply tap on your model to change the focus point.
 
-| DOF off                   | DOF focus on far ring     | DOF focus on close ring  |
-| :---:                     |:---:                      |:---:                     |
-|![](./images/dof-off.jpg)  |![](./images/dof-near.jpg) |![](./images/dof-far.jpg) |
+| DOF off                   | DOF focus on far ring      | DOF focus on close ring   |
+| :-----------------------: | :------------------------: | :-----------------------: |
+| ![](./images/dof-off.jpg) | ![](./images/dof-near.jpg) | ![](./images/dof-far.jpg) |
 
 
 ## Bloom
 Blooms will make the bright area of your scene glow.
 
-| Bloom off                  | Bloom with radius 0       | Bloom with radius 1  |
-| :---:                      |:---:                      |:---:                     |
-|![](./images/bloom-off.jpg) |![](./images/bloom-r0.jpg) |![](./images/bloom-r1.jpg) |
+| Bloom off                   | Bloom with radius 0        | Bloom with radius 1        |
+| :-------------------------: | :------------------------: | :------------------------: |
+| ![](./images/bloom-off.jpg) | ![](./images/bloom-r0.jpg) | ![](./images/bloom-r1.jpg) |
 
 
 ## Tone Mapping
@@ -105,9 +105,9 @@ You can adjust the overall image with `exposure`, `contrast` and `saturation`.
 
 Notice that with `Tone Mapping` disabled, some details disappear because the pixels are too bright.
 
-| Tone Mapping off           | Tone Mapping on   |
-| :---:                      |:---:                    |
-|![](./images/tone-off.jpg) |![](./images/tone-on.jpg) |
+| Tone Mapping off           | Tone Mapping on           |
+| :------------------------: | :-----------------------: |
+| ![](./images/tone-off.jpg) | ![](./images/tone-on.jpg) |
 
 ::: tip
 Tone mapping can enhance the effect of global illumination. If you turn the instensity of the environment map down, the primary light source up, can increase the tone mapping `exposure` to see more of the bounce lighting effects.
@@ -116,61 +116,61 @@ Tone mapping can enhance the effect of global illumination. If you turn the inst
 ## Color Grading
 Similar to the curves tool in Photoshop, this allows you to control the balance and distribution of color in the image. The `main` control affects the entire color balance, the `red`/`green`/`blue` controls allow for fine control. 
 
-| Color Grading off           | Color Grading on   |
-| :---:                      |:---:                    |
-|![](./images/grading_off.jpg) |![](./images/grading_on.jpg) |
+| Color Grading off             | Color Grading on             |
+| :---------------------------: | :--------------------------: |
+| ![](./images/grading_off.jpg) | ![](./images/grading_on.jpg) |
 
 ## Curvature
 Sharpen the edges of the model.
 
-| Curvature off              | Curvature on   |
-| :---:                      |:---:                    |
-|![](./images/curvature-off.jpg)  |![](./images/curvature-on.jpg) |
+| Curvature off                   | Curvature on                   |
+| :-----------------------------: | :----------------------------: |
+| ![](./images/curvature-off.jpg) | ![](./images/curvature-on.jpg) |
 
 
 ## Chromatic Aberration
 Simulate the lens artifacts with light being decomposed around the screen edges.
 
-| Chromatic off              | Chromatic on   |
-| :---:                      |:---:                    |
-|![](./images/chroma-off.jpg)  |![](./images/chroma-on.jpg) |
+| Chromatic off                | Chromatic on                |
+| :--------------------------: | :-------------------------: |
+| ![](./images/chroma-off.jpg) | ![](./images/chroma-on.jpg) |
 
 
 ## Vignette
 Simulate the lens artifacts by darkening the screen edges.
 
-| Vignette off              | Vignette on   |
-| :---:                      |:---:                    |
-|![](./images/vignette-off.jpg)  |![](./images/vignette-on.jpg) |
+| Vignette off                   | Vignette on                   |
+| :----------------------------: | :---------------------------: |
+| ![](./images/vignette-off.jpg) | ![](./images/vignette-on.jpg) |
 
 ## Grain
 Add a grain effect, it can help make the image a bit less artificial.
 
-| Grain off                  | Grain on   |
-| :---:                      |:---:                    |
-|![](./images/grain-off.jpg)  |![](./images/grain-on.jpg) |
+| Grain off                   | Grain on                   |
+| :-------------------------: | :------------------------: |
+| ![](./images/grain-off.jpg) | ![](./images/grain-on.jpg) |
 
 
 ## Sharpness
 Sharpen the model edges.
 
-| Sharpness off                  | Sharpness on   |
-| :---:                      |:---:                    |
-|![](./images/sharpen-off.jpg)  |![](./images/sharpen-on.jpg) |
+| Sharpness off                 | Sharpness on                 |
+| :---------------------------: | :--------------------------: |
+| ![](./images/sharpen-off.jpg) | ![](./images/sharpen-on.jpg) |
 
 ## Pixel Art
 Simulate retro game pixel art.
 
-| Pixel off                  | Pixel on   |
-| :---:                      |:---:                    |
-|![](./images/pixel_off.jpg)  |![](./images/pixel_on.jpg) |
+| Pixel off                   | Pixel on                   |
+| :-------------------------: | :------------------------: |
+| ![](./images/pixel_off.jpg) | ![](./images/pixel_on.jpg) |
 
 ## Scanline
 Simulate the look of old CRT monitors.
 
-| Scanline off                  | Scanline on   |
-| :---:                      |:---:                    |
-|![](./images/scanline_off.jpg)  |![](./images/scanline_on.jpg) |
+| Scanline off                   | Scanline on                   |
+| :----------------------------: | :---------------------------: |
+| ![](./images/scanline_off.jpg) | ![](./images/scanline_on.jpg) |
 
 ## Temporal Anti-Aliasing (TAA)
 This effect is enabled by default, this is not an artistic effect but a quality one.

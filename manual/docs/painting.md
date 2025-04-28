@@ -1,4 +1,4 @@
-# Painting ![](./icons/paint.png#icon#left)  
+# ![](./icons/paint.png) Painting  
 
 Control the color, roughness, metalness of paint strokes, allow for flood filling of paint attributes, and how paint tools interact with layers, masks, hidden selections.
 
@@ -51,7 +51,7 @@ Clicking on the material ball will display a preset browser of Color/Roughness/M
 By default when you paint, all 3 channels are painted simultaneously. This means that instead of just painting 'red', you can be painting 'a red rough metal' or 'a white smooth plastic'. If you need to, you can use the checkboxes to toggle the channels, so that you are only painting, color, or only painting roughness, for example. 
 
 |                | Metalness 0%                      | Metalness 100%               |
-| :---:          | :---:                             |:---:                         |
+| :------------: | :-------------------------------: | :--------------------------: |
 | Roughness 0%   | ![](./images/dielectric_r0.jpg)   | ![](./images/metal_r0.jpg)   |
 | Roughness 50%  | ![](./images/dielectric_r50.jpg)  | ![](./images/metal_r50.jpg)  |
 | Roughness 100% | ![](./images/dielectric_r100.jpg) | ![](./images/metal_r100.jpg) |
@@ -76,12 +76,12 @@ Apply the current material to the object. If the checkboxes next to color/materi
 
 The buttons control how the paint all can be further affected:
 
-| Icon                            | Description                  |
-| :---:                           |:---:                         |
-| ![](./icons/tool_mask.png#icon) |Masked areas won't be affected.                        |
-| ![](./icons/tool_hide.png#icon)                           | Hidden areas won't be affected.                        |
-| ![](./icons/opacity.png#icon)                          | use the tool painting factor above.                        |
-| ![](./icons/layers.png#icon)                          | Unpainted areas of a layer won't be affected.                         |
+| Icon                       | Description                                   |
+| :------------------------: | :-------------------------------------------: |
+| ![](./icons/tool_mask.png) | Masked areas won't be affected.               |
+| ![](./icons/tool_hide.png) | Hidden areas won't be affected.               |
+| ![](./icons/opacity.png)   | use the tool painting factor above.           |
+| ![](./icons/layers.png)    | Unpainted areas of a layer won't be affected. |
 
 
 ### Use stroke alpha

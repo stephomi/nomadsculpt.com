@@ -1,4 +1,4 @@
-# Stroke ![](./icons/pencil.png#icon#left)    
+# ![](./icons/pencil.png) Stroke    
 
 ---
 ![](./images/stroke_overview.png) 
@@ -10,13 +10,13 @@ The settings should be similar to the ones present in 2d painting applications, 
 
 The options are split across 5 sub-menus:
 
-| Name      | Icon                             | Description  |
-| :---:       | :---:                            | :---:        |
-| Stroke | ![](./icons/stroke_dot.png#icon) | Control how the stroke gets applied to the model |
-| Alpha | ![](./icons/alpha.png#icon) | How a grey-scale texture is used for the brush stamp |
-| Falloff | ![](./icons/falloff.png#icon) | Control how the brush strength changes from the center to the edge |
-| Filter | ![](./icons/filter.png#icon) | How the brush is affected by the model geometry |
-| Pressure | ![](./icons/pressure.png#icon) | Control stylus pressure response  |
+| Name     | Icon                        | Description                                                        |
+| :------: | :-------------------------: | :----------------------------------------------------------------: |
+| Stroke   | ![](./icons/stroke_dot.png) | Control how the stroke gets applied to the model                   |
+| Alpha    | ![](./icons/alpha.png)      | How a grey-scale texture is used for the brush stamp               |
+| Falloff  | ![](./icons/falloff.png)    | Control how the brush strength changes from the center to the edge |
+| Filter   | ![](./icons/filter.png)     | How the brush is affected by the model geometry                    |
+| Pressure | ![](./icons/pressure.png)   | Control stylus pressure response                                   |
 
 ::: tip
 Not all stroke options apply for all tools. Stroke options that aren't used by the current tool will be disabled or hidden. 
@@ -45,40 +45,40 @@ When enabled, all tools will use the same radius, the default is for each tool t
 
 Strokes can act in multiple modes:
 
-###  Dot ![](./icons/stroke_dot.png#icon) 
+### ![](./icons/stroke_dot.png) Dot
 Drag like a regular paint stroke. 
 ![](./videos/stroke_dot.mp4) 
 
-###  Roll ![](./icons/stroke_roll.png#icon) 
+### ![](./icons/stroke_roll.png) Roll
 The brush alpha will be rotated to follow the direction of the stroke, useful for making fabric stitches. 
 ![](./videos/stroke_roll.mp4) 
 
-###  Tile ![](./icons/stroke_tile.png#icon) 
+### ![](./icons/stroke_tile.png) Tile
 The brush alpha will be treated as a repeating pattern, and the brush stroke will reveal that pattern. The tiling is controlled from [Alpha -> Tiling](stroke#tiling).
 ![](./videos/stroke_tile.mp4) 
 
- ### Lock + radius ![](./icons/radius.png#icon) 
+ ### ![](./icons/radius.png) Lock + radius
  Stamp a brush stroke with fixed **height**. Drag will set the scale and rotation.
 ![](./videos/stroke_lock_radius.mp4) 
 
-### Lock + intensity  ![](./icons/falloff.png#icon) 
+### ![](./icons/falloff.png) Lock + intensity 
 Stamp a brush stroke with fixed **radius**. Drag will set height and rotation.
 ![](./videos/stroke_lock_intensity.mp4) 
 
 The `Move` and `Drag` tools have their own 3 options:
 
-###  Drag ![](./icons/snake.png#icon) 
+### ![](./icons/snake.png) Drag
 
 Will keep updating what is inside the brush radius during the stroke. A fast stroke will leave the surface behind, while a slow stroke will hold onto material, making longer shapes. This is the default mode for the `Drag` tool. With `Dynamic Topology` this can be used to make snake like extrusions. 
 ![](./videos/stroke_drag.mp4) 
 
 
-### Grab ![](./icons/grab.png#icon) 
+### ![](./icons/grab.png) Grab
 Will select what is inside the brush radius when the brush is started, and keep that selection. This is useful for more precise move operations, as you can carefully adjust the distance of the move and not accidentally move more than you originally selected. This is the default mode for the `Move` tool.
 ![](./videos/stroke_grab.mp4) 
 
 
-### Lock + radius (drag)  ![](./icons/radius.png#icon) 
+### ![](./icons/radius.png) Lock + radius (drag) 
 The user radius is ignored, and is set dynamically based on how far the stroke is dragged away from the starting point. A small distance=small radius, a larger distance = bigger radius. Use the intensity slider to control the shape of the falloff. Useful for blocking in organic rubbery shapes.
 ![](./videos/stroke_lockradius_drag.mp4) 
 
@@ -123,7 +123,7 @@ The intensity, translation, rotation and scale of the stroke can each be randomi
 Apply a constant offset on the stroke. This is useful for small screens where your finger would cover the stroke. 
 
 
-## Alpha ![](./icons/alpha.png#icon#left)
+## ![](./icons/alpha.png) Alpha
 ![](./images/stroke_alpha.jpg) 
 The `Alpha` is a texture that will modulate your brush behavior.
 It's a grayscale image, where black pixels mean no deformation and white pixels full deformation.
@@ -198,11 +198,11 @@ When selected, the user can draw their own falloff curves. The editor works the 
 
 The curve editor has 3 extra buttons:
 
-| Item                     | Icon | Description  |
-| :---:                    | :---: | :---:        |
-| Maximize                      | ![](./icons/maximize.png#icon) | Expand the curve editor    |
-| Symmetry   | ![](./icons/symmetric.png#icon) | Display the curve as a symmetric 'brush tip' |
-| Reset | ![](./icons/reset.png#icon)  | Revert the curve to the default state |
+| Item     | Icon                       | Description                                  |
+| :------: | :------------------------: | :------------------------------------------: |
+| Maximize | ![](./icons/maximize.png)  | Expand the curve editor                      |
+| Symmetry | ![](./icons/symmetric.png) | Display the curve as a symmetric 'brush tip' |
+| Reset    | ![](./icons/reset.png)     | Revert the curve to the default state        |
 
 ### Influence
 

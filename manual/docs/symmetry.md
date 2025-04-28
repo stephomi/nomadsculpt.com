@@ -1,4 +1,4 @@
-# Symmetry ![](./icons/symmetry.png#icon#left) 
+# ![](./icons/symmetry.png) Symmetry
 
 This menu controls how strokes will be repeated acroos a mirror plane or radially, and ways to restore symmetry on non-symmetrical objects.
 
@@ -42,7 +42,7 @@ The mirror can either be 'Local', and move with the object, or be 'World', and n
 
 When sculpting near the symmetry planes, some brushes will have imperfect symmetry behavior. This section allows you to restore symmetry by copying one side of your sculpt to the other. 
 
-![](./icons/tool_mask.png#icon#left) The mask button lets you isolate what will be mirrored; masking the destination side will protect that region, masking the source side will stop that area from being mirrored to the destination. 
+![](./icons/tool_mask.png) The mask button lets you isolate what will be mirrored; masking the destination side will protect that region, masking the source side will stop that area from being mirrored to the destination. 
 
 The << and >> buttons determine which side will be copied to the other. Nomad calculates this from your current viewport, so setting it to << for example will always copy from screen right to screen left.
 

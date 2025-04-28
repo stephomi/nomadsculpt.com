@@ -1,4 +1,4 @@
-# Camera ![](./icons/camera.png#icon#left) 
+# ![](./icons/camera.png) Camera
 
 This menu lets you create and modify cameras, as well as control how you interact with cameras.
 
@@ -54,13 +54,13 @@ A saved view will save the [Projection Type](#projection-type) settings but also
 It can be useful if you want to cycle between front/left/back reference views with different backgrounds.
 :::
 
-| Action      | Icon                             | Description  |
-| :---:       | :---:                            | :---:        |
-| Visibility | ![](./icons/eye_open.png#icon) | Toggle the camera. Hidden cameras will be skipped from previous/next button |
-| Name | ![]() | Select the camera |
-| Update View | ![](./icons/update_view.png#icon) | Update the saved view with the current view point |
-| Edit Name | ![](./icons/pencil.png#icon) | Edit the camera name |
-| Delete | ![](./icons/trash.png#icon) | Delete the camera |
+| Action      | Icon                         | Description                                                                 |
+| :---------: | :--------------------------: | :-------------------------------------------------------------------------: |
+| Visibility  | ![](./icons/eye_open.png)    | Toggle the camera. Hidden cameras will be skipped from previous/next button |
+| Name        |                              | Select the camera                                                           |
+| Update View | ![](./icons/update_view.png) | Update the saved view with the current view point                           |
+| Edit Name   | ![](./icons/pencil.png)      | Edit the camera name                                                        |
+| Delete      | ![](./icons/trash.png)       | Delete the camera                                                           |
 
 ### Add View
 Create a new camera based on the current view.
