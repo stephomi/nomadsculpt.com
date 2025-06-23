@@ -9,6 +9,11 @@ The files menu allows you to save and load nomad projects, import and export 3d 
 
 A thumbnail is shown of the last save at the top of this menu. Clicking this thumbnail brings up a mini browser, tap twice on another project to bring up a mini menu to open, add, save, clone, rename, delete that project.
 
+### ![](./icons/nomad.png) Preset 
+Access a collection of demos and character components. Select one, then select again to choose to Open, Add to Scene or Clone the entry into your projects folder.
+
+![](./images/file_preset_preview.png)
+
 ### ![](./icons/save.png) Save
 Save the Nomad project.
 
@@ -29,6 +34,25 @@ Display the project browser, any selected projects will be deleted from the file
 
 ### ![](./icons/new_file.png) New
 Start a new project, if there are unsaved changes you will be asked if you want to save.
+
+### ![](./icons/autosave.png) Auto Save...
+Menu to control auto save options.
+
+If you enable autosave, you can set up a timer so that a popup will appear at regular intervals.
+The reason why Nomad doesn't save in background is because 3d files can be pretty big so it can induce a significant lag while you are sculpting.
+
+Additionally, to avoid out-of-memory issues the scene is typically compressed before the saving operation.
+This compression/decompression will slow down the save operation as well.
+
+### Timer pop up
+How frequently will the timer popup appear.
+
+### Popup timeout
+Enable popup timeout
+
+### Discard autosave
+If an auto save file exists for a project, it will automatically be loaded instead of the original project. If this isn't required, this button will delete the autosave. Loading the fill will then load the last manual save of the project.
+
 
 ## Import
 
@@ -79,42 +103,28 @@ Set the color mode interpreted from the ply as Linear, sRGB, or Auto.
 Set the color mode interpreted from the obj as Linear, sRGB, or Auto.
 
 
-## Autosave
-
-If you enable autosave, you can set up a timer so that a popup will appear at regular intervals.
-The reason why Nomad doesn't save in background is because 3d files can be pretty big so it can induce a significant lag while you are sculpting.
-
-Additionally, to avoid out-of-memory issues the scene is typically compressed before the saving operation.
-This compression/decompression will slow down the save operation as well.
-
-### Timer pop up
-How frequently will the timer popup appear.
-
-### Popup timeout
-Enable popup timeout
-
-### Discard autosave
-If an auto save file exists for a project, it will automatically be loaded instead of the original project. If this isn't required, this button will delete the autosave. Loading the fill will then load the last manual save of the project.
 
 ## Export
 Save to a 3d geometry format that can be used in other software. 
 
 ![](./images/file_export.png)
 
+Different file formats support different features, the options available will change based on the selected file type.
+
 <!-- https://www.tablesgenerator.com/markdown_tables# -->
 <!-- http://markdowntable.com/ -->
-|                                 | NOM    | GLTF/GLB             | OBJ  | PLY  | STL   | FBX                    |
-| :-----------------------------: | :----: | :------------------: | :--: | :--: | :---: | :--------------------: |
-| [Vertex Colors](#vertex-colors) | ✅     | ✅                   | ✅   | ✅    | ✅    | ✅                     |
-| [Vertex PBR](#vertex-pbr)       | ✅     | Nomad ✅<br>Other ⚠️ | ❌   | ✅    | ❌    | ❌                     |
-| Quad                            | ✅     | Nomad ✅<br>Other ⚠️ | ✅   | ✅    | ❌    | ✅                     |
-| [Layers](#layers)               | ✅     | ✅                   | ❌   | ❌    | ❌    | ✅                     |
-| Objects                         | ✅     | ✅                   | ✅   | ❌    | ❌    | ✅                     |
-| Face Group                      | ✅     | ✅                   | ✅   | ❌    | ❌    | ✅                     |
-| Hierarchy                       | ✅     | ✅                   | ❌   | ❌    | ❌    | ✅                     |
-| Lights                          | ✅     | ✅                   | ❌   | ❌    | ❌    | ✅                     |
-| Textures                        | ✅     | ✅                   | ✅   | ❌    | ❌    | Import ✅<br>Export ❌ |
-| Primitives, Postprocess, etc    | ✅     | Nomad ✅<br>Other ❌ | ❌   | ❌    | ❌    | ❌                     |
+|                                 | NOM    | GLTF/GLB             | OBJ  | USD | PLY  | STL   | FBX                    |
+| :-----------------------------: | :----: | :------------------: | :--: | :--: | :--: | :---: | :--------------------: |
+| [Vertex Colors](#vertex-colors) | ✅     | ✅                   | ✅   | ✅ | ✅    | ✅    | ✅                     |
+| [Vertex PBR](#vertex-pbr)       | ✅     | Nomad ✅<br>Other ⚠️ | ❌   | ✅ | ✅    | ❌    | ❌                     |
+| Quad                            | ✅     | Nomad ✅<br>Other ⚠️ | ✅   | ✅ | ✅    | ❌    | ✅                     |
+| [Layers](#layers)               | ✅     | ✅                   | ❌   | ✅ | ❌    | ❌    | ✅                     |
+| Objects                         | ✅     | ✅                   | ✅   | ✅ | ❌    | ❌    | ✅                     |
+| Face Group                      | ✅     | ✅                   | ✅   | ✅ | ❌    | ❌    | ✅                     |
+| Hierarchy                       | ✅     | ✅                   | ❌   | ✅ | ❌    | ❌    | ✅                     |
+| Lights                          | ✅     | ✅                   | ❌   | ✅ | ❌    | ❌    | ✅                     |
+| Textures                        | ✅     | ✅                   | ✅   | ✅ | ❌    | ❌    | Import ✅<br>Export ❌ |
+| Primitives, Postprocess, etc    | ✅     | Nomad ✅<br>Other ❌ | ❌   | ❌ | ❌    | ❌    | ❌                     |
 
 
 ### All/Visible/Selected
@@ -123,7 +133,7 @@ The active button state will set which objects will be exported. The number next
 ### Vertex colors
 Export vertex colors if supported by the file format.
 
-### Vertex PBR
+### PBR Paint
 PBR vertex colors are exported as secondary vertex colors attributes.
 The channels are packed in the following way:
 
@@ -141,8 +151,14 @@ Nomad also exports per-layer colors, roughness and metalness but it will be igno
 ### Layer painting
 Export layer painting, usually ignored by other software.
 
+### Face Group
+Export facegroups, exporting can sometimes interfere with other software.
+
 ### Normals
 Export normal information. Note that Nomad will always compute its own normals when importing other file formats.
+
+### Tangents
+Export tangent information, used if the model has normal maps. 
 
 ### Textures
 If textures have been added to the material, they will be exported. Note that this will not bake textures, that is done via the bake options in topology.
@@ -157,6 +173,12 @@ Blender can import glTF/glb, but doesn't automatically understand vertex attribu
 This video shows the process:
 
 ![](./videos/blender_pbr.mp4)
+
+::: 
+
+::: tip Tip: USD feature support
+
+USD is a complex format, it's specification supports many features, but not all 3d software will support them. OSX/iOS don't support vertex color for example.  The preset modes within the USD exporter attempt a best guess at  compatibility with OpenUSD, Apple, Procreate, Zbrush.
 
 ::: 
 
