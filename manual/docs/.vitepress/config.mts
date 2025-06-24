@@ -126,6 +126,14 @@ export default defineConfig({
                 }
                 return self.renderToken(tokens, idx, options);
             }
+            // md.use(markdownItFitMedia, {
+            //     imgDir: './docs/../docs/',
+            //     lazyLoad: true,
+            //     decoding: 'auto',
+            //     aspectRatio: true,
+            //     imgSizeHint: true,
+            //     fitWrapElements: ['iframe', 'video']
+            // })
         }
     },
 
