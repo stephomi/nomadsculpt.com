@@ -11,12 +11,14 @@ This menu lets you manage objects, lights, cameras and repeaters in Nomad. It di
 | :--------------------: | :------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
 | [Add...](#add-menu)    | ![](./icons/plus.png)            | Display the [Add Menu](#add-menu) to add an object to the scene                                                     |
 | Delete                 | ![](./icons/trash.png)           | Delete the object                                                                                                   |
+| Lock                   | ![](./icons/lock_close.png)            | Make the object unselectable in the viewport. It can still be selected from the tree view.                          |
 | Join                   | ![](./icons/merge.png)           | Join the selected objects into a single object with no geometry changes                                             |
 | Separate               | ![](./icons/diagonal.png)        | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation |
 | [Boolean...](#boolean) | ![](./icons/subtract_circle.png) | Display the [Boolean](#boolean) menu                                                                                |
 | Clone                  | ![](./icons/clone.png)           | Duplicate the object into a new object                                                                              |
 | Instance               | ![](./icons/link.png)            | Duplicate the object as an instance, so modelling changes to one are made to all instances.                         |
 | Un-instance            | ![](./icons/unlink.png)          | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances                 |
+| Sync                   | ![](./icons/sync.png)            | If instances have children, ensure all instances share the same child hierarchy                                     |
 
 
 ## Tree view
@@ -53,10 +55,10 @@ Many of these options are similar to the shortcut bar at the top, repeated for c
 | Clone                                    | ![](./icons/clone.png)                  | Duplicate the object into a new object                                                                               |
 | Name                                     | ![](./icons/pencil.png)                 | Change the name of the object                                                                                        |
 | Delete                                   | ![](./icons/trash.png)                  | Delete the object                                                                                                    |
-| Delete+                                  | ![](./icons/trash.png)                  | Delete the object and its children                                                                                   |
+| Delete+                                  | ![](./icons/removeNode.png)             | Delete the object and its children                                                                                   |
 | Un-instance                              | ![](./icons/unlink.png)                 | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances.                 |
-| Separate                                 | ![](./images/scene_separate_button.png) | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation. |
-| Separate ![](./icons/tool_faceGroup.png) | ![](./images/scene_separate_button.png) | If an object has multiple face groups, break the mesh into separate objects.                                         |
+| Separate (Topology)                      | ![](./images/scene_separate_button.png) | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation. |
+| Separate (Face Group)                    | ![](./images/scene_separate_button.png) | If an object has multiple face groups, break the mesh into separate objects.                                         |
 
 
 ### Multiselection
@@ -88,8 +90,7 @@ You can see an example in video in the [Separate](#separate) section.
 
 ## Boolean
 ![](./images/scene_boolean_menu.png) 
-Combine objects into a single surface either through a `Voxel Merge` or a `Boolean` operation.
-
+Combine objects into a single surface.
 
 `Voxel merge` will retain the volume of the objects, and calculate new evenly spaced polygons on the surface. Because of the calculation step a voxel merge can handle complex geometry, but can lose fine detail if the target resolution isn't high enough.
 
@@ -148,6 +149,11 @@ Enable putting the new primitive where the current selected shape or gizmo is. W
 ### Select gizmo
 Enable automatically switching to the gizmo tool when a new primitive is created. 
 
+### Advanced
+
+This menu allows you to set your preference for where new primitives, groups, repeaters will be created. They can be on the selected object, at the world origin, or at the location of the gizmo.
+
+
 ### UV's
 Enable UV's on primitives. UV's (often called texture coordinates), are extra data used in 3d to allow textures to be applied to surfaces. They take up more memory, but for most devices this shouldn't be a concern unless you're getting into very high poly counts (eg 10 million polys or more). 
 
@@ -161,11 +167,12 @@ Enable UV's on primitives. UV's (often called texture coordinates), are extra da
 | Torus       | ![](./icons/torus.png)       | The torus can be a good starting point for rings                                                                |
 | Cone        | ![](./icons/cone.png)        | -                                                                                                               |
 | Icosahedron | ![](./icons/icosahedron.png) | -                                                                                                               |
-| UV-sphere   | ![](./icons/circle.png)      | A sphere with uneven poly layout, see [Warning below](#sphere-warning)                                          |
+| UV-sphere   | ![](./icons/circle.png)      | A sphere with uneven poly layout, see [Warning below](#uv-sphere)                                          |
 | Plane       | ![](./icons/rectangle.png)   | It's a simple plane, note that this is the only primitive that is not closed                                    |
 | Tube        | ![](./icons/tool_tube.png)   | see [Tube](tools#tube)                                                                                          |
 | Lathe       | ![](./icons/tool_lathe.png)  | see [Lathe](tools#lathe)                                                                                        |
 | Triplanar   | ![](./icons/triplanar.png)   | see [Triplanar](#triplanar)                                                                                     |
+| Shadow Catcher   | ![](./icons/material_shadow_catcher.png)   | see [Shadow Catcher](#shadow-catcher)                                                                                     |
 | Head        | ![](./icons/face.png)        | A simple head with a layer to blend between male/female                                                         |
 
 ::: tip
@@ -193,6 +200,13 @@ Different primitives will have extra options on the toolbar:
 * `Disk` Toggle if a plane should be a 4 sided shape, or a circle shape.
 
 The small toolbar below the main toolbar will let you toggle between the primitive gizmo and the transform gizmo.
+
+::: tip
+
+Clicking on the title of the toolbar will toggle it to the top or bottom of the display. Clicking on the arrow in the corner will collapse it.
+
+:::
+
 
 ### Primitive menu
 
@@ -252,6 +266,9 @@ For now there is no option to 'lock' the painting on a single plane, but maybe i
 You can use the [Connected Topology](stroke.md#connected-topology) to help a little bit, in that if your cursor lies precisely on one plane it won't impact the other planes.
 :::
 
+### Shadow Catcher
+Add a plane with the shadow catcher material. See [Shadow Catcher material](material.md#shadow-catcher) for more details. 
+
 
 ## Group/Camera
 ### Group
@@ -306,13 +323,13 @@ All the repeaters have a `Validate` control, which will bake the results of the 
 * Keep instances - the instances remain as instances, but are no longer have the repeater 'parent'
 * Un-instances - the instances are converted into unique objects
 
-::: tip Combine repeaters
+::: tip Tip: Combine repeaters
 Repeaters can be parented under each other, and several objects can be made children of repeaters, leading to complex effects.
 
 ![](./images/scene_repeater_combine.png)
 :::
 
-::: tip Repeater pivots
+::: tip Tip: Repeater pivots
 
 Some repeaters will try to auto-pivot the child objects, so even if you move or rotate them with the gizmo tool, they won't move. If you need to override this behavior, insert a group in between the repeater and the child. Now you can move the child shape independently of the repeater.
 :::
@@ -332,17 +349,20 @@ Create a point light
 
 ## Advanced
 ### Focus on item
+Double clicking an item in the Scene list will center the camera on that item in the 3d view.
 
 ### Sync visibility
+Using the eye icon will impact all the selected items. 
 
-### Icon size
-Set the size of the group, light, camera, mirror icons in the viewport
+### Instance: Show
+Display a colour capsule on the left of the scene list to show instances.
+
+
+### Icons
+Set the size and opacity of the group, light, camera, mirror icons in the viewport
 
 ### Hierarchy lines
 Display a line between parent and its children in the viewport
-
-### Use Nomad pivot
-The Nomad pivot is the pivot used by the Transform and Gizmo tools. If this option is disabled, it will use the natural base pivot. In some cases this base pivot can be far away from the object center itself!
 
 ## Bottom toolbar
 These icons will toggle visibility of Group, Light, Camera, Repeater and Hierarchy lines in the viewport.
