@@ -41,7 +41,7 @@ Read the [Getting Started](gettingstarted.md) guide.
 | [Pressure](pressure.md)        | ![](./icons/pressure.png)    | Manage the pressure of your pencil                 |
 | [Painting](painting.md)	     | ![](./icons/paint.png)       | Painting settings for painting tools               |
 | [Symmetry](symmetry.md)        | ![](./icons/symmetry.png)    | Manage the mirror plane of your current mesh       |
-| [Layers](layers.md)            | ![](./icons/layers.png)      | Manage your current object layers                  |
+| [Layers](layers.md)            | ![](./icons/layer.png)       | Manage your current object layers                  |
 | [Settings](settings.md)        | ![](./icons/cog.png)         | Customize the 3d viewport                          |
 | [Interface](interface.md)      | ![](./icons/interface.png)   | Customize the interface                            |
 | [Tools](tools.md)              | ![](./icons/toolbox.png)     | List of every tools/brushes                        |

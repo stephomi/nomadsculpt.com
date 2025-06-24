@@ -11,14 +11,14 @@ This menu lets you manage objects, lights, cameras and repeaters in Nomad. It di
 | :--------------------: | :------------------------------: | :-----------------------------------------------------------------------------------------------------------------: |
 | [Add...](#add-menu)    | ![](./icons/plus.png)            | Display the [Add Menu](#add-menu) to add an object to the scene                                                     |
 | Delete                 | ![](./icons/trash.png)           | Delete the object                                                                                                   |
-| Lock                   | ![](./icons/lock_close.png)            | Make the object unselectable in the viewport. It can still be selected from the tree view.                          |
+| Lock                   | ![](./icons/lock.png)            | Make the object unselectable in the viewport. It can still be selected from the tree view.                          |
 | Join                   | ![](./icons/merge.png)           | Join the selected objects into a single object with no geometry changes                                             |
 | Separate               | ![](./icons/diagonal.png)        | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation |
 | [Boolean...](#boolean) | ![](./icons/subtract_circle.png) | Display the [Boolean](#boolean) menu                                                                                |
 | Clone                  | ![](./icons/clone.png)           | Duplicate the object into a new object                                                                              |
 | Instance               | ![](./icons/link.png)            | Duplicate the object as an instance, so modelling changes to one are made to all instances.                         |
 | Un-instance            | ![](./icons/unlink.png)          | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances                 |
-| Sync                   | ![](./icons/sync.png)            | If instances have children, ensure all instances share the same child hierarchy                                     |
+| Sync                   | ![](./icons/link.png)            | If instances have children, ensure all instances share the same child hierarchy                                     |
 
 
 ## Tree view

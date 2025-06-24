@@ -81,7 +81,7 @@ The buttons control how the paint all can be further affected:
 | ![](./icons/tool_mask.png) | Masked areas won't be affected.               |
 | ![](./icons/tool_hide.png) | Hidden areas won't be affected.               |
 | ![](./icons/opacity.png)   | use the tool painting factor above.           |
-| ![](./icons/layers.png)    | Unpainted areas of a layer won't be affected. |
+| ![](./icons/layer.png)     | Unpainted areas of a layer won't be affected. |
 
 
 ### Use stroke alpha
