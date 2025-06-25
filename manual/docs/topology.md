@@ -69,7 +69,7 @@ The *Subdivide* button will increase the number of polygons by 4, so make sure t
 One important aspect of *Subdivision Surface*  is that they will converge to a *Smooth Surface*.
 To understand how it works, you can try the *Subdivide* button on an object with only a few polygons.
 
-You can disable this *Smooth* behavior by checking the `Linear` option.
+You can disable this *Smooth* behavior by checking the `Linear subdivision` option.
 
 ### Delete lower
 If there are subdivisions below the currently displayed level, delete them. If you do this by accident, you can recreate them with the Reverse button.
@@ -77,15 +77,22 @@ If there are subdivisions below the currently displayed level, delete them. If y
 ### Delete higher
 If there are subdivisions above the currently displayed level, delete them.
 
-### Keep triangles
-Most standard subdivision surface systems will attempt to convert all polygons to quads during a subdivision operation. This toggle will force the subdivision to use triangles instead.
-
 ### Linear subdivision
 Subdivide the mesh without applying smoothing.
 
+### Sharp border
+If your object has facegroups, enabling this option will keep the facegroup borders sharp. This can be set at each subdivision level (the subdivision slider will have a small icon above the level to indicate this).
+
+### Keep triangles
+Most standard subdivision surface systems will attempt to convert all polygons to quads during a subdivision operation. This toggle will force the subdivision to use triangles instead.
+
+### Lock (LV0)
+
+Prevent the lowest subdivision level from being modified. This can be important if your object was generated in another application, and the base object has to remain unchanged. When this option is disabled, large changes made at higher subdivision levels will move level 0.
+
 ::: tip 
 
-Subdivision will smooth all sharp edges by default. To keep edges slightly sharp, experiment with using linear subdivision on the first 2 subdivide levels, then turn it off for the higher levels. This will create a semi-sharp subdivided mesh.
+Subdivision will smooth all sharp edges by default. To keep edges slightly sharp, experiment with using linear subdivision or Sharp border on the first 2 subdivide levels, then turn it off for the higher levels. This will create a semi-sharp subdivided mesh.
 
 :::
 
@@ -117,7 +124,13 @@ Execute the voxel remesh.
 The size of the voxels used during the calcuation. While changing this parameter a checkerboard pattern will be overlayed on the mesh to give a preview of the result.
 
 ### Build multiresolution
-Create lower multiresolution levels for the voxel remesh. If you use the checkerboard pattern to set a resolution, and set build multiresolution to 1, the remesh operation will first create a voxel mesh at double the checkboard size, project it onto your model, then subdivide, and project again. This can be a good way to both generate a clean mesh with even polygons, and have a lower resolution control mesh.
+Create lower multiresolution levels for the voxel remesh. If you use the checkerboard pattern to set a resolution, and set build multiresolution to 2, the final result will have detail that matches the resolution slider, and if you go to the multires tab, it will be at level 2, meaning you have lower resolution multires meshes at level 1 and level 0. This can be a good way to both generate a clean mesh with even polygons, and have a lower resolution control mesh.
+
+::: tip Tip: Build multiresolution and stable smoothing
+
+This option can sometimes cause 'loops' in the geometry that can be difficult to smooth, causing little pimples. If this happens, enable 'Stable smoothing' in the smooth tool options. 
+
+:::
 
 ### Keep sharp edges
 Enable snapping of the new points to sharp edges on the original mesh. It can introduce distortion.
@@ -136,17 +149,23 @@ See the video below in action.
 ![](./videos/dynamic.mp4)
 
 ### Enabled
-Turn on dynamic topology. A DynTopo icon will be placed below the brush radius and intensity sliders to remind you it is active.
+Turn on dynamic topology. A DynTopo icon will be placed below the brush radius and intensity sliders to allow you to toggle Dyntopo per tool.
 
 ### Detail
-The target polygon density when the detail mode is in `Constant`. A checkboard preview will be displayed when changing detail to indicate polygon size.
+Control the amount of detail, its behavior changes based on the 'Detail based on...' selection, see below.
 
 ### Detail based on...
 | Method   | Description                                                     |
 | :------: | :-------------------------------------------------------------: |
-| Screen   | The level of detail will depend how big the object is on screen |
-| Radius   | The tool radius defines the amount of detail                    |
-| Constant | The detail slider defines the amount of detail                  |
+| Screen   | The level of detail will depend how big the object is on screen. The detail slider is 100% or higher for fine detail, making small triangles, or 1% for low detail, making big triangles.  |
+| Radius   | The tool radius defines the amount of detail. Use a small tool radius, for fine detail, a big tool radius for low detail. The detail slider is a multiplier on this ratio.                     |
+| Constant | The detail slider defines the amount of detail, and isn't affected by screen size or tool size.             |
+
+::: tip TIP: Radius mode
+
+To get a better sense of how radius mode works, start moving the detail slider with one finger, then at the same time change the tool radius with another finger. You will see how they are linked.
+
+:::
 
 ### Prefer...
 | Method  | Description       |
@@ -164,6 +183,9 @@ That way, if you sculpt very small details or do quick strokes, the topology wil
 ### Use pressure on radius
 Only relevant if `Radius` is activated. When enabled, the level of detail will always reflect the brush size, even when the brush size is affected by pencil pressure.
 
+### Use stroke falloff
+
+Also include the brush falloff curve and alpha in the dyntopo calculations.
 
 ### Method
 Whether you are using `Dynamic Topology` on your [Brush](#brush) or [Globally](#global), you can choose in which mode it operates:
@@ -177,8 +199,11 @@ Whether you are using `Dynamic Topology` on your [Brush](#brush) or [Globally](#
 ### Protect masked area
 Enable masked areas protecting the topology from being changed.
 
+### Vertex extrapolation
+
+
 ### Detail
-A linked copy of the detail slider, placed near the remesh button for convenience.
+The resolution used for the remesh operation. If Dyntopo is in 'Constant' mode, it will be the same value as the Detail slider at the top of this menu.
 
 ### Remesh
 Execute a global remesh using the dyntopo algorithm. Usually you should use the [Voxel Remesher](#voxel-remesher) for full remeshing.
@@ -212,11 +237,9 @@ Start the decimate operation.
 
 #### ![](./icons/cog.png) Decimate gear menu
 The gear menu has these advanced options:
-##### Target triangles
-Set the target triangle count. The default value is 50%, the %/target button will toggle between a percentage or an exact target poly count.
-
 ##### Preserve painting
 The checkbox will toggle this mode, the value will determine how accurately painting detail will be preserved. Higher values will preserve more painting. Set to 0 if you do not care about painting.
+
 
 ##### Uniform faces
 The checkbox will toggle this mode. Higher values will output triangles with similar size.
@@ -224,11 +247,37 @@ The checkbox will toggle this mode. Higher values will output triangles with sim
 ##### Preserve borders
 Enable to stop borders being decimated. Border weights can be selected for `Geometry`, `Face Group` or `UV` borders.
 
+#### Target triangles
+Set the target triangle count. The default value is 50%, the percent/target button will toggle between a percentage or an exact target poly count.
+
 
 ### UV Unwrap - UVAtlas
 
 ![](./images/topology_uvatlas_menu.png)
 Compute texture coordinates (UVs) for the current mesh, generally preferring to make more islands with cuts, to minimise distortion.
+
+The small eye icon between the menu title and the gear menu will toggle previewing uv's on the object.
+
+![](./videos/unwrap.mp4)
+
+#### Unwrap
+Calculate UVs for the selected object, which will be displayed in the background.
+
+#### Delete UVs
+Delete UVs on the object.
+
+#### ![](./icons/cog.png) UVAtlas gear menu
+The gear menu has these advanced options:
+
+#### Face Group
+
+Use facegroups to define the cuts for the UV's.
+
+##### Max Stretch
+Low values create less distortion and more islands, high values create more distortion and less islands. 
+
+##### Island spacing
+The amount of padding between the islands. Low values will waste less space, but will risk textures bleeding between islands. 
 
 ::: warning
 Computing UVs can take some time, it is best to have a mesh with fewer than 100k vertices.
@@ -254,37 +303,32 @@ When models are made in Nomad, you can paint directly onto objects without UVs. 
 
 :::
 
-![](./videos/unwrap.mp4)
+### UV Unwrap - BFF
+![](./images/topology_uvbff_menu.png)
 
-#### Unwrap
-Calculate UVs for the selected object, which will be displayed in the background.
+BFF Uv's favour a 'less cuts, more distortion' approach. 
 
-#### Delete UVs
-Delete UVs on the object.
-
-#### ![](./icons/cog.png) UVAtlas gear menu
-The gear menu has these advanced options:
+#### ![](./icons/cog.png) UV BFF gear menu
 
 #### Face Group
 
 Use facegroups to define the cuts for the UV's.
 
-##### Max Stretch
-Low values create less distortion and more islands, high values create more distortion and less islands. 
+##### Cone count
+Define the number of main projections used. Lower values will produce fewer islands, but more distortion.
 
-##### Island spacing
-The amount of padding between the islands. Low values will waste less space, but will risk textures bleeding between islands. 
-
+##### Seamless patches
+Affects the layout of the uv patches, workes best with carefully created facegroups.
 
 ### Bake -> texture 
 ![](./images/topology_bake_menu.png)
 
-Texture baking will create textures by projecting other visible objects in the scene.
+Texture baking will create textures by projecting other visible objects in the scene into the uv's of the selected object.
 
 Here is the typical workflow for baking:
 - You have a mesh with fine details and painting
 - Clone it
-- Decimate it (set `Preserve painting` to 0!)
+- Decimate it (set `Preserve painting` to 0)
 - UV unwrap it
 - Bake it!
 
@@ -294,7 +338,7 @@ If there is no other visible objects, then it will take the entire scene into ac
 
 You should now have a low-resolution mesh that retains most of the paint and details of your previous object.
 
-After the operation, vertex colors will be moved in a new disabled layer, so that it gets ignored instead of being multiplied against the colored texture.
+After the operation, vertex colors will be moved in a new disabled layer, so they don't interfere with the textures.
 
 #### From itself
 Bake the highest multiresolution level to the lowest level on the current object. This is simple to setup, but often you will require more control, in which case the next option is more useful.
