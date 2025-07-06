@@ -344,7 +344,7 @@ After the operation, vertex colors will be moved in a new disabled layer, so the
 Bake the highest multiresolution level to the lowest level on the current object. This is simple to setup, but often you will require more control, in which case the next option is more useful.
 
 #### From high-res ()
-Bake from the other visible objects in the scene to the selected object. The number in brackets indicate the number of other visible objects that will be used as high-res targets, and baked into the current low-res object with uv's. The other objects do not need to be similar in layout or topology to the object being baked, allowing for interesting bake workflows.
+Bake from the other visible objects in the scene to the selected object. The number in brackets indicate the number of other visible objects that will be used as high-res targets, and baked into the current low-res object with uv's. The other objects do not need to be similar in layout or topology to the object being baked, allowing for versatile bake workflows.
 
 #### Resolution
 The resolution of the baked texture. Bake textures are always square, so 1024 will create a 1024x1024 image. 
@@ -352,19 +352,20 @@ The resolution of the baked texture. Bake textures are always square, so 1024 wi
 The buttons below are shortcuts for commonly used resolutions. For reference, 512x512 is relatively small, say for web graphics and simple geometry. 4096x4096 (4k for short) is for high quality renders.
 
 #### ![](./icons/cog.png) Bake gear menu
+![](./images/topology_bake_gear_menu.png)
 The gear menu has these advanced options:
 
 ##### Normal, Roughness, Metalness, Color, Emissive, Opacity
 These checkboxes will determine which properties will be baked, each into separate maps. After the bake is complete, these will be added as textures to the material of the current object.
 
 ##### Backup
-To preview the baked textures, the object's paint information should be disabled. This option will transfer any paint information to a new layer as a backup, and so it can be easily enabled/disabled.
+To preview the baked textures, the object's paint information should be disabled. This option will transfer any paint information to a new layer as a backup so it can be easily enabled/disabled.
 
 #### Cage radius
 Adjust how far away from the bake object rays are sent to look for target objects. By default this distance is kept low to avoid artifacts, but can be increased if the target objects are far away from the bake object.
 
 ##### Ray offset
-Adjust where the bake calculations start from on the bake object. By default they start 5% away from the surface, which avoids certain artifacts. If the target objects are very far away from the bake object, this offset might need to be increased.
+Adjust where the bake calculations start from on the bake object. By default they start 5% away from the surface, which avoids most common artifacts. If the target objects are very far away from the bake object, this offset might need to be increased.
 
 
 ### Reproject to vertex
@@ -372,6 +373,9 @@ Adjust where the bake calculations start from on the bake object. By default the
 ![](./images/topology_reproject_menu.png)
 
 Project sculpted details, painting, layers, textures into vertex values.
+
+It can be thought of as the inverse of baking; if baking transfer vertex properties to textures, reproject transfers textures (and other properties)
+ back into vertices.
 
 ::: tip
 When using `Bake to texture` or `Reproject to vertex`, both the vertex colors and material textures will be taken into account.
@@ -425,7 +429,7 @@ Adjust where the bake calculations start from on the selected object. By default
 Remesh using the [Instant Meshes algorithm by Wenzel Jakob, Marco Tarini, Daniele Panozzo, Olga Sorkine-Hornung](https://igl.ethz.ch/projects/instant-meshes/). It will analyze the flow of a mesh and create clean quad topology.
 
 ::: tip
-On iOS, the [Quad remesher](tools#quad-remesher) tool gives better results.
+On iOS and desktop, the [Quad remesher](tools#quad-remesher) tool gives better results and more control.
 :::
 
 #### Remesh
@@ -467,9 +471,13 @@ The polygon density used to fill the whole. While dragging this slider a checker
 ##### Fill non-manifold
 Try to fill non manifold hole.
 
+##### Face Group
+
+When filling holes, should each hole get its own facegroup (Auto), or should they all share a facegroup (Off), or don't create facegroups (On).
+
 ### Force Manifold
 ![](./images/topology_forcemanifold_menu.png)
-Try to clean non manifold edge. It can be useful for external software that don't support edges that have more than 2 faces in common.
+Try to clean non manifold edges. It can be useful for external software that don't support edges that have more than 2 faces in common.
 
 #### Clean
 Execute the clean action.
@@ -483,7 +491,7 @@ A threshold used to remove and join small polygons.
 ### Triplanar
 ![](./images/topology_triplanar_menu.png)
 Converts the mesh into a [triplanar](scene.md#triplanar) primitive.
-You might lose lot of details in the process.
+You will likely lose a lot of detail in the process.
 
 #### Force cubic
 Enable the triplanar to be a cube. Otherwise the triplanar will fit to the closest bounding box around your object.
@@ -492,7 +500,9 @@ Enable the triplanar to be a cube. Otherwise the triplanar will fit to the close
 Execute the triplanar action.
 
 #### Resolution
-The detail of the 'voxels' used in the triplanar operation.
+The voxel size used in the triplanar operation.
 
 ## ![](./icons/dot.png) Primitive
-If a primitive is selected, it's parameters will be displayed in this menu. Most of these options will be available from the viewport toolbar that is visible when a primitive is selected.
+Parameters for the selected primitive. These are also available in the primitive viewport toolbar.
+
+![](./images/topology_primitive_screenshot.png)
