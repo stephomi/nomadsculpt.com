@@ -29,6 +29,8 @@ This slider controls the resolution of the post processing. A value of x1.0 will
 
 ### Max samples
 
+This will increase the quality of post process, but generally `Full resolution` will have more impact. 
+
 ### Full resolution
 When enabled will force the resolution multiplier to x1.0
 

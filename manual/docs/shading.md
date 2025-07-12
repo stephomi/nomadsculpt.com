@@ -37,6 +37,7 @@ Toggle the grayscale mask overlay of the [mask tools](tools#mask). When this is 
 
 ### Use Hide
 
+Toggle hidden faces. Note this only works if you are NOT in the hide tool!
 
 ### Use textures
 
