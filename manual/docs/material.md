@@ -79,6 +79,12 @@ Make the object semi-transparent by discarding some pixels in a random fashion.
 
 Make the object invisible, and only recieve shadows. Useful to combine nomad renders with other images. 
 
+::: tip
+
+Further information about transparency and blending modes can be found at https://support.fab.com/s/article/Transparency-Opacity
+
+:::
+
 ## Controls
 
 ![](./images/material_controls.png)
@@ -148,16 +154,67 @@ Select another texture
 ### None
 Remove the texture
 
-### Filtering
+### Opacity
+
+If the image has an alpha channel, this will allow you to use it for Opacity, or to ignore it.
+
+### ![](./icons/link.png) Chain/Link icon 
+
+The link icon in the following sections, when enabled, will mean whatever options are used, will be shared with the other textures (color, normal, roughness, metalness, opacity, emissive) that also have their link icon enabled. 
+
+This allows you to ensure if you have aligned textures, they will stay aligned even you alter parameters or projection types.
+
+
+### Projection
+![](./images/material_projection.png)
+
+Set how the texture should be applied to the object.
+
+* `Auto` - If the object has uv's, UV, otherwise Triplanar
+* `UV` - Use the uv coordinates of the mesh to apply the texture. If the mesh and texture come from outside of Nomad, or are going to be exported from Nomad to use elsewhere, UV is the correct option.
+* `Triplanar` - Project the texture along the X,Y,Z axis', and blend the seams. 
+
+### Triplanar
+![](./images/material_triplanar.png)
+
+Triplanar projections are a powerful yet simple way to apply textures to objects.
+
+Triplanar is like having 6 video projectors all with the same image, shining onto the front, back, left, right, top and bottom of your object.
+
+This can then be baked into UVs or vertex colors if needed.
+
+
+![](./images/material_triplanar_example.png)
+
+#### Method
+
+* `Local` - The projection will move with the object transform
+* `World` - The projections stays fixed, moving the object will slide it through the projection.
+
+#### Hardness
+
+How the projections mix. 100% will do no blending, and the edges of the projections will be sharp. 0% will blend the edges over a wide angle. The default is 90%, enough mixing to hide the edges, and let the rest of the projections stay sharp.
+
+### Uniform
+
+When ticked, the same hardness is used for all projections. When unticked, extra hardness controls are exposed for X, Y, Z projections.
+
+
+### Parameter
+![](./images/material_parameter.png)
+
+#### Filtering
 The texture filter method to use, `Auto` is the default, methods are `Nearest`, `Linear`, `Mipmap`. Nearest does no filtering, so textures can get jagged artifacts when viewed up close. Linear and Mipmap do better filtering, so textures appear blurred rather than jagged up close.
 
-### Tiling-X
+#### Tiling-X
 If the Scale parameter is greater than 1, making the texture smaller than the object UVs, how will the texture be tiled along the X axis. `None` means no repeats. `Repeat` will do copies of the texture. `Mirror` will do copies of the texture, with every second copy reversed, which can help hide tiling artifacts.
 
-### Tiling-Y
+#### Tiling-Y
 Same as Tiling-X, but for the Y axis.
 
 ### Transform
+![](./images/material_transform.png)
+
 Extra 2d transformations applied to the texture in UV space. The reset button resets to defaults, the chain icon (when textures other than color are selected) will link or unlink the transform to be the same as the color texture.
 
 #### Translation
@@ -172,8 +229,3 @@ The scale of the texture, bigger numbers will make the texture smaller on the ob
 ### Uniform scale
 When turned off Nomad will show separate controls for Scale-X and Scale-Y.
 
-::: tip
-
-Further information about transparency and blending modes can be found at https://support.fab.com/s/article/Transparency-Opacity
-
-:::
