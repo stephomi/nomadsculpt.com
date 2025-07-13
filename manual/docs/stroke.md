@@ -35,8 +35,8 @@ When enabled, all tools will use the same radius, the default is for each tool t
 
 #### Size
 
-* Screen - the radius is set in screen units. So if you make the radius 100 pixels wide, when you zoom out or zoom in, the radius will remain 100 pixels wide.
-* Constant (3d) - the radius is set in 3d units. For example if you create a sphere and make the clay tool radius match the sphere, the radius will be the same as the sphere as you zoom in and out.
+* Screen - the radius is set in screen units. If you make the radius 100 pixels wide, it will stay 100 pixels wide regardless if you zoom in or out.
+* Constant (3d) - the radius is set in 3d units. For example if you create a sphere and make the radius the same size as the sphere, the radius stay the same size as the sphere as you zoom in and out.
 
 
 ### Stroke
@@ -53,17 +53,15 @@ Drag like a regular paint stroke.
 The brush alpha will be rotated to follow the direction of the stroke, useful for making fabric stitches. 
 ![](./videos/stroke_roll.mp4) 
 
-### ![](./icons/stroke_tile.png) Tile
-The brush alpha will be treated as a repeating pattern, and the brush stroke will reveal that pattern. The tiling is controlled from [Alpha -> Tiling](stroke#tiling).
-![](./videos/stroke_tile.mp4) 
-
  ### ![](./icons/radius.png) Lock + radius
- Stamp a brush stroke with fixed **height**. Drag will set the scale and rotation.
+ Stamp a brush stroke with fixed **_height_**. Drag will set the scale and rotation.
 ![](./videos/stroke_lock_radius.mp4) 
 
 ### ![](./icons/falloff.png) Lock + intensity 
-Stamp a brush stroke with fixed **radius**. Drag will set height and rotation.
+Stamp a brush stroke with fixed **_radius_**. Drag will set height and rotation.
 ![](./videos/stroke_lock_intensity.mp4) 
+
+![](./images/stroke_strokemodemove.png)
 
 The `Move` and `Drag` tools have their own 3 options:
 
@@ -82,9 +80,11 @@ Will select what is inside the brush radius when the brush is started, and keep 
 The user radius is ignored, and is set dynamically based on how far the stroke is dragged away from the starting point. A small distance=small radius, a larger distance = bigger radius. Use the intensity slider to control the shape of the falloff. Useful for blocking in organic rubbery shapes.
 ![](./videos/stroke_lockradius_drag.mp4) 
 
-![](./images/stroke_space_smooth.png)
+
 
 ### Adjust spacing intensity
+![](./images/stroke_space_smooth.png)
+
 Strokes with a low spacing (lower than 50%) can accumulate quickly, making more intense strokes than higher spacing values. This toggle will compensate for this, so strokes will be of approximately the same intensity regardless of spacing.
 
 ### Stroke spacing
@@ -95,26 +95,26 @@ Strokes will lag behind the pointer position by a certain distance. This can be 
 ![](./videos/stroke_lazy_rope.mp4) 
 
 ### Stroke smoothing
-Average multiple pointer position to get a smoother stroke.
+Average multiple pointer positions to get a smoother stroke.
 With high values, the stroke will lag behind the pointer but will eventually catch up.
-
-It can also be useful for drawing smooth lines.
+This is useful for drawing smooth lines.
 
 ### Snap radius
 Snap the start of the stroke to the end of the previous stroke. The radius determines how far to look for the end of the previous stroke. This can be useful when drawing long continuous lines, while doing frequent pauses.
 
-### Silhouette
+### ![](./icons/silhouette.png) Silhouette
+![](./images/stroke_silhouette.png)
 By default strokes will only affect the model surface within the brush radius. When silhouette is enabled, the stroke will be projected through the entire model. This can be very useful when doing the initial blocking out of a model, or for shapes that require the sides to remain perpendicular.
 
 The projection direction can be set explicitly, the default 'Closest' method will detect the best angle relative to the view. 
 
 ![](./videos/stroke_silhouette.mp4) 
 
-### Randomize
+### ![](./icons/dice.png)Randomize
 
 ![](./images/stroke_randomize.png)
 
-The intensity, translation, rotation and scale of the stroke can each be randomized. This can be used to create a range of effects, eg mottled color with the paint tool, or the crease tool can be used to create skin detail.
+The intensity, translation, rotation and scale of the stroke can each be randomized. This can be used to create a range of effects, eg randomize with the paint tool can create mottled color, or randomize with the crease tool can be used to create skin detail.
 
 ![](./videos/stroke_randomize.mp4) 
 
@@ -124,32 +124,50 @@ Apply a constant offset on the stroke. This is useful for small screens where yo
 
 
 ## ![](./icons/alpha.png) Alpha
-![](./images/stroke_alpha.jpg) 
+![](./images/stroke_alpha.png) 
+
 The `Alpha` is a texture that will modulate your brush behavior.
 It's a grayscale image, where black pixels mean no deformation and white pixels full deformation.
 
 Click on the alpha image to change it.
 
+Click on the material preview to load an alpha from a material preset. You can also save material presets here, and choose to embed textures with the tool.
+
 ::: tip
-The texture is never resized, so huge textures can slow down performance.
+The texture is never resized, so large textures can slow down performance.
 :::
 
 ### Invert pixels
-This will reverse the values of the image, so black pixels will become white, and white pixels will become black. This only works for user-imported textures.
+This will reverse the values of the image, so black pixels will become white, and white pixels will become black.
+
+::: tip
+
+The built in alphas that ship with Nomad cannot be inverted.
+
+:::
 
 ### Scaling
 
-The brush size in Nomad is a circle with a user defined radius. Textures are often square or rectangular, the `Scaling` parameters let you decide how the texture should fit within the circle. For a square texture, a value of 0.7 will fit within the circle. A value of 1 will do the opposite, and fit the circle within the texture, clipping the edges.
+The brush size in Nomad is a circle with a user defined radius. Textures are often square or rectangular, the `Scaling` parameters let you decide how the texture should fit within the circle. For a square texture, a value of 0.7 will fit within the circle. A value of 1 will scale the texture larger so that the circle fits inside, clipping the edges.
 
-![](./images/alpha_scaling.jpg) 
+![](./images/alpha_scaling.png) 
 
-Enabling `Scaling - Y` will allow you to stretch the texture vertically.
+Enabling `Scaling - Y` will allow you to stretch the alpha vertically.
 
-![](./images/alpha_scaling_y.jpg) 
+![](./images/alpha_scaling_y.png) 
 
 ### Rotation
 
 The alpha texture will be rotated to follow the direction of the stroke. You can add a rotation offset, and if the lock icon is enabled, the texture will stay locked to this rotation relative to the screen.
+
+### Tiling
+![](./images/stroke_tiling.png) 
+
+How often the texture repeats within the brush profile. The tiling modes allow you to limit to a single texture within the stroke, or repeated textures, or mirrored where every second texture is flipped to create patterns or help make seamless textures.
+
+![](./videos/alpha_tiling.mp4) 
+
+
 
 ### Mid value
 
@@ -157,28 +175,16 @@ By default black pixels will mean no deformation, and white pixels will mean ful
 
 If you want the brush to push the surface in, or both push in AND pull out, you can modify the mid value. So if you set the value to 0.5, a middle gray in the alpha will do nothing, a black value will push in, white will pull out.
 
-### Tiling
-
-How often the texture repeats within the brush profile. The tiling can be calculated from the mesh surface, or from the screen projection, allowing for a range of effects. In screen project, where you start the brush stroke is treated as the center of the screen projection. When screen project is active, and values are changed, an overlay will be shown to preview the results.
-
-The tiling modes allow you to limit to a single texture within the stroke, or repeated textures, or mirrored where every second texture is flipped to create patterns or help make seamless textures.
-
-![](./videos/alpha_tiling.mp4) 
 
 
 
 ## Falloff
 
-![](./images/falloff_menu.jpg) 
+![](./images/falloff_menu.png) 
 
-This is similar to the [Alpha](#alpha), except that you drive the intensity with a single curve.
-when the curve is on the top, this is full deformation, when it's at the bottom the brush has no effect.
+This is similar to the [Alpha](#alpha), except that you drive the intensity with a single curve. This is combined with the alpha so that you can use a texture for detail, and falloff to control the edge fading and intensity at the center of the tool.
 
-::: tip Symmetrical curve
-The curve is always symmetric, but if you go in the [Interface](interface.md) menu, you can choose to only display the left part of the curve.
-
-It doesn't change the behavior of the falloff, this is mostly for convenience.
-:::
+When the curve is on the top, this is full deformation, when it's at the bottom the brush has no effect.
 
 You can think of the curve as a cross section through the tip of the brush. The bottom section gives a preview of a what a single 'stamp' of the brush would look like on the model surface, and if there is an alpha texture for the brush, this will be shown too to preview how the falloff and alpha will interact.
 
@@ -196,51 +202,64 @@ When selected, the user can draw their own falloff curves. The curve editor work
 ### B-spline
 When selected, the user can draw their own falloff curves. The editor works the same as Catmull-Rom, but curve points influence the curve instead of being directly on the curve, which can help in creating smoother curve shapes.
 
-The curve editor has 3 extra buttons:
+The curve editor has 3 buttons:
 
 | Item     | Icon                       | Description                                  |
 | :------: | :------------------------: | :------------------------------------------: |
 | Maximize | ![](./icons/maximize.png)  | Expand the curve editor                      |
-| Symmetry | ![](./icons/symmetric.png) | Display the curve as a symmetric 'brush tip' |
 | Reset    | ![](./icons/reset.png)     | Revert the curve to the default state        |
+| Symmetry | ![](./icons/symmetric.png) | Display the curve as a symmetric 'brush tip' |
+
 
 ### Influence
 
 * Sphere (3d) - Influence is computed by taking the distance from the vertex to the brush's center.
 * Circle (2d) - The vertex is first projected on the area plane, before taking its distance to the brush's center. This is similar to how alphas are sampled. 
+* Cylinder - The influence is projected through the area as a cylinder, used by the Silhouette mode below.
+
+### Silhouette
+By default strokes will only affect the model surface within the brush radius. When silhouette is enabled, the stroke will be projected through the entire model. This can be very useful when doing the initial blocking out of a model, or for shapes that require the sides to remain perpendicular.
+
 
 
 ## Filter
-![](./images/filter_menu.jpg) 
+
+![](./images/filter_menu.png) 
 
 ### Accumulate stroke
 Enable no limit to how much matter can be added/removed per stroke. Eg the `Clay` tool has this enabled, so material can keep building up, while the `Brush` tool has this disabled, so strokes will stop adding material if you keep moving the same stroke over the same region of the mesh. 
-
-### Connected topology
-Enable only sculpting the vertices that are linked to the picked surface. For example when used with the `Move` tool, will alow you to exclusively move a part that self intersects with another part.
-![](./videos/connected_topology.mp4)
 
 ### Front-facing vertex only
 This option will ignore back facing vertices.
 It can be useful if you want to paint part of a thin geometry without impacting the other side.
 It also works for sculpting but you might experience some artifacts.
 
-### Face Group
-This option will limit the brush to the current face group.
-* Auto will filter when face groups are set to be visible from the [Lighting](lighting) menu, and be disabled when they are turned off.
-* On will always filter regardless if the face groups are visible or hidden.
-* Off will never filter regardless if the face groups are visible or hidden.
-
 ### Allow dynamic topology
-This option is only available if your mesh is in [Dynamic Topology](topology.md#dynamic-topology) mode.
-You can disable or enable the refinement for a specific tool.
+This option is only available if your mesh is in [Dynamic Topology](topology.md#dynamic-topology) mode. You can disable or enable dynamic topology per tool.
+
+### Connected topology
+Enable only sculpting the vertices that are linked to the surface you touch with the tool. For example when used with the `Move` tool, this will allow you to move a part even if it intersects with another part.
+![](./videos/connected_topology.mp4)
+
+### Protect Area
+![](./images/filter_protect_area.png) 
+
+These options will stop tools affecting parts of your mesh under various conditions. 
+
+The 'Auto' option means if you have hide, or mask, or facegroup visible in the [Shading](shading) menu, they will be protected, but if they are turned off in that menu, protection is disabled.
+
+* `All` - Toggle to set if the protect filters are global, or per tool.
+* `Hide` - If parts of the mesh are hidden with the hide tool, set if they should be protected.
+* `Mask` - If parts of the mesh are masked, set if they should be protected.
+* `Facegroup` - Set if you can only use a tool within the first touched facegroup.
+
 
 ### Keep sharp edges
 Exclude points whose normals differ too much from the surface normal.
 
 It will change how the plane area is computed (Area sampling).
 
-This option can be useful for flatten-based tools, or if you want to color a planar surface without over-spill.
+This option can be useful for flatten-based tools, or if you want to color a mostly flat surface without over-spill.
 
 ![](./videos/filter_keep_sharp_edges.mp4)
 
@@ -274,7 +293,7 @@ To only paint in high regions, set the height offset to +90%, so that the bottom
 
 
 ## Pressure 
-![](./images/pressure_menu.jpg) 
+![](./images/pressure_menu.png) 
 
 Control how the stylus/pen pressure affects the brushes.
 
@@ -282,9 +301,9 @@ By default `Use global settings` is enabled, meaning all brushes will share the 
 
 ### Pressure - Radius
 
-This curve controls how the brush radius is affected by pressure. The default is a linear relationship, so if your stylus has a smooth response, then the radius change should also feel smooth. That said, many stylii have a non-linear response, which you can compensate for with this curve. For example, if the radius doesn't like it gets to its maximum value at high pressure, use a curve preset like 'out-pow3', with a bend that aims up, to increase radius earlier.
+This curve controls how the brush radius is affected by pressure. The default is a linear relationship, so if your stylus has a smooth response, then the radius change should also feel smooth. That said, many stylii have a non-linear response, which you can compensate for with this curve. For example, if the radius doesn't feel like it gets to its maximum value at high pressure, use a curve preset like 'out-pow3', with a bend that aims up, to increase radius earlier.
 
-This dialog is similar to the falloff curve display, you can use preset by tapping on the curve window, or draw your own curve responses with the Catmull-Rom and B-Spline modes.
+This dialog is similar to the falloff curve display, you can use a preset by tapping on the curve window, or draw your own curves with the Catmull-Rom and B-Spline modes.
 
 If you want constant radius, disable this section.
 
@@ -294,4 +313,4 @@ Similar to the radius slider, but for controlling intensity. If you want constan
 
 ### Pressure smoothing
 
-Average the pencil pressure events for smoother results.
+Average the stylus pressure events for smoother results.
