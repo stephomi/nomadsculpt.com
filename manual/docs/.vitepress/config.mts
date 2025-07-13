@@ -34,7 +34,7 @@ export default defineConfig({
                 { text: 'Scene', link: '/scene' },
                 { text: 'Topology', link: '/topology' },
                 { text: 'Material', link: '/material' },
-                { text: 'Lighting', link: '/lighting' },
+                { text: 'Shading', link: '/shading' },
                 { text: 'Postprocess', link: '/postprocess' },
                 { text: 'Background', link: '/background' },
                 { text: 'Camera', link: '/camera' },

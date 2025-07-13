@@ -20,17 +20,23 @@ However, most of the time you want the post process to be disabled when you are 
 
 ![](./images/postprocess_quality.png)
 ### Max frame sampling
-Nomad will calculate a certain amount of post processing for a single frame render, which can look noisy. This control determines how many frames will be rendered, then blended together, which can remove most noisy artifacts. Some effects require no extra samples (eg color grading), while others like global illumination can require hundreds of samples to be noise free. 
+Nomad will calculate a certain amount of post processing for a single frame render, which can look noisy. This control determines how many frames will be rendered, then blended together to remove most noisy artifacts. Some effects require no extra samples (eg color grading), while others like global illumination can require hundreds of samples to be noise free. 
 
-In the viewport this can be seen whenever nomad is left alone, the image quality will gradually refine up to the max samples, then stop. This number of calculations is also used in the render section of the File menu, when 'export png' is clicked.
+In the viewport this can be seen whenever nomad is left alone, the image quality will gradually refine up to the max samples, then stop. This number of calculations is also used in the render section of the [Files menu](files) when 'export png' is clicked.
 
 ### Resolution multiplier
-This slider controls the resolution of the post processing. A value of x1.0 will mean the render's are done at the pixel resolution of the device. A value of x0.5 will render at half resolution, then scale up to the device resolution, which will be fast but low quality. A value greater than 1 will render at a bigger size, then scale down. This result in higher quality, less noise, but longer render times.
+This slider controls the resolution of the post processing. A value of x1.0 will mean the render's are done at the pixel resolution of the device. A value of x0.5 will render at half resolution, which will be fast but low quality. A value greater than 1 will render at a bigger size, then scale down. This result in higher quality, less noise, but longer render times.
 
 ### Max samples
 
+This will increase the quality of post process, but generally `Full resolution` will have more impact. 
+
 ### Full resolution
 When enabled will force the resolution multiplier to x1.0
+
+### Denoiser (oidn)
+
+Apply a denoiser to the image. This can allow you to use much lower samples. This only works if `Full Resolution` is enabled. Note that the denoising happens after all the samples have been calculated, and can be processor intensive.
 
 ## Preset browser
 ![](./images/postprocess_presets.png)
@@ -40,7 +46,7 @@ Clcking on the image will display a collection of post processing presets. To de
 ## Reflection (SSR)
 With this option, objects can reflect other objects in the scene, as long as the objects are visible on the screen.
 If you have metallic and shiny objects in your scene, then this option should probably be used.
-This effect is only effective with PBR mode.
+This option is only effective with PBR mode.
 
 
 | SSR off                    | SSR on                   |
@@ -49,24 +55,26 @@ This effect is only effective with PBR mode.
 
 ## Global Illumination (SSGI)
 
-Global illumination simulates how light bounces between surfaces, eg a red wall will cast red onto a nearby white object. This can hugely enhance the realism of a render along with ambient occlusion and reflections. 
+Global illumination simulates how light bounces between surfaces, eg a red wall will cast red onto a nearby white object. This can hugely enhance the realism of a render when used with ambient occlusion and reflections. 
 
-### Tolerance
-The accuracy of the global illumination. A high value will do more accurate lighting, but will require high max frame sample values to remove noise.
+`Strength` - The intensity of the global illumination. 
+
+
 
 | SSGI off                   | SSGI on                   |
 | :------------------------: | :-----------------------: |
 | ![](./images/ssgi_off.jpg) | ![](./images/ssgi_on.jpg) |
 
+_A spotlight is behind the sphere, aimed at the ceiling. With SSGI off, only the ceiling is lit. WIth SSGI on, light bounces from the ceiling to the walls to the sphere._
+
 ## Ambient Occlusion (SSAO)
 Ambient occlusion will darken areas where the light has less chance of reaching (corners, etc).
 The effect only depends on the model geometry.
 
-| Mode           | Description                                                   |
-| :------------: | :-----------------------------------------------------------: |
-| Strength       | Intensity of the effect                                       |
-| Radius         | How widespread the effect is                                  |
-| Curvature bias | How sensitive the effect is relative to the surface variation |
+* `Strength`- Intensity of the effect.
+* `Size`- How widespread the effect is.
+* `Curvature bias` - How sensitive the effect is relative to the surface variation.
+* `Color` - A tint multiplied into the occlusion, used for creative effects.
 
 
 | SSAO off                   | SSAO on                   |
@@ -83,6 +91,10 @@ Add a blur effect on the region that is outside the focus.
 
 Simply tap on your model to change the focus point.
 
+* `Far blur` - The amount of blurring to be applied on the far side of the focus point.
+* `Near blur` - The amount of blurring to be applied between the focus point and the camera.
+
+
 | DOF off                   | DOF focus on far ring      | DOF focus on close ring   |
 | :-----------------------: | :------------------------: | :-----------------------: |
 | ![](./images/dof-off.jpg) | ![](./images/dof-near.jpg) | ![](./images/dof-far.jpg) |
@@ -91,17 +103,25 @@ Simply tap on your model to change the focus point.
 ## Bloom
 Blooms will make the bright area of your scene glow.
 
+* `Intensity` - strength of the effect.
+* `Radius` - The spread of the effect.
+* `Threshold` - How bright pixels have to be in the scene before they start to bloom. Setting this value low will make everything bloom, setting it high will allow only the brightest pixels to bloom.
+* `Color` - a tint that can be added to bloom for creative effects.
+
 | Bloom off                   | Bloom with radius 0        | Bloom with radius 1        |
 | :-------------------------: | :------------------------: | :------------------------: |
 | ![](./images/bloom-off.jpg) | ![](./images/bloom-r0.jpg) | ![](./images/bloom-r1.jpg) |
 
 
 ## Tone Mapping
-`Tone Mapping` is an operation that will remap HDR values to the `[0, 1]` range.
-If you don't use it (or select `none`), any color component higher than 1 will be clamped.
+Tone Mapping is an operation that will remap HDR values to the `[0, 1]` range.
+If you don't use it (or select `none`), any color component higher than 1 will be clipped.
 Any color variations above this range will then be lost.
 
-You can adjust the overall image with `exposure`, `contrast` and `saturation`.
+* `None/Neutral/Agx/ACES` - which tonemapper to use. `None` does no remapping (but the other controls still work). The other options are similar to choosing different film stock, they will deal with overexposed values and colours in different ways. This is a very deep topic, lookup tone mapping, Agx, ACES for more info!
+* `Exposure` - overall brightness of the images, similar to adjusting aperture on a camera. This can be a quick way to globally brighten or darken an image.
+* `Saturation` - color strength. 1 is neutral, 0 is monochrome, values above 1 are increasingly saturated.
+* `Contrast` - Make darks darker and lights lighter. Use carefully, it can introduce artifacts at high values.
 
 Notice that with `Tone Mapping` disabled, some details disappear because the pixels are too bright.
 
@@ -121,7 +141,12 @@ Similar to the curves tool in Photoshop, this allows you to control the balance 
 | ![](./images/grading_off.jpg) | ![](./images/grading_on.jpg) |
 
 ## Curvature
-Sharpen the edges of the model.
+Detect where there are rapid changes in curvature, and apply a colour to those regions.
+
+* `Factor` - overall intensity of the effect
+* `Bump` - how much it will find sharp convex changes, and place the selected colour there (white by default)
+* `Cavity` - how much it will detect concave changes, and place the selected colour there (black by default)
+
 
 | Curvature off                   | Curvature on                   |
 | :-----------------------------: | :----------------------------: |
@@ -131,6 +156,8 @@ Sharpen the edges of the model.
 ## Chromatic Aberration
 Simulate the lens artifacts with light being decomposed around the screen edges.
 
+* `Strength` - how much the red/green/blue parts of the image get split towards the screen edges
+
 | Chromatic off                | Chromatic on                |
 | :--------------------------: | :-------------------------: |
 | ![](./images/chroma-off.jpg) | ![](./images/chroma-on.jpg) |
@@ -139,6 +166,10 @@ Simulate the lens artifacts with light being decomposed around the screen edges.
 ## Vignette
 Simulate the lens artifacts by darkening the screen edges.
 
+* `Size` - The size of a inverted ellipse placed over the image
+* `Hardness` - How blurry or sharp the ellipse is mixed on top of the image.
+
+
 | Vignette off                   | Vignette on                   |
 | :----------------------------: | :---------------------------: |
 | ![](./images/vignette-off.jpg) | ![](./images/vignette-on.jpg) |
@@ -146,13 +177,19 @@ Simulate the lens artifacts by darkening the screen edges.
 ## Grain
 Add a grain effect, it can help make the image a bit less artificial.
 
+* `Strength` - the amount of grain/noise added to the image.
+
+
 | Grain off                   | Grain on                   |
 | :-------------------------: | :------------------------: |
 | ![](./images/grain-off.jpg) | ![](./images/grain-on.jpg) |
 
 
 ## Sharpness
-Sharpen the model edges.
+A sharpen effect similar to that in Photoshop or photo processing apps.
+
+* `Strength` - the amount of sharpening applied to the image.
+
 
 | Sharpness off                 | Sharpness on                 |
 | :---------------------------: | :--------------------------: |
@@ -161,6 +198,9 @@ Sharpen the model edges.
 ## Pixel Art
 Simulate retro game pixel art.
 
+* `Slider` - size of the pixels
+* `Allow frame sampling` - if you get lots of black pixels, try turning this on, which will override the default sampling.
+
 | Pixel off                   | Pixel on                   |
 | :-------------------------: | :------------------------: |
 | ![](./images/pixel_off.jpg) | ![](./images/pixel_on.jpg) |
@@ -168,18 +208,13 @@ Simulate retro game pixel art.
 ## Scanline
 Simulate the look of old CRT monitors.
 
+* `Factor` - strength of the lines
+* `Spacing` - size of the lines
+
 | Scanline off                   | Scanline on                   |
 | :----------------------------: | :---------------------------: |
 | ![](./images/scanline_off.jpg) | ![](./images/scanline_on.jpg) |
 
-## Temporal Anti-Aliasing (TAA)
-This effect is enabled by default, this is not an artistic effect but a quality one.
-
-When the camera doesn't move, Nomad re-uses the previous frames to improve the quality of the overall image.
-TAA tries to do the same thing when the camera is moving, by reprojecting the previous frames onto the new view point.
-Most of the time it should be ok, but it can introduce some artifacts when the reprojection is a bit off (ghosting artifacts).
-
-The effects that benefits the most from the accumulation are [Ambient Occlusion](#ambient-occlusion-ssao), [Reflection](#reflection-ssr) and [Ambient Occlusion](#ambient-occlusion-ssao), [Depth of Field](#dof) and [Bloom](#bloom).
 
 ## Dithering
 
