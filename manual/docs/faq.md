@@ -11,9 +11,9 @@ On iOS, you can access the Nomad folder with the iOS Files app.
 On Android, the Nomad folder is in `Android/data/com.stephaneginier.nomad/files/`.  
 On the recent Android version (10/11), you don't have access to the `Android/data`folder anymore.
 You can access it through a separate app, for example [this one](https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer).
- <!-- [this one](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) -->
- <!-- [this one](https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer) -->
- 
+<!-- [this one](https://play.google.com/store/apps/details?id=com.alphainventor.filemanager) -->
+<!-- [this one](https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer) -->
+
 ### Is there a way to beta test?
 There is no Android/iOS beta version.  
 However you can see the list of bugs/fixes for the pending/incoming release in the [Logs](https://forum.nomadsculpt.com/t/nomad-change-log/139/500).  
@@ -151,7 +151,7 @@ Non PBR:
 * `Use the 'Matcap' mode in the lighting menu`. Choose a brighter matcap that is mostly white, with no color tint.
 
 PBR:
-* `Use a neutral environment`. You can [change the environment](lighting.md#environment) to a more neutral one. Avoid indoor environment as they tend to be more colored. Prefer a daylight outdoor or studio environment instead.
+* `Use a neutral environment`. You can [change the environment](shading.md#environment) to a more neutral one. Avoid indoor environment as they tend to be more colored. Prefer a daylight outdoor or studio environment instead.
 * `Boost the lighting`. If you were taking a photo of white paper in a dark room, you’d simply add more light. On the environment light, turn up the exposure slider until the colors start to feel right to you, or add more individual lights with more intensity.
 * `Boost the camera exposure`. If the dark room didn't have any extra lights, you could have the camera hold the shutter open for longer, or use a more sensitive ISO. In Nomad you can achieve a similar result with post processing. Go to post process, enable, down to tone mapping, enable, and raise the exposure slider until the colors feel right.
 * `Use emissive color`. In the material menu, you can enable 'emissive' under textures, which will make an object appear to be a light source. If you turn on global illmination in the post process settings, it will cast light onto other objects in the scene. You can also enable 'unlit' for that material, which will achieve a similar look without a texture.
@@ -188,11 +188,11 @@ If your project is using [Layers](layers.md), you might want to squash them to r
 Additionally, for legacy glb.lz4 file format, you can try the following:
 
 1. If your project is using [Layers](layers.md), enable the `Merge layers` option before loading the project.
-The option can be found in the `Files -> Settings` sub menu.  
+The option can be found in the `Files -> Settings` sub menu.
 Layers can take a lot of memory, merging them at loading can help reduce the memory peak usage.
 
-2. Decompress your [project](#where-are-my-projects-located-on-my-device) (`.glb.lz4` to `.glb`).  
-On windows, you need to download [LZ4](https://github.com/lz4/lz4/releases).  
+2. Decompress your [project](#where-are-my-projects-located-on-my-device) (`.glb.lz4` to `.glb`).
+On windows, you need to download [LZ4](https://github.com/lz4/lz4/releases).
 On MacOS, you can use the command line.
 With homebrew, simply do `brew install lz4` and then `lz4 myproject.glb.lz4`.
 

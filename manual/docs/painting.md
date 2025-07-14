@@ -43,7 +43,7 @@ For sculpting tools, the `Paint intensity` has its own slider, independent of th
 
 Clicking on the material ball will display a preset browser of Color/Roughness/Metalness combinations for skin, metal, plastics. These can be cloned to define your own presets.
 
-[PBR](lighting.md#pbr) painting uses 3 channels:
+[PBR](shading.md#pbr) painting uses 3 channels:
 - `Color` The color that will be painted. The eyedropper can be used to select color from other parts of the model, or from reference images.
 - `Roughness` It tells how "rough" or "smooth" a surface is. A low value for the roughness means that the reflections will be sharp.
 - `Metalness` It simply tells if the surface is metallic or not. The value should be either 0% or 100% most of the time, in-between values should be exceptional.
@@ -57,7 +57,7 @@ By default when you paint, all 3 channels are painted simultaneously. This means
 | Roughness 100% | ![](./images/dielectric_r100.jpg) | ![](./images/metal_r100.jpg) |
 
 ::: warning
-Metalness and roughness can't be supported if you are using [Matcap rendering](lighting.md#matcap), so if you paint you will only see the colors.
+Metalness and roughness can't be supported if you are using [Matcap rendering](shading.md#matcap), so if you paint you will only see the colors.
 :::
 
 Each channel also supports loading a texture, so you can paint with a color image. When using this feature, it's often useful to swap to something like the `Stamp` tool, or use the stroke menu to use a mode other than dot, which can smear the texture.

@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress';
-import markdownHtml5 from 'markdown-it-html5-embed';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -110,10 +109,11 @@ export default defineConfig({
                 const token = tokens[idx];
                 const src = token.attrGet('src');
                 if (src && src.startsWith('./videos')) {
+                    var srcImg = src.replace('.mp4', '.jpg');
                     var tag = '<video controls preload="metadata" poster="$0">';
                     tag += '<source src="$1" type="video/mp4">';
                     tag += '</video>\n';
-                    tag = tag.replace('$0', src.replace('.mp4', '.jpg'));
+                    tag = tag.replace('$0', srcImg);
                     tag = tag.replace('$1', src);
                     return tag;
                 }
@@ -126,14 +126,6 @@ export default defineConfig({
                 }
                 return self.renderToken(tokens, idx, options);
             }
-            // md.use(markdownItFitMedia, {
-            //     imgDir: './docs/../docs/',
-            //     lazyLoad: true,
-            //     decoding: 'auto',
-            //     aspectRatio: true,
-            //     imgSizeHint: true,
-            //     fitWrapElements: ['iframe', 'video']
-            // })
         }
     },
 

@@ -33,7 +33,7 @@ Read the [Getting Started](gettingstarted.md) guide.
 | [Scene](scene.md)              | ![](./icons/scene.png)       | Add new primitive and manage your scene objects    |
 | [Topology](topology.md)        | ![](./icons/multires.png)    | Edit the topology of the model                     |
 | [Material](material.md)        | ![](./icons/material.png)    | Material (object-level)                            |
-| [Lighting](lighting.md)        | ![](./icons/sun.png)         | How to light your scene                            |
+| [Shading](shading.md)          | ![](./icons/sun.png)         | How to light your scene                            |
 | [Post Process](postprocess.md) | ![](./icons/postprocess.png) | Post Processing (screen-space visual effects)      |
 | [Background](background.md)    | ![](./icons/image.png)       | Change the background and add a reference image    |
 | [Camera](camera.md)            | ![](./icons/camera.png)      | Camera control and interaction                     |
