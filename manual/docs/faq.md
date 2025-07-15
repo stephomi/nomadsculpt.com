@@ -47,12 +47,16 @@ In terms of memory and storage, most Nomad files tend to be 100mb or less. This 
 
 In terms of features, the only difference between iOS and Android is the Quad Remesher plugin. It is only available on iOS, so if that is important to you, get an iPad.
 
-### Can it work on multiple devices?
-Nomad is available on iOS App Store, Google Play and AppGallery.
+### I bought Nomad for one device, can I use it on another device?
+As long as it uses the same app store and same account, yes.
 
-Each platform is a separate platform, there is no Nomad licensing server.
+For example if you bought it on the iOS app store, you can use it on your other iOS devices.
 
-You can use Nomad on multiple devices as long as you are using the same Google, iCloud or AppGallery account.
+If you bought it for your Android tablet on Google Play, you can use it on your other Android devices.
+
+However if you bought Nomad on Android, then you get an iPad, you will need to buy it again.
+
+This is because Nomad does not have it's own license server or subscription model. There is no agreement between Apple/Google/AppGallery to handle license sharing. 
 
 
 ### How to restore my purchase?
