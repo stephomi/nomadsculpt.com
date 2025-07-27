@@ -12,12 +12,12 @@ You can use symmetry in several ways:
 * Mirrors can operate around the origin (called world mode)  or around the center of an object (called local mode).
 * Sculpts that started non-symmetrical can be forced to be symmetrical.
 
-A shortcut to enable/disable symmetry can also be found on the left quick panel (*"Sym"*). The small 'L/W' indicates if Nomad is in Local or World symmetry mode.
+A shortcut to enable/disable symmetry can also be found on the left quick panel (*"Sym"*). The small 'L/W' indicates if Nomad is in Local or World symmetry mode. You can also long press or swipe to the center of screen to bring out a menu.
 
-![](./images/symmetry_button.jpg) 
+![](./images/symmetry_button.png) 
 
 This is a global option, so the state will carry over the different tools.
-The only exception are the transforms tool ([Move](#translate), [Rotate](#rotate), [Scale](#scale) and [Gizmo](#gizmo)) which have their own symmetry state.
+The only exceptions are the transform tools ([Move](#translate), [Rotate](#rotate), [Scale](#scale) and [Gizmo](#gizmo)) which have their own symmetry state.
 
 ::: tip
 The symmetry menu is mainly for controlling stroke symmetry. You can also mirror and repeat objects via [repeaters found in the scene menu](scene#repeaters). 
@@ -42,9 +42,12 @@ The mirror can either be 'Local', and move with the object, or be 'World', and n
 
 When sculpting near the symmetry planes, some brushes will have imperfect symmetry behavior. This section allows you to restore symmetry by copying one side of your sculpt to the other. 
 
-![](./icons/tool_mask.png) The mask button lets you isolate what will be mirrored; masking the destination side will protect that region, masking the source side will stop that area from being mirrored to the destination. 
 
-The << and >> buttons determine which side will be copied to the other. Nomad calculates this from your current viewport, so setting it to << for example will always copy from screen right to screen left.
+`Direction` - The `<<` and `>>` buttons determine which side will be copied to the other. Nomad calculates this from your current viewport, so setting it to `<<` for example will always copy from screen right to screen left.
+
+![](./icons/shield.png) `Mask` - The mask button lets you isolate what will be mirrored; masking the destination side will protect that region, masking the source side will stop that area from being mirrored to the destination. 
+
+![](./icons/tool_hide.png) `Hide` -
 
 `Mirror` will try to identify if the topology is the same on both sides of the mirror, and if so, just move vertices. This is the more common scenario.
 
