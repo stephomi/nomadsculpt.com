@@ -9,7 +9,7 @@ Control the color, roughness, metalness of paint strokes, allow for flood fillin
 Nomad uses PBR vertex painting. What does this mean?
 
 ### PBR
-PBR, or Physically Based Rendering is a common rendering and texturing method in CGI in film, television, games and mobile, as it supports a wide variety of looks, is easy for artists to understand, and produces results that look photoreal.
+PBR, or Physically Based Rendering is a popular computer graphics technique for film, television, games and mobile. By basing lights on physical properties, and defining surfaces through color, roughness, metalness, a wide variety of photoreal looks can be achieved.
 
 ### Vertex painting
 
@@ -33,16 +33,39 @@ One example of workflow:
 - Export back to Nomad for rendering purpose
 :::
 
-## Painting - Paint
+That's the overview, now lets explore the sections of the painting menu:
 
-You can enable painting with most tools.
-For sculpting tools, the `Paint intensity` has its own slider, independent of the main deformation slider.
+
+## Stroke painting
+![](./images/paint_intensity.png)  
+
+Enable painting for this tool, useful if you need to sculpt and paint at the same time.
+
+For tools where painting is the primary function (eg Paint, Smudge, Mask), this checkbox doesn't exist.
+
+## Paint intensity
+
+A slider to allow you to ise a different intensity to the primary tool intensity.
+
+The `Alpha`, `Falloff` and `Randomize` checkboxes determine if those features will affect painting. Eg you could have randomize enabled for the clay tool, but color won't be randomized.
 
 
 ## Material
+![](./images/paint_material.png) 
 
-Clicking on the material ball will display a preset browser of Color/Roughness/Metalness combinations for skin, metal, plastics. These can be cloned to define your own presets.
+The first icon is a material preview shape. Dragging on the 3d material preview will rotate it. 
 
+The second icon is a preview of the paint stroke with the selected alpha and falloff options.
+
+
+## Material Presets
+Tapping the 3d preview shape will bring up a preset menu of materials, these can be cloned to define your own presets.
+
+![](./images/paint_presets.png) 
+
+The `Embed Textures` and `Alpha` toggles when enabled will store any textures used by this material within the preset. This is explained more below.
+
+## PBR sliders
 [PBR](shading.md#pbr) painting uses 3 channels:
 - `Color` The color that will be painted. The eyedropper can be used to select color from other parts of the model, or from reference images.
 - `Roughness` It tells how "rough" or "smooth" a surface is. A low value for the roughness means that the reflections will be sharp.
