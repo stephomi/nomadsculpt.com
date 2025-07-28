@@ -54,9 +54,9 @@ The 'More...' button will show extra options for the current layer:
 
 #### Channel factors
 
-These controls let you scale the amount of sculpt/color/roughness/metalness/opacity this layer displays. These values are multiplied against the layer factor slider, so for example if the layer strength is 1, but the color channel factor is 0.5, then the color displayed will be at 0.5 strength.
+These controls let you scale the amount of sculpt/color/roughness/metalness/opacity for the layer. These values are multiplied against the layer factor slider, so for example if the layer strength is 1, but the color channel factor is 0.5, then the color displayed will be at 0.5 strength.
 
-`Offset` is a slider for the layer sculpt strength. While color/roughness/metalness are clamped between 0 and 1, offset can be any value, both positive and negative. 
+`Offset` controls the layer sculpt strength. While color/roughness/metalness are clamped between 0 and 1, offset can be any value, both positive and negative. 
 
 ::: tip
 Offset can be used to turn a layer of bumps into a layer of cavities, or a smile into a frown:
@@ -82,32 +82,57 @@ Maybe in the future, each channel will have its own alpha channel to remove this
 #### ![](./icons/tool_mask.png) Mask
 The mask button next to each slider will create a mask from that channel. Similar to using layers to make selections in painting applications, this allows you to reuse work you have done in a layer for other operations.
 
+#### ![](./icons/preview.png) Preview
+![](./images/layers_preview.png) 
+
+When enabled, will preview the extract settings for this layer (see the next section).
+
+When xray is enabled, only the exacted shape will be solid, the rest of the shape will be made transparent, useful if you are using negative extraction heights.
+
 #### Extract
+![](./images/layers_extract.png) 
 
 ![](./videos/layer_shell.mp4)
 
-The `Extract` button will duplicate the contents of the layer into a new object. The options under 'Closing action' determine how the duplication is done.
+The `Extract` button will duplicate the contents of the layer into a new object, usually with a user specifed thickness set by the next section.
+
+`Closing action` determines how the duplication is done:
 
 * None - Simply extract the part, do not try to generate sides or fill any holes.
 * Fill - Hole is filled and smoothed with triangles. Do not use this option for flat surfaces.
 * Shell - Close the extracted shape with the thickness value and direction options.
 * Layer - Extract the layer difference.
 
-Smoothness - If the edges of the region to be extracted are jagged, this slider will attempt to blur the edge into a smoother shape. 
+#### ![](./icons/height.png) Thickness
+![](./images/layers_thickness.png) 
 
-#### Shell
-This section is visible when the closing action is 'Shell'. 
-
-Thickness - The depth of the shell extrusion. 
+The depth of the shell extrusion. Positive values grow out of the surface, negative values grow into the surface.
 
 The plus/minus next to this value will set the direction of the extrusion:
 * Minus ( - ) will start from the current surface and extrude down. 
 * Plus ( + ) will start from the current surface and extrude up.
 * PlusMinus ( ± ) will push the top and bottom of the extrusion away by equal amounts, so it will be halfway embedded in the original surface.
 
-Auto Edge-loop (side) and Edge loop (side) control the sides of the shell extrusion. Auto will calculate the number of edge loops along the shell sides to create square polygons. If disabled, the Edge loop slider will set the number of divisions on the sides.
+#### Smoothness
+![](./images/layers_smoothness.png) 
 
-### Keep top layers details
+If the edges of the region to be extracted are jagged, this slider will attempt to blur the edge into a smoother shape. 
+
+#### ![](./icons/height.png) Edge loop (side)
+![](./images/layers_edgeloop.png) 
+
+This section is visible when the closing action is 'Shell'. 
+
+`Auto Edge-loop (side)` will calculate the number of edge loops along the shell sides to create square polygons. 
+
+If disabled, the `Division` slider will set the number of divisions on the sides.
+
+_This is the end of the 'More...' submenu._
+
+### Advanced
+![](./images/layers_advanced.png)
+
+#### Keep top layers details
 
 Ensure that small details on higher layers remain visible when large changes are made to lower changes.
 
@@ -116,8 +141,16 @@ By default if you sculpt small wrinkles on a layer, then go and make large chang
 ![](./videos/layers_details.mp4)
 
 
-### UI: Expand list
+#### UI: Expand list
 
 The default layer menu lets you toggle layer visibility and the layer opacity. Enabling this option expands the full controls for every layer.
 
 ![](./images/layers_expand.png)
+
+#### Sync transform
+
+If enabled, all the unselected layers will be adjusted depending on the transform rotation, scale, skew. 
+
+Disbale this option if the other layers are meantt o be used without the new transform that you are applying.
+
+When set on `Auto`, only the visible layers will be adjusted.
