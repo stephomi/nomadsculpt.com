@@ -123,10 +123,7 @@ Not planned for now, iOS has a [video recording feature](https://support.apple.c
 Under iOS, this is done by swiping down from the top left, and tapping the record button. It will give you a 3 second countdown, swipe the menu away to reveal Nomad, and use the turntable feature. When complete, swipe down again from the top right, and tap the record button again. Edit the movie from the photo library to remove excess footage at the start and end of the video.
 
 ### Can you add [insert-favorite-feature] as a top-level button?
-If I did that each time I received such a request, Nomad wouldn't be usable.  
-Customization is probably the way to go, but it's not straightforward.
-Handling a small screen is challenging.
-
+Yes, the lower toolbar can now be customised from the [interface](interface.md) menu. 
 
 ### What are the next features?
 For the mid/long term roadmap I have a lot of ideas but I don't know yet.  
