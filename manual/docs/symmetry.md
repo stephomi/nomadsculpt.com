@@ -47,7 +47,7 @@ When sculpting near the symmetry planes, some brushes will have imperfect symmet
 
 ![](./icons/shield.png) `Mask` - The mask button lets you isolate what will be mirrored; masking the destination side will protect that region, masking the source side will stop that area from being mirrored to the destination. 
 
-![](./icons/tool_hide.png) `Hide` -
+![](./icons/tool_hide.png) `Hide` - When active, areas that are hidden on the source side will not be mirrored to the destination. 
 
 `Mirror` will try to identify if the topology is the same on both sides of the mirror, and if so, just move vertices. This is the more common scenario.
 
@@ -55,14 +55,13 @@ When sculpting near the symmetry planes, some brushes will have imperfect symmet
 
 ### Flip object
 ![](./images/symmetry_flip.png)
-Make the left side the right side, and vice versa. Similar in appearance to if you used the gizmo tool menu and set the scale to -1 on X.
+Make the left side to the right side, and vice versa. Similar in appearance to if you used the gizmo tool menu and set the scale to -1 on X.
 
-## Reset
+## Reset and Edit
 
-It is possible to edit the symmetry location and orientation (but not recommended!). If needed, 'object center' and 'orientation' will reset the symmetry location and orientation to their default values.
-
-## Edit
 ![](./images/symmetry_edit.png)
+
+It is possible to edit the symmetry location and orientation (but not recommended!). If needed, `World center` and `Orientation` will reset the symmetry location and orientation to their default values.
 
 Nomad usually knows where to put the symmetry plane. It is not recommended to adjust this manually, but the `Gizmo (Edit)` button allows this for advanced users. When this button is clicked, a gizmo is shown to let you translate and rotate the symmetry plane. If you want to restore the default center and orientation, the `object center` and `orientation` buttons will do this.
 
@@ -73,6 +72,10 @@ So if it doesn't work as you would expect, make sure to check if you are in the 
 The `Gizmo (Edit)` button is intentionally grayed out as a reminder that you probably shouldn't use this!
 :::
 
-'Show line' and 'Show plane' will toggle a viewport overlay of the symmetry locations. Note that turning off these options will only take effect when the symmetry menu is closed.
+## Show options
+![](./images/symmetry_show.png)
+
+
+`Show line` and `Show plane` will toggle a viewport overlay of the symmetry locations. Note that turning off these options will only take effect when the symmetry menu is closed.
 
 
