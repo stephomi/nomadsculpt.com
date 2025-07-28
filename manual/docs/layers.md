@@ -8,11 +8,11 @@ This menu contains the layer stack, a way to store edits to your object in a non
 
 Nomad layers serve multiple purposes.
 
-Paint information (Color, Roughness, Metalness, Opacity) work with layers similar to 2d paint applications. A layer can be created and paint applied to a model. The layer can be toggled on or off, have its opacity adjusted, the layer can be duplicated, its order can be changed in the layer stack.
+Paint information (Color, Roughness, Metalness, Opacity) work with layers similar to 2d paint applications. A layer can be created and paint applied to a model. The layer can be toggled on or off, have its opacity adjusted, the layer can be duplicated, its order can be changed in the layer stack, its blending mode adjusted.
 
-Nomad also users layers for sculpting. A layer can store fine details like wrinkles, or it can store large changes, allowing them to function like blendshapes in 3d applications. For example you could sculpt different facial expressions on different layers, and adjust the layer sliders to combine them into new expressions.
+Nomad also users layers for sculpting. A layer can store fine details like wrinkles, or it can store large changes, allowing them to function like blendshapes/shape keys/morph targets in other 3d applications. For example you could sculpt different facial expressions on different layers, and adjust the layer sliders to combine them into new expressions.
 
-In this case the changes stored in a layer are purely additive, so layering in the stack doesn't matter like it does for paint.
+In this case the changes stored in a layer are purely additive, layer order doesn't matter like it does for paint.
 
 Layers can be partially erased via the [Delete Layer](tools.md#delete-layer) tool, and layers can also be used to create masks based on the different information stored in the layer.
 
@@ -35,8 +35,9 @@ Each layer has a name, a slider to control it's strength/factor, and option butt
 ### Options
 
 | Action       | Icon                        | Description                                         |
-| :----------: | :-------------------------: | :-------------------------------------------------: |
-| Visible      | ![](./icons/eye_open.png)   | Show/hide the layer influence                       |
+| :----------: | :-------------------------: | :-------------------------------------------------  |
+| Visible      | ![](./icons/eye_open.png)   | Show/hide the layer                                 |
+| Blend Mode   | ![](./icons/opacity.png)    | The photoshop style blending mode. The 4 icons display the modes for Color, Roughness, Metalness, Opacity.                                 |
 | Edit Name    | ![](./icons/pencil.png)     | Edit the layer name                                 |
 | Delete       | ![](./icons/trash.png)      | Delete the layer                                    |
 | Duplicate    | ![](./icons/clone.png)      | Duplicate the layer                                 |
@@ -53,11 +54,12 @@ The 'More...' button will show extra options for the current layer:
 
 #### Channel factors
 
-These controls let you change how much of the sculpt/color/roughness/metalness/opacity are shown. These values are multiplied against the layer factor slider, so for example if the layer strength is 1, but the color channel factor is 0.5, then the color displayed will be at 0.5 strength.
+These controls let you scale the amount of sculpt/color/roughness/metalness/opacity this layer displays. These values are multiplied against the layer factor slider, so for example if the layer strength is 1, but the color channel factor is 0.5, then the color displayed will be at 0.5 strength.
 
 `Offset` is a slider for the layer sculpt strength. While color/roughness/metalness are clamped between 0 and 1, offset can be any value, both positive and negative. 
 
-This can be used to turn a layer of bumps into a layer of cavities, or a smile into a frown:
+::: tip
+Offset can be used to turn a layer of bumps into a layer of cavities, or a smile into a frown:
 ![](./videos/layer_happysad.mp4)
 
 
@@ -67,7 +69,7 @@ A symmetrical layer can be cloned and then split into left/right shapes with del
 Layers with negative offset factors can be baked down to empty layers to make new positive shapes.
 
 Layers with positive offset factors above 1 can be used to experiment with more extreme blendshapes.
-
+:::
 
 ::: warning
 At the moment layers only share a single opacity channel for all 3 channels (color/metalness/roughness).
