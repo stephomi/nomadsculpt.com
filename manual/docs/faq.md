@@ -28,24 +28,51 @@ But the main reason is that I felt like paid Android apps are not really the nor
 
 ### What is the best tablet to run Nomad on?
 
-This is a very common question! The answer is 'the best iPad you can afford, unless you really hate Apple, in which case the best Android tablet you can afford'. People always want more information, so here's a summary.
+TLDR: An iPad.
 
-Nomad runs best on iPads. The newest most expensive iPad available will be able to render final images very quickly, and let you sculpt a lot of detail.
+The slightly longer answer is 
 
-While it's true that the most expensive iPad runs Nomad the best, the drop in performance with cheaper and older iPads isn't as bad as people expect. Any iPad that supports an Apple Pencil runs Nomad quite well. For example:
+> "The newest iPad _you can afford_, unless you really hate Apple, in which case the newest Samsung tablet you can afford. Anything else, test first." 
 
-- An iPad Pro from 2023 can handle 5 million poly sculpts and be responsive, a final quality image can render in 5 seconds.
-- An iPad Pro from 2015 can handle a 1.2 million poly object with a bit of lag, a final quality image can render in 20 seconds.
+People always want more information, so here's a summary.
 
-The latest top of the line iPad Pro in 2024 is $2600. The 2023 iPad Pro currently costs $800 second hand. The 2015 iPad Pro costs $200. Non Pro models can be cheaper still and give a wide variety of sizes and performance to choose from. This means whatever your budget, you should be able to find an iPad for you. And remember that most sculpts aren't millions of polys! If you can keep under 500,000 polys, even old iPads will let you sculpt quickly.
+Nomad runs best on newer iPads:
 
-Android graphics performance is below that of iPads. A Samsung Galaxy Tab S9 will run Nomad an order of magnitude slower than an iPad Air. If you only care about performance, get an iPad. If you *really* don't want to get an iPad,  modern Samsung Galaxy tablets runs Nomad good enough for most sculpting. 
+* iPads and iPhones can access the [Quad Remesher](tools#quad-remesher) plugin from [Exoside](https://exoside.com/)
+* recent iPads with the latest pencil support 'barrel roll', you can twist the pencil in certain tools in Nomad. 
+* performance of the latest M series chips is very fast. 
 
-For tablets other than Samsung, it is best to test with the free Nomad demo first. Android hardware can vary in performance a lot, so it's not easy to predict how Nomad will run.
+The newest most expensive iPad available will be able to render final images very quickly, and let you sculpt a lot of detail.
 
-In terms of memory and storage, most Nomad files tend to be 100mb or less. This means almost any tablet you buy these days, iPad or Android,  will have plenty of room for your Nomad projects.
+However, the drop in performance with cheaper and older iPads isn't as bad as people expect. Any iPad that supports an Apple Pencil runs Nomad quite well. For example:
 
-In terms of features, the only difference between iOS and Android is the Quad Remesher plugin. It is only available on iOS, so if that is important to you, get an iPad.
+* An iPad Pro from 2023 can handle 5 million poly sculpts and be responsive, a final quality image can render in 5 seconds.
+* An iPad Pro from 2015 can handle a 1.2 million poly object with a bit of lag, a final quality image can render in 20 seconds.
+
+That's a big performance difference, but you also have to take into account the price:
+
+* The 2025 iPad Pro is *$2500 USD* brand new with all the options. 
+* The 2023 iPad Pro currently costs *$400 USD* on eBay.
+* The 2015 iPad Pro costs *$250 USD* on eBay.
+
+Is getting an extra 4 million polys and saving 15 seconds worth $2100? That's up to you.
+
+Non Pro models can be cheaper still and give a wide variety of sizes and performance to choose from. The current iPad Air supports the gen 2 pencil with barrel roll, and is substantially cheaper than the Pro. The second hand and refurbished market has even more options. 
+
+This means whatever your budget, you should be able to find an iPad for you. And remember that most sculpts aren't millions of polys! If you can keep under 500,000 polys, even old iPads will let you sculpt quickly.
+
+`What about Android?`
+
+Android graphics performance is below that of iPads. According to Nomad's developer, "A Samsung Galaxy Tab S9 will run Nomad an order of magnitude slower than an iPad Air". That said a lot of users are very happy with their Samsung tablets, Nomad runs fine for most sculpting. 
+
+For other Android tablets, be careful. Android hardware can vary in performance a lot, it's not easy to predict how Nomad will run.
+
+Please use the free save-disabled version of Nomad to test first. 
+
+`What about memory and storage?`
+
+Most Nomad files tend to be 100mb or less. This means almost any tablet you buy these days, iPad or Android,  will have plenty of room for your Nomad projects.
+
 
 ### I bought Nomad for one device, can I use it on another device?
 As long as it uses the same app store and same account, yes.
