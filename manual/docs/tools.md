@@ -1,14 +1,20 @@
 # ![](./icons/toolbox.png) Tools
 
-![](./images/tools_menu.jpg)
+![](./images/tools_menu.png)
 
 ## Overview
-Nomad has many tools that can be broadly categorized as follows:
+Nomad has many tools, by default they are colour coded in the toolbox:
 
-* Brush tools that directly affect the surface of an object, eg [Clay](#Clay)
-* Mask tools that will protect the surface from changes, eg [Mask](#Mask)
-* Selection based tools where a 2d mask is drawn first, then an operation happens, eg [Trim](#Trim)
-* Special tools with their own interaction methods, eg [Tube](#Tube)
+* <span style="color: white;">**Brush tools**</span> that directly affect the surface (Clay, Brush, Smooth, Layer, Inflate, Nudge, Stamp, DelLayer)
+* <span style="color: #996666;">**Mask tools**</span> that will protect the surface from changes (Mask, SelMask)
+* <span style="color: #FFFF99;">**Paint tools**</span> (Paint, Smudge)
+* <span style="color: #99FF66;">**Flatten tools**</span> (Flatten, Planar)
+* <span style="color: #FF9966;">**Pinch tools**</span> (Crease, Pinch)
+* <span style="color: #CC6666;">**Selection based tools**</span> where a 2d mask is drawn first, then an operation happens (Trim, Split, Project)
+* <span style="color: #FF9900;">**Creation tools**</span> that are interaction based (Tube, Lathe, Insert)
+* <span style="color: #FF99CC;">**Transform tools**</span> (Transform, Gizmo)
+* <span style="color: #99CCFF;">**Misc tools**</span> (Facegroup, Hide, Measure, Select)
+* <span style="color: #66FFCC;">**View tool**</span>
 
 Many of these tools can be customized with different brush behavior, pressure, textures etc via the [Stroke](stroke.md) menu. 
 
