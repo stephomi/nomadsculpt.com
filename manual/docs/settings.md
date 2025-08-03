@@ -5,9 +5,9 @@ The settings menu contains many options to control the appearance and behavior o
 ![](./images/settings_overview.png)
 
 ## Display settings
-This section is quick launch shortcuts for most of the setting below.
+This section contains quick launch shortcuts for most of the settings further down this menu.
 
-![](./images/settings_display_settings.jpg)
+![](./images/settings_display_settings.png)
 
 ### Smooth Shading 
 If Smooth Shading is disabled, the faces are shaded independently, so you can see the underlying topology.
@@ -49,6 +49,14 @@ Display a helper icon in the corner of the scene, useful to quickly switch betwe
 ### Show Painting
 You can check this option if you want to ignore the object's painting.
 The default paint used is a white non-metallic material, at 25% roughness.
+
+### Use Hide
+
+### Show Mask
+
+### Mask -> Opaque
+
+### Highlight
 
 ### Stats
 Display information about your system memory, total scene vertex count, and the current selection vertex count.
