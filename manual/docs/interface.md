@@ -237,7 +237,9 @@ Nearly all functions in Nomad can be bound to keyboard shortcuts if your device 
 
 To create a binding, click the rectangle next to the function, and press the key/button. 
 
-Individual bindings can be disabled via the checkbox next to the binding name. The search bar at the top can find functions by name.
+Find functions via the category icons at the top, or via the search bar to find by name. 
+
+Individual bindings can be disabled via the checkbox next to the binding name.
 
 ### ![](./icons/more.png) Context menu
 The ![](./icons/more.png) icon after each binding brings up a context menu:
@@ -253,7 +255,6 @@ The ![](./icons/more.png) icon after each binding brings up a context menu:
 At the bottom of the bindings menu is a gear menu for advanced options:
 
 ![](./images/interface_bindings_advanced.png)
-
 
 * `Toggle shortcut on key tap` - A tap of the standard shortcuts for mask, smooth, gizmo, hide, sub will toggle to that mode, but holding the key down will switch to hat mode, then when the key is released, the mode will revert to the previous mode. Sometimes called 'sticky keys' in other 3d apps.
 * `Toggle tool shortcuts` - When using one of the tool shortcuts, if the same shortcut is pressed twice, it will toggle to the previous tool. In this way you can keep swapping between two tools with the same hotkey.
@@ -275,12 +276,11 @@ Some experimental and debug options are stored in this menu. Many of these optio
 
 ![](./images/interface_debug.png)
 ### UV
-* `Add BFF UVs` - Add an alternative unwrapping method (boundary first flattening). Note that BFF will produce overlaps if your mesh topology is different than a disk or sphere.
 * `Normalize Uvs` - Nomad will normalize the UVs inside the [0-1] tile.
 
 ### Quad Remesh
 * `Instant Mesh` - Enable the instant remesh algorithm
-* `Quadriflow` - An alternative quad remesh method, but it might crash!
+* `Quadriflow` - An alternative quad remesh method.
 
 ### Render
 * `Heightmap` - Change the viewport to render the depth of the scene. This can be used to create alpha maps to use for brushes.
@@ -288,10 +288,17 @@ Some experimental and debug options are stored in this menu. Many of these optio
 * `Flip Y (normal map)` - Invert the y channel when baking normal maps, required for certain game and render engines.
 * `Angle weighted smooth normals` - An adjustment to how smooth shading works that can avoid creases in certain cases.
 
-### Interface
-* `Top: layout` Collapse: On small devices the top bar will collapse into more sub menus. Scroll: If you're used to Nomad on large displays and prefer the normal layout, enabling this will use the standard wide top bar, and it can be scrolled. Multiline: Display the entire top menu over several lines.
-* `Bottom: draggable popup` - The bottom toolbar has several buttons that pop up a dialog. If this options is enabled, those dialogs can be moved elsewhere on screen.  
+### Target FPS
+When disabled, Nomad will sync its frames-per-second with your display's refresh rate.
 
+When enabled, you can set the frame per second Nomad will render.
+
+### Interface
+* `Top: layout` 
+  * Collapse: On small devices the top bar will collapse into more sub menus. 
+  * Scroll: If you're used to Nomad on large displays and prefer the normal layout, enabling this will use the standard wide top bar, and it can be scrolled.
+  * Multiline: Display the entire top menu over several lines.
+* `Bottom: draggable popup` - The bottom toolbar has several buttons that pop up a dialog. If this options is enabled, those dialogs can be moved elsewhere on screen.  
 * `Toolbox: show all` - Nomad will hide tools that aren't relevant for the current selection, eg all sculpt brushes are hidden on primitives that aren't validated. This option will dim disabled tools rather than hide them.
 * `Toolbox: colored` - Colour code the toolbox icons based on their type.
 * `Panel: Drop shadows` - Draw drop shadows around menus and panels. On some older devices this can impact performance.
@@ -303,9 +310,9 @@ Nomad can export an animated gif turntable. Note that due to limitations of the 
 
 * `Duration` - how long in seconds the turntable will be
 * `Rotation center` - where the camera pivot is, therefore what part of the scene the camera will rotate around
-* `Transparent background` - Use the transparent option for gifs. Note that gif's only support 1bit transparency, so edges can be badly aliased.
+* `Transparent background` - Use the transparent option for gifs. Note that gif's only support 1 bit transparency, so edges can be badly aliased.
 * `Max frame sampling` - Many of Nomads high quality rendering effects come from combining several frames together. This slider sets how many frames to combine.
-* `Gif export` - start the gif export process.
+* `Export (GIF)` - start the gif export process.
 
 ### Post Process
 * `Filtering` - Debug option
@@ -313,11 +320,15 @@ Nomad can export an animated gif turntable. Note that due to limitations of the 
 * `Buffer reuse` - Debug option
 
 ### Performance
-* `Partial Drawing` - Experimental feature! Use if you are sculpting a relatively small part of a high poly mesh. It should make the sculpting smoother, but you should not enable wireframe! Also it might add visual artifacts during brush strokes.
+* `Multicore general` - Debug option
 * `Multicore sculpting` - Debug option
+* `Partial Drawing` - Experimental feature! Use if you are sculpting a relatively small part of a high poly mesh. It should make the sculpting smoother, but you should not enable wireframe! Also it might add visual artifacts during brush strokes.
 
-### Dev
+### Feature
 * `Flip quad split (on tap)` -  Debug option
-* `App review popup` - Debug option
 * `Join: merge radius` - Vertices will be automatically welded if they are close enough when meshes are joined. You can adjust the radius with this slider.
 
+### Debug
+* `Logs` - Popup a log view
+* `App review popup` - Debug option
+* `FPS` - add a frames-per-second counter to the viewport stats.
