@@ -10,24 +10,23 @@ This section contains quick launch shortcuts for most of the settings further do
 ![](./images/settings_display_settings.png)
 
 ### Smooth Shading 
-If Smooth Shading is disabled, the faces are shaded independently, so you can see the underlying topology.
-This is the reason why disabling it is preferred during the sculpting stage.
-However for rendering purposes, sometimes you might want to enable it.
+Toggle smooth and faceted shading. When faceted the polygons are shaded independently, so you can see the underlying topology.
+It can be useful to see faceted shading during the sculpting stage, then change to smooth shading for rendering.
 
-Disabling Smooth Shading improves the performance a little bit.
+Disabling Smooth Shading improves performance a little bit.
 
 ### Outline
-You can display an outline on your current selection.
+Toggle an outline on your current selection.
 
-This is useful to get visual feedback on your current selected meshes in case [Darken Unselected](#darken-unselected-objects) is disabled.
+This is useful to get visual feedback on your current selected mesh(es) in case [Darken Unselected](#darken-unselected-objects) is disabled.
 
 From a performance point of view, using [Darken Unselected](#darken-unselected-objects) is much better than using the outline solution.
 
 ### Grid
-Display a planar grid so that you can get a better understanding of how your scene is positioned on the scene.
+Toggle a background grid, useful for understanding object placement and scale.
 
 ### Two sided
-All faces point in a certain direction.
+Toggle two sided polygon display. All faces point in a certain direction.
 Faces that are considered *backface* are the ones that point "away" from the camera viewpoint.
 
 For example the startup simple sphere will have its faces point towards the outside.
@@ -39,37 +38,44 @@ Disabling `two sided` rendering can improve rendering performance a bit.
 
 
 ### Wireframe
-Display the topology of the scene.
+Toggle a wireframe overlay. 
 
-Note that showing the Wireframe will lower the performance.
+Note that enabling wireframe will lower performance.
 
 ### Snap cube
-Display a helper icon in the corner of the scene, useful to quickly switch between front/back/left/right/top/bottom views.
+Toggle a helper icon in the corner of the scene, useful to orient yourself in space and quickly switch between front/back/left/right/top/bottom views.
 
 ### Show Painting
-You can check this option if you want to ignore the object's painting.
-The default paint used is a white non-metallic material, at 25% roughness.
+Toggle paint display. The default paint used is a white non-metallic material, at 25% roughness.
 
 ### Use Hide
+Toggle the hide mode. When turned off it is still there, just deactivated. This button is disabled if you are currently using the hide tool.
 
 ### Show Mask
+Toggle the mask mode. When turned off it is still there, just deactivated. Press this button again to re-enable it.
+
+If you need to hide the mask AND still have it be active, use the mask color below and set it to white. Remember to change it back to a gray when you're done!
+
+Note that this button is disabled if you are currently using a mask tool. 
 
 ### Mask -> Opaque
+Mask -> opaque will ignore transparent vertices for masked mask. This is only relevant for vertex and texture opacity, face hidden by “hide” will still be hidden.
 
 ### Highlight
+Toggle the selection highlight flash. When selecting objects, temporarily flash the selected object hot pink for 500 miliseconds. The color and length of the flash can be customised below.
 
 ### Stats
-Display information about your system memory, total scene vertex count, and the current selection vertex count.
+Toggle the status display text in the 3d viewport. This displays information about your system memory, total scene vertex count, and the current selection vertex count.
 
 ----- 
-
-### Highlight selection
-Temporarily flash object(s) in the hightlight color (pink by default) when selected by tap or with the select tool.
 
 ### Darken Unselected objects
 The objects that are not selected will be darkened so that the current selection can stand out.
 
-## Cursor
+### Mask
+The colour used for masking, by default a mid gray, multiplied against your object color. Set this to white to make the mask invisible, but remember to change it back to to a gray when done!
+
+## ![](./icons/cursor.png) Cursor
 
 ### Show circle while sculpting
 Continue to show the brush radius when sculpting.
@@ -80,7 +86,7 @@ Display a dot at the center of the brush stroke while sculpting, or when the cam
 ### Show rope stabilizer
 Draw a line to indicate the rope length when lazy rope stablizer is active in stroke settings.
 
-## Indicator
+## ![](./icons/cursor.png) Indicator
 ![](./images/settings_indicator.png)
 
 Display visual indicator(s) for tutorials and screen captures.
@@ -93,31 +99,51 @@ The color of the indicator.
 ### Size/Icon/Circle
 Controls to adjust the size of the indicator and shapes within the indicator.
 
-## Wireframe
-Activate the wireframe overlay, and set the wireframe color and opacity.
+## ![](./icons/wireframe.png) Wireframe
+![](./images/settings_wireframe.png)
+Activate the wireframe overlay.
 
-## Grid
-Activate the grid, and set the grid color and opacity
+### Target
+Set if unselected objects will show wireframe, or only selected objects, or all objects.
 
-## Two sided
+### Hide
+Set if the wireframe will still be shown for hidden polygons.
+
+### Multiresolution: Level 0 only
+Multiresolution will show wireframes for level 0 darker, and higher levels progressively lighter. When enabled, this option will only show the level 0 wireframe.
+
+### Color
+Set the color and opacity for wireframe.
+
+## ![](./icons/grid.png) Grid
+![](./images/settings_grid.png)
+Activate the grid.
+
+### Color
+Set the grid color and opacity.
+
+### Snap
+Enable snapping for curve based tools to the grid.
+
+## ![](./icons/culling.png)Two sided
 Enable seeing polygon faces from both sides.
 
 ### Color Backface, Backface Color
 Enable tinting of the backfaces, and the tint color.
 
-## Outline
+## ![](./icons/outline.png)Outline
 Enable an outline around the active object.
 
 ### Outline color, Thickness
 Set the color and thickness of the outline.
 
 
-## Highlight
+## ![](./icons/bang.png) Highlight
 Enable a short flash when the active object is changed.
 ### Color, Duration
 Set the color and length of time of the flash in milliseconds.
 
-## Snap cube
+## ![](./icons/snap_cube.png) Snap cube
 ![](./images/settings_snapcube.png)
 
 Display a helper icon in the corner of the scene, useful to quickly switch between front/back/left/right/top/bottom views. Tap on the sides of the cube to swap between orthographic views.
@@ -131,21 +157,24 @@ Enable camera rotation locking when dragging on the snap cube. When active, a dr
 ### Size
 Set the size of the snap cube.
 
-### Position
-
-Set which corner the snap cube will be in.
-
 ### Flip 180
 Enable a tap behavior so that if the view is snapped, tapping on the center of the cube will rotate the view 180 degrees. For example if the view is snapped to the front, tapping the view cube will rotate to the back view.
 
-## Stats
+### Position
+Set which corner the snap cube will be in.
+
+
+## ![](./icons/edit_radius_n.png) Stats
 ![](./images/settings_stats.png)
 
 Display information about your system memory, total scene vertex count, and the current selection vertex count.
 
 ### Position
-
 Set which corner the stats will be in.
+
+## Primtive/Repeaters
+## Numerical input
+Allow numerical input when tapping the gizmo widgets.
 
 ## Multiresolution
 ### Max vertices count
