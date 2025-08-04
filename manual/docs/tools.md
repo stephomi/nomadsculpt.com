@@ -20,9 +20,11 @@ Many of these tools can be customized with different brush behavior, pressure, t
 
 ### Tool controls
 
+The panel on the left side of the screen controls the tool radius and intensity, and hotkeys specific to certain tools, explained in each tool's help section below.
+
+
 ![](./images/tool_left_panel.jpg)
 
-The panel on the left side of the screen controls the tool radius and intensity, and hotkeys specific to certain tools, explained in each tool's help section below.
 
 ::: tip
 The intensity slider for many tools can go above 100%, worth experimenting with!
@@ -30,9 +32,11 @@ The intensity slider for many tools can go above 100%, worth experimenting with!
 
 ### Shape selector
 
+The [Trim](#trim), [Split](#split), [Project](#project), [Facegroup](#facegroup) and [Hide](#hide) tools all use similar controls for selecting areas of the mesh, and are chosen with the shape selector panel on the left of the screen. 
+
 ![](./images/tools_shape_selector_panel.jpg)
 
-The [Trim](#trim), [Split](#split), [Project](#project), [Facegroup](#facegroup) and [Hide](#hide) tools all use similar controls for selecting areas of the mesh, and are chosen with the shape selector panel on the left of the screen. 
+
 
 * `Lasso` - A freehand drawn shape
 * `Polygon` - An enclosed shape defined by a combination of curves and/or straight lines. See [Shape editing](#shape-editing) below for more info.
