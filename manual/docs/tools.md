@@ -3,39 +3,42 @@
 ![](./images/tools_menu.png)
 
 ## Overview
-Nomad has many tools, by default they are colour coded in the toolbox:
 
-* <span style="color: white;">**Brush tools**</span> that directly affect the surface (Clay, Brush, Smooth, Layer, Inflate, Nudge, Stamp, DelLayer)
-* <span style="color: #996666;">**Mask tools**</span> that will protect the surface from changes (Mask, SelMask)
-* <span style="color: #FFFF99;">**Paint tools**</span> (Paint, Smudge)
-* <span style="color: #99FF66;">**Flatten tools**</span> (Flatten, Planar)
-* <span style="color: #FF9966;">**Pinch tools**</span> (Crease, Pinch)
-* <span style="color: #CC6666;">**Selection based tools**</span> where a 2d mask is drawn first, then an operation happens (Trim, Split, Project)
-* <span style="color: #FF9900;">**Creation tools**</span> that are interaction based (Tube, Lathe, Insert)
-* <span style="color: #FF99CC;">**Transform tools**</span> (Transform, Gizmo)
-* <span style="color: #99CCFF;">**Misc tools**</span> (Facegroup, Hide, Measure, Select)
-* <span style="color: #66FFCC;">**View tool**</span>
+Tools are selected from the `Toolbox` on the right, and controlled with the `Tool Controls` on the left. Brush tools have controls for size and intensity, selection tools have controls for several selection styles, and the bottom of the tool controls has shortcuts for frequently used operations (Smooth, Mask, Hide, Gizmo, Colour, Alpha).
+
+Nomad's many tools are colour coded in the toolbox:
+
+* <span class=brush>**Brush tools**</span> that directly affect the surface (Clay, Brush, Smooth, Layer, Inflate, Nudge, Stamp, DelLayer)
+* <span class=mask>**Mask tools**</span> that will protect the surface from changes (Mask, SelMask)
+* <span class=paint>**Paint tools**</span> (Paint, Smudge)
+* <span class=flatten>**Flatten tools**</span> (Flatten, Planar)
+* <span class=pinch>**Pinch tools**</span> (Crease, Pinch)
+* <span class=selection>**Selection based tools**</span> where a 2d mask is drawn first, then an operation happens (Trim, Split, Project)
+* <span class=creation>**Creation tools**</span> that are interaction based (Tube, Lathe, Insert)
+* <span class=transform>**Transform tools**</span> (Transform, Gizmo)
+* <span class=misc>**Misc tools**</span> (Facegroup, Hide, Measure, Select)
+* <span class=view>**View tool**</span>
+
+
 
 Many of these tools can be customized with different brush behavior, pressure, textures etc via the [Stroke](stroke.md) menu. 
 
+
 ### Tool controls
 
-The panel on the left side of the screen controls the tool radius and intensity, and hotkeys specific to certain tools, explained in each tool's help section below.
-
+The left toolbar has sliders for radius and intensity, and then tool category specific controls, explained below.
 
 ![](./images/tool_left_panel.jpg)
-
 
 ::: tip
 The intensity slider for many tools can go above 100%, worth experimenting with!
 :::
 
-### Shape selector
+#### Shape selector
 
-The [Trim](#trim), [Split](#split), [Project](#project), [Facegroup](#facegroup) and [Hide](#hide) tools all use similar controls for selecting areas of the mesh, and are chosen with the shape selector panel on the left of the screen. 
+The [Trim](#trim), [Split](#split), [Project](#project), [Facegroup](#facegroup) and [Hide](#hide) tools all use similar controls for selecting areas of the mesh.
 
 ![](./images/tools_shape_selector_panel.jpg)
-
 
 
 * `Lasso` - A freehand drawn shape
