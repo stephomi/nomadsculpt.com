@@ -61,11 +61,11 @@ Polygon editing and curve editing behave in similar ways:
 * To delete a point, drag a point into its neighbor until it turns red.
 * The trash icon in the corner of the polygon or path icon will delete the shape.
 
-## Tool context menu
+## Toolbox context menu
 
 ![](./images/tools_context_menu.jpg)
 
-A right click or long press on a tool will bring up a context menu. This menu has the following options:
+A right click or long press on a tool in the toolbox will bring up a context menu. This menu has the following options:
 
 * `Save` - save any changes you made to the tool
 * `Clone` - duplicate the tool into a new tool shortcut
