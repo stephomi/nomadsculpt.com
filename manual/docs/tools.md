@@ -88,7 +88,7 @@ Many tools have extra setttings that are found in the settings menu, the first i
 |   ![](./icons/tool_transform.png) <br>  [Transform](#transform)    | ![](./icons/tool_gizmo.png) <br>   [Gizmo](#gizmo) | ![](./icons/tool_faceGroup.png)  <br>   [FaceGroup](#facegroup)  |    ![](./icons/tool_hide.png) <br>    [Hide](#hide)    | ![](./icons/tool_measure.png) <br>    [Measure](#measure) | ![](./icons/tool_remesh.png) <br>  [Quad Remesher](#quad-remesher) |
 |     ![](./icons/tool_select.png)  <br>      [Select](#select)      |  ![](./icons/tool_view.png) <br>    [View](#view)  |                                                                  |                                                        |                                                           |                                                                    |
 
-
+------
 
 ### ![](./icons/tool_clay.png) Clay
 The Clay tool is useful for building up your sculpture. `Sub` will remove material from your sculpture.
@@ -124,11 +124,19 @@ The alternate mode is the `Relax` mode, which only smooths the wireframe but tri
 
 #### Smooth settings
 
-![](./images/tool_smooth_settings.jpg)
+![](./images/tool_smooth_settings.png)
 
+##### Facegroup
+
+* `Relax` - Will smoooth the borders of facegroups. Use intensity greater that 100% to quickly smooth borders. `Auto` will smooth only if facegroup preview is enabled, `Off` will disable, `On` will enable. 
+
+##### Vertex
 * `Sticky vertex on border` - For meshes with open edges, eg a plane, it is possible to smooth out the corners. Enabling this option will lock the open edges.
 * `Relax` - the same as the relax alternate mode in the left hand toolbar.
 * `Stable smoothing` - Tries to make the smoothing topology independent. This works best with varying topology density and with a high smoothing intensity value.
+
+##### Painting
+
 
 ::: tip
 Higher polygon densities can require raising the intensity above 100%. Very high values (300%, 500%) can also work well as a sculpting tool, forcing areas to go flat and smooth quickly under the brush, like hitting clay with a mallet!
