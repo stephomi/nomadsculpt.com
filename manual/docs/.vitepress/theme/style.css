@@ -196,6 +196,7 @@ html.dark {
 }
 
 span.brush { color: #fff; }
+span.move { color: #9791C8; }
 span.mask { color: #966; }
 span.paint { color: #FF9; }
 span.flatten { color: #9F6; }

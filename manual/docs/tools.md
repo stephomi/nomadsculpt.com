@@ -2,19 +2,26 @@
 
 ![](./images/tools_menu.png)
 
+::: tip
+Jump down to [Tools](#tools-1) for descriptions of the individual tools.
+:::
+
 ## Overview
 
-Tools are selected from the `Toolbox` on the right, and controlled with the `Tool Controls` on the left. Brush tools have controls for size and intensity, selection tools have controls for several selection styles, and the bottom of the tool controls has shortcuts for frequently used operations (Smooth, Mask, Hide, Gizmo, Colour, Alpha).
+Tools are selected from the `Toolbox` on the right, and controlled with the `Tool Controls` on the left. Extra settings are found in the `Settings` menu, the first icon in the top-right menu.
 
-Nomad's many tools are colour coded in the toolbox:
+Brush tools have controls for size and intensity. Selection tools have controls for several selection styles. The bottom of the tool controls has shortcuts for frequently used operations (Smooth, Mask, Hide, Gizmo, Color, Alpha).
 
-* <span class=brush>**Brush tools**</span> that directly affect the surface (Clay, Brush, Smooth, Layer, Inflate, Nudge, Stamp, DelLayer)
-* <span class=mask>**Mask tools**</span> that will protect the surface from changes (Mask, SelMask)
+Nomad's tools are colour coded in the toolbox:
+
+* <span class=brush>**Brush tools**</span> (Clay, Brush, Smooth, Layer, Inflate, Nudge, Stamp, DelLayer)
+* <span class=move>**Move tools**</span> (Move, Drag)
+* <span class=mask>**Mask tools**</span> (Mask, SelMask)
 * <span class=paint>**Paint tools**</span> (Paint, Smudge)
 * <span class=flatten>**Flatten tools**</span> (Flatten, Planar)
 * <span class=pinch>**Pinch tools**</span> (Crease, Pinch)
 * <span class=selection>**Selection based tools**</span> where a 2d mask is drawn first, then an operation happens (Trim, Split, Project)
-* <span class=creation>**Creation tools**</span> that are interaction based (Tube, Lathe, Insert)
+* <span class=creation>**Creation tools**</span> (Tube, Lathe, Insert)
 * <span class=transform>**Transform tools**</span> (Transform, Gizmo)
 * <span class=misc>**Misc tools**</span> (Facegroup, Hide, Measure, Select)
 * <span class=view>**View tool**</span>
@@ -24,7 +31,7 @@ Nomad's many tools are colour coded in the toolbox:
 Many of these tools can be customized with different brush behavior, pressure, textures etc via the [Stroke](stroke.md) menu. 
 
 
-### Tool controls
+### Brush controls
 
 The left toolbar has sliders for radius and intensity, and then tool category specific controls, explained below.
 
@@ -34,7 +41,7 @@ The left toolbar has sliders for radius and intensity, and then tool category sp
 The intensity slider for many tools can go above 100%, worth experimenting with!
 :::
 
-#### Shape selector
+### Selection controls
 
 The [Trim](#trim), [Split](#split), [Project](#project), [Facegroup](#facegroup) and [Hide](#hide) tools all use similar controls for selecting areas of the mesh.
 
@@ -61,32 +68,25 @@ Polygon editing and curve editing behave in similar ways:
 * To delete a point, drag a point into its neighbor until it turns red.
 * The trash icon in the corner of the polygon or path icon will delete the shape.
 
-## Toolbox context menu
+### Settings menu
 
-![](./images/tools_context_menu.jpg)
+Many tools have extra setttings that are found in the settings menu, the first icon in the top right menu:
 
-A right click or long press on a tool in the toolbox will bring up a context menu. This menu has the following options:
-
-* `Save` - save any changes you made to the tool
-* `Clone` - duplicate the tool into a new tool shortcut
-* `Last save` - revert to the previously saved version of the tool
-* `Icon` - change the icon for the tool
-* `Reset` - reset the tool to its defaults
+![](./images/tools_settings_menu.png)
 
 
 
 ## Tools
 
-|                                                                |                                                               |                                                                    |                                                   |
-| -------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------- |
-| ![](./icons/tool_clay.png)       [Clay](#clay)                 | ![](./icons/tool_brush.png)   [Brush](#brush)                 | ![](./icons/tool_move.png)         [Move](#move)                   | ![](./icons/tool_drag.png)    [Drag](#drag)       |
-| ![](./icons/tool_smooth.png)     [Smooth](#smooth)             | ![](./icons/tool_mask.png)    [Mask](#mask)                   | ![](./icons/tool_maskSelector.png) [Selector Mask](#selector-mask) | ![](./icons/tool_paint.png)   [Paint](#paint)     |
-| ![](./icons/tool_smudge.png)     [Smudge](#smudge)             | ![](./icons/tool_flatten.png) [Flatten](#flatten)             | ![](./icons/tool_planar.png)       [Planar](#planar)               | ![](./icons/tool_layer.png)   [Layer](#layer)     |
-| ![](./icons/tool_crease.png)     [Crease](#crease)             | ![](./icons/tool_trim.png)    [Trim](#trim)                   | ![](./icons/tool_split.png)        [Split](#split)                 | ![](./icons/tool_project.png) [Project](#project) |
-| ![](./icons/tool_inflate.png)    [Inflate](#inflate)           | ![](./icons/tool_pinch.png)   [Pinch](#pinch)                 | ![](./icons/tool_nudge.png)        [Nudge](#nudge)                 | ![](./icons/tool_stamp.png)   [Stamp](#stamp)     |
-| ![](./icons/tool_clearLayer.png) [Delete Layer](#delete-layer) | ![](./icons/tool_tube.png)    [Tube](#tube)                   | ![](./icons/tool_lathe.png)        [Lathe](#lathe)                 | ![](./icons/tool_insert.png)  [Insert](#insert)   |
-| ![](./icons/tool_transform.png)  [Transform](#transform)       | ![](./icons/tool_gizmo.png)   [Gizmo](#gizmo)                 | ![](./icons/tool_faceGroup.png)    [FaceGroup](#facegroup)         | ![](./icons/tool_hide.png)    [Hide](#hide)       |
-| ![](./icons/tool_measure.png)    [Measure](#measure)           | ![](./icons/tool_remesh.png)  [Quad Remesher](#quad-remesher) | ![](./icons/tool_select.png)       [Select](#select)               | ![](./icons/tool_view.png)    [View](#view)       |
+
+|                                                                    |                                                    |                                                                  |                                                        |                                                           |                                                                    |
+| :----------------------------------------------------------------: | :------------------------------------------------: | :--------------------------------------------------------------: | :----------------------------------------------------: | :-------------------------------------------------------: | :----------------------------------------------------------------: |
+|         ![](./icons/tool_clay.png) <br>      [Clay](#clay)         | ![](./icons/tool_brush.png) <br>  [Brush](#brush)  |       ![](./icons/tool_move.png)  <br>       [Move](#move)       |    ![](./icons/tool_drag.png)  <br>  [Drag](#drag)     |  ![](./icons/tool_smooth.png)  <br>    [Smooth](#smooth)  |          ![](./icons/tool_mask.png)  <br>   [Mask](#mask)          |
+| ![](./icons/tool_maskSelector.png)<br>  [Sel Mask](#selector-mask) | ![](./icons/tool_paint.png)  <br>  [Paint](#paint) |     ![](./icons/tool_smudge.png)  <br>    [Smudge](#smudge)      | ![](./icons/tool_flatten.png) <br> [Flatten](#flatten) | ![](./icons/tool_planar.png)  <br>      [Planar](#planar) |      ![](./icons/tool_crease.png) <br>     [Crease](#crease)       |
+|         ![](./icons/tool_pinch.png) <br>   [Pinch](#pinch)         |  ![](./icons/tool_trim.png) <br>    [Trim](#trim)  |     ![](./icons/tool_split.png) <br>        [Split](#split)      |   ![](./icons/tool_project.png) [Project](#project)    |    ![](./icons/tool_layer.png)  <br>  [Layer](#layer)     |     ![](./icons/tool_inflate.png) <br>    [Inflate](#inflate)      |
+|      ![](./icons/tool_nudge.png)   <br>      [Nudge](#nudge)       | ![](./icons/tool_stamp.png) <br>   [Stamp](#stamp) | ![](./icons/tool_clearLayer.png) <br> [Del Layer](#delete-layer) |    ![](./icons/tool_tube.png)  <br>   [Tube](#tube)    |  ![](./icons/tool_lathe.png)   <br>      [Lathe](#lathe)  |        ![](./icons/tool_insert.png) <br>  [Insert](#insert)        |
+|   ![](./icons/tool_transform.png) <br>  [Transform](#transform)    | ![](./icons/tool_gizmo.png) <br>   [Gizmo](#gizmo) | ![](./icons/tool_faceGroup.png)  <br>   [FaceGroup](#facegroup)  |    ![](./icons/tool_hide.png) <br>    [Hide](#hide)    | ![](./icons/tool_measure.png) <br>    [Measure](#measure) | ![](./icons/tool_remesh.png) <br>  [Quad Remesher](#quad-remesher) |
+|     ![](./icons/tool_select.png)  <br>      [Select](#select)      |  ![](./icons/tool_view.png) <br>    [View](#view)  |                                                                  |                                                        |                                                           |                                                                    |
 
 
 
@@ -530,3 +530,16 @@ Use the shape modes to select objects in the scene. `Unselect` will remove objec
 
 ### ![](./icons/tool_view.png) View
 This "tool" does nothing in particular, this is simply a way to view the model without modifying your scene.
+
+
+## Toolbox context menu
+
+![](./images/tools_context_menu.jpg)
+
+A right click or long press on a tool in the toolbox will bring up a context menu. This menu has the following options:
+
+* `Save` - save any changes you made to the tool
+* `Clone` - duplicate the tool into a new tool shortcut
+* `Last save` - revert to the previously saved version of the tool
+* `Icon` - change the icon for the tool
+* `Reset` - reset the tool to its defaults
