@@ -106,6 +106,12 @@ The area under the brush will stick to the brush, allowing for elastic deformati
 
 This brush is good for both large scale deformation and careful small deformation.
 
+#### Move Settings
+
+* `Radius (Background)` - How far away from the edge of a model you can be and still sculpt, useful when working on the silouette of an object. 
+* `Same-side vertex only` - Ignore verticies that point in the opposite direction of the deformation.
+
+
 ![](./videos/tool_move.mp4)
 
 ### ![](./icons/tool_drag.png) Drag
@@ -113,6 +119,11 @@ The area under the brush will stick to the brush, allowing for elastic deformati
 `Normal` will move the area under the brush along the surface normal.
 
 This brush is good for more loose, gestural shape changes.
+
+#### Drag Settings
+
+* `Radius (Background)` - How far away from the edge of a model you can be and still sculpt, useful when working on the silouette of an object. 
+* `Same-side vertex only` - Ignore verticies that point in the opposite direction of the deformation.
 
 ![](./videos/tool_drag.mp4)
 
@@ -136,7 +147,8 @@ The alternate mode is the `Relax` mode, which only smooths the wireframe but tri
 * `Stable smoothing` - Tries to make the smoothing topology independent. This works best with varying topology density and with a high smoothing intensity value.
 
 ##### Painting
-
+* `Screen Smoothing` - Use this option to get topology independent smoothing, even at high poly counts.
+* `Screen samples` - The quality of the smoothing, higher numbers will be be smoother, but slower.
 
 ::: tip
 Higher polygon densities can require raising the intensity above 100%. Very high values (300%, 500%) can also work well as a sculpting tool, forcing areas to go flat and smooth quickly under the brush, like hitting clay with a mallet!
@@ -150,18 +162,26 @@ Masked vertices can't be sculpted or painted afterwards, this is a way to "prote
 
 ![](./videos/tool_mask1.mp4)
 
-#### Mask settings
-![](./images/tool_mask_settings.jpg)
-
-
  A toolbar will appear at the top of the viewport with extra controls:
 
-| Action  | Description           |
-| :-----: | :-------------------: |
-| Clear   | Clear the mask        |
-| Invert  | Invert the mask       |
-| Blur    | Blur the mask edge    |
-| Sharpen | Sharpen the mask edge |
+| Action                                                        | Description                                                                                |
+| :------------------------------------------------------------ | :----------------------------------------------------------------------------------------- |
+| ![](./icons/cross_circle2.png)      Clear                     | Clear the mask                                                                             |
+| ![](./icons/invert.png)                Invert                 | Invert the mask                                                                            |
+| ![](./icons/sharpen.png)                   Sharpen            | Sharpen the mask edge                                                                      |
+| ![](./icons/blur.png)                    Blur                 | Blur the mask edge                                                                         |
+| Blur ->                                                       | Drag left/right to interactively blur the mask                                             |
+| ![](./icons/culling.png)                    Front             | Toggle to only mask front facing vertices                                                  |
+| ![](./icons/cross_circle2.png)                   Convert      | Convert the mask to a facegroup                                                            |
+| ![](./icons/group_to_mask.png)             On tap (facegroup) | When enabled facegroups will be shown, tapping a facegroup will mask it                    |
+| On tap (mask)                                                 | When enabled tapping an 'island' of mask or unmasked polygons will flood fill that island. |
+| ![](./icons/vertex.png)                  Connected            | When enabled only allow mask strokes to affect connected topology.                         |
+
+
+#### Mask settings
+![](./images/tool_mask_settings.png)
+
+
 
 ##### Shell/Extraction
 
