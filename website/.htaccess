@@ -3,16 +3,27 @@ Options +FollowSymlinks
 ErrorDocument 404 /404
 
 RewriteEngine on
-RewriteCond %{SERVER_PORT} 80 
-RewriteRule ^(.*)$ https://nomadsculpt.com/$1 [R,L]
 
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Redirect /404 to homepage
 RewriteCond %{REQUEST_URI} ^/404
-RewriteRule ^(.*)$ https://nomadsculpt.com/ [L]
+RewriteRule ^.*$ https://%{HTTP_HOST}/ [R=301,L]
 
-RewriteCond %{THE_REQUEST} \.html
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-RewriteRule ^/?index\.html$ / [R=301,L]
+# Redirect /index.html to /
+RewriteRule ^index\.html$ / [R=301,L]
 
+# Redirect explicit .html requests to extensionless URL
+RewriteCond %{THE_REQUEST} \s/([^\s]+)\.html
+RewriteRule ^([^\s]+)\.html$ /$1 [R=301,L,QSA]
+
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Compression rules
 SetOutputFilter DEFLATE
 BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4\.0[678] no-gzip
