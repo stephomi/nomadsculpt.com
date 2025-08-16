@@ -157,9 +157,9 @@ Higher polygon densities can require raising the intensity above 100%. Very high
 ![](./videos/tool_smooth.mp4)
 
 ### ![](./icons/tool_mask.png) Mask
-This tool lets you mask vertices. Masked vertices can't be sculpted or painted afterwards, this is a way to "protect" areas. `Unmask` will erase where the mask has been painted.
+This tool lets you mask vertices. Masked vertices are protected from sculpting or painting.  `Unmask` will erase where the mask has been painted.
 
-Similar to selections in 2d painting programs, masks can be painted with a brush UI, or shape selections, blurred or sharpened. 
+Similar to selections in 2d painting programs, masks can be painted with a brush, or made with shape selections, blurred or sharpened. 
 
 Unlike 2d painting programs, they can also be made via facegroups, and masks can be used to create new geometry via extrusion/extraction style operations. 
 
@@ -179,44 +179,63 @@ The title of the bar can be tapped to expand/collapse, or the arrow in the top r
 | ![](./icons/blur.png)                    Blur                 | Blur the mask edge                                                                         |
 | Blur ->                                                       | Drag left/right to interactively blur the mask                                             |
 | ![](./icons/culling.png)                    Front             | Toggle to only mask front facing vertices                                                  |
-| ![](./icons/cross_circle2.png)                   Convert      | Convert the mask to a facegroup                                                            |
+| Convert                                                       | Convert the mask to a facegroup                                                            |
 | ![](./icons/group_to_mask.png)             On tap (facegroup) | When enabled facegroups will be shown, tapping a facegroup will mask it                    |
 | On tap (mask)                                                 | When enabled tapping an 'island' of mask or unmasked polygons will flood fill that island. |
 | ![](./icons/vertex.png)                  Connected            | When enabled only allow mask strokes to affect connected topology.                         |
 
-
-#### Mask settings
-![](./images/tool_mask_settings.png)
-
-
-
-##### Shell/Extraction
-
-![](./videos/tool_mask2.mp4)
-
-Masks can also be used to extract geometry. The `Carve`, `Extract` and `Split` buttons will create new shapes from the masked region. The following settings offer more control:
-
-* `Uniform thickness` - Sets the height of the extraction. When disabled, the mask strength is multiplied by the thickness slider, allowing for varying height. This can be useful if you have custom made [Alphas](stroke.md#alpha) and you are using the `Grab - dynamic radius` [stroke type](stroke.md#stroke-type). 
-* `Thickness` - The distance of the extraction. Use the ± button to set the distance to be positive, negative, or centered from the surface.
-* `Auto Edge-loop (side)` - Will calculate the amount of divisions on the sides of the extracted shape to make square polygons that match the polygons of the masked area. When disabled, you can set the number of edge loops yourself with the edge loop slider.
-* `Smoothness` - Will smooth the border of the extracted shape, it works better with higher polygon counts. 
-* `All/Sharp border/Borders only` - Smoothing can work in all directions, smoothing both the sides and top of the extracted shape, or smooth the top and sides but maintain a sharp edge, or only smooth the border, leaving the top surface unaffected.
-* `Carve` - In default mode, behave a if you had trimmed into the surface by the 'thickness' amount, like cutting a section of orange peel. 
-* `Extract` - In default mode 'shell' mode, behave like an extrude in other 3d apps, pulling the mask section out from the surface.
-* `Closing action` - How extract should behave. 'None' will duplicate the masked polys into a new shape. 'Fill' will do the same, and try and patch the back surface. 'Shell' will extrude to the amount set in 'thickness'.
-* `Split` - Will extract the masked region into a new shape, but also apply an operation to the unmasked region. By default ths operation is 'shell', resulting in a fat extruded mask and a matching unmasked shape.
-* `Closing action` - Control what the masked and unmasked zones will do, identical to the closing actions explained earlier.
-* `Sync border` - Ensure the border between the masked and unmasked extracted shapes stay close together. When disabled, because the shell operation will extrude each face along its normal, a gap can form between the shapes.
-
-
-##### Quick gesture
-You can perform zbrush-style gestures while holding the quick masking button:
+##### Mask Quick gesture
+You can perform zbrush-style gestures while holding the quick masking button in the left toolbar:
 | Action  | Gesture (hold lower-left shortcut) |
 | :-----: | :--------------------------------: |
 | Invert  | Tap on the background              |
 | Clear   | Drag on the background             |
 | Blur    | Tap on masked area                 |
 | Sharpen | Tap on unmasked area               |
+
+
+#### Mask settings
+![](./images/tool_mask_settings.png)
+
+![](./videos/tool_mask2.mp4)
+
+* `Preview` - The Mask settings menu is mainly used to create geometry from the mask. Because of this the default behavior is to preview what the new geometry will look like. You can choose to have no preview, an extract preview, a split preview, and if this geometry will be shown in x-ray mode.
+
+##### Thickness
+* `Height` - The height of the extracted shape. The Plus/Minus icon lets you  cycle between an outwards extrusion, or inwards, or centered. 
+* `Height/Height+Mask` - Toggle between the height being constant, or if blurred parts of the mask should affect the height, allowing for soft and varying height shapes. 
+
+##### Smoothness
+When active, will smooth the border of the extracted shape, it works better with higher polygon counts. 
+* `Iterations` - The amount of smoothing applied. High values will produce very smooth curved edges, but will start to drift from the mask shape.
+* `All/Sharp border/Borders only` - Smoothing can work in all directions, smoothing both the sides and top of the extracted shape, or smooth the top and sides but maintain a sharp edge, or only smooth the border, leaving the top surface unaffected.
+
+##### Edge loop (side)
+* `Auto Edge-loop (side)` - Will calculate the amount of divisions on the sides of the extracted shape to make square polygons that match the polygons of the masked area. When disabled, you can set the number of edge loops yourself with the edge loop slider.
+
+----
+
+##### Extract
+* `Extract` - Create the extracted geometry.
+* `Closing action` - How extract should behave. 'None' will duplicate the masked polys into a new shape. 'Fill' will do the same, and try and patch the back surface. 'Shell' will extrude to the amount set in 'thickness', and is the default.
+
+::: tip
+
+If preview is in 'Extract' mode with 'X-ray' enabled, clicking the Extract button can be confusing at first. Because the menu is active, it will try and preview an extraction on your new shape, and xray the original surface. However because you have no mask on the new surface, it can't preview the extraction, and Nomad will warn you 'Nothing to Extract!'. 
+
+This is normal, close the mask settings menu to view the new shape and the original, and select the original surface again if you need to clear the mask or draw new masks.
+:::
+
+##### Split
+* `Split` - Will extract the both the masked AND unmasked regions into new shapes. 
+* `Closing action (masked)` - How the mask extract should behave. 'None' will duplicate the masked polys into a new shape. 'Fill' will do the same, and try and patch the back surface. 'Shell' will extrude to the amount set in 'thickness', and is the default.
+* `Closing action (unmasked)` - How the unmasked extract should behave. 'None' will duplicate the masked polys into a new shape. 'Fill' will do the same, and try and patch the back surface. 'Shell' will extrude to the amount set in 'thickness', and is the default.
+* `Sync border` - Ensure the border between the masked and unmasked extracted shapes stay close together. When disabled, because the shell operation will extrude each face along its normal, a gap can form between the shapes.
+
+##### Carve
+* `Carve` - In default mode, behave a if you had trimmed into the surface by the 'thickness' amount, like cutting a section of orange peel. 
+
+
 
 ### ![](./icons/tool_maskSelector.png) Selector Mask
 This tool is mostly similar to the [Masking tool](#mask), the main difference is that you don't use stroke to paint mask, but instead use the shape selector.
