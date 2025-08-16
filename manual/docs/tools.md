@@ -157,12 +157,19 @@ Higher polygon densities can require raising the intensity above 100%. Very high
 ![](./videos/tool_smooth.mp4)
 
 ### ![](./icons/tool_mask.png) Mask
-This tool lets you mask points.
-Masked vertices can't be sculpted or painted afterwards, this is a way to "protect" areas. `Unmask` will erase where the mask has been painted.
+This tool lets you mask vertices. Masked vertices can't be sculpted or painted afterwards, this is a way to "protect" areas. `Unmask` will erase where the mask has been painted.
+
+Similar to selections in 2d painting programs, masks can be painted with a brush UI, or shape selections, blurred or sharpened. 
+
+Unlike 2d painting programs, they can also be made via facegroups, and masks can be used to create new geometry via extrusion/extraction style operations. 
 
 ![](./videos/tool_mask1.mp4)
 
- A toolbar will appear at the top of the viewport with extra controls:
+ A toolbar will appear at the top of the viewport with extra controls. 
+
+![](./images/tool_mask_toolbar.png)
+
+The title of the bar can be tapped to expand/collapse, or the arrow in the top right can be tapped to move it to the top or bottom of the UI.
 
 | Action                                                        | Description                                                                                |
 | :------------------------------------------------------------ | :----------------------------------------------------------------------------------------- |
