@@ -41,9 +41,19 @@ The left toolbar has sliders for radius and intensity, and then tool category sp
 The intensity slider for many tools can go above 100%, worth experimenting with!
 :::
 
+### Sub mode
+The button directly below the intensity slider is the `Sub` button. It's label and function will change with every tool, and when pressed will invoke an alternate, usually opposite behavior. Eg for [Paint](#paint) it will invoke an Erase mode, for [Crease](#crease) it will create raised edges rather than creases etc.
+
+By default it functions as a sticky button; ie you can hold it down to temporarily invoke it, when you let go it will be turned off. If you tap it, the sub mode will be permanently activated.
+
+### Shortcuts
+At the bottom of the left toolbar are shortcuts for [Smooth](#smooth), [Mask](#mask), [Hide](#hide), [Gizmo](#gizmo), [Color](painting.md#pbr-sliders), [Alpha](stroke.md#alpha) . 
+
+By default these all function as sticky buttons; ie you can hold it down to temporarily invoke it, when you let go it will be turned off. If you tap it, that shortcut mode will be permanently activated.
+
 ### Selection controls
 
-The [Trim](#trim), [Split](#split), [Project](#project), [Facegroup](#facegroup) and [Hide](#hide) tools all use similar controls for selecting areas of the mesh.
+The [Selection Mask](#selection-mask), [Trim](#trim), [Split](#split), [Project](#project), [Facegroup](#facegroup) and [Hide](#hide) tools all use similar controls for selecting areas of the mesh.
 
 ![](./images/tools_shape_selector_panel.jpg)
 
@@ -102,7 +112,8 @@ The standard brush. `Sub` will remove material.
 
 ### ![](./icons/tool_move.png) Move
 The area under the brush will stick to the brush, allowing for elastic deformation. The selection is maintained during the move, so if you move the brush away, then move it back where you started, you will see no deformation.
-`Normal` will move the area under the brush along the surface normal.
+
+The sub mode is `Normal`, and will move the area under the brush along the surface normal.
 
 This brush is good for both large scale deformation and careful small deformation.
 
@@ -116,7 +127,8 @@ This brush is good for both large scale deformation and careful small deformatio
 
 ### ![](./icons/tool_drag.png) Drag
 The area under the brush will stick to the brush, allowing for elastic deformation. Unlike the move brush, the selection is continuously updated during the stroke, so it is possible to make longer, snake like objects, especially when Dynamic Topology is activated.
-`Normal` will move the area under the brush along the surface normal.
+
+THe sub mode is `Normal`, and will move the area under the brush along the surface normal.
 
 This brush is good for more loose, gestural shape changes.
 
@@ -131,7 +143,7 @@ This brush is good for more loose, gestural shape changes.
 Smooth the area by average the point positions. This tool is highly dependent on the polygon density.
 So if you have many polygons, the smoothing will be less effective.
 
-The alternate mode is the `Relax` mode, which only smooths the wireframe but tries to retain the geometric details.
+The sub mode is `Relax`, which only smooths the wireframe but tries to retain the geometric details.
 
 #### Smooth settings
 
@@ -157,7 +169,9 @@ Higher polygon densities can require raising the intensity above 100%. Very high
 ![](./videos/tool_smooth.mp4)
 
 ### ![](./icons/tool_mask.png) Mask
-This tool lets you mask vertices. Masked vertices are protected from sculpting or painting.  `Unmask` will erase where the mask has been painted.
+This tool lets you mask vertices. Masked vertices are protected from sculpting or painting. 
+
+The sub mode is `Unmask`, and will erase where the mask has been painted.
 
 Similar to selections in 2d painting programs, masks can be painted with a brush, or made with shape selections, blurred or sharpened. 
 
@@ -237,29 +251,35 @@ This is normal, close the mask settings menu to view the new shape and the origi
 
 
 
-### ![](./icons/tool_maskSelector.png) Selector Mask
-This tool is mostly similar to the [Masking tool](#mask), the main difference is that you don't use stroke to paint mask, but instead use the shape selector.
+### ![](./icons/tool_maskSelector.png) Selection Mask
+This tool is mostly similar to the [Masking tool](#mask), the main difference is that you don't use stroke to paint mask, but instead use the [Selection Controls](#selection-controls).
 
-Selector mask shares the same tool settings as the `Mask` tool.
+The sub mode is `Unmask`, and will erase the mask using selection controls.
+
+Selection mask shares the same tool settings as the `Mask` tool.
 
 ![](./videos/tool_selector_mask.mp4)
 
 ### ![](./icons/tool_paint.png) Paint
-To learn more about material you can visit the [Painting](painting.md) section. `Erase` will remove paint.
+Apply color and material properties. To learn more about material you can visit the [Painting](painting.md) section.
+
+The sub mode is `Erase` and will remove paint.
 
 #### Paint settings
-* `Layer fitering` - This functions like the alpha lock in photoshop or procreate. If you're painting on a layer, when this is enabled, you can only modify where paint already exists; unpainted areas will be protected.
+* `Layer fitering` - This functions like the layer alpha lock in photoshop or procreate. If you're painting on a layer, when this is enabled, you can only modify where paint already exists; unpainted areas will be protected.
 
 ![](./videos/tool_paint.mp4)
 
 ### ![](./icons/tool_smudge.png) Smudge
-The smudge tool is only active on painting. It's settings menu contains a `Quality` slider, lower values mean faster strokes.
+Smudge color and material proprties. The smudge settings menu contains a `Quality` slider, lower values mean faster strokes.
 
 ![](./videos/tool_smudge.mp4)
 
 
 ### ![](./icons/tool_flatten.png) Flatten
-Flatten the area by projecting the points onto the average plane. `Fill` will define a plane set by the highest point, and tend to pull points up.
+Flatten the area by projecting the points onto the average plane.
+
+The sub mode is `Fill` and will define a plane set by the highest point, and tend to pull points up.
 
 #### Flatten settings
 
@@ -268,23 +288,26 @@ Flatten the area by projecting the points onto the average plane. `Fill` will de
 
 When either or both of these are disabled, the flatten can be gradually deepened or the plane angle altered by using long strokes that move over different depths and curvatures. This in conjunction with the area sampling options of the brush menu can offer very precise control.
 
+::: tip
+When working in ears of high curvature, eg trying to flatten the cheeks but the tool keeps affecting the sides of the nose, try creating a mask to protect areas the flatten brush shouldn't affect.
+:::
+
 ![](./videos/tool_flatten.mp4)
 
 
 ### ![](./icons/tool_planar.png) Planar
-Make points planar by projecting onto the average plane, but with less buildup than the flatten brush. This creates cleaner hard-edge surfaces. Quick strokes will push and pull on the surface more, slower strokes that start from already planar areas and work out will maintain the plane more. `Fill` will define a plane set by the highest point, and tend to pull points up.
+Make points planar by projecting onto the average plane, but with less buildup than the flatten brush. This creates cleaner hard-edge surfaces. Quick strokes will push and pull on the surface more, slower strokes that start from already planar areas and work out will maintain the plane more.
+
+The sub mode is `Fill` and will define a plane set by the highest point, and tend to pull points up.
 
 Planar is actually the same tool as `Flatten`, but with `Lock plane direction` enabled, meaning it will tend to make more stable, hard edged surface, while flatten can be more sculptural and used to create semi-flat areas.
 
 ![](./videos/tool_planar.mp4)
 
-### ![](./icons/tool_layer.png) Layer
-Sculpt by limiting the maximum height displacement, this tool is more useful when a layer is active. `Sub` will use a minimum depth displacement, creating grooves.
-
-![](./videos/tool_layer.mp4)
-
 ### ![](./icons/tool_crease.png) Crease
-Crease tools can be useful to sculpt small cuts or dents. `Sub` will create a raised crease.
+Crease tools can be useful to sculpt small cuts or dents.
+
+The sub mode is `Invert`, and will create a raised crease.
 
 #### Crease Settings
 
@@ -292,6 +315,14 @@ Crease tools can be useful to sculpt small cuts or dents. `Sub` will create a ra
 * `Offset factor` - How much to push/pull vertices in depth. If pinch is at 0, and offset at 1, deep creases or raised dents will be made, but will look jagged because not enough geo is pulled towards the crease to define the sides or the bottom of the crease accurately.
 
 ![](./videos/tool_crease.mp4)
+
+### ![](./icons/tool_pinch.png) Pinch
+This tool can be used to sharpen edges.
+
+The sub mode is `Invert` and will spread vertices apart.
+
+![](./videos/tool_pinch.mp4)
+
 
 ### ![](./icons/tool_trim.png) Trim
 The Trim tool works by removing a chunk of your mesh, and gives options for how to process the gap left behind.
@@ -324,16 +355,18 @@ The Project tool will project the points on a shape that you draw, but unlike th
 ![](./videos/tool_project.mp4)
 
 
+### ![](./icons/tool_layer.png) Layer
+Sculpt by limiting the maximum height displacement, this tool is more useful when a layer is active. `Sub` will use a minimum depth displacement, creating grooves.
+
+![](./videos/tool_layer.mp4)
+
+
 ### ![](./icons/tool_flatten.png) Inflate
 Move the vertices along their own normals. `Sub` will move vertices along their inverted normal.
 
 ![](./videos/tool_inflate.mp4)
 
 
-### ![](./icons/tool_pinch.png) Pinch
-This tool can be used to sharpen edges. `Sub` will spread vertices apart.
-
-![](./videos/tool_pinch.mp4)
 
 
 ### ![](./icons/tool_nudge.png) Nudge
