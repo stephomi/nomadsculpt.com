@@ -458,11 +458,11 @@ The left toolbar has the following options:
     * `Closed` - make the tube into a loop
     * `Screen` - When active, the path is 'pinned' to the screen, allowing you to move the view and the object, and the path stays in place. When inactive, the path is part of the 3d scene, and it will move with the camera and objects.
 
-##### Tube toolbar
+##### Tube top toolbar
 ![](./images/tool_tube_toolbar.png)
 Whe a tube is selected, a toolbar will appear at the top of the viewport with extra controls. Click the title of the toolbar to collapse/expand the toolbar, and click the arrow in the top right to move the toolbar to the top or bottom of the viewport.
 
-* `Validate` - bake the curve into regular polygons so it can be sculpted.
+* `Validate` - bake the tube into regular polygons so it can be sculpted.
 * `Edit` - display the curve points so they can be manipulated
 * `Mirror` - add a mirror repeater as a parent of this curve
 * `Snap` - snap curve points to nearby surfaces
@@ -505,6 +505,50 @@ Create a revolution surface by drawing a curve.
 
 ![](./videos/tool_lathe.mp4)
 
+#### Lathe left toolbar
+
+![](./images/tool_lathe_left_toolbar.png)
+
+The left toolbar has the following options:
+
+* `Sync` - If the current lathe is instanced, and there are child nodes of the lathe that differ between the instances, this will resync them.
+* `Fixed` - When enabled, the center of the lathe is fixed and displayed on screen. This center line has edit points that can be adjusted. When disabled, the center of the lathe will dynmaically update to match to the start and end of the drawn curve.
+* `Curve` - Draw the lathe profile in one stroke. It has a small flyout menu:
+    * `Auto-validate` - When enabled, the lathe will be created when the pencil is lifted from the screen. When disabled, a green circle next to the curve can be pressed to create the lathe. The curve can be deleted with the `Reset` button.
+    * `Closed` - Join the start and end of the curve to form a loop
+    * `Screen` - Available only when Auto-validate is disabled. When active, the path is 'pinned' to the screen, allowing you to move the view and the object, and the path stays in place. When inactive, the path is part of the 3d scene, and it will move with the camera and objects.
+    * `Accuracy` - How many curve points will be used to convert the drawn path into a tube. 0% will use the lowest number of points, but will miss small curvature path changes. 100% will be very accurate, and use many points.
+* `Path` - Create a lathe by clicking to define curve points. Tap the green circle to validate the path. It has a small flyout menu:
+    * `B-spline` - An alternate curve drawing method where curve points usually don't sit directly on the curve, but can make smoother results than the default method.
+    * `Closed` - make the tube into a loop
+    * `Screen` - When active, the path is 'pinned' to the screen, allowing you to move the view and the object, and the path stays in place. When inactive, the path is part of the 3d scene, and it will move with the camera and objects.
+
+#### Lathe top toolbar
+![](./images/tool_lathe_top_toolbar.png)
+
+Whe a lathe is selected, a toolbar will appear at the top of the viewport with extra controls. Click the title of the toolbar to collapse/expand the toolbar, and click the arrow in the top right to move the toolbar to the top or bottom of the viewport.
+
+* `Validate` - bake the lathe into regular polygons so it can be sculpted.
+* `Edit` - display the curve points so they can be manipulated
+* `Mirror` - add a mirror repeater as a parent of this lathe
+* `Snap` - snap curve points to nearby surfaces
+* `Stable` - When enabled, the curve profile will be parented to the center line of the lathe. When disabled, the center line can be edited and will not move the curve, allowing for more complex shapes.
+* `Focus` - Will rotate the view to see the curve profile perfectly flat to camera.
+* `Closed` - Join the start and end of the curve to form a loop
+* `Cap` - If Closed is disabled, cycle between caps on both ends of the tube, or the start or end, or no caps.
+* `Hole` - Add thickness to the lathe, converting it into a pipe. Cycle between having a hole at both ends, at only the end, or no holes. 
+* `B-spline` - Toggle between Catmull-rom and B-spline interpolation.
+* `X Divisions` - the number of divisions around the tulathebe, 4 divisions will make a square profile lathe for example. 
+* `Constant density` - when active, will keep the polygons square. when disabled, will allow you to set `Y divisions` along the length of the tube.
+* `...` - Lathe settings menu.
+
+#### Lathe settings
+* `Primitive` - buttons to allow you to enable/disable UV's, or to validate the tube.
+* `Post subdivision` - a shortcut to set the multiresolution level before validating.
+* `Linear subdivision` - shortcut to set the linear subdivision level before validating. 
+* `Division X` - same as X Divisions in the toolbar.
+* `Division Y` - same as Y Divisions in the toolbar.
+* `Curve (Repeater)` - convert the curve profile into a [Curve Repeater](scene.md#curve)
 
 ### ![](./icons/tool_insert.png) Insert
 Insert an object in the scene.  
@@ -518,9 +562,10 @@ If an object is using a custom gizmo pivot, then it will be used as an anchor po
 ### ![](./icons/tool_transform.png) Transform
 Move/Rotate/Scale a model directly with 1 and 2 fingers. 
 
-The tool is controlled with the left toolbar, and has 4 buttons:
+The tool is controlled with the left toolbar, and has 5 buttons:
 
 * `Snap` - snap the model onto other surfaces
+* `Group` - If the selected object has a combination of objects and instances, this allows you to determine the behaviour of the tool.
 * `Move` - Single finger drag will move the object. When snap is active, this will slide the object along the surface under your finger.
 * `Rotate` - Single finger drag will rotate the object. When snap is active, will rotate around the normal of the surface under your finger.
 * `Scale` - Single finger drag will scale the object.
@@ -616,9 +661,9 @@ When pivot mode is active, a menu is displayed to allow quick pivot changes:
 * `Numerical input` - when enabled, a single tap on the gizmo will pop up a window to enter an exact value for the tapped widget axis.
 
 ::: warning
-The [Gizmo](#gizmo), [Translate](#translate), [Rotate](#rotate) and [Scale](#scale) are using their own symmetry checkbox!
+The [Gizmo](#gizmo), [Translate](#translate), [Rotate](#rotate) and [Scale](#scale) use their own symmetry checkbox!
 
-And by default, the symmetry is turned off.
+By default this symmetry is turned off.
 :::
 
 On the left you can move the gizmo pivot, you can see the video below in action.
@@ -637,7 +682,7 @@ Facegroups let you organise your object into differently colored faces. You can 
 * Guide the quad remesher
 * Additional control for tools like smooth.
 
-Its controls are in the left hand menu:
+#### Facegroup left toolbar
 
 * `Patch ` - Display the available facegroups as patches. Unused patches can be deleted. Tap on a patch to rename or change its color. The plus icon lets you create new patches.
 * `Dot` - Paint on the object to define facegroups. When '+ Face Group' is enabled, every new stroke will automatically create a new facegroup, useful for quickly defining regions. A tap will flood fill the selected regon. The slider sets the radius of the dot.
