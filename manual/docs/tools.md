@@ -325,44 +325,81 @@ The sub mode is `Invert` and will spread vertices apart.
 
 
 ### ![](./icons/tool_trim.png) Trim
-The Trim tool works by removing a chunk of your mesh, and gives options for how to process the gap left behind.
+The Trim tool works by removing a chunk of your mesh, and gives options for how to process the gap left behind. It uses the [Selection controls](#selection-controls) to define the trim.
+
+::: tip
+Because this tool projects from the camera, you will get a warning if the camera is in perspective mode.
+
+In orthographic mode the cut made through the mesh is parallel to the view, which is what people usually expect. When done with a perspective camera, the cut will look different on the far side of the object vs the near side.
+:::
 
 #### Trim settings
 
-* `Fill holes` - If the trimmed area should be patched or not.
-* `Stroke painting` - If paint is enabled in the paint menu, the patched region will be filled with the selected color.
-* `Fill/Boolean/Legacy` - Fill will use a triangulated patch, similar to a soap bubble surface. Boolean will create a quad poly region, projecting the trim shape from the camera. Legacy will create a triangulated region, projecting the trim shape from the camera.
-* `Detail` - The approximate size of the triangles or polys used during the trim operation.
+* `Stroke painting` - If paint is enabled in the paint menu, the patched region will be filled with the currently selected color.
+* `Boolean` - fill the hole of the trim using a quad poly region. The filled region will be flat.
+* `Legacy` - fill the hole of the trim with a triangulated region. The filled region will be flat.
+* `Fill` - fill the hole with a triangulated region. The filled region will a curved surface, like the film of a soap bubble.
+* `None` - do not fill the hole.
+* `Boolean Detail Shape` - The approximate size of the quads and triangles used on the shape side of the trim.
+* `Boolean Detail Hole` - The approximate size of the triangles or polys used on the filled hole of the trim. 
+* `Legacy Detail` - The approximate size of the triangles used on the trim.
+* `Legacy Hole smoothing` - How much the triangles are relaxed on the filled area.
+* `Legacy Threshold espilon` - A value that can be adjusted to improve the legacy hole filling algorithm.
+* `Fill Detail` - The approximate size of the triangles used on the trim.
 
 ![](./videos/tool_trim.mp4)
 
 ### ![](./icons/tool_split.png) Split
-Similar to the [Trim](#trim) tool, except that it produces two different objects instead of one.
+Similar to the [Trim](#trim) tool, except that while Trim discards the selection, Split will keep the selection as a new object.
 
 #### Split settings
 
-* `Fill holes` - If the split areas should be patched or not.
-* `Stroke painting` - If paint is enabled in the paint menu, the patched region will be filled with the selected color.
-* `Fill/Boolean/Legacy` - Fill will use a triangulated patch, similar to a soap bubble surface. Boolean will create a quad poly region, projecting the split shape from the camera. Legacy will create a triangulated region, projecting the split shape from the camera.
-* `Detail` - The approximate size of the triangles or polys used during the split operation.
+* `Stroke painting` - If paint is enabled in the paint menu, the patched region will be filled with the currently selected color.
+* `Boolean` - fill the hole of the split using a quad poly region. The filled regions will be flat.
+* `Legacy` - fill the hole of the split with a triangulated region. The filled regions will be flat.
+* `Fill` - fill the holes with a triangulated region. The filled regions will curved surfaces, like the film of a soap bubble.
+* `None` - do not fill the holes.
+* `Boolean Detail Shape` - The approximate size of the quads and triangles used on the shape side of the split.
+* `Boolean Detail Hole` - The approximate size of the triangles or polys used on the filled hole of the split. 
+* `Legacy Detail` - The approximate size of the triangles used on the split.
+* `Legacy Hole smoothing` - How much the triangles are relaxed on the filled area.
+* `Legacy Threshold espilon` - A value that can be adjusted to improve the legacy hole filling algorithm.
+* `Fill Detail` - The approximate size of the triangles used on the split.
 
 ![](./videos/tool_split.mp4)
 
 
 ### ![](./icons/tool_project.png) Project
-The Project tool will project the points on a shape that you draw, but unlike the [Trim](#trim) tool, the topology is kept intact.
+The Project tool looks like the [Trim](#trim) tool, but it does not delete or create any geometry, it just moves verticies to conform to the selection.
 
 ![](./videos/tool_project.mp4)
 
 
 ### ![](./icons/tool_layer.png) Layer
-Sculpt by limiting the maximum height displacement, this tool is more useful when a layer is active. `Sub` will use a minimum depth displacement, creating grooves.
+Raise the surface, but limit the height.
+
+If you keep the pencil down and keep brushing over an area, the Clay and Brush tools will keep increasing in height, while Layer will raise to a certain height then go no further.
+
+If you start a new stroke, it will build from the new surface height, which is usually not what people expect. Because of this, the tool is designed to work with Nomad's [Layers](layers.md) system.
+
+If you create and select a layer, then use this brush, then the maximum height is set by the layer itself, so you can apply many brush strokes. 
+
+`Sub` will use a minimum depth displacement, creating grooves.
+
+#### Layer Settings
+
+* `Use layer data` - When active, and when a layer is selected, use the layer data to set the maximum height.
+* `Inflate`- When active adjust the direction that layer works to get smoother results.
+* `Relax (Normal)` - The amount of smoothing applied to the normals.
 
 ![](./videos/tool_layer.mp4)
 
 
 ### ![](./icons/tool_flatten.png) Inflate
 Move the vertices along their own normals. `Sub` will move vertices along their inverted normal.
+
+#### Inflate Setings
+* `Relax (Normal)` - The amount of smoothing applied to the normals.
 
 ![](./videos/tool_inflate.mp4)
 
