@@ -374,6 +374,9 @@ The Project tool looks like the [Trim](#trim) tool, but it does not delete or cr
 
 ![](./videos/tool_project.mp4)
 
+::: tip
+If you use Project while in a layer, you can blend between the original and the projected shape with the layer slider.
+:::
 
 ### ![](./icons/tool_layer.png) Layer
 Raise the surface, but limit the height.
@@ -382,7 +385,7 @@ If you keep the pencil down and keep brushing over an area, the Clay and Brush t
 
 If you start a new stroke, it will build from the new surface height, which is usually not what people expect. Because of this, the tool is designed to work with Nomad's [Layers](layers.md) system.
 
-If you create and select a layer, then use this brush, then the maximum height is set by the layer itself, so you can apply many brush strokes. 
+If you create and select a layer, then use this brush, then the maximum height is set by the layer itself, so you can apply many brush strokes and the height will always be the same.
 
 `Sub` will use a minimum depth displacement, creating grooves.
 
@@ -407,13 +410,17 @@ Move the vertices along their own normals. `Sub` will move vertices along their 
 
 
 ### ![](./icons/tool_nudge.png) Nudge
-Move points along the stroke.
+Move or 'smear' points in the direction of the stroke.
 
 ![](./videos/tool_nudge.mp4)
 
 
 ### ![](./icons/tool_stamp.png) Stamp
 This is simply the [Brush tool](#brush) with a stroke type set to `Grab - dynamic radius`. `Sub` will push the stamp in rather than pull it out from the surface.
+
+::: tip
+Stamp usually works best with high resolution geometry. If you search online for 'wrinkles alpha', 'pores alpha', 'scales alpha' etc, these alpha textures and Stamp can be a great way to add organic detail to a character sculpt.
+:::
 
 ![](./videos/tool_stamp.mp4)
 
@@ -428,21 +435,69 @@ This tool can reset layers locally, you need an active layer otherwise nothing w
 Create a tube by drawing a curve. 
 ![](./images/tool_tube_new.jpg)
 
-Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Shape editing](#shape-editing) and curve editing tools. A toolbar will appear at the top of the viewport with extra controls:
+Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Shape editing](#shape-editing) and curve editing tools. 
+
+![](./videos/tool_tube.mp4)
+
+#### Tube left toolbar
+
+![](./images/tool_tube_left_toolbar.png)
+
+The left toolbar has the following options:
+
+* `Sync` - If the current tube is instanced, and there are child nodes of the tube that differ between the instances, this will resync them.
+* `Snap` - When active, the curve and path modes will snap onto other objects as you draw. When inactive, the first point will snap, then the rest of the tube will be drawn at that depth. It has a small flyout menu:
+    * `Offset` - Set the depth of the snap; 0% will have the middle of the tube cross section snap to the surface, positive values will lift it from the surface, negative values will lower it.
+* `Curve` - Freeform sketch a tube. It has a small flyout menu:
+    * `Auto-validate` - Will create the tube as soon as the stroke is complete. When disabled, a green validate circle will be visible next to the curve path, press it to validate, or use the `Reset` link that appears in this menu to remove the path.
+    * `Closed` - make the tube into a loop.
+    * `Screen` - Available only when Auto-validate is disabled. When active, the path is 'pinned' to the screen, allowing you to move the view and the object, and the path stays in place. When inactive, the path is part of the 3d scene, and it will move with the camera and objects.
+    * `Accuracy` - How many curve points will be used to convert the drawn path into a tube. 0% will use the lowest number of points, but will miss small curvature path changes. 100% will be very accurate, and use many points.
+* `Path` - Create a tube by clicking to define curve points. Tap the green circle to validate the path. It has a small flyout menu:
+    * `B-spline` - An alternate curve drawing method where curve points usually don't sit directly on the curve, but can make smoother results than the default method.
+    * `Closed` - make the tube into a loop
+    * `Screen` - When active, the path is 'pinned' to the screen, allowing you to move the view and the object, and the path stays in place. When inactive, the path is part of the 3d scene, and it will move with the camera and objects.
+
+##### Tube toolbar
+![](./images/tool_tube_toolbar.png)
+Whe a tube is selected, a toolbar will appear at the top of the viewport with extra controls. Click the title of the toolbar to collapse/expand the toolbar, and click the arrow in the top right to move the toolbar to the top or bottom of the viewport.
 
 * `Validate` - bake the curve into regular polygons so it can be sculpted.
 * `Edit` - display the curve points so they can be manipulated
 * `Mirror` - add a mirror repeater as a parent of this curve
 * `Snap` - snap curve points to nearby surfaces
 * `Closed` - Join the start and end of the curve to form a loop
+* `B-spline` - Toggle between Catmull-rom and B-spline interpolation.
+* `Cap` - Cycle between caps on both ends of the tube, or the start or end, or no caps.
+* `Hole` - Add thickness to the tube, converting it into a pipe. Cycle between having a hole at both ends, at only the end, or no holes. 
 * `Radius` - Cycle between a uniform radius, a radius at the start and end, or a radius per curve point. These are edited with orange handles on the curve.
 * `Twist` - Cycle between no twist, a uniform twist, a twist at the start and end, or a twist per curve point. These are editing with pink handles on the curve.
 * `Profile` - Cycle between no profile (so a circle profile), a uniform profile, a profile at the start end end, or a profile per point.
 * `Profile edit` - Display a profile editor. This functions similar to the [Shape editing](#shape-editing) tools, can save and load profile presets, and has a toggle to allow you to edit the profile in 3d space.
-* `B-spline` - Toggle between Catmull-rom and B-spline interpolation.
-* `...` - Advanced options for the tube polygon density, spiral controls, if the snap should be offset from nearby surfaces, and to clone the tube's curve as a repeater curve.
+* `Spiral` - Toggle a menu to add a spiral twist to the tube. This menu has options for `Twist Angle`, `Offset`, `Scale`, and `Angle offset`.
+* `X Divisions` - the number of divisions around the tube, 4 divisions will make a square tube for example. 
+* `Constant density` - when active, will keep the polygons square. when disabled, will allow you to set `Y divisions` along the length of the tube.
+* `...` - Tube settings menu.
 
-![](./videos/tool_tube.mp4)
+#### Curve point delete toggle
+
+![](./images/tool_tube_delete_toggle.png)
+
+Below the toolbar is a curve point delete toggle. When you drag a curve point near another, it will turn red, indicating that if you let go, the point will be deleted. If you are doing small edits and you do not want to delete points, this button will disable the point delete behavior.
+
+
+
+#### Tube settings
+* `Primitive` - buttons to allow you to enable/disable UV's, or to validate the tube.
+* `Post subdivision` - a shortcut to set the multiresolution level before validating.
+* `Linear subdivision` - shortcut to set the linear subdivision level before validating. 
+* `Division X` - same as X Divisions in the toolbar.
+* `Division Y` - same as Y Divisions in the toolbar.
+* `Curve (Repeater)` - convert the tube into a [Curve Repeater](scene.md#curve)
+
+::: tip
+Divisions at 4 and Post subdivision at 3 will make smooth round tipped tubes, good for worms, snakes, body parts.
+:::
 
 
 ### ![](./icons/tool_lathe.png) Lathe
