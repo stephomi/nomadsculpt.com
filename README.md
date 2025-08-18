@@ -22,6 +22,7 @@ npm run dev
 ```
 
 <!-- pnpm update -->
+<!-- npm view vitepress versions -->
 
 # Website
 
