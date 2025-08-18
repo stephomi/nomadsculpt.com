@@ -2,7 +2,7 @@
 
 This menu lets you create and modify cameras, as well as control how you interact with cameras.
 
-![](./images/camera_overview2.png)
+![](./images/camera_overview2.jpg)
 
 Cameras in Nomad have several uses:
 

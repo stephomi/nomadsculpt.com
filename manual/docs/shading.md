@@ -2,7 +2,7 @@
 
 This menu controls the shading modes used by Nomad, lighting properties, and the environment light/matcap properties.
 
-![](./images/shading_overview.png)
+![](./images/shading_overview.jpg)
 
 
 
@@ -132,7 +132,7 @@ Add a light to the scene, to a maxiumum of 4. When a light is added, the light l
 Toggle the display of light icons in the viewport
 
 ### Light toolbar
-![](./images/shading_lights_toolbar.png) 
+![](./images/shading_lights_toolbar.jpg) 
 
 This toolbar will appear at the top of the viewport when a light is selected.
 
@@ -168,7 +168,7 @@ Note that some options are specific to certain light types.
 
 ## Environment
 
-![](./images/shading_environment.png)
+![](./images/shading_environment.jpg)
 
 Light in the real world comes from all directions; the blue of the sky, the green of the grass, the red of a building, all this light from the 'environment' can be simulated with an environment map. 
 

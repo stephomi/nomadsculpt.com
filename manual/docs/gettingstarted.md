@@ -66,7 +66,7 @@ To erase, tap the `Erase` button on the left toolbar, then erase on the surface.
 
 Using the clay brush in add/sub modes, smooth, paint, see if you can make a simple cartoon head:
 
-![](./images/gettingstarted_head.jpg)
+![](./images/gettingstarted_head1.jpg)
 
 ## Other tools
 
@@ -82,7 +82,7 @@ Now that you know the basics of Nomad, lets look at the rest of the interface.
 
 ## Interface
 
-![](./images/interface_overview.jpg)
+![](./images/interface_overview1.jpg)
 
 * `Top menus` - The menus to access most of Nomads features. The top-left menus mainly cover scene and object features, the top-right menus are related to tools. On smaller screens these menus will collapse together to save space.
 * `Stats` - Information about the scene, the current object, mask status, memory usage.

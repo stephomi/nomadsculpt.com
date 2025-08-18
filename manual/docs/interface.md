@@ -2,7 +2,7 @@
 
 This menu controls many options to customise Nomad's interface. 
 
-![](./images/interface_overview2.png)
+![](./images/interface_overview2.jpg)
 
 Nomad can be customized to quite a deep level, this menu is split across 4 sections; Interface, Gesture, Bindings, Debug.
 
@@ -17,7 +17,7 @@ This page is for the interface menu, not the interface itself! The overall inter
 
 The interface section lets you add shortcuts, create floating toolbars, and control the color, size, appearance of Nomad's user interface.
 
-![](./images/interface_overview.png)
+![](./images/interface_overview3.png)
 
 ### Add shortcuts (bottom)...
 ![](./images/interface_shortcuts.png)
@@ -52,7 +52,7 @@ This will display a list of the shorcuts. Long press then drag to reorder the sh
 Reset will restore the bottom toolbar to its default settings.
 
 ### Add shortcuts (window)... +
-![](./images/interface_add_shortcuts_window.png)
+![](./images/interface_add_shortcuts_window.jpg)
 
 Clicking the + will add a floating toolbar. It won't be visible until you click the bindings button and add some shortcuts to it, then you can make it visible. 
 
@@ -103,7 +103,7 @@ An alternative style for buttons that makes them more visible when they are enab
 The primary colors used in the interface.
 
 #### Transparent panel, Color panel, Blur strength
-![](./images/interface_transparent.png)
+![](./images/interface_transparent.jpg)
 When enabled, extra options will appear to control how menus and panels look in nomad. Their color, transparency and blur amount can be adjusted.
 
 ::: tip

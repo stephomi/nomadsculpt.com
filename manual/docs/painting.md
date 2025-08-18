@@ -2,7 +2,7 @@
 
 Control the color, roughness, metalness of paint strokes, allow for flood filling of paint attributes, and how paint tools interact with layers, masks, hidden selections.
 
-![](./images/paint_overview.png)  
+![](./images/paint_overview.jpg)  
 
 ## Overview
 
@@ -53,7 +53,7 @@ The `Alpha`, `Falloff` and `Randomize` checkboxes determine if those features wi
 
 
 ## Material
-![](./images/paint_material.png) 
+![](./images/paint_material.jpg) 
 
 The first icon is a material preview shape. Dragging on the 3d material preview will rotate it. 
 

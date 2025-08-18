@@ -2,7 +2,7 @@
 
 This menu controls the topology of objects in Nomad, as well as tools to bake and transfer details between objects, and between textures.
 
-![](./images/topology_overview.png)
+![](./images/topology_overview.jpg)
 
 Nomad is based on polygons, it uses triangles and quads to handle the geometry.
 By topology, we refer to both the number of faces but also the way points (vertices) are connected.
@@ -36,7 +36,7 @@ Tapping on this section will bring up a list of polygon statistics for all the p
 
 ## ![](./icons/multires.png) Multiresolution
 
-![](./images/topology_multires_menu.png)
+![](./images/topology_multires_menu.jpg)
 
 ### What is multiresolution?
 The multiresolution feature is useful for two main scenarios:
@@ -98,7 +98,7 @@ Subdivision will smooth all sharp edges by default. To keep edges slightly sharp
 
 
 ## ![](./icons/voxel.png) Voxel Remesher
-![](./images/topology_voxel_menu.png)
+![](./images/topology_voxel_menu.jpg)
 When using the `Voxel Remesher`, the entire mesh will force the topology to have an uniform resolution, meaning all the polygons have more or less the same size. This is very useful when you don't want to think about topology and simply do free-form sculpting.
 
 A typical sculpting workflow can start by using the `Voxel Remesher` to block-out a rough shape with a low resolution.
@@ -137,7 +137,7 @@ Enable snapping of the new points to sharp edges on the original mesh. It can in
 
 ## ![](./icons/dynamic.png) Dynamic Topology
 
-![](./images/topology_dyntopo_menu.png)
+![](./images/topology_dyntopo_menu.jpg)
 Multiresolution and voxel remeshing are common industry methods to control topology, but both require you to watch that you're not stretching polygons too far, or squeezing polgyons too tight. 
 
 Dynamic Topology is an alternative method. As you sculpt, Nomad will adaptively add and remove polygons during the brush stroke, so carving in small details will add many small polygons where you need them, and smoothing elsewhere will take away polygons.
@@ -214,14 +214,14 @@ However one advantage over the voxels is that the masked area will be protected,
 
 ## ![](./icons/topo_extra.png) Misc
 
-![](./images/topology_misc_menu.png)
+![](./images/topology_misc_menu.jpg)
 
 ##### ![](./icons/cog.png) Gear menu
 Many of the tools in this menu have extra options. They can be accessed through the gear icon next to the section title.
 
 ### Decimation
 
-![](./images/topology_decimation.png)
+![](./images/topology_decimation.jpg)
 
 Reduce the number of polygons by trying to keep as many details as possible, using triangle polygons.
 
@@ -253,7 +253,7 @@ Set the target triangle count. The default value is 50%, the percent/target butt
 
 ### UV Unwrap - UVAtlas
 
-![](./images/topology_uvatlas_menu.png)
+![](./images/topology_uvatlas_menu.jpg)
 Compute texture coordinates (UVs) for the current mesh, generally preferring to make more islands with cuts, to minimise distortion.
 
 The small eye icon between the menu title and the gear menu will toggle previewing uv's on the object.
@@ -304,7 +304,7 @@ When models are made in Nomad, you can paint directly onto objects without UVs. 
 :::
 
 ### UV Unwrap - BFF
-![](./images/topology_uvbff_menu.png)
+![](./images/topology_uvbff_menu.jpg)
 
 BFF Uv's favour a 'less cuts, more distortion' approach. 
 
@@ -321,7 +321,7 @@ Define the number of main projections used. Lower values will produce fewer isla
 Affects the layout of the uv patches, workes best with carefully created facegroups.
 
 ### Bake -> texture 
-![](./images/topology_bake_menu.png)
+![](./images/topology_bake_menu.jpg)
 
 Texture baking will create textures by projecting other visible objects in the scene into the uv's of the selected object.
 
@@ -352,7 +352,7 @@ The resolution of the baked texture. Bake textures are always square, so 1024 wi
 The buttons below are shortcuts for commonly used resolutions. For reference, 512x512 is relatively small, say for web graphics and simple geometry. 4096x4096 (4k for short) is for high quality renders.
 
 #### ![](./icons/cog.png) Bake gear menu
-![](./images/topology_bake_gear_menu.png)
+![](./images/topology_bake_gear_menu.jpg)
 The gear menu has these advanced options:
 
 ##### Normal, Roughness, Metalness, Color, Emissive, Opacity
@@ -425,7 +425,7 @@ Adjust where the bake calculations start from on the selected object. By default
 
 
 ### Quad Remesh - Instant
-![](./images/topology_quadremesh_menu.png)
+![](./images/topology_quadremesh_menu.jpg)
 Remesh using the [Instant Meshes algorithm by Wenzel Jakob, Marco Tarini, Daniele Panozzo, Olga Sorkine-Hornung](https://igl.ethz.ch/projects/instant-meshes/). It will analyze the flow of a mesh and create clean quad topology.
 
 ::: tip
@@ -505,4 +505,4 @@ The voxel size used in the triplanar operation.
 ## ![](./icons/dot.png) Primitive
 Parameters for the selected primitive. These are also available in the primitive viewport toolbar.
 
-![](./images/topology_primitive_screenshot.png)
+![](./images/topology_primitive_screenshot.jpg)

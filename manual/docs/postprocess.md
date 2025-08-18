@@ -2,11 +2,11 @@
 
 This menu controls many aspects of Nomad to affect the look of the render.
 
-![](./images/postprocess_overview_drac.png)
+![](./images/postprocess_overview_drac.jpg)
 
 Using post processing can substantially change the final look of your scene.
 
-![](./images/postprocess_overview.png)
+![](./images/postprocess_overview.jpg)
 *The same scene before and after post processing, no additional lights or material changes.*
 
 Post process can impact the performance by a lot depending on your device.

@@ -21,6 +21,8 @@ npm run dev
 # then simply localhost in your browser
 ```
 
+<!-- pnpm update -->
+
 # Website
 
 https://html5up.net/solid-state

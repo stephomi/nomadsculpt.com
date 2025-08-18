@@ -2,7 +2,7 @@
 
 This menu controls how strokes will be repeated acroos a mirror plane or radially, and ways to restore symmetry on non-symmetrical objects.
 
-![](./images/symmetry_overview.png) 
+![](./images/symmetry_overview.jpg) 
 
 ## Overview 
 You can use symmetry in several ways:
@@ -14,7 +14,7 @@ You can use symmetry in several ways:
 
 A shortcut to enable/disable symmetry can also be found on the left quick panel (*"Sym"*). The small 'L/W' indicates if Nomad is in Local or World symmetry mode. You can also long press or swipe to the center of screen to bring out a menu.
 
-![](./images/symmetry_button.png) 
+![](./images/symmetry_button.jpg) 
 
 This is a global option, so the state will carry over the different tools.
 The only exceptions are the transform tools ([Move](#translate), [Rotate](#rotate), [Scale](#scale) and [Gizmo](#gizmo)) which have their own symmetry state.

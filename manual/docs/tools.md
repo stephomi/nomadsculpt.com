@@ -1,6 +1,6 @@
 # ![](./icons/toolbox.png) Tools
 
-![](./images/tools_menu.png)
+![](./images/tools_menu.jpg)
 
 ::: tip
 Jump down to [Tools](#tools-1) for descriptions of the individual tools.
@@ -82,12 +82,9 @@ Polygon editing and curve editing behave in similar ways:
 
 Many tools have extra setttings that are found in the settings menu, the first icon in the top right menu:
 
-![](./images/tools_settings_menu.png)
-
-
+![](./images/tools_settings_menu.jpg)
 
 ## Tools
-
 
 |                                                                    |                                                    |                                                                  |                                                        |                                                           |                                                                    |
 | :----------------------------------------------------------------: | :------------------------------------------------: | :--------------------------------------------------------------: | :----------------------------------------------------: | :-------------------------------------------------------: | :----------------------------------------------------------------: |
@@ -441,7 +438,7 @@ Once the tube is created, the path can be edited in 3d space using similar contr
 
 #### Tube left toolbar
 
-![](./images/tool_tube_left_toolbar.png)
+![](./images/tool_tube_left_toolbar.jpg)
 
 The left toolbar has the following options:
 
@@ -459,7 +456,7 @@ The left toolbar has the following options:
     * `Screen` - When active, the path is 'pinned' to the screen, allowing you to move the view and the object, and the path stays in place. When inactive, the path is part of the 3d scene, and it will move with the camera and objects.
 
 ##### Tube top toolbar
-![](./images/tool_tube_toolbar.png)
+![](./images/tool_tube_toolbar.jpg)
 Whe a tube is selected, a toolbar will appear at the top of the viewport with extra controls. Click the title of the toolbar to collapse/expand the toolbar, and click the arrow in the top right to move the toolbar to the top or bottom of the viewport.
 
 * `Validate` - bake the tube into regular polygons so it can be sculpted.
@@ -481,7 +478,7 @@ Whe a tube is selected, a toolbar will appear at the top of the viewport with ex
 
 #### Curve point delete toggle
 
-![](./images/tool_tube_delete_toggle.png)
+![](./images/tool_tube_delete_toggle.jpg)
 
 Below the toolbar is a curve point delete toggle. When you drag a curve point near another, it will turn red, indicating that if you let go, the point will be deleted. If you are doing small edits and you do not want to delete points, this button will disable the point delete behavior.
 
@@ -507,7 +504,7 @@ Create a revolution surface by drawing a curve.
 
 #### Lathe left toolbar
 
-![](./images/tool_lathe_left_toolbar.png)
+![](./images/tool_lathe_left_toolbar.jpg)
 
 The left toolbar has the following options:
 

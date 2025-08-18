@@ -2,7 +2,7 @@
 
 This menu controls the background color of Nomad, as well as any reference images to be used.
 
-![](./images/background_overview.png)
+![](./images/background_overview.jpg)
 
 ## Background 
 ![](./images/background_selector.png)

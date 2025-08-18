@@ -2,7 +2,7 @@
 
 The settings menu contains many options to control the appearance and behavior of Nomad.
 
-![](./images/settings_overview.png)
+![](./images/settings_overview.jpg)
 
 ## Display settings
 This section contains quick launch shortcuts for most of the settings further down this menu.

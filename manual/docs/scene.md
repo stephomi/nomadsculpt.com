@@ -3,7 +3,7 @@
 This menu lets you manage objects, lights, cameras and repeaters in Nomad. It displays the scene hierarchy as a tree-view, allowing you to modify many aspects of your objects. It also lets you create new objects, as well as combine and split objects in various ways.
 
 
-![](./images/scene_menu_summary.png)
+![](./images/scene_menu_summary.jpg)
 
 
 ## Shortcut bar
@@ -100,13 +100,13 @@ Combine objects into a single surface.
 Both Voxel Merge and Boolean will use object visibility to control the operation:
 
 #### Union
-Both objects visible will create a boolean **union**, the outer skin of the objects are combined, with no interior surfaces. ![](./images/boolean_union.png)
+Both objects visible will create a boolean **union**, the outer skin of the objects are combined, with no interior surfaces. ![](./images/boolean_union.jpg)
 
 #### Subtract
-One object invisible = boolean **subtract**, the invisible object will be subtracted from the visible object. ![](./images/boolean_subtract.png)
+One object invisible = boolean **subtract**, the invisible object will be subtracted from the visible object. ![](./images/boolean_subtract.jpg)
 
 #### Intersect
-Both objects invisible = boolean **intersection**, create a new shape only where the two objects overlap. ![](./images/boolean_intersect.png)
+Both objects invisible = boolean **intersection**, create a new shape only where the two objects overlap. ![](./images/boolean_intersect.jpg)
 
 
 ### Voxel Merge Button
@@ -283,7 +283,7 @@ Create a camera.
 Repeaters are nodes that make instances of objects below it. 
 
 ### Array
-![](./images/scene_primitive_array.png)
+![](./images/scene_primitive_array.jpg)
 
 When objects are made children of this node, they can be instanced into a grid layout. When selected, it has controls for:
 * Fit inside - toggle between controlling the size of the grid/box of the array, or controlling the space between the array instances
@@ -292,7 +292,7 @@ When objects are made children of this node, they can be instanced into a grid l
 * SizeX/Y/Z - the width/height/depth of the total array grid when fit inside is toggled.
 
 ### Curve
-![](./images/scene_primitive_curve.png)
+![](./images/scene_primitive_curve.jpg)
 This will create a curve, children of this node will be repeated along the curve. When selected, it has controls for:
 * Edit - allow adding of points to the curve, and moving points on the curve.
 * Snap - will snap curve points to other geometry
@@ -304,7 +304,7 @@ This will create a curve, children of this node will be repeated along the curve
 * B-spline - Toggle the instances to follow the curve exactly, or use b-spline interpolation which has smoother results. 
 
 ### Radial
-![](./images/scene_primitive_radial.png)
+![](./images/scene_primitive_radial.jpg)
 
 Children of this node will be instanced into a circle. Move the child object to alter the radius of this repeater. When selected, it has controls for:
 * RadialX/Y/Z - selecting these buttons will set the radial axis, and set the number of instances.
@@ -312,7 +312,7 @@ Children of this node will be instanced into a circle. Move the child object to 
 
 
 ### Mirror
-![](./images/scene_primitive_mirror.png)
+![](./images/scene_primitive_mirror.jpg)
 
 Children of this node will be mirrored across an axis. When selected it has controls for:
 * Gizmo - enable the transform gizmo to set the center of the mirror. This can also be rotated and scaled. When done, tap gizmo again to reveal the standard controls.
@@ -326,7 +326,7 @@ All the repeaters have a `Validate` control, which will bake the results of the 
 ::: tip Tip: Combine repeaters
 Repeaters can be parented under each other, and several objects can be made children of repeaters, leading to complex effects.
 
-![](./images/scene_repeater_combine.png)
+![](./images/scene_repeater_combine.jpg)
 :::
 
 ::: tip Tip: Repeater pivots

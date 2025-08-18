@@ -2,7 +2,7 @@
 
 This menu allows you to change the material of the current object, render properties of the object/material, and assign textures to the material.
 
-![](./images/material_overview.png)
+![](./images/material_overview.jpg)
 
 Materials define the how an object looks, by controlling how it reacts to light and to other objects. The look of an object is controlled by these properties:
 
@@ -87,7 +87,7 @@ Further information about transparency and blending modes can be found at https:
 
 ## Controls
 
-![](./images/material_controls.png)
+![](./images/material_controls.jpg)
 
 ### Always unlit
 If enabled, the object will ignore PBR and Matcap and simply display its color painting without shading.
@@ -129,7 +129,7 @@ See the [global option](settings.md#wireframe).
 
 ## Textures
 
-![](./images/material_textures.png)
+![](./images/material_textures.jpg)
 
 If an object has UVs, then textures can be applied to the material in addition to the vertex color/roughness/metalness/opacity. Usually these are the result of a texture bake, but images created outside of Nomad can also be used.
 
@@ -146,7 +146,7 @@ Clicking on a texture slot will bring up a selector. After a texture has been as
 
 ### Texture panel options
 
-![](./images/material_texture_panel.png)
+![](./images/material_texture_panel.jpg)
 
 ### Open
 Select another texture
@@ -184,7 +184,7 @@ Triplanar is like having 6 video projectors all with the same image, shining ont
 This can then be baked into UVs or vertex colors if needed.
 
 
-![](./images/material_triplanar_example.png)
+![](./images/material_triplanar_example.jpg)
 
 #### Method
 

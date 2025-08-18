@@ -2,17 +2,17 @@
 
 The files menu allows you to save and load nomad projects, import and export 3d models, and export rendered images.
 
-![](./images/file_menu.png)
+![](./images/file_menu.jpg)
 
 ## Project
-![](./images/file_project.png)
+![](./images/file_project.jpg)
 
 A thumbnail is shown of the last save at the top of this menu. Clicking this thumbnail brings up a mini browser, tap twice on another project to bring up a mini menu to open, add, save, clone, rename, delete that project.
 
 ### ![](./icons/nomad.png) Preset 
 Access a collection of demos and character components. Select one, then select again to choose to Open, Add to Scene or Clone the entry into your projects folder.
 
-![](./images/file_preset_preview.png)
+![](./images/file_preset_preview.jpg)
 
 ### ![](./icons/save.png) Save
 Save the Nomad project.
@@ -107,7 +107,7 @@ Set the color mode interpreted from the obj as Linear, sRGB, or Auto.
 ## Export
 Save to a 3d geometry format that can be used in other software. 
 
-![](./images/file_export.png)
+![](./images/file_export.jpg)
 
 Different file formats support different features, the options available will change based on the selected file type.
 
