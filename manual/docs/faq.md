@@ -39,7 +39,7 @@ People always want more information, so here's a summary.
 Nomad runs best on newer iPads:
 
 * iPads and iPhones can access the [Quad Remesher](tools#quad-remesher) plugin from [Exoside](https://exoside.com/)
-* recent iPads with the latest pencil support 'barrel roll', you can twist the pencil in certain tools in Nomad. 
+* recent iPads with the latest pencil support [barrel roll](https://www.youtube.com/watch?v=XcDQazDYpo0), you can twist the pencil in certain tools in Nomad. 
 * performance of the latest M series chips is very fast. 
 
 The newest most expensive iPad available will be able to render final images very quickly, and let you sculpt a lot of detail.

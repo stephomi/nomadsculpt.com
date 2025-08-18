@@ -194,3 +194,15 @@ html.dark {
 .DocSearch {
     --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
+
+span.brush { color: #fff; }
+span.move { color: #9791C8; }
+span.mask { color: #966; }
+span.paint { color: #FF9; }
+span.flatten { color: #9F6; }
+span.pinch { color: #F96; }
+span.selection { color: #C66; }
+span.creation { color: #F90; }
+span.transform { color: #F9C; }
+span.misc { color: #9CF; }
+span.view { color: #6FC; }
