@@ -22,6 +22,11 @@ When you first start Nomad you'll see a sphere on screen. Simply drag your stylu
 
 ![](./videos/gettingstarted_01.mp4)
 
+<video controls preload="none" data-poster="/manual/videos/gettingstarted_01.jpg">
+  <source src="/videos/gettingstarted_01.mp4" type="video/mp4">
+</video>
+
+
 To make the brush bigger or smaller, use the radius slider on the left.
 
 ![](./videos/gettingstarted_02.mp4)

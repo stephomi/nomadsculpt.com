@@ -378,13 +378,15 @@ If you use Project while in a layer, you can blend between the original and the 
 ### ![](./icons/tool_layer.webp) Layer
 Raise the surface, but limit the height.
 
-If you keep the pencil down and keep brushing over an area, the Clay and Brush tools will keep increasing in height, while Layer will raise to a certain height then go no further.
+If you keep the pencil down and keep brushing over an area, Layer will raise to a certain height then go no further, vs other tools that will keep accumulating height.
 
-If you start a new stroke, it will build from the new surface height, which is usually not what people expect. Because of this, the tool is designed to work with Nomad's [Layers](layers.md) system.
+Note that by default the limit is only set per stroke! If you start a new stroke, it will build from the new surface height.
 
-If you create and select a layer, then use this brush, then the maximum height is set by the layer itself, so you can apply many brush strokes and the height will always be the same.
+To set a constant maximum height acrosss many strokes, use the Layer tool with Nomad's [Layers](layers.md) system.
 
-`Sub` will use a minimum depth displacement, creating grooves.
+Create a layer, and use this tool. The the maximum height is now set from the layer, so you can apply many brush strokes and the height will always be the same.
+
+`Sub` will use a minimum depth, creating grooves.
 
 #### Layer Settings
 
@@ -412,11 +414,22 @@ Move or 'smear' points in the direction of the stroke.
 ![](./videos/tool_nudge.mp4)
 
 
-### ![](./icons/tool_stamp.webp) Stamp
-This is simply the [Brush tool](#brush) with a stroke type set to `Grab - dynamic radius`. `Sub` will push the stamp in rather than pull it out from the surface.
+### ![](./icons/tool_stamp.png) Stamp
+
+Click and drag to raise an area of the sculpt in the shape of the selected Alpha.
+
+This is simply the [Brush tool](#brush) with a stroke type set to `Lock + radius`. 
+
+`Sub` will push the stamp in rather than pull it out from the surface.
 
 ::: tip
 Stamp usually works best with high resolution geometry. If you search online for 'wrinkles alpha', 'pores alpha', 'scales alpha' etc, these alpha textures and Stamp can be a great way to add organic detail to a character sculpt.
+
+The two stroke modes are useful for different things. 
+
+* `Lock + radius` has a set *height*, dragging adjusts the width and rotation of the stamp. Good for skin textures where they need to be of the same depth/height, but different rotations and scales to hide repeating patterns.
+* `Lock + intensity` has a set *width*, dragging adjust the rotatin and height of the stamp. Good for rivets, where they all have to be the same size, but different rotations and heights. 
+
 :::
 
 ![](./videos/tool_stamp.mp4)
@@ -500,6 +513,8 @@ Divisions at 4 and Post subdivision at 3 will make smooth round tipped tubes, go
 ### ![](./icons/tool_lathe.webp) Lathe
 Create a revolution surface by drawing a curve.
 
+This tool is great for shapes like vases, wineglasses.
+
 ![](./videos/tool_lathe.mp4)
 
 #### Lathe left toolbar
@@ -547,17 +562,22 @@ Whe a lathe is selected, a toolbar will appear at the top of the viewport with e
 * `Division Y` - same as Y Divisions in the toolbar.
 * `Curve (Repeater)` - convert the curve profile into a [Curve Repeater](scene.md#curve)
 
-### ![](./icons/tool_insert.webp) Insert
-Insert an object in the scene.  
-When the insertion takes place, Nomad switches automatically to the [Transform tool](#transform) for quick adjustment and then switches back the [Insert](#insert) tool when you release your fingers.
+### ![](./icons/tool_insert.png) Insert
+Place an object on the surface of another. In use it is similar to the stamp tool, but for full 3d shapes.
 
-If an object is using a custom gizmo pivot, then it will be used as an anchor point for the insertion, see video below.
+If you select a primitive from the left toolbar, a click-drag on any surface will place a primitive where you click, the drag will set the size. Once you finish dragging, Insert will swap to Instance mode.
+
+In Instance mode, dragging will create and slide a new instance over the surface. The size will be duplicated from the first shape, in this way you can place many same-sized instances of an obejct over other surfaces.
+
+You don't have to just insert primitives! Select *any* shape in the outliner, if Insert is in Instance or Clone mode, you can drag copies of the selected object over any other surface.
+
+If an object has a custom pivot, then it will be used as an anchor point. See video below.
 
 ![](./videos/tool_insert.mp4)
 
 
-### ![](./icons/tool_transform.webp) Transform
-Move/Rotate/Scale a model directly with 1 and 2 fingers. 
+### ![](./icons/tool_transform.png) Transform
+Move/Rotate/Scale a model directly with 1 and 2 fingers, usually over the surface of another object.
 
 The tool is controlled with the left toolbar, and has 5 buttons:
 
@@ -590,8 +610,8 @@ This presents a fast workflow for cloning objects over another, eg rocks over a 
 
 ![](./videos/tool_transform.mp4)
 
-### ![](./icons/tool_gizmo.webp) Gizmo
-This tool lets you move, rotate and scale your mesh with a single tool. It also lets you do certain operatations on the scene hierarchy.
+### ![](./icons/tool_gizmo.png) Gizmo
+This tool lets you move, rotate and scale objects, and alter pivots of objects.
 
 The viewport handle has the following features:
 
@@ -640,19 +660,45 @@ When pivot mode is active, a menu is displayed to allow quick pivot changes:
 
 #### Gizmo settings
 
-* `Move origin` - Move the object to the center of the scene, called the origin.
-* `Reset` - A shortcut that sets the translation values to 0, rotation values to 0, scale to 1, moving and rotating the object.
-* `Bake` - Freeze the object where it currently is, and set the translate/rotate values to 0, scale to 1.
+![](./images/tool_gizmo_settings.png)
+
+##### Matrix 
+* ![](./icons/target.png) `Move origin` - Move the object so that it's pivot is at the center of the scene, called the origin.
+* ![](./icons/bake.png)  `Bake` - Freeze the object where it currently is, and set the translate/rotate values to 0, scale to 1.
+* ![](./icons/bake.png) -> ![](./icons/tool_gizmo.png) `Bake Pivot` - Make the matrix values correspond to where the gizmo handle is in the world.
+* ![](./icons/reset.png) `Reset` - A shortcut that sets the translation values to 0, rotation values to 0, scale to 1, moving and rotating the object.
+
+::: tip Bake vs bake to pivot
+Create a box, select the Gizmo tool, open and pin the settings menu. By default the translation and rotation are 0, scale is 1.
+
+Enable pivot mode, move the handle to one side, disable pivot mode. The pivot has changed, but note that the translation values are still 0. 
+
+If you want to see where the pivot *really* is, click `Bake Pivot`. Now the translation values update. Note the box doesn't move during this operation, nor in pivot mode.
+
+Move and rotate the box somewhere, then tap `Move Origin`. It moves the object so that its pivot is at the center of the world, but leaves the rotation unchanged.
+
+Click `Reset`, and the rotation will be set to 0 as well.
+
+Move and rotate the box again, this time click `Bake`. The pivot stays where it is, the box stays where it is, but the translation and rotation values are set to 0.
+
+Practice this a few times! Get an understanding that the pivot values are hidden, Nomad takes care of it for you, but if you need to set the pivot to real locations in space, Bake pivot will do that for you.
+
+:::
 
 * `Translation` - the translate X, Y, Z values
 * `Rotation` - the rotate X, Y, Z values
 * `Scale` - The uniform scale if that is enable, or the scale X, Y Z if disabled.
 * `Uniform scale` - Toggle the ability to scale uniformly or independantly on each axis
 
+-----
+
 * `Compact` - toggle the gizmo layout to put the extra handles outside or inside the rotation sphere
 * `Widget size` - the size of the gizmo
 * `Thickness` - the size of the lines on the gizmo
+* `Opacity` - the opacity of the gizmo
 * `Hide on interaction` - toggle if the gizmo should be temporarily hidden when being dragged
+
+-----
 
 * `Tangent roll threshold` - Control how the rotation UI behaves when dragging on the circle handles to rotate on X/Y/Z. If this value is 0, rotating works like a dial, drag the gizmo in circles. If this value is 90, rotating works like pulling the string of a yo-yo; drag in a straight line towards or away from where you first clicked. Values between 0 and 90 will do a combination of both; below the value will be the linear move, above the value will be circular move.
 * `Numerical input` - when enabled, a single tap on the gizmo will pop up a window to enter an exact value for the tapped widget axis.
