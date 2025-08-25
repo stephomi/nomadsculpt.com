@@ -1,26 +1,26 @@
-# ![](./icons/sun.png) Shading
+# ![](./icons/sun.webp) Shading
 
 This menu controls the shading modes used by Nomad, lighting properties, and the environment light/matcap properties.
 
-![](./images/shading_overview.jpg)
+![](./images/shading_overview.webp)
 
 
 
 You can choose between several rendering modes:
 
-| Mode                        | Meaning                    | Description                                                   |
-| :-------------------------: | :------------------------: | :-----------------------------------------------------------: |
-| [Lit(PBR)](#pbr)            | Physically Based Rendering | Painting with metalness/roughness                             |
-| [Matcap](#matcap)           | Material Capture           | Using during sculpting with lower gpu/cpu use than PBR        |
-| [Unlit](#unlit)             | Surface Color              | Surface color only with no shading or lighting                |
-| [Object Id](#objectid)      | Object ID                  | A random color per object, useful for painting applications.  |
+| Mode                        | Meaning                    | Description                                                     |
+| :-------------------------: | :------------------------: | :-------------------------------------------------------------: |
+| [Lit(PBR)](#pbr)            | Physically Based Rendering | Painting with metalness/roughness                               |
+| [Matcap](#matcap)           | Material Capture           | Using during sculpting with lower gpu/cpu use than PBR          |
+| [Unlit](#unlit)             | Surface Color              | Surface color only with no shading or lighting                  |
+| [Object Id](#objectid)      | Object ID                  | A random color per object, useful for painting applications.    |
 | [Instance Id](#instanceid)  | Instance ID                  | A random color per instance, useful to identify shared meshes |
 
 If you want to learn more about metalness and roughness, see the [Vertex Paint](painting.md) section.
 
 ---
 
-![](./images/shading_second.png)
+![](./images/shading_second.webp)
 
 ### Face Group
 Overlay facegroup colours. Facegroups are coloured selections of polygons that can be created with the [Face group](tools#facegroup) tool, and are made automatically with most of the primitives.
@@ -106,9 +106,9 @@ If you have a big object in your scene that doesn't need to cast shadows (for ex
 
 ## Lights
 
-![](./images/shading_lights.png)
+![](./images/shading_lights.webp)
 
-### ![](./icons/checked.png) Lights checkbox
+### ![](./icons/checked.webp) Lights checkbox
 
 Toggle all the direct lights in the scene.
 
@@ -118,7 +118,7 @@ Toggle all the direct lights in the scene.
 
 Add a light to the scene, to a maxiumum of 4. When a light is added, the light lister is displayed with buttons, and a light toolbar is added to the top of the viewport.
 
-![](./images/shading_lights_icons.png)
+![](./images/shading_lights_icons.webp)
 
 * The text shows the name of the light and the brightness.
 * The eye icon toggles visibility.
@@ -127,12 +127,12 @@ Add a light to the scene, to a maxiumum of 4. When a light is added, the light l
 * The copy icon will duplicate a light. 
 * The 3 dots icon will bring up a full light editor. Most of this functionality is also available from the toolbar that appears in the viewport. 
 
-### ![](./icons/spotlight.png)  Icons
+### ![](./icons/spotlight.webp)  Icons
 
 Toggle the display of light icons in the viewport
 
 ### Light toolbar
-![](./images/shading_lights_toolbar.jpg) 
+![](./images/shading_lights_toolbar.webp) 
 
 This toolbar will appear at the top of the viewport when a light is selected.
 
@@ -146,7 +146,7 @@ This toolbar will appear at the top of the viewport when a light is selected.
 
 ### Light extra controls
 
-![](./images/shading_extra_controls.png) 
+![](./images/shading_extra_controls.webp) 
 
 Note that some options are specific to certain light types.
 
@@ -168,7 +168,7 @@ Note that some options are specific to certain light types.
 
 ## Environment
 
-![](./images/shading_environment.jpg)
+![](./images/shading_environment.webp)
 
 Light in the real world comes from all directions; the blue of the sky, the green of the grass, the red of a building, all this light from the 'environment' can be simulated with an environment map. 
 
@@ -189,9 +189,9 @@ Attach the environment to the camera.
 It will force the lighting to be consistent, whcih can be useful during sculpting.
 
 
-## ![](./icons/sphere_smooth.png) Matcap
+## ![](./icons/sphere_smooth.webp) Matcap
 
-![](./images/shading_matcap.png)
+![](./images/shading_matcap.webp)
 
 As the name suggests (MATerial CAPture), a matcap takes care of both the lighting and material information in a single image.
 Since the material itself is already present in the matcap, roughness and metalness painting channel will be ignored.
@@ -214,13 +214,13 @@ A matcap is a specialised form of an environment map, so like an environment map
 
 
 
-## ![](./icons/circle_fill.png) Unlit
+## ![](./icons/circle_fill.webp) Unlit
 
 This mode will only show the surface color. It can be useful for checking the surface color of your objects are what you expect, without being distracted by lights, shadows, reflecton, transparency. 
 
 This mode can also be used for non-photoreal renders, achieving a flat, cartoony look.
 
-## ![](./icons/cube.png) Object ID
+## ![](./icons/cube.webp) Object ID
 
 All lighting and surface information is ignored, and each object is shaded with a unique flat color. If this is rendered alongside a PBR render, this can be used in a painting program to select by color, and thus be able to do color corrections on specific objects.
 
@@ -230,7 +230,7 @@ Note that these colors will also appear in the [Scene menu tree view](scene#tree
 
 Generate a new set of random colors. 
 
-## ![](./icons/link.png) Instance ID
+## ![](./icons/link.webp) Instance ID
 
 Same as Object ID, but instances will have the same color. 
 

@@ -1,8 +1,8 @@
-# ![](./icons/paint.png) Painting  
+# ![](./icons/paint.webp) Painting  
 
 Control the color, roughness, metalness of paint strokes, allow for flood filling of paint attributes, and how paint tools interact with layers, masks, hidden selections.
 
-![](./images/paint_overview.jpg)  
+![](./images/paint_overview.webp)  
 
 ## Overview
 
@@ -39,7 +39,7 @@ That's the overview, now lets explore the sections of the painting menu:
 
 
 ## Stroke painting
-![](./images/paint_intensity.png)  
+![](./images/paint_intensity.webp)  
 
 Enable painting for this tool, useful if you need to sculpt and paint at the same time.
 
@@ -53,7 +53,7 @@ The `Alpha`, `Falloff` and `Randomize` checkboxes determine if those features wi
 
 
 ## Material
-![](./images/paint_material.jpg) 
+![](./images/paint_material.webp) 
 
 The first icon is a material preview shape. Dragging on the 3d material preview will rotate it. 
 
@@ -70,12 +70,12 @@ The eydropper can be used to sample all the properties from an object in your sc
 ## Material Presets
 Tapping the 3d preview shape will bring up a preset menu of materials, these can be cloned to define your own presets.
 
-![](./images/paint_presets.png) 
+![](./images/paint_presets.webp) 
 
 The `Embed Textures` and `Alpha` toggles when enabled will store any textures used by this material within the preset. This is explained more below.
 
 ## PBR sliders
-![](./images/paint_sliders.png) 
+![](./images/paint_sliders.webp) 
 
 [PBR](shading.md#pbr) painting uses 4 channels:
 - `Color` The color that will be painted. The eyedropper can be used to select color from other parts of the model, or from reference images.
@@ -115,7 +115,7 @@ You might consider turning on `Smooth Shading` [globally](settings.md#smooth-sha
 
 ## Paint all
 
-![](./images/paint_paint_all.png)
+![](./images/paint_paint_all.webp)
 
 Apply the current material to the object, either in standard mode with 'Paint All', or as a Triplanar projection.
 
@@ -123,17 +123,17 @@ The checkboxes next to the color/metalness/roughness/opacity sliders are respect
 
 The extra buttons control how the paint all can be further affected:
 
-| Icon                       | Description                                   |
-| :------------------------: | :-------------------------------------------: |
-| ![](./icons/tool_mask.png) | Masked areas won't be affected.               |
-| ![](./icons/tool_hide.png) | Hidden areas won't be affected.               |
-| ![](./icons/opacity.png)   | use the tool painting factor above.           |
-| ![](./icons/layer.png)     | Unpainted areas of a layer won't be affected. |
-| ![](./icons/triplanar.png)     | Indicator of triplanar settings               |
-| ![](./icons/cog.png)     | Open the Triplanar settings                   |
+| Icon                        | Description                                   |
+| :-------------------------: | :-------------------------------------------: |
+| ![](./icons/tool_mask.webp) | Masked areas won't be affected.               |
+| ![](./icons/tool_hide.webp) | Hidden areas won't be affected.               |
+| ![](./icons/opacity.webp)   | use the tool painting factor above.           |
+| ![](./icons/layer.webp)     | Unpainted areas of a layer won't be affected. |
+| ![](./icons/triplanar.webp) | Indicator of triplanar settings               |
+| ![](./icons/cog.webp)       | Open the Triplanar settings                   |
 
 ### Triplanar settings
-![](./images/paint_triplanar_settings.png)
+![](./images/paint_triplanar_settings.webp)
 
 Similar to the [triplanar settings in the material menu](material.md#triplanar), you can control the blending of the projections, tiling and offsets. 
 

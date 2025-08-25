@@ -1,12 +1,12 @@
-# ![](./icons/interface.png) Interface Menu 
+# ![](./icons/interface.webp) Interface Menu 
 
 This menu controls many options to customise Nomad's interface. 
 
-![](./images/interface_overview2.jpg)
+![](./images/interface_overview2.webp)
 
 Nomad can be customized to quite a deep level, this menu is split across 4 sections; Interface, Gesture, Bindings, Debug.
 
-![](./images/interface_menu.png)
+![](./images/interface_menu.webp)
 
 
 ::: tip
@@ -17,10 +17,10 @@ This page is for the interface menu, not the interface itself! The overall inter
 
 The interface section lets you add shortcuts, create floating toolbars, and control the color, size, appearance of Nomad's user interface.
 
-![](./images/interface_overview3.png)
+![](./images/interface_overview3.webp)
 
 ### Add shortcuts (bottom)...
-![](./images/interface_shortcuts.png)
+![](./images/interface_shortcuts.webp)
 
 The bottom toolbar has these shortcuts enabled by default:
 * `Undo` - undo the previous operation
@@ -35,44 +35,44 @@ The bottom toolbar has these shortcuts enabled by default:
 
 Other commonly used shortcuts are availble from this menu, many more can be found within the bindings button.
 
-#### ![](./icons/more.png) Bindings
+#### ![](./icons/more.webp) Bindings
 
 Almost every function of Nomad can be added to the shortcuts toolbar via the bindings button. A bindings menu will be displayed when the button is clicked:
 
-![](./images/interface_bindings_search.png)
+![](./images/interface_bindings_search.webp)
 
 You can search by category via the icons at the top, or use the search field to find functions by name. Click on a function to add it to the toolbar. Click again to remove it.
 
-#### ![](./icons/list.png) Order
+#### ![](./icons/list.webp) Order
 
 This will display a list of the shorcuts. Long press then drag to reorder the shortcuts.
 
-#### ![](./icons/reset.png) Reset
+#### ![](./icons/reset.webp) Reset
 
 Reset will restore the bottom toolbar to its default settings.
 
 ### Add shortcuts (window)... +
-![](./images/interface_add_shortcuts_window.jpg)
+![](./images/interface_add_shortcuts_window.webp)
 
 Clicking the + will add a floating toolbar. It won't be visible until you click the bindings button and add some shortcuts to it, then you can make it visible. 
 
 You can make many toolbars, each toolbar has the following options in this menu:
 
-* ![](./icons/checked.png) `Visible` - Toggle visibility for the toolbar
-* ![](./icons/more.png)`Bindings` - Display the binding window to select functions to add to or remove from the toolbar.
-* ![](./icons/list.png)`Order` - Dislay a menu to reorder the toolbar.
-* ![](./icons/reset.png) `Reset` - Reset the toolbar to its default state.
-* ![](./icons/resize_bottom_right.png) `Resize corner` - Toggle a resize handle in the toolbar bottom right corner.
-* ![](./icons/sort_down.png) `Collapsable` - Toggle a collapse handle in the top right corner.
-* ![](./icons/trash.png) `Delete` - Delete the toolbar.
+* ![](./icons/checked.webp) `Visible` - Toggle visibility for the toolbar
+* ![](./icons/more.webp)`Bindings` - Display the binding window to select functions to add to or remove from the toolbar.
+* ![](./icons/list.webp)`Order` - Dislay a menu to reorder the toolbar.
+* ![](./icons/reset.webp) `Reset` - Reset the toolbar to its default state.
+* ![](./icons/resize_bottom_right.webp) `Resize corner` - Toggle a resize handle in the toolbar bottom right corner.
+* ![](./icons/sort_down.webp) `Collapsable` - Toggle a collapse handle in the top right corner.
+* ![](./icons/trash.webp) `Delete` - Delete the toolbar.
 
 ### Toolbox
 
 Options for the tool menu on the right of Nomad's interface.
 
-![](./images/interface_toolbox.png)
+![](./images/interface_toolbox.webp)
 
-#### ![](./icons/resize_bottom_right.png) Ui Resize Corner
+#### ![](./icons/resize_bottom_right.webp) Ui Resize Corner
 
 Toggle a resize handle in the toolbar bottom corner.
 
@@ -92,7 +92,7 @@ Reset the default tools in the toolbox to the default order. Custom icons will r
 
 ### Presets
 
-![](./images/interface_presets.png)
+![](./images/interface_presets.webp)
 
 A collection of color presets for the interface.
 
@@ -103,7 +103,7 @@ An alternative style for buttons that makes them more visible when they are enab
 The primary colors used in the interface.
 
 #### Transparent panel, Color panel, Blur strength
-![](./images/interface_transparent.jpg)
+![](./images/interface_transparent.webp)
 When enabled, extra options will appear to control how menus and panels look in nomad. Their color, transparency and blur amount can be adjusted.
 
 ::: tip
@@ -127,7 +127,7 @@ When you select a color for a material, a preview of this material is displayed 
 ----
 ### Help popup on hover
 
-For devices that support hover, enable if the context help in Nomad represented with the ![](./icons/help.png) icon will appear on hover, or only when clicked.
+For devices that support hover, enable if the context help in Nomad represented with the ![](./icons/help.webp) icon will appear on hover, or only when clicked.
 
 ----
 
@@ -158,10 +158,10 @@ Reset all the UI elements to their default values.
 ## Gesture
 The gesture menu controls how stylus and finger presses control Nomad.
 
-![](./images/interface_gesture.png)
+![](./images/interface_gesture.webp)
 
 ### Gesture options
-![](./images/interface_gesture_matrix.png)
+![](./images/interface_gesture_matrix.webp)
 
 Nomad can limit operations based on the input device. For example a finger drag could only move the camera, while a stylus drag can only sculpt. If you have a mouse or trackpad, that can also be assigned to control specific operations.
 
@@ -176,9 +176,9 @@ Nomad currently lets you set these modes to be controlled on any combination of 
 
 `Finger always smooths` - Smooth can be set to only work with a finger drag.
 
-### ![](./icons/tool_mask.png) Mask
+### ![](./icons/tool_mask.webp) Mask
 
-![](./images/interface_gesture_mask.png)
+![](./images/interface_gesture_mask.webp)
 
 `One tap shortcuts` - Enable the following one tap shortcuts without having to hold the mask button. It will allow the following gestures:
 * tap on the background to invert the mask
@@ -186,19 +186,19 @@ Nomad currently lets you set these modes to be controlled on any combination of 
 * tap on an unmasked area to sharpen the mask
 
 ### Toggle Mask <-> SelMask
-![](./images/interface_gesture_togglemask.png)
+![](./images/interface_gesture_togglemask.webp)
 * `Stroke` - Long press will toggle between Mask and SelMask and start a new stroke. At the end of the stroke, the previous tool is reselected. 
 * `Tool` - Long press and release without moving to switch between Mask and SelMask. 
 
-### ![](./icons/tool_hide.png) Hide
-![](./images/interface_gesture_hide.png)
+### ![](./icons/tool_hide.webp) Hide
+![](./images/interface_gesture_hide.webp)
 
 `One tap shortcuts` will enable the following shortcuts with the hide tool:
 * Tap on a face group to hide it
 * Tap in empty space to invert the hidden polygons
 
-### ![](./icons/finger3.png) Three fingers
-![](./images/interface_gesture_threefingers.png)
+### ![](./icons/finger3.webp) Three fingers
+![](./images/interface_gesture_threefingers.webp)
 
 If your device supports 3 finger gestures, configure shortcuts for that gesture. 
 
@@ -208,7 +208,7 @@ The option matrix allows you to define vertical and horizontal drags as separate
 * `Tool Radius` - Edit the tool radius.
 * `Tool Intensity` - Edit the tool intensity. 
 
-### ![](./icons/fingerprint.png) History 2/3
+### ![](./icons/fingerprint.webp) History 2/3
 `History shortcuts` - when enabled, the following gestures are active:
 * Undo - tap with 2 fingers
 * Redo - tap with 3 fingers
@@ -217,7 +217,7 @@ The option matrix allows you to define vertical and horizontal drags as separate
 
 ### Accessibility 
 
-![](./images/interface_gesture_accessibility.png)
+![](./images/interface_gesture_accessibility.webp)
 
 `Assistive window` will bring up a floating toolbar to control drag, pinch, roll and camera operations.
 
@@ -232,7 +232,7 @@ A shortcut to go to the `Bindings` menu (Pencil tap and double tap options used 
 ## Bindings
 Keyboard and button shortcuts can be defined from the bindings menu:
 
-![](./images/interface_bindings.png)
+![](./images/interface_bindings.webp)
 Nearly all functions in Nomad can be bound to keyboard shortcuts if your device has a keyboard, or to extra buttons on your stylus, or even gamepad controllers.
 
 To create a binding, click the rectangle next to the function, and press the key/button. 
@@ -241,10 +241,10 @@ Find functions via the category icons at the top, or via the search bar to find 
 
 Individual bindings can be disabled via the checkbox next to the binding name.
 
-### ![](./icons/more.png) Context menu
-The ![](./icons/more.png) icon after each binding brings up a context menu:
+### ![](./icons/more.webp) Context menu
+The ![](./icons/more.webp) icon after each binding brings up a context menu:
 
-![](./images/interface_bindings_context.png)
+![](./images/interface_bindings_context.webp)
 
 * `Clone` - Clone the binding
 * `Reset` - Reset the binding
@@ -254,7 +254,7 @@ The ![](./icons/more.png) icon after each binding brings up a context menu:
 ### Advanced
 At the bottom of the bindings menu is a gear menu for advanced options:
 
-![](./images/interface_bindings_advanced.png)
+![](./images/interface_bindings_advanced.webp)
 
 * `Toggle shortcut on key tap` - A tap of the standard shortcuts for mask, smooth, gizmo, hide, sub will toggle to that mode, but holding the key down will switch to hat mode, then when the key is released, the mode will revert to the previous mode. Sometimes called 'sticky keys' in other 3d apps.
 * `Toggle tool shortcuts` - When using one of the tool shortcuts, if the same shortcut is pressed twice, it will toggle to the previous tool. In this way you can keep swapping between two tools with the same hotkey.
@@ -274,7 +274,7 @@ Android keyboard support is a bit experimental.
 ## Debug
 Some experimental and debug options are stored in this menu. Many of these options should be left at their defaults, and only altered after contacting Nomad support.
 
-![](./images/interface_debug.png)
+![](./images/interface_debug.webp)
 ### UV
 * `Normalize Uvs` - Nomad will normalize the UVs inside the [0-1] tile.
 

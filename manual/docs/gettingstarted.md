@@ -66,7 +66,7 @@ To erase, tap the `Erase` button on the left toolbar, then erase on the surface.
 
 Using the clay brush in add/sub modes, smooth, paint, see if you can make a simple cartoon head:
 
-![](./images/gettingstarted_head1.jpg)
+![](./images/gettingstarted_head1.webp)
 
 ## Other tools
 
@@ -76,7 +76,7 @@ The tools in Nomad can do a wide variety of things, from sculpting related tools
 
 See if you can use the move, crease, inflate, and smooth tools to add more detail to your head, change its shape:
 
-![](./images/gettingstarted_head2.jpg)
+![](./images/gettingstarted_head2.webp)
 
 Now that you know the basics of Nomad, lets look at the rest of the interface.
 
@@ -97,7 +97,7 @@ You can mirror the placement and ordering of all the toolbars, see [Mirror top b
 
 ## Bottom toolbar
 
-![](./images/interface_bottom_toolbar.jpg)
+![](./images/interface_bottom_toolbar.webp)
 
 * `Undo` - revert the last operation
 * `Redo` - restore the last undo operation

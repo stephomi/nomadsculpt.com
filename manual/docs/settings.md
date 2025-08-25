@@ -1,13 +1,13 @@
-# ![](./icons/cog.png) Settings 
+# ![](./icons/cog.webp) Settings 
 
 The settings menu contains many options to control the appearance and behavior of Nomad.
 
-![](./images/settings_overview.jpg)
+![](./images/settings_overview.webp)
 
 ## Display settings
 This section contains quick launch shortcuts for most of the settings further down this menu.
 
-![](./images/settings_display_settings.png)
+![](./images/settings_display_settings.webp)
 
 ### Smooth Shading 
 Toggle smooth and faceted shading. When faceted the polygons are shaded independently, so you can see the underlying topology.
@@ -75,7 +75,7 @@ The objects that are not selected will be darkened so that the current selection
 ### Mask
 The colour used for masking, by default a mid gray, multiplied against your object color. Set this to white to make the mask invisible, but remember to change it back to to a gray when done!
 
-## ![](./icons/cursor.png) Cursor
+## ![](./icons/cursor.webp) Cursor
 
 ### Show circle while sculpting
 Continue to show the brush radius when sculpting.
@@ -86,8 +86,8 @@ Display a dot at the center of the brush stroke while sculpting, or when the cam
 ### Show rope stabilizer
 Draw a line to indicate the rope length when lazy rope stablizer is active in stroke settings.
 
-## ![](./icons/cursor.png) Indicator
-![](./images/settings_indicator.png)
+## ![](./icons/cursor.webp) Indicator
+![](./images/settings_indicator.webp)
 
 Display visual indicator(s) for tutorials and screen captures.
 
@@ -99,8 +99,8 @@ The color of the indicator.
 ### Size/Icon/Circle
 Controls to adjust the size of the indicator and shapes within the indicator.
 
-## ![](./icons/wireframe.png) Wireframe
-![](./images/settings_wireframe.png)
+## ![](./icons/wireframe.webp) Wireframe
+![](./images/settings_wireframe.webp)
 Activate the wireframe overlay.
 
 ### Target
@@ -115,8 +115,8 @@ Multiresolution will show wireframes for level 0 darker, and higher levels progr
 ### Color
 Set the color and opacity for wireframe.
 
-## ![](./icons/grid.png) Grid
-![](./images/settings_grid.png)
+## ![](./icons/grid.webp) Grid
+![](./images/settings_grid.webp)
 Activate the grid.
 
 ### Color
@@ -125,26 +125,26 @@ Set the grid color and opacity.
 ### Snap
 Enable snapping for curve based tools to the grid.
 
-## ![](./icons/culling.png)Two sided
+## ![](./icons/culling.webp)Two sided
 Enable seeing polygon faces from both sides.
 
 ### Color Backface, Backface Color
 Enable tinting of the backfaces, and the tint color.
 
-## ![](./icons/outline.png)Outline
+## ![](./icons/outline.webp)Outline
 Enable an outline around the active object.
 
 ### Outline color, Thickness
 Set the color and thickness of the outline.
 
 
-## ![](./icons/bang.png) Highlight
+## ![](./icons/bang.webp) Highlight
 Enable a short flash when the active object is changed.
 ### Color, Duration
 Set the color and length of time of the flash in milliseconds.
 
-## ![](./icons/snap_cube.png) Snap cube
-![](./images/settings_snapcube.png)
+## ![](./icons/snap_cube.webp) Snap cube
+![](./images/settings_snapcube.webp)
 
 Display a helper icon in the corner of the scene, useful to quickly switch between front/back/left/right/top/bottom views. Tap on the sides of the cube to swap between orthographic views.
 
@@ -164,8 +164,8 @@ Enable a tap behavior so that if the view is snapped, tapping on the center of t
 Set which corner the snap cube will be in.
 
 
-## ![](./icons/edit_radius_n.png) Stats
-![](./images/settings_stats.png)
+## ![](./icons/edit_radius_n.webp) Stats
+![](./images/settings_stats.webp)
 
 Display information about your system memory, total scene vertex count, and the current selection vertex count.
 

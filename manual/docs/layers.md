@@ -1,8 +1,8 @@
-# ![](./icons/layer.png) Layers 
+# ![](./icons/layer.webp) Layers 
 
 This menu contains the layer stack, a way to store edits to your object in a non destructive way, and many ways to combine and repurpose layers.
 
-![](./images/layers_overview.jpg) 
+![](./images/layers_overview.webp) 
 
 ## Overview
 
@@ -26,7 +26,7 @@ Unlike most sculpting software, changing the topology of a mesh will not discard
 
 ## Layer menu 
 
-![](./images/layers_menu.png)
+![](./images/layers_menu.webp)
 
 Press `Add layer` to create a new layer.
 
@@ -34,15 +34,15 @@ Each layer has a name, a slider to control it's strength/factor, and option butt
 
 ### Options
 
-| Action       | Icon                        | Description                                         |
-| :----------: | :-------------------------: | :-------------------------------------------------  |
-| Visible      | ![](./icons/eye_open.png)   | Show/hide the layer                                 |
-| Blend Mode   | ![](./icons/opacity.png)    | The photoshop style blending mode. The 4 icons display the modes for Color, Roughness, Metalness, Opacity.                                 |
-| Edit Name    | ![](./icons/pencil.png)     | Edit the layer name                                 |
-| Delete       | ![](./icons/trash.png)      | Delete the layer                                    |
-| Duplicate    | ![](./icons/clone.png)      | Duplicate the layer                                 |
-| Merge Down   | ![](./icons/merge_down.png) | Merge the layer with the lower layer (or base mesh) |
-| More         | ![](./icons/more.png)       | [More...](#more) options                            |
+| Action       | Icon                         | Description                                         |
+| :----------: | :--------------------------: | :-------------------------------------------------  |
+| Visible      | ![](./icons/eye_open.webp)   | Show/hide the layer                                 |
+| Blend Mode   | ![](./icons/opacity.webp)    | The photoshop style blending mode. The 4 icons display the modes for Color, Roughness, Metalness, Opacity.                                 |
+| Edit Name    | ![](./icons/pencil.webp)     | Edit the layer name                                 |
+| Delete       | ![](./icons/trash.webp)      | Delete the layer                                    |
+| Duplicate    | ![](./icons/clone.webp)      | Duplicate the layer                                 |
+| Merge Down   | ![](./icons/merge_down.webp) | Merge the layer with the lower layer (or base mesh) |
+| More         | ![](./icons/more.webp)       | [More...](#more) options                            |
 
 To move a layer to another part of the layer stack, press and hold on its name, then drag.
 
@@ -50,7 +50,7 @@ To move a layer to another part of the layer stack, press and hold on its name, 
 
 The 'More...' button will show extra options for the current layer:
 
-![](./images/layers_more.png) 
+![](./images/layers_more.webp) 
 
 #### Channel factors
 
@@ -79,18 +79,18 @@ Maybe in the future, each channel will have its own alpha channel to remove this
 :::
 
 
-#### ![](./icons/tool_mask.png) Mask
+#### ![](./icons/tool_mask.webp) Mask
 The mask button next to each slider will create a mask from that channel. Similar to using layers to make selections in painting applications, this allows you to reuse work you have done in a layer for other operations.
 
-#### ![](./icons/preview.png) Preview
-![](./images/layers_preview.png) 
+#### ![](./icons/preview.webp) Preview
+![](./images/layers_preview.webp) 
 
 When enabled, will preview the extract settings for this layer (see the next section).
 
 When xray is enabled, only the exacted shape will be solid, the rest of the shape will be made transparent, useful if you are using negative extraction heights.
 
 #### Extract
-![](./images/layers_extract.png) 
+![](./images/layers_extract.webp) 
 
 ![](./videos/layer_shell.mp4)
 
@@ -103,8 +103,8 @@ The `Extract` button will duplicate the contents of the layer into a new object,
 * Shell - Close the extracted shape with the thickness value and direction options.
 * Layer - Extract the layer difference.
 
-#### ![](./icons/height.png) Thickness
-![](./images/layers_thickness.png) 
+#### ![](./icons/height.webp) Thickness
+![](./images/layers_thickness.webp) 
 
 The depth of the shell extrusion. Positive values grow out of the surface, negative values grow into the surface.
 
@@ -114,12 +114,12 @@ The plus/minus next to this value will set the direction of the extrusion:
 * PlusMinus ( ± ) will push the top and bottom of the extrusion away by equal amounts, so it will be halfway embedded in the original surface.
 
 #### Smoothness
-![](./images/layers_smoothness.png) 
+![](./images/layers_smoothness.webp) 
 
 If the edges of the region to be extracted are jagged, this slider will attempt to blur the edge into a smoother shape. 
 
-#### ![](./icons/height.png) Edge loop (side)
-![](./images/layers_edgeloop.png) 
+#### ![](./icons/height.webp) Edge loop (side)
+![](./images/layers_edgeloop.webp) 
 
 This section is visible when the closing action is 'Shell'. 
 
@@ -130,7 +130,7 @@ If disabled, the `Division` slider will set the number of divisions on the sides
 _This is the end of the 'More...' submenu._
 
 ### Advanced
-![](./images/layers_advanced.png)
+![](./images/layers_advanced.webp)
 
 #### Keep top layers details
 
@@ -145,7 +145,7 @@ By default if you sculpt small wrinkles on a layer, then go and make large chang
 
 The default layer menu lets you toggle layer visibility and the layer opacity. Enabling this option expands the full controls for every layer.
 
-![](./images/layers_expand.png)
+![](./images/layers_expand.webp)
 
 #### Sync transform
 

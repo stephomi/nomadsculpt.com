@@ -1,8 +1,8 @@
-# ![](./icons/material.png) Material
+# ![](./icons/material.webp) Material
 
 This menu allows you to change the material of the current object, render properties of the object/material, and assign textures to the material.
 
-![](./images/material_overview.jpg)
+![](./images/material_overview.webp)
 
 Materials define the how an object looks, by controlling how it reacts to light and to other objects. The look of an object is controlled by these properties:
 
@@ -26,14 +26,14 @@ Note that Nomad's renderer is a realtime renderer; while powerful, it favours sp
 
 ## Material types
 
-![](./images/material_types.png)
+![](./images/material_types.webp)
 
 Nomad material types are Opaque, Subsurface, Blending, Additive, Refraction, Dithering, Shadow Catcher.
 
-### ![](./icons/material_opaque.png) Opaque
+### ![](./icons/material_opaque.webp) Opaque
 The default mode that treats surfaces as a simple material that supports painted color, roughness, metalness, opacity.
 
-### ![](./icons/material_subsurface.png) Subsurface
+### ![](./icons/material_subsurface.webp) Subsurface
 This mode can simulate material that allows light to blur and scatter light internally like skin, wax, jade.
 
 To get the best result, switch to PBR shading mode and use at least one directional or spot light, ideally with a dim environment.
@@ -42,7 +42,7 @@ To get the best result, switch to PBR shading mode and use at least one directio
 
 `Translucency` controls how light scatters from the front to the back of a shape, like like scattering through the underside of a leaf, or when ears are strongly backlit. 
 
-### ![](./icons/material_blending.png) Blending
+### ![](./icons/material_blending.webp) Blending
 
 Similar to Opaque, but supports the opacity slider to allow the material to mix between solid and transparent. This is a simple single slider for opacity, vs the paintable opacity supported by the opaque material. 
 
@@ -50,7 +50,7 @@ Similar to Opaque, but supports the opacity slider to allow the material to mix 
 Blending mode can cause flickering and popping in complex or intersecting shapes.
 :::
 
-### ![](./icons/material_additive.png) Additive
+### ![](./icons/material_additive.webp) Additive
 You can make your mesh semi-transparent with this material. It is similar to the blending material, but while blending will mix with its surroundings, additive will always be brighter than objects behind it, good for bright effects like light rays, fire, explosions.
 
 You can set an opacity value higher than 1, which means the object will be brighter.  
@@ -58,7 +58,7 @@ It can be useful if you want to use [bloom](postprocess.md#bloom) and the `thres
 
 This mode tends to have less artifacts than [Blending](#blending) (order independent transparency).
 
-### ![](./icons/material_refraction.png) Refraction
+### ![](./icons/material_refraction.webp) Refraction
 This mode can be used to simulate glass material. Because of real time constraints, self-refraction and multi-layered refraction is somewhat limited.
 
 The roughness painting of the model impacts how blurry the refraction is.
@@ -72,10 +72,10 @@ In order to have different values (for example a lollipop with sharp surface but
 ![](./videos/refraction.mp4)
 
 
-### ![](./icons/material_dithering.png) Dithering
+### ![](./icons/material_dithering.webp) Dithering
 Make the object semi-transparent by discarding some pixels in a random fashion.
 
-### ![](./icons/material_shadow_catcher.png) Shadow Catcher
+### ![](./icons/material_shadow_catcher.webp) Shadow Catcher
 
 Make the object invisible, and only recieve shadows. Useful to combine nomad renders with other images. 
 
@@ -87,7 +87,7 @@ Further information about transparency and blending modes can be found at https:
 
 ## Controls
 
-![](./images/material_controls.jpg)
+![](./images/material_controls.webp)
 
 ### Always unlit
 If enabled, the object will ignore PBR and Matcap and simply display its color painting without shading.
@@ -129,7 +129,7 @@ See the [global option](settings.md#wireframe).
 
 ## Textures
 
-![](./images/material_textures.jpg)
+![](./images/material_textures.webp)
 
 If an object has UVs, then textures can be applied to the material in addition to the vertex color/roughness/metalness/opacity. Usually these are the result of a texture bake, but images created outside of Nomad can also be used.
 
@@ -146,7 +146,7 @@ Clicking on a texture slot will bring up a selector. After a texture has been as
 
 ### Texture panel options
 
-![](./images/material_texture_panel.jpg)
+![](./images/material_texture_panel.webp)
 
 ### Open
 Select another texture
@@ -158,7 +158,7 @@ Remove the texture
 
 If the image has an alpha channel, this will allow you to use it for Opacity, or to ignore it.
 
-### ![](./icons/link.png) Chain/Link icon 
+### ![](./icons/link.webp) Chain/Link icon 
 
 The link icon in the following sections, when enabled, will mean whatever options are used, will be shared with the other textures (color, normal, roughness, metalness, opacity, emissive) that also have their link icon enabled. 
 
@@ -166,7 +166,7 @@ This allows you to ensure if you have aligned textures, they will stay aligned e
 
 
 ### Projection
-![](./images/material_projection.png)
+![](./images/material_projection.webp)
 
 Set how the texture should be applied to the object.
 
@@ -175,7 +175,7 @@ Set how the texture should be applied to the object.
 * `Triplanar` - Project the texture along the X,Y,Z axis', and blend the seams. 
 
 ### Triplanar
-![](./images/material_triplanar.png)
+![](./images/material_triplanar.webp)
 
 Triplanar projections are a powerful yet simple way to apply textures to objects.
 
@@ -184,7 +184,7 @@ Triplanar is like having 6 video projectors all with the same image, shining ont
 This can then be baked into UVs or vertex colors if needed.
 
 
-![](./images/material_triplanar_example.jpg)
+![](./images/material_triplanar_example.webp)
 
 #### Method
 
@@ -201,7 +201,7 @@ When ticked, the same hardness is used for all projections. When unticked, extra
 
 
 ### Parameter
-![](./images/material_parameter.png)
+![](./images/material_parameter.webp)
 
 #### Filtering
 The texture filter method to use, `Auto` is the default, methods are `Nearest`, `Linear`, `Mipmap`. Nearest does no filtering, so textures can get jagged artifacts when viewed up close. Linear and Mipmap do better filtering, so textures appear blurred rather than jagged up close.
@@ -213,7 +213,7 @@ If the Scale parameter is greater than 1, making the texture smaller than the ob
 Same as Tiling-X, but for the Y axis.
 
 ### Transform
-![](./images/material_transform.png)
+![](./images/material_transform.webp)
 
 Extra 2d transformations applied to the texture in UV space. The reset button resets to defaults, the chain icon (when textures other than color are selected) will link or unlink the transform to be the same as the color texture.
 

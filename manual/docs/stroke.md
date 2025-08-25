@@ -1,7 +1,7 @@
-# ![](./icons/pencil.png) Stroke    
+# ![](./icons/pencil.webp) Stroke    
 
 ---
-![](./images/stroke_overview.jpg) 
+![](./images/stroke_overview.webp) 
 
 ## Overview 
 
@@ -10,13 +10,13 @@ The settings should be similar to the ones present in 2d painting applications, 
 
 The options are split across 5 sub-menus:
 
-| Name     | Icon                        | Description                                                        |
-| :------: | :-------------------------: | :----------------------------------------------------------------: |
-| Stroke   | ![](./icons/stroke_dot.png) | Control how the stroke gets applied to the model                   |
-| Alpha    | ![](./icons/alpha.png)      | How a grey-scale texture is used for the brush stamp               |
-| Falloff  | ![](./icons/falloff.png)    | Control how the brush strength changes from the center to the edge |
-| Filter   | ![](./icons/filter.png)     | How the brush is affected by the model geometry                    |
-| Pressure | ![](./icons/pressure.png)   | Control stylus pressure response                                   |
+| Name     | Icon                         | Description                                                        |
+| :------: | :--------------------------: | :----------------------------------------------------------------: |
+| Stroke   | ![](./icons/stroke_dot.webp) | Control how the stroke gets applied to the model                   |
+| Alpha    | ![](./icons/alpha.webp)      | How a grey-scale texture is used for the brush stamp               |
+| Falloff  | ![](./icons/falloff.webp)    | Control how the brush strength changes from the center to the edge |
+| Filter   | ![](./icons/filter.webp)     | How the brush is affected by the model geometry                    |
+| Pressure | ![](./icons/pressure.webp)   | Control stylus pressure response                                   |
 
 ::: tip
 Not all stroke options apply for all tools. Stroke options that aren't used by the current tool will be disabled or hidden. 
@@ -27,7 +27,7 @@ Not all stroke options apply for all tools. Stroke options that aren't used by t
 
 ### Radius
 
-![](./images/stroke_radius.png)
+![](./images/stroke_radius.webp)
 
 #### Share radius
 
@@ -41,49 +41,49 @@ When enabled, all tools will use the same radius, the default is for each tool t
 
 ### Stroke
 
-![](./images/stroke_strokemode.png)
+![](./images/stroke_strokemode.webp)
 
 Strokes can act in multiple modes:
 
-### ![](./icons/stroke_dot.png) Dot
+### ![](./icons/stroke_dot.webp) Dot
 Drag like a regular paint stroke. 
 ![](./videos/stroke_dot.mp4) 
 
-### ![](./icons/stroke_roll.png) Roll
+### ![](./icons/stroke_roll.webp) Roll
 The brush alpha will be rotated to follow the direction of the stroke, useful for making fabric stitches. 
 ![](./videos/stroke_roll.mp4) 
 
- ### ![](./icons/radius.png) Lock + radius
+ ### ![](./icons/radius.webp) Lock + radius
  Stamp a brush stroke with fixed **_height_**. Drag will set the scale and rotation.
 ![](./videos/stroke_lock_radius.mp4) 
 
-### ![](./icons/falloff.png) Lock + intensity 
+### ![](./icons/falloff.webp) Lock + intensity 
 Stamp a brush stroke with fixed **_radius_**. Drag will set height and rotation.
 ![](./videos/stroke_lock_intensity.mp4) 
 
-![](./images/stroke_strokemodemove.png)
+![](./images/stroke_strokemodemove.webp)
 
 The `Move` and `Drag` tools have their own 3 options:
 
-### ![](./icons/snake.png) Drag
+### ![](./icons/snake.webp) Drag
 
 Will keep updating what is inside the brush radius during the stroke. A fast stroke will leave the surface behind, while a slow stroke will hold onto material, making longer shapes. This is the default mode for the `Drag` tool. With `Dynamic Topology` this can be used to make snake like extrusions. 
 ![](./videos/stroke_drag.mp4) 
 
 
-### ![](./icons/grab.png) Grab
+### ![](./icons/grab.webp) Grab
 Will select what is inside the brush radius when the brush is started, and keep that selection. This is useful for more precise move operations, as you can carefully adjust the distance of the move and not accidentally move more than you originally selected. This is the default mode for the `Move` tool.
 ![](./videos/stroke_grab.mp4) 
 
 
-### ![](./icons/radius.png) Lock + radius (drag) 
+### ![](./icons/radius.webp) Lock + radius (drag) 
 The user radius is ignored, and is set dynamically based on how far the stroke is dragged away from the starting point. A small distance=small radius, a larger distance = bigger radius. Use the intensity slider to control the shape of the falloff. Useful for blocking in organic rubbery shapes.
 ![](./videos/stroke_lockradius_drag.mp4) 
 
 
 
 ### Adjust spacing intensity
-![](./images/stroke_space_smooth.png)
+![](./images/stroke_space_smooth.webp)
 
 Strokes with a low spacing (lower than 50%) can accumulate quickly, making more intense strokes than higher spacing values. This toggle will compensate for this, so strokes will be of approximately the same intensity regardless of spacing.
 
@@ -102,17 +102,17 @@ This is useful for drawing smooth lines.
 ### Snap radius
 Snap the start of the stroke to the end of the previous stroke. The radius determines how far to look for the end of the previous stroke. This can be useful when drawing long continuous lines, while doing frequent pauses.
 
-### ![](./icons/silhouette.png) Silhouette
-![](./images/stroke_silhouette.png)
+### ![](./icons/silhouette.webp) Silhouette
+![](./images/stroke_silhouette.webp)
 By default strokes will only affect the model surface within the brush radius. When silhouette is enabled, the stroke will be projected through the entire model. This can be very useful when doing the initial blocking out of a model, or for shapes that require the sides to remain perpendicular.
 
 The projection direction can be set explicitly, the default 'Closest' method will detect the best angle relative to the view. 
 
 ![](./videos/stroke_silhouette.mp4) 
 
-### ![](./icons/dice.png)Randomize
+### ![](./icons/dice.webp)Randomize
 
-![](./images/stroke_randomize.png)
+![](./images/stroke_randomize.webp)
 
 The intensity, translation, rotation and scale of the stroke can each be randomized. This can be used to create a range of effects, eg randomize with the paint tool can create mottled color, or randomize with the crease tool can be used to create skin detail.
 
@@ -123,8 +123,8 @@ The intensity, translation, rotation and scale of the stroke can each be randomi
 Apply a constant offset on the stroke. This is useful for small screens where your finger would cover the stroke. 
 
 
-## ![](./icons/alpha.png) Alpha
-![](./images/stroke_alpha.png) 
+## ![](./icons/alpha.webp) Alpha
+![](./images/stroke_alpha.webp) 
 
 The `Alpha` is a texture that will modulate your brush behavior.
 It's a grayscale image, where black pixels mean no deformation and white pixels full deformation.
@@ -150,18 +150,18 @@ The built in alphas that ship with Nomad cannot be inverted.
 
 The brush size in Nomad is a circle with a user defined radius. Textures are often square or rectangular, the `Scaling` parameters let you decide how the texture should fit within the circle. For a square texture, a value of 0.7 will fit within the circle. A value of 1 will scale the texture larger so that the circle fits inside, clipping the edges.
 
-![](./images/alpha_scaling.png) 
+![](./images/alpha_scaling.webp) 
 
 Enabling `Scaling - Y` will allow you to stretch the alpha vertically.
 
-![](./images/alpha_scaling_y.png) 
+![](./images/alpha_scaling_y.webp) 
 
 ### Rotation
 
 The alpha texture will be rotated to follow the direction of the stroke. You can add a rotation offset, and if the lock icon is enabled, the texture will stay locked to this rotation relative to the screen.
 
 ### Tiling
-![](./images/stroke_tiling.png) 
+![](./images/stroke_tiling.webp) 
 
 How often the texture repeats within the brush profile. The tiling modes allow you to limit to a single texture within the stroke, or repeated textures, or mirrored where every second texture is flipped to create patterns or help make seamless textures.
 
@@ -180,7 +180,7 @@ If you want the brush to push the surface in, or both push in AND pull out, you 
 
 ## Falloff
 
-![](./images/falloff_menu.png) 
+![](./images/falloff_menu.webp) 
 
 This is similar to the [Alpha](#alpha), except that you drive the intensity with a single curve. This is combined with the alpha so that you can use a texture for detail, and falloff to control the edge fading and intensity at the center of the tool.
 
@@ -204,11 +204,11 @@ When selected, the user can draw their own falloff curves. The editor works the 
 
 The curve editor has 3 buttons:
 
-| Item     | Icon                       | Description                                  |
-| :------: | :------------------------: | :------------------------------------------: |
-| Maximize | ![](./icons/maximize.png)  | Expand the curve editor                      |
-| Reset    | ![](./icons/reset.png)     | Revert the curve to the default state        |
-| Symmetry | ![](./icons/symmetric.png) | Display the curve as a symmetric 'brush tip' |
+| Item     | Icon                        | Description                                  |
+| :------: | :-------------------------: | :------------------------------------------: |
+| Maximize | ![](./icons/maximize.webp)  | Expand the curve editor                      |
+| Reset    | ![](./icons/reset.webp)     | Revert the curve to the default state        |
+| Symmetry | ![](./icons/symmetric.webp) | Display the curve as a symmetric 'brush tip' |
 
 
 ### Influence
@@ -224,7 +224,7 @@ By default strokes will only affect the model surface within the brush radius. W
 
 ## Filter
 
-![](./images/filter_menu.png) 
+![](./images/filter_menu.webp) 
 
 ### Accumulate stroke
 Enable no limit to how much matter can be added/removed per stroke. Eg the `Clay` tool has this enabled, so material can keep building up, while the `Brush` tool has this disabled, so strokes will stop adding material if you keep moving the same stroke over the same region of the mesh. 
@@ -242,7 +242,7 @@ Enable only sculpting the vertices that are linked to the surface you touch with
 ![](./videos/connected_topology.mp4)
 
 ### Protect Area
-![](./images/filter_protect_area.png) 
+![](./images/filter_protect_area.webp) 
 
 These options will stop tools affecting parts of your mesh under various conditions. 
 
@@ -274,7 +274,7 @@ At 0%, only the nearest vertex or triangle is taken into account. These values c
 
 
 ### Depth masking
-![](./images/stroke_depthmask.png)
+![](./images/stroke_depthmask.webp)
 
 Exclude points that are above or below a certain distance of the computed plane (Area sampling).
 
@@ -293,7 +293,7 @@ To only paint in high regions, set the height offset to +90%, so that the bottom
 
 
 ## Pressure 
-![](./images/pressure_menu.png) 
+![](./images/pressure_menu.webp) 
 
 Control how the stylus/pen pressure affects the brushes.
 

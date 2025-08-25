@@ -84,26 +84,26 @@ export default defineConfig({
     markdown: {
         config: md => {
             const colored = [
-                'faceGroup.png',
-                'gizmo.png',
+                'faceGroup.webp',
+                'gizmo.webp',
                 'flag_',
-                'tool_planar.png',
-                'tool_pinch.png',
-                'tool_paint.png',
-                'tool_nudge.png',
-                'tool_move.png',
-                'tool_layer.png',
-                'tool_inflate.png',
-                'tool_gizmo.png',
-                'tool_flatten.png',
-                'tool_faceGroup.png',
-                'tool_drag.png',
-                'tool_crease.png',
-                'tool_clearLayer.png',
-                'tool_clay.png',
-                'tool_brush.png',
-                'tool_stamp.png',
-                'tool_smooth.png'
+                'tool_planar.webp',
+                'tool_pinch.webp',
+                'tool_paint.webp',
+                'tool_nudge.webp',
+                'tool_move.webp',
+                'tool_layer.webp',
+                'tool_inflate.webp',
+                'tool_gizmo.webp',
+                'tool_flatten.webp',
+                'tool_faceGroup.webp',
+                'tool_drag.webp',
+                'tool_crease.webp',
+                'tool_clearLayer.webp',
+                'tool_clay.webp',
+                'tool_brush.webp',
+                'tool_stamp.webp',
+                'tool_smooth.webp'
             ];
             md.renderer.rules.image = function (tokens, idx, options, env, self) {
                 const token = tokens[idx];

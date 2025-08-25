@@ -1,5 +1,8 @@
 Options +FollowSymlinks
 
+# no directory listing
+Options -Indexes
+
 ErrorDocument 404 /404
 
 RewriteEngine on

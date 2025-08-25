@@ -1,4 +1,4 @@
-# ![](./icons/faq.png) FAQ
+# ![](./icons/faq.webp) FAQ
 
 [[toc]]
 

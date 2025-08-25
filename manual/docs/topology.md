@@ -1,8 +1,8 @@
-# ![](./icons/multires.png) Topology 
+# ![](./icons/multires.webp) Topology 
 
 This menu controls the topology of objects in Nomad, as well as tools to bake and transfer details between objects, and between textures.
 
-![](./images/topology_overview.jpg)
+![](./images/topology_overview.webp)
 
 Nomad is based on polygons, it uses triangles and quads to handle the geometry.
 By topology, we refer to both the number of faces but also the way points (vertices) are connected.
@@ -13,30 +13,30 @@ It's important to keep track of the topology, especially if you want to sculpt o
 You can display the [Wireframe](settings.md#wireframe) or simply disable [Smooth Shading](settings.md#smooth-shading).
 :::
 
-![](./images/topology_top.png)
+![](./images/topology_top.webp)
 
 The topology menu of Nomad has several sections:
 
-| Method                                | Icon                        | Description                                                      |
-| :-----------------------------------: | :-------------------------: | :--------------------------------------------------------------: |
-| [Multiresolution](#multiresolution)   | ![](./icons/multires.png)   | Edit multiple levels of detail using subdivision                 |
-| [Voxel Remesher](#voxel-remesher)     | ![](./icons/voxel.png)      | Recompute a new topology with uniform density                    |
-| [Dynamic Topology](#dynamic-topology) | ![](./icons/dynamic.png)    | Add/Remove faces locally in real-time when sculpting or painting |
-| [Misc](#misc)                         | ![](./icons/topo_extra.png) | Decimation, UVs, baking, remeshing, reprojection                 |
-| [Primitive](#msc)                     | ![](./icons/dot.png)        | Primitive options                                                |
+| Method                                | Icon                         | Description                                                      |
+| :-----------------------------------: | :--------------------------: | :--------------------------------------------------------------: |
+| [Multiresolution](#multiresolution)   | ![](./icons/multires.webp)   | Edit multiple levels of detail using subdivision                 |
+| [Voxel Remesher](#voxel-remesher)     | ![](./icons/voxel.webp)      | Recompute a new topology with uniform density                    |
+| [Dynamic Topology](#dynamic-topology) | ![](./icons/dynamic.webp)    | Add/Remove faces locally in real-time when sculpting or painting |
+| [Misc](#misc)                         | ![](./icons/topo_extra.webp) | Decimation, UVs, baking, remeshing, reprojection                 |
+| [Primitive](#msc)                     | ![](./icons/dot.webp)        | Primitive options                                                |
 
 
 ## Polygon stats
 
-![](./images/topology_stats.png)
+![](./images/topology_stats.webp)
 
 The top section of the topology menu displays polygon information for the selected object and the entire scene. The numbers show the total number of vertices, total number of triangles, and total number of quads (4 sided polygons).
 
 Tapping on this section will bring up a list of polygon statistics for all the polygon objects in the scene.
 
-## ![](./icons/multires.png) Multiresolution
+## ![](./icons/multires.webp) Multiresolution
 
-![](./images/topology_multires_menu.jpg)
+![](./images/topology_multires_menu.webp)
 
 ### What is multiresolution?
 The multiresolution feature is useful for two main scenarios:
@@ -97,8 +97,8 @@ Subdivision will smooth all sharp edges by default. To keep edges slightly sharp
 :::
 
 
-## ![](./icons/voxel.png) Voxel Remesher
-![](./images/topology_voxel_menu.jpg)
+## ![](./icons/voxel.webp) Voxel Remesher
+![](./images/topology_voxel_menu.webp)
 When using the `Voxel Remesher`, the entire mesh will force the topology to have an uniform resolution, meaning all the polygons have more or less the same size. This is very useful when you don't want to think about topology and simply do free-form sculpting.
 
 A typical sculpting workflow can start by using the `Voxel Remesher` to block-out a rough shape with a low resolution.
@@ -135,9 +135,9 @@ This option can sometimes cause 'loops' in the geometry that can be difficult to
 ### Keep sharp edges
 Enable snapping of the new points to sharp edges on the original mesh. It can introduce distortion.
 
-## ![](./icons/dynamic.png) Dynamic Topology
+## ![](./icons/dynamic.webp) Dynamic Topology
 
-![](./images/topology_dyntopo_menu.jpg)
+![](./images/topology_dyntopo_menu.webp)
 Multiresolution and voxel remeshing are common industry methods to control topology, but both require you to watch that you're not stretching polygons too far, or squeezing polgyons too tight. 
 
 Dynamic Topology is an alternative method. As you sculpt, Nomad will adaptively add and remove polygons during the brush stroke, so carving in small details will add many small polygons where you need them, and smoothing elsewhere will take away polygons.
@@ -212,16 +212,16 @@ However one advantage over the voxels is that the masked area will be protected,
 
 
 
-## ![](./icons/topo_extra.png) Misc
+## ![](./icons/topo_extra.webp) Misc
 
-![](./images/topology_misc_menu.jpg)
+![](./images/topology_misc_menu.webp)
 
-##### ![](./icons/cog.png) Gear menu
+##### ![](./icons/cog.webp) Gear menu
 Many of the tools in this menu have extra options. They can be accessed through the gear icon next to the section title.
 
 ### Decimation
 
-![](./images/topology_decimation.jpg)
+![](./images/topology_decimation.webp)
 
 Reduce the number of polygons by trying to keep as many details as possible, using triangle polygons.
 
@@ -235,7 +235,7 @@ Note that the masked areas won't be decimated.
 #### Decimate
 Start the decimate operation.
 
-#### ![](./icons/cog.png) Decimate gear menu
+#### ![](./icons/cog.webp) Decimate gear menu
 The gear menu has these advanced options:
 ##### Preserve painting
 The checkbox will toggle this mode, the value will determine how accurately painting detail will be preserved. Higher values will preserve more painting. Set to 0 if you do not care about painting.
@@ -253,7 +253,7 @@ Set the target triangle count. The default value is 50%, the percent/target butt
 
 ### UV Unwrap - UVAtlas
 
-![](./images/topology_uvatlas_menu.jpg)
+![](./images/topology_uvatlas_menu.webp)
 Compute texture coordinates (UVs) for the current mesh, generally preferring to make more islands with cuts, to minimise distortion.
 
 The small eye icon between the menu title and the gear menu will toggle previewing uv's on the object.
@@ -266,7 +266,7 @@ Calculate UVs for the selected object, which will be displayed in the background
 #### Delete UVs
 Delete UVs on the object.
 
-#### ![](./icons/cog.png) UVAtlas gear menu
+#### ![](./icons/cog.webp) UVAtlas gear menu
 The gear menu has these advanced options:
 
 #### Face Group
@@ -304,11 +304,11 @@ When models are made in Nomad, you can paint directly onto objects without UVs. 
 :::
 
 ### UV Unwrap - BFF
-![](./images/topology_uvbff_menu.jpg)
+![](./images/topology_uvbff_menu.webp)
 
 BFF Uv's favour a 'less cuts, more distortion' approach. 
 
-#### ![](./icons/cog.png) UV BFF gear menu
+#### ![](./icons/cog.webp) UV BFF gear menu
 
 #### Face Group
 
@@ -321,7 +321,7 @@ Define the number of main projections used. Lower values will produce fewer isla
 Affects the layout of the uv patches, workes best with carefully created facegroups.
 
 ### Bake -> texture 
-![](./images/topology_bake_menu.jpg)
+![](./images/topology_bake_menu.webp)
 
 Texture baking will create textures by projecting other visible objects in the scene into the uv's of the selected object.
 
@@ -351,8 +351,8 @@ The resolution of the baked texture. Bake textures are always square, so 1024 wi
 
 The buttons below are shortcuts for commonly used resolutions. For reference, 512x512 is relatively small, say for web graphics and simple geometry. 4096x4096 (4k for short) is for high quality renders.
 
-#### ![](./icons/cog.png) Bake gear menu
-![](./images/topology_bake_gear_menu.jpg)
+#### ![](./icons/cog.webp) Bake gear menu
+![](./images/topology_bake_gear_menu.webp)
 The gear menu has these advanced options:
 
 ##### Normal, Roughness, Metalness, Color, Emissive, Opacity
@@ -370,7 +370,7 @@ Adjust where the bake calculations start from on the bake object. By default the
 
 ### Reproject to vertex
 
-![](./images/topology_reproject_menu.png)
+![](./images/topology_reproject_menu.webp)
 
 Project sculpted details, painting, layers, textures into vertex values.
 
@@ -402,7 +402,7 @@ Convert any visible objects into vertex values on the selected object. The numbe
 Reprojecting other objects can be used not just for transferring color information from other objects, but to project vertices onto other objects, eg bandages can be projected onto a character.
 :::
 
-#### ![](./icons/cog.png) Reproject gear menu
+#### ![](./icons/cog.webp) Reproject gear menu
 The gear menu has these advanced options:
 
 #### Vertices, Roughness, Metalness, Color, Opacity, Opacity->Mask, Mask, Layers, Face Group
@@ -425,7 +425,7 @@ Adjust where the bake calculations start from on the selected object. By default
 
 
 ### Quad Remesh - Instant
-![](./images/topology_quadremesh_menu.jpg)
+![](./images/topology_quadremesh_menu.webp)
 Remesh using the [Instant Meshes algorithm by Wenzel Jakob, Marco Tarini, Daniele Panozzo, Olga Sorkine-Hornung](https://igl.ethz.ch/projects/instant-meshes/). It will analyze the flow of a mesh and create clean quad topology.
 
 ::: tip
@@ -438,7 +438,7 @@ Start the instant meshes operation.
 #### Target quads
 The number of quad polygons quad remesh will attempt to create.
 
-#### ![](./icons/cog.png) Quad Remesh Instant gear menu
+#### ![](./icons/cog.webp) Quad Remesh Instant gear menu
 The gear menu has these advanced options:
 
 ##### Crease angle
@@ -448,7 +448,7 @@ A threshold of sharp corners that will try and help guide the remesh operation.
 The algorithm can sometimes produce unwanted holes. If a hole has fewer vertices than this value, then it will be filled.
 
 ### Holes
-![](./images/topology_holes_menu.png)
+![](./images/topology_holes_menu.webp)
 Most of the time, your object will probably be watertight, meaning the mesh is 'closed'.
 
 If your object has holes, you can fill them. Note that it only works on 'naive' holes, as such, it cannot 'weld' two separate borders.
@@ -462,7 +462,7 @@ When you run the Voxel remesher, all the holes are automatically closed, whether
 #### Close holes
 Execute the hole close action.
 
-#### ![](./icons/cog.png) Holes gear menu
+#### ![](./icons/cog.webp) Holes gear menu
 The gear menu has these advanced options:
 
 ##### Detail
@@ -476,12 +476,12 @@ Try to fill non manifold hole.
 When filling holes, should each hole get its own facegroup (Auto), or should they all share a facegroup (Off), or don't create facegroups (On).
 
 ### Force Manifold
-![](./images/topology_forcemanifold_menu.png)
+![](./images/topology_forcemanifold_menu.webp)
 Try to clean non manifold edges. It can be useful for external software that don't support edges that have more than 2 faces in common.
 
 #### Clean
 Execute the clean action.
-#### ![](./icons/cog.png) Force manifold gear menu
+#### ![](./icons/cog.webp) Force manifold gear menu
 The gear menu has these advanced options:
 
 #### Delete small faces
@@ -489,7 +489,7 @@ A threshold used to remove and join small polygons.
 
 
 ### Triplanar
-![](./images/topology_triplanar_menu.png)
+![](./images/topology_triplanar_menu.webp)
 Converts the mesh into a [triplanar](scene.md#triplanar) primitive.
 You will likely lose a lot of detail in the process.
 
@@ -502,7 +502,7 @@ Execute the triplanar action.
 #### Resolution
 The voxel size used in the triplanar operation.
 
-## ![](./icons/dot.png) Primitive
+## ![](./icons/dot.webp) Primitive
 Parameters for the selected primitive. These are also available in the primitive viewport toolbar.
 
-![](./images/topology_primitive_screenshot.jpg)
+![](./images/topology_primitive_screenshot.webp)

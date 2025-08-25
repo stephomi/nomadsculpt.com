@@ -1,5 +1,5 @@
-# ![](./icons/history.png) History
-![](./images/history_overview.png)
+# ![](./icons/history.webp) History
+![](./images/history_overview.webp)
 
 Like most content creation tools, you can undo/redo all editing in Nomad.
 There is a limit to how many operations can be undoable, but you can control this behavior.
@@ -11,12 +11,12 @@ You can use quick gestures to undo/redo:
 :::
 
 ## History
-![](./images/history_history.png)
+![](./images/history_history.webp)
 
 This panel displays the history stack, showing the number of steps, the operation name, and the amount of memory that step is using.
 
 ## Settings
-![](./images/history_settings.png)
+![](./images/history_settings.webp)
 
 ### History limit (Mb)
 If the history stack exceeds this value, the older operations will be removed so that the memory budget fits into this limit.

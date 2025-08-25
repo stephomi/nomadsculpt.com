@@ -1,12 +1,12 @@
-# ![](./icons/postprocess.png) Post process 
+# ![](./icons/postprocess.webp) Post process 
 
 This menu controls many aspects of Nomad to affect the look of the render.
 
-![](./images/postprocess_overview_drac.jpg)
+![](./images/postprocess_overview_drac.webp)
 
 Using post processing can substantially change the final look of your scene.
 
-![](./images/postprocess_overview.jpg)
+![](./images/postprocess_overview.webp)
 *The same scene before and after post processing, no additional lights or material changes.*
 
 Post process can impact the performance by a lot depending on your device.
@@ -18,7 +18,7 @@ However, most of the time you want the post process to be disabled when you are 
 
 ## Quality
 
-![](./images/postprocess_quality.png)
+![](./images/postprocess_quality.webp)
 ### Max frame sampling
 Nomad will calculate a certain amount of post processing for a single frame render, which can look noisy. This control determines how many frames will be rendered, then blended together to remove most noisy artifacts. Some effects require no extra samples (eg color grading), while others like global illumination can require hundreds of samples to be noise free. 
 
@@ -39,7 +39,7 @@ When enabled will force the resolution multiplier to x1.0
 Apply a denoiser to the image. This can allow you to use much lower samples. This only works if `Full Resolution` is enabled. Note that the denoising happens after all the samples have been calculated, and can be processor intensive.
 
 ## Preset browser
-![](./images/postprocess_presets.png)
+![](./images/postprocess_presets.webp)
 Clcking on the image will display a collection of post processing presets. To define your own presets, select one, click 'clone', make changes. To save, click the preset image, click again inside the preset browser, and choose 'save'.
 
 
@@ -49,9 +49,9 @@ If you have metallic and shiny objects in your scene, then this option should pr
 This option is only effective with PBR mode.
 
 
-| SSR off                    | SSR on                   |
-| :------------------------: | :----------------------: |
-| ![](./images/ssr-off.jpg)  | ![](./images/ssr-on.jpg) |
+| SSR off                    | SSR on                    |
+| :------------------------: | :-----------------------: |
+| ![](./images/ssr_off.webp) | ![](./images/ssr_on.webp) |
 
 ## Global Illumination (SSGI)
 
@@ -77,9 +77,9 @@ The effect only depends on the model geometry.
 * `Color` - A tint multiplied into the occlusion, used for creative effects.
 
 
-| SSAO off                   | SSAO on                   |
-| :------------------------: | :-----------------------: |
-| ![](./images/ssao-off.jpg) | ![](./images/ssao-on.jpg) |
+| SSAO off                    | SSAO on                    |
+| :-------------------------: | :------------------------: |
+| ![](./images/ssao_off.webp) | ![](./images/ssao_on.webp) |
 
 ::: tip
 AO will be most visible in areas lit mainly by environment light. Areas that are under strong direct light will receive a much weaker AO effect.
@@ -95,9 +95,9 @@ Simply tap on your model to change the focus point.
 * `Near blur` - The amount of blurring to be applied between the focus point and the camera.
 
 
-| DOF off                   | DOF focus on far ring      | DOF focus on close ring   |
-| :-----------------------: | :------------------------: | :-----------------------: |
-| ![](./images/dof-off.jpg) | ![](./images/dof-near.jpg) | ![](./images/dof-far.jpg) |
+| DOF off                   | DOF focus on far ring       | DOF focus on close ring    |
+| :-----------------------: | :-------------------------: | :------------------------: |
+| ![](./images/dof_off.jpg) | ![](./images/dof_near.webp) | ![](./images/dof_far.webp) |
 
 
 ## Bloom
@@ -108,9 +108,9 @@ Blooms will make the bright area of your scene glow.
 * `Threshold` - How bright pixels have to be in the scene before they start to bloom. Setting this value low will make everything bloom, setting it high will allow only the brightest pixels to bloom.
 * `Color` - a tint that can be added to bloom for creative effects.
 
-| Bloom off                   | Bloom with radius 0        | Bloom with radius 1        |
-| :-------------------------: | :------------------------: | :------------------------: |
-| ![](./images/bloom-off.jpg) | ![](./images/bloom-r0.jpg) | ![](./images/bloom-r1.jpg) |
+| Bloom off                    | Bloom with radius 0         | Bloom with radius 1         |
+| :--------------------------: | :-------------------------: | :-------------------------: |
+| ![](./images/bloom_off.webp) | ![](./images/bloom_r0.webp) | ![](./images/bloom_r1.webp) |
 
 
 ## Tone Mapping
@@ -125,9 +125,9 @@ Any color variations above this range will then be lost.
 
 Notice that with `Tone Mapping` disabled, some details disappear because the pixels are too bright.
 
-| Tone Mapping off           | Tone Mapping on           |
-| :------------------------: | :-----------------------: |
-| ![](./images/tone-off.jpg) | ![](./images/tone-on.jpg) |
+| Tone Mapping off            | Tone Mapping on            |
+| :-------------------------: | :------------------------: |
+| ![](./images/tone_off.webp) | ![](./images/tone_on.webp) |
 
 ::: tip
 Tone mapping can enhance the effect of global illumination. If you turn the instensity of the environment map down, the primary light source up, can increase the tone mapping `exposure` to see more of the bounce lighting effects.
@@ -148,9 +148,9 @@ Detect where there are rapid changes in curvature, and apply a colour to those r
 * `Cavity` - how much it will detect concave changes, and place the selected colour there (black by default)
 
 
-| Curvature off                   | Curvature on                   |
-| :-----------------------------: | :----------------------------: |
-| ![](./images/curvature-off.jpg) | ![](./images/curvature-on.jpg) |
+| Curvature off                    | Curvature on                   |
+| :------------------------------: | :----------------------------: |
+| ![](./images/curvature_off.webp) | ![](./images/curvature_on.jpg) |
 
 
 ## Chromatic Aberration
@@ -158,9 +158,9 @@ Simulate the lens artifacts with light being decomposed around the screen edges.
 
 * `Strength` - how much the red/green/blue parts of the image get split towards the screen edges
 
-| Chromatic off                | Chromatic on                |
-| :--------------------------: | :-------------------------: |
-| ![](./images/chroma-off.jpg) | ![](./images/chroma-on.jpg) |
+| Chromatic off                 | Chromatic on                 |
+| :---------------------------: | :--------------------------: |
+| ![](./images/chroma_off.webp) | ![](./images/chroma_on.webp) |
 
 
 ## Vignette
@@ -170,9 +170,9 @@ Simulate the lens artifacts by darkening the screen edges.
 * `Hardness` - How blurry or sharp the ellipse is mixed on top of the image.
 
 
-| Vignette off                   | Vignette on                   |
-| :----------------------------: | :---------------------------: |
-| ![](./images/vignette-off.jpg) | ![](./images/vignette-on.jpg) |
+| Vignette off                    | Vignette on                    |
+| :-----------------------------: | :----------------------------: |
+| ![](./images/vignette_off.webp) | ![](./images/vignette_on.webp) |
 
 ## Grain
 Add a grain effect, it can help make the image a bit less artificial.
@@ -180,9 +180,9 @@ Add a grain effect, it can help make the image a bit less artificial.
 * `Strength` - the amount of grain/noise added to the image.
 
 
-| Grain off                   | Grain on                   |
-| :-------------------------: | :------------------------: |
-| ![](./images/grain-off.jpg) | ![](./images/grain-on.jpg) |
+| Grain off                    | Grain on                   |
+| :--------------------------: | :------------------------: |
+| ![](./images/grain_off.webp) | ![](./images/grain_on.jpg) |
 
 
 ## Sharpness
@@ -191,9 +191,9 @@ A sharpen effect similar to that in Photoshop or photo processing apps.
 * `Strength` - the amount of sharpening applied to the image.
 
 
-| Sharpness off                 | Sharpness on                 |
-| :---------------------------: | :--------------------------: |
-| ![](./images/sharpen-off.jpg) | ![](./images/sharpen-on.jpg) |
+| Sharpness off                  | Sharpness on                 |
+| :----------------------------: | :--------------------------: |
+| ![](./images/sharpen_off.webp) | ![](./images/sharpen_on.jpg) |
 
 ## Pixel Art
 Simulate retro game pixel art.

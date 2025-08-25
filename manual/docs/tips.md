@@ -1,4 +1,4 @@
-# ![](./icons/manual.png) Tips
+# ![](./icons/manual.webp) Tips
 
 [[toc]]
 
@@ -166,11 +166,11 @@ To fix the topolgy itself, use a new primitive, or the quad remesh tools, or an 
 
 The default PBR render is, as its name suggests, physically based, which like an unprocessed digital photo can look a little washed out and flat. Nomad's lights and post processing can be used to make renders look more vibrant.
 
-![](./images/tips_lighting_default.jpg)
+![](./images/tips_lighting_default.webp)
 
 Enabling post processing and tonemapping can add brightness and contrast:
 
-![](./images/tips_lighting_tonemap.jpg)
+![](./images/tips_lighting_tonemap.webp)
 
 To focus on the lights, the default environment light is good for sculpting, but can be improved for a final render. One way to think about this is to separate direct light (eg the sun) vs environment light (eg light from the blue of the sky, the ground). By reducing the environment light and rotating it, this starts to capture what the lighting should look like if the subject were in a shaded area:
 
