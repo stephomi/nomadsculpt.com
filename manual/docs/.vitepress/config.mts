@@ -109,7 +109,7 @@ export default defineConfig({
                 const token = tokens[idx];
                 const src = token.attrGet('src');
                 if (src && src.startsWith('./videos')) {
-                    var srcImg = src.replace('.mp4', '.jpg');
+                    var srcImg = src.replace('.mp4', '.webp');
                     var tag = '<video controls preload="metadata" poster="$0">';
                     tag += '<source src="$1" type="video/mp4">';
                     tag += '</video>\n';
