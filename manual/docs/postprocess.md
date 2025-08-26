@@ -63,7 +63,7 @@ Global illumination simulates how light bounces between surfaces, eg a red wall 
 
 | SSGI off                   | SSGI on                   |
 | :------------------------: | :-----------------------: |
-| ![](./images/ssgi_off.jpg) | ![](./images/ssgi_on.jpg) |
+| ![](./images/ssgi_off.webp) | ![](./images/ssgi_on.webp) |
 
 _A spotlight is behind the sphere, aimed at the ceiling. With SSGI off, only the ceiling is lit. WIth SSGI on, light bounces from the ceiling to the walls to the sphere._
 
@@ -97,7 +97,7 @@ Simply tap on your model to change the focus point.
 
 | DOF off                   | DOF focus on far ring       | DOF focus on close ring    |
 | :-----------------------: | :-------------------------: | :------------------------: |
-| ![](./images/dof_off.jpg) | ![](./images/dof_near.webp) | ![](./images/dof_far.webp) |
+| ![](./images/dof_off.webp) | ![](./images/dof_near.webp) | ![](./images/dof_far.webp) |
 
 
 ## Bloom
@@ -138,7 +138,7 @@ Similar to the curves tool in Photoshop, this allows you to control the balance 
 
 | Color Grading off             | Color Grading on             |
 | :---------------------------: | :--------------------------: |
-| ![](./images/grading_off.jpg) | ![](./images/grading_on.jpg) |
+| ![](./images/grading_off.webp) | ![](./images/grading_on.webp) |
 
 ## Curvature
 Detect where there are rapid changes in curvature, and apply a colour to those regions.
@@ -150,7 +150,7 @@ Detect where there are rapid changes in curvature, and apply a colour to those r
 
 | Curvature off                    | Curvature on                   |
 | :------------------------------: | :----------------------------: |
-| ![](./images/curvature_off.webp) | ![](./images/curvature_on.jpg) |
+| ![](./images/curvature_off.webp) | ![](./images/curvature_on.webp) |
 
 
 ## Chromatic Aberration
@@ -182,7 +182,7 @@ Add a grain effect, it can help make the image a bit less artificial.
 
 | Grain off                    | Grain on                   |
 | :--------------------------: | :------------------------: |
-| ![](./images/grain_off.webp) | ![](./images/grain_on.jpg) |
+| ![](./images/grain_off.webp) | ![](./images/grain_on.webp) |
 
 
 ## Sharpness
@@ -193,7 +193,7 @@ A sharpen effect similar to that in Photoshop or photo processing apps.
 
 | Sharpness off                  | Sharpness on                 |
 | :----------------------------: | :--------------------------: |
-| ![](./images/sharpen_off.webp) | ![](./images/sharpen_on.jpg) |
+| ![](./images/sharpen_off.webp) | ![](./images/sharpen_on.webp) |
 
 ## Pixel Art
 Simulate retro game pixel art.
@@ -203,7 +203,7 @@ Simulate retro game pixel art.
 
 | Pixel off                   | Pixel on                   |
 | :-------------------------: | :------------------------: |
-| ![](./images/pixel_off.jpg) | ![](./images/pixel_on.jpg) |
+| ![](./images/pixel_off.webp) | ![](./images/pixel_on.webp) |
 
 ## Scanline
 Simulate the look of old CRT monitors.
@@ -213,7 +213,7 @@ Simulate the look of old CRT monitors.
 
 | Scanline off                   | Scanline on                   |
 | :----------------------------: | :---------------------------: |
-| ![](./images/scanline_off.jpg) | ![](./images/scanline_on.jpg) |
+| ![](./images/scanline_off.webp) | ![](./images/scanline_on.webp) |
 
 
 ## Dithering

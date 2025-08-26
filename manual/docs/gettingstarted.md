@@ -22,7 +22,7 @@ When you first start Nomad you'll see a sphere on screen. Simply drag your stylu
 
 ![](./videos/gettingstarted_01.mp4)
 
-<video controls preload="none" data-poster="/manual/videos/gettingstarted_01.jpg">
+<video controls preload="none" data-poster="/manual/videos/gettingstarted_01.webp">
   <source src="/videos/gettingstarted_01.mp4" type="video/mp4">
 </video>
 
@@ -87,7 +87,7 @@ Now that you know the basics of Nomad, lets look at the rest of the interface.
 
 ## Interface
 
-![](./images/interface_overview1.jpg)
+![](./images/interface_overview1.webp)
 
 * `Top menus` - The menus to access most of Nomads features. The top-left menus mainly cover scene and object features, the top-right menus are related to tools. On smaller screens these menus will collapse together to save space.
 * `Stats` - Information about the scene, the current object, mask status, memory usage.

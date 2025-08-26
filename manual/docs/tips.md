@@ -174,16 +174,16 @@ Enabling post processing and tonemapping can add brightness and contrast:
 
 To focus on the lights, the default environment light is good for sculpting, but can be improved for a final render. One way to think about this is to separate direct light (eg the sun) vs environment light (eg light from the blue of the sky, the ground). By reducing the environment light and rotating it, this starts to capture what the lighting should look like if the subject were in a shaded area:
 
-![](./images/tips_lighting_env.jpg)
+![](./images/tips_lighting_env.webp)
 
 A direct light can be added, and its intensity boosted to simulate harsh sunlight. Balancing this with the environment light will achieve a pleasing result:
 
-![](./images/tips_lighting_sunlight.jpg)
+![](./images/tips_lighting_sunlight.webp)
 
 Characters can benefit from swapping their material to subsurface, and placing a spotlight behind the character aiming at the ears to make them glow:
 
-![](./images/tips_lighting_sss.jpg)
+![](./images/tips_lighting_sss.webp)
 
 Then experiment with the rest of the post process settings! Global Illumination and Ambient Occlusion help with more realistic lighting. Curvature and Sharpen can help bring out more detail in the sculpt. Chromatic Aberration, Depth of Field, Grain, Bloom, Vignette help simulate camera effects. Note that as features are enabled, the lighting and other post processing values need to be adjusted to compensate.
 
-![](./images/tips_lighting_final.jpg)
+![](./images/tips_lighting_final.webp)

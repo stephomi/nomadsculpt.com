@@ -35,7 +35,7 @@ Many of these tools can be customized with different brush behavior, pressure, t
 
 The left toolbar has sliders for radius and intensity, and then tool category specific controls, explained below.
 
-![](./images/tool_left_panel.jpg)
+![](./images/tool_left_panelwebp)
 
 ::: tip
 The intensity slider for many tools can go above 100%, worth experimenting with!
@@ -414,7 +414,7 @@ Move or 'smear' points in the direction of the stroke.
 ![](./videos/tool_nudge.mp4)
 
 
-### ![](./icons/tool_stamp.png) Stamp
+### ![](./icons/tool_stamp.webp) Stamp
 
 Click and drag to raise an area of the sculpt in the shape of the selected Alpha.
 
@@ -443,7 +443,7 @@ This tool can reset layers locally, you need an active layer otherwise nothing w
 
 ### ![](./icons/tool_tube.webp) Tube
 Create a tube by drawing a curve. 
-![](./images/tool_tube_new.jpg)
+![](./images/tool_tube_newwebp)
 
 Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Shape editing](#shape-editing) and curve editing tools. 
 
@@ -659,13 +659,13 @@ When pivot mode is active, a menu is displayed to allow quick pivot changes:
 
 #### Gizmo settings
 
-![](./images/tool_gizmo_settings.png)
+![](./images/tool_gizmo_settings.webp)
 
 ##### Matrix 
-* ![](./icons/target.png) `Move origin` - Move the object so that it's pivot is at the center of the scene, called the origin.
-* ![](./icons/bake.png)  `Bake` - Freeze the object where it currently is, and set the translate/rotate values to 0, scale to 1.
-* ![](./icons/bake.png) -> ![](./icons/tool_gizmo.png) `Bake Pivot` - Make the matrix values correspond to where the gizmo handle is in the world.
-* ![](./icons/reset.png) `Reset` - A shortcut that sets the translation values to 0, rotation values to 0, scale to 1, moving and rotating the object.
+* ![](./icons/target.webp) `Move origin` - Move the object so that it's pivot is at the center of the scene, called the origin.
+* ![](./icons/bake.webp)  `Bake` - Freeze the object where it currently is, and set the translate/rotate values to 0, scale to 1.
+* ![](./icons/bake.webp) -> ![](./icons/tool_gizmo.webp) `Bake Pivot` - Make the matrix values correspond to where the gizmo handle is in the world.
+* ![](./icons/reset.webp) `Reset` - A shortcut that sets the translation values to 0, rotation values to 0, scale to 1, moving and rotating the object.
 
 ::: tip Bake vs bake to pivot
 Create a box, select the Gizmo tool, open and pin the settings menu. By default the translation and rotation are 0, scale is 1.
@@ -755,6 +755,8 @@ Drag to measure the distance between 2 points.
 
 ### ![](./icons/tool_remesh.webp) Quad Remesher
 
+![](./images/tool_quadremesher.webp)
+
 This tool will convert the selected object into a clean quad topology layout, with controls for density, edge flow, symmetry. 
 
 ::: tip
@@ -770,26 +772,52 @@ When this tool is activated for the first time, it will ask if you want to enabl
 * `Rect` - Draw rectangles on the the surface of the sculpt, quad remesher will use these as guides for the edge flow. Tap on a path to delete it.
 * `Ellipse` - Draw ellipses on the the surface of the sculpt, quad remesher will use these as guides for the edge flow. Tap on a path to delete it.
 
+#### Quad remesher top toolbar
+![](./images/tool_quadremesher_toolbar.webp)
+
 A toolbar will appear at the top of the viewport with extra controls:
 
-* `Remesh` - Click this to start the quad remesher process.
+
+* `<Count>` - Click this to start the quad remesher process, this number tells you what the target quad remesh count will be.
 * `Quads` - Set the target quad count by sliding left and right, or tap to set an exact number. Note that this is a guide more than a fixed number, the various controls on the quad remesher will often mean the result will not exactly match this target.
+* `Half` - A shortcut to set the target count to half the current poly count.
+* `Same` - A shortcut to set the target count to the current poly count.
 * `Guides` - indicate the total number of guides, or tap to delete all guides.
 * `Density X` - tap to remove all density painting.
 * `Density (painting)` - toggle to use or ignore density painting.
 * `Face Group` - toggle to use or ignore facegroups to steer the quad remesher.
 * `Relax` - toggle to automatically relax facegroup borders during quad remeshing. If your have already relaxed/smoothed your facegroup borders, disable this option.
+* `Relax Slider` - A shortcut slider to relax the facegroup borders.
+* `Hard Edges` - toggle to try and maintain hard edges.
+* `Reproject Vertex` - toggle to reproject the new layout to the input mesh.
 * `Symmetry` - Toggle to enable a symmetrical result. Note that symmetry is always calculated around the world x-axis, so ensure your model is at the origin if you expect a symmetrical result.
+* `...` - Quadremesher settings menu. 
 
-The ... menu contains further options, note that the top toolbar has shortcuts for most of these:
+#### Quad remesher settings menu
 
-* `Remesh` - Same as the `Remesh` button in the top toolbar
+Most of these settings are available in the top toolbar.
+
+* `<Count>, Half, Same` - Same as the Remesh, Half, Same buttons in the top toolbar.
 * `Target Quads` - Same as the `Quads` button in the top toolbar
 * `Adaptive quad count` - toggle to enable using smaller quads in areas of high curvature, and larger quads in lower curvature.
 * `Adaptive size` - Set the amount of adaptivity. 100% will alow maximum adaptive size, at 0% quads will be uniform.
 * `Auto-Detect Hard Edges` - toggle to adapt the quad remesh layout to better follow sharp surfaces.
 * `Density (painting)` - Same as the `Density (painting)` button in the top toolbar
+* `Reproject Vertex` - toggle to reproject the new layout to the input mesh.
 * `Face Group` - Same as the `Face Group` button in the top toolbar
+* `Relax Slider` - A shortcut slider to relax the facegroup borders.
+
+::: tip
+
+A recipie to get a good quad remesh with minimal artifacts:
+
+* Facegroup the mesh to define your ideal quad flow.
+* Facegroup relax to get smooth facegroup borders.
+* Decimate. This will ensure you have no thin or distorted faces on the facegroup edge. In the decimate settings ensure facegroup is enabled. This will make triangle edges follow your facegroup edges precisely. 
+
+In the quad remesh options ensure relax is disabled (as you have already relaxed the mesh) and you should get good results.
+
+:::
 
 ### ![](./icons/tool_select.webp) Select
 Use the shape modes to select objects in the scene. `Unselect` will remove objects from the selection.
