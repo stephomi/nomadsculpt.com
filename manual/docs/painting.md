@@ -95,9 +95,9 @@ Here are some examples of different roughness and metalness properties:
 
 |                | Metalness 0%                      | Metalness 100%               |
 | :------------: | :-------------------------------: | :--------------------------: |
-| Roughness 0%   | ![](./images/dielectric_r0.jpg)   | ![](./images/metal_r0.jpg)   |
-| Roughness 50%  | ![](./images/dielectric_r50.jpg)  | ![](./images/metal_r50.jpg)  |
-| Roughness 100% | ![](./images/dielectric_r100.jpg) | ![](./images/metal_r100.jpg) |
+| Roughness 0%   | ![](./images/dielectric_r0.webp)   | ![](./images/metal_r0.webp)   |
+| Roughness 50%  | ![](./images/dielectric_r50.webp)  | ![](./images/metal_r50.webp)  |
+| Roughness 100% | ![](./images/dielectric_r100.webp) | ![](./images/metal_r100.webp) |
 
 ::: warning
 Only color is supported in [Matcap rendering](shading.md#matcap) mode, metalness and roughness are ignored.

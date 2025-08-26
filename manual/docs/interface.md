@@ -268,7 +268,7 @@ On iOS devices with a keyboard, hold the ⌘ (cmd) key to display a list of shor
 
 Android keyboard support is a bit experimental.
 
-![](./images/shortcuts.jpg)
+![](./images/shortcuts.webp)
 
 
 ## Debug
