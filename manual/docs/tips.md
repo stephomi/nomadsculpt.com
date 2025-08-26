@@ -34,6 +34,10 @@ The tube tool is a great way to start a sculpt. Reptile tails, arms, legs, finge
 
 Some people prefer to start a model in other apps, thats also fine. Tools like Blender or Valence allow models to be started using low poly techniques, they can then be imported into Nomad for sculpting.
 
+### Use the built in presets
+
+From the project menu click `Preset...` in the top right. Here you will find several head and body shape presets from the Blender foundation. Select one you like, tap it again, add to your scene. 
+
 ### Use online models
 
 There are many free models available online, eg polyhaven, sketchfab, turbosquid. Usually these models can be imported to Nomad, and ether sculpted on directly, or used as reference.
@@ -41,10 +45,6 @@ There are many free models available online, eg polyhaven, sketchfab, turbosquid
 ### No rules!
 
 Ultimately you can use any combination of these techniques, or none at all! Nomad is very flexible in this regard, advanced users might use tubes to start with, then dyntopo, then combine with a downloaded foot, then quad remesh it all, then multires for final detail. Whatever works for you.
-
-## Quad remesher curve guides and symmetry
-
-Curve guides can be used in closed mode to define loops around the eyes or nostrils, but will act strangely if you try and use then across the mirror plane, eg for a mouth or lips. In this case its better to turn off loop mode, and turn off symmetry. Tap and delete guides so that you only have them on one side of the face. Enable symmetry again, when you run the quadremesher, it will be guided properly.
 
 ## Facegroups
 
@@ -166,6 +166,7 @@ To fix the topolgy itself, use a new primitive, or the quad remesh tools, or an 
 
 The default PBR render is, as its name suggests, physically based, which like an unprocessed digital photo can look a little washed out and flat. Nomad's lights and post processing can be used to make renders look more vibrant.
 
+Here is a default render, lets see if we can make it look better:
 ![](./images/tips_lighting_default.webp)
 
 Enabling post processing and tonemapping can add brightness and contrast:
@@ -174,16 +175,17 @@ Enabling post processing and tonemapping can add brightness and contrast:
 
 To focus on the lights, the default environment light is good for sculpting, but can be improved for a final render. One way to think about this is to separate direct light (eg the sun) vs environment light (eg light from the blue of the sky, the ground). By reducing the environment light and rotating it, this starts to capture what the lighting should look like if the subject were in a shaded area:
 
-![](./images/tips_lighting_env.webp)
+![](./images/tips_lighting_env.jpg)
 
 A direct light can be added, and its intensity boosted to simulate harsh sunlight. Balancing this with the environment light will achieve a pleasing result:
 
-![](./images/tips_lighting_sunlight.webp)
+![](./images/tips_lighting_sunlight.jpg)
 
 Characters can benefit from swapping their material to subsurface, and placing a spotlight behind the character aiming at the ears to make them glow:
 
-![](./images/tips_lighting_sss.webp)
+![](./images/tips_lighting_sss.jpg)
 
 Then experiment with the rest of the post process settings! Global Illumination and Ambient Occlusion help with more realistic lighting. Curvature and Sharpen can help bring out more detail in the sculpt. Chromatic Aberration, Depth of Field, Grain, Bloom, Vignette help simulate camera effects. Note that as features are enabled, the lighting and other post processing values need to be adjusted to compensate.
 
-![](./images/tips_lighting_final.webp)
+Here's the render with a full set of post processing tweaks:
+![](./images/tips_lighting_final.jpg)
