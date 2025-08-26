@@ -14,19 +14,7 @@ export default {
         })
     },
     enhanceApp({ app, router, siteData }) {
-    router.onAfterRouteChanged = () => {
-        setTimeout(() => {
-            console.log('VitePress video fix script is firing!');
-            const videos = document.querySelectorAll('video[data-poster]');
-            videos.forEach(video => {
-                const posterUrl = video.getAttribute('data-poster');
-                if (posterUrl) {
-                    video.setAttribute('poster', posterUrl);
-                }
-            });
-        }, 500); // 500ms delay
-    };
-
+        // ...
     },
 
     // https://github.com/francoischalifour/medium-zoom

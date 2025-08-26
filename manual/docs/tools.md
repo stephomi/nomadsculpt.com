@@ -575,7 +575,6 @@ If an object has a custom pivot, then it will be used as an anchor point. See vi
 
 ![](./videos/tool_insert.mp4)
 
-
 ### ![](./icons/tool_transform.png) Transform
 Move/Rotate/Scale a model directly with 1 and 2 fingers, usually over the surface of another object.
 
