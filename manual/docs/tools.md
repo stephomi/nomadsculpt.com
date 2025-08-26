@@ -565,7 +565,7 @@ Whe a lathe is selected, a toolbar will appear at the top of the viewport with e
 ### ![](./icons/tool_insert.png) Insert
 Place an object on the surface of another. In use it is similar to the stamp tool, but for full 3d shapes.
 
-If you select a primitive from the left toolbar, a click-drag on any surface will place a primitive where you click, the drag will set the size. Once you finish dragging, Insert will swap to Instance mode.
+If you select a primitive from the left toolbar, a click-drag on any surface will place a primitive where you click, the drag will set the size. Once you finish dragging, Insert will swap to [Transform](#transform) mode.
 
 In Instance mode, dragging will create and slide a new instance over the surface. The size will be duplicated from the first shape, in this way you can place many same-sized instances of an obejct over other surfaces.
 
