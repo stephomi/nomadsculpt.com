@@ -562,7 +562,7 @@ Whe a lathe is selected, a toolbar will appear at the top of the viewport with e
 * `Division Y` - same as Y Divisions in the toolbar.
 * `Curve (Repeater)` - convert the curve profile into a [Curve Repeater](scene.md#curve)
 
-### ![](./icons/tool_insert.png) Insert
+### ![](./icons/tool_insert.webp) Insert
 Place an object on the surface of another. In use it is similar to the stamp tool, but for full 3d shapes.
 
 If you select a primitive from the left toolbar, a click-drag on any surface will place a primitive where you click, the drag will set the size. Once you finish dragging, Insert will swap to [Transform](#transform) mode.
@@ -575,7 +575,7 @@ If an object has a custom pivot, then it will be used as an anchor point. See vi
 
 ![](./videos/tool_insert.mp4)
 
-### ![](./icons/tool_transform.png) Transform
+### ![](./icons/tool_transform.webp) Transform
 Move/Rotate/Scale a model directly with 1 and 2 fingers, usually over the surface of another object.
 
 The tool is controlled with the left toolbar, and has 5 buttons:
@@ -609,7 +609,7 @@ This presents a fast workflow for cloning objects over another, eg rocks over a 
 
 ![](./videos/tool_transform.mp4)
 
-### ![](./icons/tool_gizmo.png) Gizmo
+### ![](./icons/tool_gizmo.webp) Gizmo
 This tool lets you move, rotate and scale objects, and alter pivots of objects.
 
 The viewport handle has the following features:
