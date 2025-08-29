@@ -22,6 +22,9 @@ Layers can be partially erased via the [Delete Layer](tools.md#delete-layer) too
 Unlike most sculpting software, changing the topology of a mesh will not discard the layers. You can use the [Voxel Remesher](topology.md#voxel-remesher), the [Multiresolution](topology.md#multiresolution) or the [Trim](tools.md#trim)/[Split](tools.md#split) tools, but note that when using [Voxel Remesher](topology.md#voxel-remesher), the quality of the layer will be impacted.
 :::
 
+::: tip
+If using layers for blendshapes/morph targets, there is extra layer functionality in the [scene menu](scene.md#object-menu). you can separate layers into objects, and combine matching objects into layers.
+:::
 ----
 
 ## Layer menu 
@@ -154,3 +157,4 @@ If enabled, all the unselected layers will be adjusted depending on the transfor
 Disbale this option if the other layers are meantt o be used without the new transform that you are applying.
 
 When set on `Auto`, only the visible layers will be adjusted.
+
