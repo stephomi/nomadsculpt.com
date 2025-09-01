@@ -16,13 +16,16 @@ RewriteCond %{REQUEST_URI} ^/404
 RewriteRule ^.*$ https://%{HTTP_HOST}/ [R=301,L]
 
 # Redirect /index.html to /
+RewriteCond %{REQUEST_URI} !^/manual
 RewriteRule ^index\.html$ / [R=301,L]
 
 # Redirect explicit .html requests to extensionless URL
+RewriteCond %{REQUEST_URI} !^/manual
 RewriteCond %{THE_REQUEST} \s/([^\s]+)\.html
 RewriteRule ^([^\s]+)\.html$ /$1 [R=301,L,QSA]
 
 # Remove trailing slash
+RewriteCond %{REQUEST_URI} !^/manual
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [L,R=301]
 
