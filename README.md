@@ -1,7 +1,5 @@
 # About
 
-Website : https://nomadsculpt.com/
-
 Manual : https://nomadsculpt.com/manual/
 
 ```
@@ -9,7 +7,6 @@ git clone https://github.com/stephomi/nomadsculpt.com.git
 ```
 
 # Manual
-
 ```bash
 cd manual
 
@@ -24,19 +21,7 @@ npm run dev
 <!-- pnpm update -->
 <!-- npm view vitepress versions -->
 
-# Website
-
-https://html5up.net/solid-state
-
-```bash
-cd website
-python3 -m http.server 8000
-
-# In browser: localhost:8000
-```
-
 # Nomad colors
-
 ```
 #262322
 rgb(38, 35, 34)
@@ -49,7 +34,6 @@ rgb(235, 190, 108)
 ```
 
 # Misc
-
 ```
 git lfs install
 git lfs fetch

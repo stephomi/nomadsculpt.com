@@ -15,12 +15,11 @@ You can access it through a separate app, for example [this one](https://play.go
 <!-- [this one](https://play.google.com/store/apps/details?id=com.mi.android.globalFileexplorer) -->
 
 ### Is there a way to beta test?
-There is no Android/iOS beta version.  
-However you can see the list of bugs/fixes for the pending/incoming release in the [Logs](https://forum.nomadsculpt.com/t/nomad-change-log/139/500).  
-The [web demo](https://stephaneginier.com/archive/nomad_demo) is usually updated with the pending/incoming release.
-
-### Is there a Windows or OSX version?
-No, but it is planned for 2025.
+For Windows & MacOS, a beta might be available on the [Homepage](https://nomadsculpt.com).
+<br>
+For iOS there is a private TestFlight, visit the [Discord](https://discord.com/invite/8h7BwpRz29) in the #beta-ios channel.
+<br>
+The [Web Demo](https://nomadsculpt.com/demo) is usually updated with the latest features.
 
 ### Why is there a free trial on Android? But not on iOS?
 Because old Android devices suck (and some recent ones as well...), and I didn't want people to buy the app and be welcomed with a black screen.

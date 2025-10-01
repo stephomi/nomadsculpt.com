@@ -35,7 +35,7 @@ Many of these tools can be customized with different brush behavior, pressure, t
 
 The left toolbar has sliders for radius and intensity, and then tool category specific controls, explained below.
 
-![](./images/tool_left_panelwebp)
+![](./images/tool_left_panel.webp)
 
 ::: tip
 The intensity slider for many tools can go above 100%, worth experimenting with!
@@ -443,7 +443,7 @@ This tool can reset layers locally, you need an active layer otherwise nothing w
 
 ### ![](./icons/tool_tube.webp) Tube
 Create a tube by drawing a curve. 
-![](./images/tool_tube_newwebp)
+![](./images/tool_tube_new.webp)
 
 Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Shape editing](#shape-editing) and curve editing tools. 
 

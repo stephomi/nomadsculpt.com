@@ -24,7 +24,6 @@ h6 {
 .icon {
     display: inline-block;
     vertical-align: middle;
-    /*height: auto;*/
     width: 1.9em;
     pointer-events: none;
 }
