@@ -35,7 +35,7 @@ Many of these tools can be customized with different brush behavior, pressure, t
 
 The left toolbar has sliders for radius and intensity, and then tool category specific controls, explained below.
 
-![](./images/tool_left_panel.jpg)
+![](./images/tool_left_panelwebp)
 
 ::: tip
 The intensity slider for many tools can go above 100%, worth experimenting with!
@@ -378,13 +378,15 @@ If you use Project while in a layer, you can blend between the original and the 
 ### ![](./icons/tool_layer.webp) Layer
 Raise the surface, but limit the height.
 
-If you keep the pencil down and keep brushing over an area, the Clay and Brush tools will keep increasing in height, while Layer will raise to a certain height then go no further.
+If you keep the pencil down and keep brushing over an area, Layer will raise to a certain height then go no further, vs other tools that will keep accumulating height.
 
-If you start a new stroke, it will build from the new surface height, which is usually not what people expect. Because of this, the tool is designed to work with Nomad's [Layers](layers.md) system.
+Note that by default the limit is only set per stroke! If you start a new stroke, it will build from the new surface height.
 
-If you create and select a layer, then use this brush, then the maximum height is set by the layer itself, so you can apply many brush strokes and the height will always be the same.
+To set a constant maximum height acrosss many strokes, use the Layer tool with Nomad's [Layers](layers.md) system.
 
-`Sub` will use a minimum depth displacement, creating grooves.
+Create a layer, and use this tool. The the maximum height is now set from the layer, so you can apply many brush strokes and the height will always be the same.
+
+`Sub` will use a minimum depth, creating grooves.
 
 #### Layer Settings
 
@@ -413,10 +415,21 @@ Move or 'smear' points in the direction of the stroke.
 
 
 ### ![](./icons/tool_stamp.webp) Stamp
-This is simply the [Brush tool](#brush) with a stroke type set to `Grab - dynamic radius`. `Sub` will push the stamp in rather than pull it out from the surface.
+
+Click and drag to raise an area of the sculpt in the shape of the selected Alpha.
+
+This is simply the [Brush tool](#brush) with a stroke type set to `Lock + radius`. 
+
+`Sub` will push the stamp in rather than pull it out from the surface.
 
 ::: tip
 Stamp usually works best with high resolution geometry. If you search online for 'wrinkles alpha', 'pores alpha', 'scales alpha' etc, these alpha textures and Stamp can be a great way to add organic detail to a character sculpt.
+
+The two stroke modes are useful for different things. 
+
+* `Lock + radius` has a set *height*, dragging adjusts the width and rotation of the stamp. Good for skin textures where they need to be of the same depth/height, but different rotations and scales to hide repeating patterns.
+* `Lock + intensity` has a set *width*, dragging adjust the rotatin and height of the stamp. Good for rivets, where they all have to be the same size, but different rotations and heights. 
+
 :::
 
 ![](./videos/tool_stamp.mp4)
@@ -430,7 +443,7 @@ This tool can reset layers locally, you need an active layer otherwise nothing w
 
 ### ![](./icons/tool_tube.webp) Tube
 Create a tube by drawing a curve. 
-![](./images/tool_tube_new.jpg)
+![](./images/tool_tube_newwebp)
 
 Once the tube is created, the path can be edited in 3d space using similar controls to the standard [Shape editing](#shape-editing) and curve editing tools. 
 
@@ -500,6 +513,8 @@ Divisions at 4 and Post subdivision at 3 will make smooth round tipped tubes, go
 ### ![](./icons/tool_lathe.webp) Lathe
 Create a revolution surface by drawing a curve.
 
+This tool is great for shapes like vases, wineglasses.
+
 ![](./videos/tool_lathe.mp4)
 
 #### Lathe left toolbar
@@ -548,16 +563,20 @@ Whe a lathe is selected, a toolbar will appear at the top of the viewport with e
 * `Curve (Repeater)` - convert the curve profile into a [Curve Repeater](scene.md#curve)
 
 ### ![](./icons/tool_insert.webp) Insert
-Insert an object in the scene.  
-When the insertion takes place, Nomad switches automatically to the [Transform tool](#transform) for quick adjustment and then switches back the [Insert](#insert) tool when you release your fingers.
+Place an object on the surface of another. In use it is similar to the stamp tool, but for full 3d shapes.
 
-If an object is using a custom gizmo pivot, then it will be used as an anchor point for the insertion, see video below.
+If you select a primitive from the left toolbar, a click-drag on any surface will place a primitive where you click, the drag will set the size. Once you finish dragging, Insert will swap to [Transform](#transform) mode.
+
+In Instance mode, dragging will create and slide a new instance over the surface. The size will be duplicated from the first shape, in this way you can place many same-sized instances of an obejct over other surfaces.
+
+You don't have to just insert primitives! Select *any* shape in the outliner, if Insert is in Instance or Clone mode, you can drag copies of the selected object over any other surface.
+
+If an object has a custom pivot, then it will be used as an anchor point. See video below.
 
 ![](./videos/tool_insert.mp4)
 
-
 ### ![](./icons/tool_transform.webp) Transform
-Move/Rotate/Scale a model directly with 1 and 2 fingers. 
+Move/Rotate/Scale a model directly with 1 and 2 fingers, usually over the surface of another object.
 
 The tool is controlled with the left toolbar, and has 5 buttons:
 
@@ -591,7 +610,7 @@ This presents a fast workflow for cloning objects over another, eg rocks over a 
 ![](./videos/tool_transform.mp4)
 
 ### ![](./icons/tool_gizmo.webp) Gizmo
-This tool lets you move, rotate and scale your mesh with a single tool. It also lets you do certain operatations on the scene hierarchy.
+This tool lets you move, rotate and scale objects, and alter pivots of objects.
 
 The viewport handle has the following features:
 
@@ -640,19 +659,45 @@ When pivot mode is active, a menu is displayed to allow quick pivot changes:
 
 #### Gizmo settings
 
-* `Move origin` - Move the object to the center of the scene, called the origin.
-* `Reset` - A shortcut that sets the translation values to 0, rotation values to 0, scale to 1, moving and rotating the object.
-* `Bake` - Freeze the object where it currently is, and set the translate/rotate values to 0, scale to 1.
+![](./images/tool_gizmo_settings.webp)
+
+##### Matrix 
+* ![](./icons/target.webp) `Move origin` - Move the object so that it's pivot is at the center of the scene, called the origin.
+* ![](./icons/bake.webp)  `Bake` - Freeze the object where it currently is, and set the translate/rotate values to 0, scale to 1.
+* ![](./icons/bake.webp) -> ![](./icons/tool_gizmo.webp) `Bake Pivot` - Make the matrix values correspond to where the gizmo handle is in the world.
+* ![](./icons/reset.webp) `Reset` - A shortcut that sets the translation values to 0, rotation values to 0, scale to 1, moving and rotating the object.
+
+::: tip Bake vs bake to pivot
+Create a box, select the Gizmo tool, open and pin the settings menu. By default the translation and rotation are 0, scale is 1.
+
+Enable pivot mode, move the handle to one side, disable pivot mode. The pivot has changed, but note that the translation values are still 0. 
+
+If you want to see where the pivot *really* is, click `Bake Pivot`. Now the translation values update. Note the box doesn't move during this operation, nor in pivot mode.
+
+Move and rotate the box somewhere, then tap `Move Origin`. It moves the object so that its pivot is at the center of the world, but leaves the rotation unchanged.
+
+Click `Reset`, and the rotation will be set to 0 as well.
+
+Move and rotate the box again, this time click `Bake`. The pivot stays where it is, the box stays where it is, but the translation and rotation values are set to 0.
+
+Practice this a few times! Get an understanding that the pivot values are hidden, Nomad takes care of it for you, but if you need to set the pivot to real locations in space, Bake pivot will do that for you.
+
+:::
 
 * `Translation` - the translate X, Y, Z values
 * `Rotation` - the rotate X, Y, Z values
 * `Scale` - The uniform scale if that is enable, or the scale X, Y Z if disabled.
 * `Uniform scale` - Toggle the ability to scale uniformly or independantly on each axis
 
+-----
+
 * `Compact` - toggle the gizmo layout to put the extra handles outside or inside the rotation sphere
 * `Widget size` - the size of the gizmo
 * `Thickness` - the size of the lines on the gizmo
+* `Opacity` - the opacity of the gizmo
 * `Hide on interaction` - toggle if the gizmo should be temporarily hidden when being dragged
+
+-----
 
 * `Tangent roll threshold` - Control how the rotation UI behaves when dragging on the circle handles to rotate on X/Y/Z. If this value is 0, rotating works like a dial, drag the gizmo in circles. If this value is 90, rotating works like pulling the string of a yo-yo; drag in a straight line towards or away from where you first clicked. Values between 0 and 90 will do a combination of both; below the value will be the linear move, above the value will be circular move.
 * `Numerical input` - when enabled, a single tap on the gizmo will pop up a window to enter an exact value for the tapped widget axis.
@@ -710,6 +755,8 @@ Drag to measure the distance between 2 points.
 
 ### ![](./icons/tool_remesh.webp) Quad Remesher
 
+![](./images/tool_quadremesher.webp)
+
 This tool will convert the selected object into a clean quad topology layout, with controls for density, edge flow, symmetry. 
 
 ::: tip
@@ -725,26 +772,52 @@ When this tool is activated for the first time, it will ask if you want to enabl
 * `Rect` - Draw rectangles on the the surface of the sculpt, quad remesher will use these as guides for the edge flow. Tap on a path to delete it.
 * `Ellipse` - Draw ellipses on the the surface of the sculpt, quad remesher will use these as guides for the edge flow. Tap on a path to delete it.
 
+#### Quad remesher top toolbar
+![](./images/tool_quadremesher_toolbar.webp)
+
 A toolbar will appear at the top of the viewport with extra controls:
 
-* `Remesh` - Click this to start the quad remesher process.
+
+* `<Count>` - Click this to start the quad remesher process, this number tells you what the target quad remesh count will be.
 * `Quads` - Set the target quad count by sliding left and right, or tap to set an exact number. Note that this is a guide more than a fixed number, the various controls on the quad remesher will often mean the result will not exactly match this target.
+* `Half` - A shortcut to set the target count to half the current poly count.
+* `Same` - A shortcut to set the target count to the current poly count.
 * `Guides` - indicate the total number of guides, or tap to delete all guides.
 * `Density X` - tap to remove all density painting.
 * `Density (painting)` - toggle to use or ignore density painting.
 * `Face Group` - toggle to use or ignore facegroups to steer the quad remesher.
 * `Relax` - toggle to automatically relax facegroup borders during quad remeshing. If your have already relaxed/smoothed your facegroup borders, disable this option.
+* `Relax Slider` - A shortcut slider to relax the facegroup borders.
+* `Hard Edges` - toggle to try and maintain hard edges.
+* `Reproject Vertex` - toggle to reproject the new layout to the input mesh.
 * `Symmetry` - Toggle to enable a symmetrical result. Note that symmetry is always calculated around the world x-axis, so ensure your model is at the origin if you expect a symmetrical result.
+* `...` - Quadremesher settings menu. 
 
-The ... menu contains further options, note that the top toolbar has shortcuts for most of these:
+#### Quad remesher settings menu
 
-* `Remesh` - Same as the `Remesh` button in the top toolbar
+Most of these settings are available in the top toolbar.
+
+* `<Count>, Half, Same` - Same as the Remesh, Half, Same buttons in the top toolbar.
 * `Target Quads` - Same as the `Quads` button in the top toolbar
 * `Adaptive quad count` - toggle to enable using smaller quads in areas of high curvature, and larger quads in lower curvature.
 * `Adaptive size` - Set the amount of adaptivity. 100% will alow maximum adaptive size, at 0% quads will be uniform.
 * `Auto-Detect Hard Edges` - toggle to adapt the quad remesh layout to better follow sharp surfaces.
 * `Density (painting)` - Same as the `Density (painting)` button in the top toolbar
+* `Reproject Vertex` - toggle to reproject the new layout to the input mesh.
 * `Face Group` - Same as the `Face Group` button in the top toolbar
+* `Relax Slider` - A shortcut slider to relax the facegroup borders.
+
+::: tip
+
+A recipie to get a good quad remesh with minimal artifacts:
+
+* Facegroup the mesh to define your ideal quad flow.
+* Facegroup relax to get smooth facegroup borders.
+* Decimate. This will ensure you have no thin or distorted faces on the facegroup edge. In the decimate settings ensure facegroup is enabled. This will make triangle edges follow your facegroup edges precisely. 
+
+In the quad remesh options ensure relax is disabled (as you have already relaxed the mesh) and you should get good results.
+
+:::
 
 ### ![](./icons/tool_select.webp) Select
 Use the shape modes to select objects in the scene. `Unselect` will remove objects from the selection.

@@ -49,16 +49,20 @@ When you select a parent item, by default all the child items will also be selec
 Clicking the ellipsis button (...) for an object in the tree view will show the object menu. 
 Many of these options are similar to the shortcut bar at the top, repeated for convenience.
 
-| Action                                   | Icon                                     | Description  |
-| :--------------------------------------: | :--------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
-| Instance                                 | ![](./icons/link.webp)                   | Duplicate the object as an instance, so modelling changes to one are made to all instances.                          |
-| Clone                                    | ![](./icons/clone.webp)                  | Duplicate the object into a new object                                                                               |
-| Name                                     | ![](./icons/pencil.webp)                 | Change the name of the object                                                                                        |
-| Delete                                   | ![](./icons/trash.webp)                  | Delete the object                                                                                                    |
-| Delete+                                  | ![](./icons/removeNode.webp)             | Delete the object and its children                                                                                   |
-| Un-instance                              | ![](./icons/unlink.webp)                 | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances.                 |
-| Separate (Topology)                      | ![](./images/scene_separate_button.webp) | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation. |
-| Separate (Face Group)                    | ![](./images/scene_separate_button.webp) | If an object has multiple face groups, break the mesh into separate objects.                                         |
+|       Action        |                        Icon                        | Description                                                                                                                                                             |
+| :-----------------: | :------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|      Instance       |               ![](./icons/link.webp)               | Duplicate the object as an instance, so modelling changes to one are made to all instances.                                                                             |
+|        Clone        |              ![](./icons/clone.webp)               | Duplicate the object into a new object                                                                                                                                  |
+|        Name         |              ![](./icons/pencil.webp)              | Change the name of the object                                                                                                                                           |
+|       Delete        |              ![](./icons/trash.webp)               | Delete the object                                                                                                                                                       |
+|       Delete+       |            ![](./icons/removeNode.webp)            | Delete the object and its children                                                                                                                                      |
+|     Un-instance     |              ![](./icons/unlink.webp)              | Convert an instance to a unique shape, so modelling changes are no longer copied to other instances.                                                                    |
+|  Separate Topology  |             ![](./icons/separate.webp)             | If an object is made up of unique polygon shells, break it into separate objects. The reverse of the join operation.                                                    |
+| Separate Face Group |            ![](./icons/faceGroup.webp)             | If an object has multiple face groups, break the mesh into separate objects.                                                                                            |
+|   Separate Layers   |              ![](./icons/layer.webp)               | If an object has layers, split each layer into a separate object. Useful for sending blendshapes to other applications.                                                 |
+|   Join -> Layers    | ![](./icons/merge.webp) -> ![](./icons/layer.webp) | If multiple objects are selected and have matching topology, merge those objects into layers for the primary object (the other objects will be deleted). Again, useful for blendshapes coming FROM other applications.<br><br> Note that the layers will be disabled by default. Enable them if you need to adjust their sliders. |
+
+
 
 
 ### Multiselection
